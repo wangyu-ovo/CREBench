@@ -1,0 +1,8 @@
+anthropic
+fastmcp
+google-genai
+openai
+pydantic
+pyyaml
+python-dotenv
+uvicorn

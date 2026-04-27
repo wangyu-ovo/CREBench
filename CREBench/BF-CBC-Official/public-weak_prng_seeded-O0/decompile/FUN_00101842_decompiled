@@ -1,0 +1,75 @@
+
+void FUN_00101842(void *param_1,int param_2,undefined *param_3)
+
+{
+  undefined *puVar1;
+  undefined uVar2;
+  undefined uVar3;
+  undefined uVar4;
+  undefined uVar5;
+  undefined *puVar6;
+  long in_FS_OFFSET;
+  int local_44;
+  int local_30;
+  undefined *local_28;
+  undefined4 local_18;
+  undefined4 local_14;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  memcpy(param_1,&DAT_001020a0,0x48);
+  memcpy((void *)((long)param_1 + 0x48),&DAT_001020e8,0x1000);
+  local_44 = param_2;
+  if (0x48 < param_2) {
+    local_44 = 0x48;
+  }
+  puVar6 = param_3 + local_44;
+  local_28 = param_3;
+  for (local_30 = 0; local_30 < 0x12; local_30 = local_30 + 1) {
+    puVar1 = local_28 + 1;
+    uVar2 = *local_28;
+    local_28 = puVar1;
+    if (puVar6 <= puVar1) {
+      local_28 = param_3;
+    }
+    puVar1 = local_28 + 1;
+    uVar3 = *local_28;
+    local_28 = puVar1;
+    if (puVar6 <= puVar1) {
+      local_28 = param_3;
+    }
+    puVar1 = local_28 + 1;
+    uVar4 = *local_28;
+    local_28 = puVar1;
+    if (puVar6 <= puVar1) {
+      local_28 = param_3;
+    }
+    puVar1 = local_28 + 1;
+    uVar5 = *local_28;
+    local_28 = puVar1;
+    if (puVar6 <= puVar1) {
+      local_28 = param_3;
+    }
+    *(uint *)((long)param_1 + (long)local_30 * 4) =
+         *(uint *)((long)param_1 + (long)local_30 * 4) ^
+         CONCAT31(CONCAT21(CONCAT11(uVar2,uVar3),uVar4),uVar5);
+  }
+  local_18 = 0;
+  local_14 = 0;
+  for (local_30 = 0; local_30 < 0x12; local_30 = local_30 + 2) {
+    FUN_00101766(&local_18,param_1);
+    *(undefined4 *)((long)param_1 + (long)local_30 * 4) = local_18;
+    *(undefined4 *)((long)param_1 + (long)(local_30 + 1) * 4) = local_14;
+  }
+  for (local_30 = 0; local_30 < 0x400; local_30 = local_30 + 2) {
+    FUN_00101766(&local_18,param_1);
+    *(undefined4 *)((long)param_1 + ((long)local_30 + 0x10) * 4 + 8) = local_18;
+    *(undefined4 *)((long)param_1 + ((long)(local_30 + 1) + 0x10) * 4 + 8) = local_14;
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

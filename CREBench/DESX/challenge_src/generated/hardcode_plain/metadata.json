@@ -1,0 +1,10 @@
+{
+  "challenge": "DESX",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "6f381a6bd9f1be2f53893ea8f85083703562bd47cea9fa458abd4028276179a9",
+  "key": "53bd3084a95e4fbc449998f7ab76350dd23e8337b5452a05",
+  "iv": "3ebec1c21e3f1692",
+  "target_ciphertext": "347a270b16aaa17414b25b12c9b70261df71720159d6c970c2168ac096bd8108",
+  "test_vectors_path": "CREBench/DESX/test_vectors-hardcode_plain.json"
+}

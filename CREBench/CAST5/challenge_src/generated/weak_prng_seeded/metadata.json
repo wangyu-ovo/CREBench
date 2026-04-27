@@ -1,0 +1,10 @@
+{
+  "challenge": "CAST5",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "37a740c0ea9b7629d52b3a3987675fe6bf4a239e7e848a3fb2b8008b5055ca2e",
+  "key": "8476c0d10b9fe12a3494dc5852f74630",
+  "iv": "eddcfbfd69683b94",
+  "target_ciphertext": "55e3601a3d69b84aa62258a31c8a2baa9660261a68c24dcf1b1933a1c075755f",
+  "test_vectors_path": "CREBench/CAST5/test_vectors-weak_prng_seeded.json"
+}

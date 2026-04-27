@@ -1,0 +1,16 @@
+
+byte FUN_001020e0(ulong param_1)
+
+{
+  byte local_19;
+  
+  if ((param_1 & 1) == 0) {
+    local_19 = (&DAT_001030a8)[param_1 >> 1];
+  }
+  else {
+    local_19 = (&DAT_001030a0)[param_1 >> 1];
+  }
+  local_19 = local_19 ^ 0xf3;
+  return local_19;
+}
+

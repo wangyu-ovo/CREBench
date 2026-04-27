@@ -1,0 +1,13 @@
+
+uint FUN_00101ab9(int param_1)
+
+{
+  uint local_c;
+  
+  local_c = param_1 << 1;
+  if ((local_c & 0x10000) != 0) {
+    local_c = local_c ^ 0x11011;
+  }
+  return local_c;
+}
+

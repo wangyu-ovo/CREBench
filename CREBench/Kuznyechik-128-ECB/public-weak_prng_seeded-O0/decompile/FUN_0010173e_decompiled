@@ -1,0 +1,21 @@
+
+void FUN_0010173e(byte *param_1)
+
+{
+  byte bVar1;
+  byte local_11;
+  int local_10;
+  int local_c;
+  
+  for (local_10 = 0; local_10 < 0x10; local_10 = local_10 + 1) {
+    local_11 = param_1[0xf];
+    for (local_c = 0xe; -1 < local_c; local_c = local_c + -1) {
+      param_1[(long)local_c + 1] = param_1[local_c];
+      bVar1 = FUN_001015f8(param_1[local_c],(&DAT_0010a2c0)[local_c]);
+      local_11 = local_11 ^ bVar1;
+    }
+    *param_1 = local_11;
+  }
+  return;
+}
+

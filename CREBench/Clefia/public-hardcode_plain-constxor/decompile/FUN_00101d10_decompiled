@@ -1,0 +1,223 @@
+
+void FUN_00101d10(ulong *param_1,ulong *param_2,byte *param_3,int param_4)
+
+{
+  byte *pbVar1;
+  byte bVar2;
+  byte bVar3;
+  ulong uVar4;
+  byte bVar5;
+  byte bVar6;
+  byte bVar7;
+  byte bVar8;
+  byte bVar9;
+  byte bVar10;
+  byte bVar11;
+  uint uVar12;
+  byte bVar13;
+  byte bVar14;
+  byte bVar15;
+  ulong uVar16;
+  ulong uVar17;
+  uint uVar18;
+  uint uVar19;
+  ulong uVar20;
+  byte bVar21;
+  uint uVar22;
+  uint uVar23;
+  uint uVar24;
+  ulong local_70;
+  ulong local_68;
+  byte local_5e;
+  byte local_5d;
+  byte local_5c;
+  byte local_5b;
+  byte local_5a;
+  byte local_59;
+  ulong local_58;
+  ulong local_50;
+  ulong local_48;
+  byte local_40;
+  byte local_3f;
+  byte local_3e;
+  byte local_3d;
+  
+  uVar16 = *param_2;
+  uVar17 = param_2[1];
+  local_68 = uVar16 >> 8 & 0xff;
+  local_50 = uVar17 >> 0x38;
+  local_70 = uVar17 >> 8 & 0xff;
+  local_40 = (byte)(uVar17 >> 0x20);
+  local_3e = (byte)(uVar17 >> 0x28);
+  local_3d = (byte)(uVar17 >> 0x30);
+  uVar4 = uVar16 >> 0x20;
+  local_58 = uVar16 >> 0x28 & 0xff;
+  local_48 = uVar16 >> 0x38;
+  local_3f = (byte)(uVar16 >> 0x30);
+  pbVar1 = param_3 + (long)param_4 * 8;
+  local_5e = (byte)uVar16;
+  local_5d = (byte)uVar17;
+  local_5c = (byte)(uVar16 >> 0x18);
+  local_5b = (byte)(uVar16 >> 0x10);
+  local_5a = (byte)(uVar17 >> 0x10);
+  local_59 = (byte)(uVar17 >> 0x18);
+  while( true ) {
+    uVar20 = (ulong)(local_5e ^ *param_3);
+    uVar17 = (ulong)((byte)local_68 ^ param_3[1]);
+    bVar3 = param_3[3];
+    uVar16 = (ulong)(local_5b ^ param_3[2]);
+    FUN_00101c70();
+    uVar18 = (uint)(byte)(&DAT_00105160)[uVar20];
+    FUN_00101cc0();
+    uVar19 = (uint)(byte)(&DAT_00105060)[uVar17];
+    FUN_00101c70();
+    uVar12 = (uint)(byte)(&DAT_00105160)[uVar16];
+    FUN_00101cc0();
+    bVar3 = (&DAT_00105060)[local_5c ^ bVar3];
+    bVar15 = (byte)uVar19;
+    bVar5 = bVar15 ^ 0xe;
+    if (-1 < (char)bVar15) {
+      bVar5 = bVar15;
+    }
+    bVar15 = (byte)uVar12;
+    bVar10 = bVar5 << 1 | (char)bVar5 < '\0';
+    bVar5 = bVar15 ^ 0xe;
+    if (-1 < (char)bVar15) {
+      bVar5 = bVar15;
+    }
+    bVar5 = bVar5 << 1 | (char)bVar5 < '\0';
+    bVar15 = bVar5 ^ 0xe;
+    if (-1 < (char)bVar5) {
+      bVar15 = bVar5;
+    }
+    bVar11 = bVar3 ^ 0xe;
+    if (-1 < (char)bVar3) {
+      bVar11 = bVar3;
+    }
+    bVar8 = bVar11 << 1 | (char)bVar11 < '\0';
+    bVar11 = bVar8 ^ 0xe;
+    if (-1 < (char)bVar8) {
+      bVar11 = bVar8;
+    }
+    bVar2 = (byte)uVar18;
+    bVar7 = bVar2 ^ 0xe;
+    if (-1 < (char)bVar2) {
+      bVar7 = bVar2;
+    }
+    bVar7 = bVar7 << 1 | (char)bVar7 < '\0';
+    bVar2 = bVar7 ^ 0xe;
+    if (-1 < (char)bVar7) {
+      bVar2 = bVar7;
+    }
+    bVar21 = bVar2 << 1 | (char)bVar2 < '\0';
+    bVar2 = bVar10 ^ 0xe;
+    if (-1 < (char)bVar10) {
+      bVar2 = bVar10;
+    }
+    bVar13 = bVar2 << 1 | (char)bVar2 < '\0';
+    uVar23 = (uint)(byte)(bVar15 << 1 | (char)bVar15 < '\0');
+    bVar2 = bVar3 ^ bVar5 ^ bVar7 ^ bVar21 ^ bVar13 ^ (byte)local_48;
+    uVar12 = (uint)local_3f ^ uVar12 ^ bVar10 ^ (uint)bVar8 ^ (uint)bVar21 ^ (uint)bVar13;
+    uVar22 = (uint)(byte)(bVar11 << 1 | (char)bVar11 < '\0');
+    uVar24 = (uint)(byte)local_58 ^ uVar19 ^ bVar5 ^ uVar23 ^ uVar22 ^ (uint)bVar7;
+    uVar19 = uVar18 ^ bVar10 ^ uVar23 ^ (uint)bVar8 ^ uVar22 ^ (uint)uVar4;
+    uVar16 = (ulong)(local_5d ^ param_3[4]);
+    uVar17 = (ulong)((byte)local_70 ^ param_3[5]);
+    uVar4 = (ulong)(local_5a ^ param_3[6]);
+    bVar3 = param_3[7];
+    FUN_00101cc0();
+    bVar15 = (&DAT_00105060)[uVar16];
+    FUN_00101c70();
+    bVar5 = (&DAT_00105160)[uVar17];
+    FUN_00101cc0();
+    bVar10 = (&DAT_00105060)[uVar4];
+    FUN_00101c70();
+    bVar3 = (&DAT_00105160)[local_59 ^ bVar3];
+    bVar11 = bVar5 ^ 0xe;
+    if (-1 < (char)bVar5) {
+      bVar11 = bVar5;
+    }
+    bVar8 = bVar11 << 1 | (char)bVar11 < '\0';
+    bVar11 = bVar8 ^ 0xe;
+    if (-1 < (char)bVar8) {
+      bVar11 = bVar8;
+    }
+    bVar11 = bVar11 << 1 | (char)bVar11 < '\0';
+    if ((char)bVar11 < '\0') {
+      bVar11 = bVar11 ^ 0xe;
+    }
+    bVar7 = bVar11 << 1 | (char)bVar11 < '\0';
+    bVar11 = bVar10 ^ 0xe;
+    if (-1 < (char)bVar10) {
+      bVar11 = bVar10;
+    }
+    bVar21 = bVar11 << 1 | (char)bVar11 < '\0';
+    bVar11 = bVar3 ^ 0xe;
+    if (-1 < (char)bVar3) {
+      bVar11 = bVar3;
+    }
+    bVar13 = bVar11 << 1 | (char)bVar11 < '\0';
+    bVar11 = bVar13 ^ 0xe;
+    if (-1 < (char)bVar13) {
+      bVar11 = bVar13;
+    }
+    bVar11 = bVar11 << 1 | (char)bVar11 < '\0';
+    if ((char)bVar11 < '\0') {
+      bVar11 = bVar11 ^ 0xe;
+    }
+    bVar9 = bVar11 << 1 | (char)bVar11 < '\0';
+    bVar11 = bVar15 ^ 0xe;
+    if (-1 < (char)bVar15) {
+      bVar11 = bVar15;
+    }
+    bVar14 = bVar11 << 1 | (char)bVar11 < '\0';
+    bVar11 = bVar14 ^ 0xe;
+    if (-1 < (char)bVar14) {
+      bVar11 = bVar14;
+    }
+    bVar11 = bVar11 << 1 | (char)bVar11 < '\0';
+    if ((char)bVar11 < '\0') {
+      bVar11 = bVar11 ^ 0xe;
+    }
+    bVar6 = bVar11 << 1 | (char)bVar11 < '\0';
+    bVar11 = bVar21 ^ 0xe;
+    if (-1 < (char)bVar21) {
+      bVar11 = bVar21;
+    }
+    bVar11 = bVar11 << 1 | (char)bVar11 < '\0';
+    if ((char)bVar11 < '\0') {
+      bVar11 = bVar11 ^ 0xe;
+    }
+    bVar11 = bVar11 << 1 | (char)bVar11 < '\0';
+    bVar3 = bVar3 ^ bVar8 ^ bVar14 ^ bVar6 ^ bVar11 ^ (byte)local_50;
+    bVar10 = bVar10 ^ bVar8 ^ bVar7 ^ bVar9 ^ bVar14 ^ local_3d;
+    bVar5 = bVar5 ^ bVar21 ^ bVar13 ^ bVar6 ^ bVar11 ^ local_3e;
+    bVar15 = bVar15 ^ bVar7 ^ bVar21 ^ bVar13 ^ bVar9 ^ local_40;
+    param_3 = param_3 + 8;
+    if (param_3 == pbVar1) break;
+    local_48 = (ulong)local_59;
+    local_50 = (ulong)local_5c;
+    local_3f = local_5a;
+    local_3d = local_5b;
+    local_58 = local_70;
+    uVar4 = (ulong)local_5d;
+    local_3e = (byte)local_68;
+    local_40 = local_5e;
+    local_70 = (ulong)bVar5;
+    local_68 = (ulong)(byte)uVar24;
+    local_5e = (byte)uVar19;
+    local_5d = bVar15;
+    local_5c = bVar2;
+    local_5b = (byte)uVar12;
+    local_5a = bVar10;
+    local_59 = bVar3;
+  }
+  param_1[1] = CONCAT71(CONCAT61(CONCAT51(CONCAT41(CONCAT31(CONCAT21(CONCAT11(bVar3,bVar10),bVar5),
+                                                            bVar15),local_59),local_5a),
+                                 (byte)local_70),local_5d);
+  *param_1 = (((((((ulong)bVar2 << 8 | (ulong)uVar12 & 0xff) << 8 | (ulong)(uVar24 & 0xff)) << 8 |
+                (ulong)(uVar19 & 0xff)) << 8 | (ulong)local_5c) << 8 | (ulong)local_5b) << 8 |
+             local_68) << 8 | (ulong)local_5e;
+  return;
+}
+

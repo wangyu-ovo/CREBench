@@ -1,0 +1,21 @@
+
+byte FUN_001018c0(uint *param_1,char param_2,int param_3)
+
+{
+  uint uVar1;
+  byte bVar2;
+  byte bVar3;
+  uint *puVar4;
+  
+  puVar4 = (uint *)FUN_001016d6();
+  bVar2 = FUN_00101746(*param_1);
+  uVar1 = param_1[1];
+  bVar3 = FUN_00101707((uint)(byte)(param_3 != 0 & bVar2 ^ param_2 != '\0') ^ *param_1 & *puVar4 ^
+                       param_1[1] & puVar4[1]);
+  param_1[1] = uVar1 * 2 | (uint)bVar3;
+  uVar1 = *param_1;
+  *param_1 = param_1[1];
+  param_1[1] = uVar1;
+  return bVar2;
+}
+

@@ -1,0 +1,10 @@
+{
+  "challenge": "Lucifer-128-ECB",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "4cde8c3e531d8400971b8e064f31e7c627fb6bd1ece498fb510b10fb2756fb21",
+  "key": "8175ecc3f5e2c5917644bea159519b49",
+  "iv": "",
+  "target_ciphertext": "14e43dd76be74b7a043f7fe3c05c80dca8fbd65ae7087db76980330ef8775940",
+  "test_vectors_path": "CREBench/Lucifer-128-ECB/test_vectors-weak_prng_seeded.json"
+}

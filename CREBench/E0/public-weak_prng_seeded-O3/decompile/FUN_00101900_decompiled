@@ -1,0 +1,57 @@
+
+void FUN_00101900(ulong *param_1)
+
+{
+  byte bVar1;
+  ulong uVar2;
+  uint uVar3;
+  uint uVar4;
+  ulong uVar5;
+  ulong uVar6;
+  ulong uVar7;
+  ulong uVar8;
+  byte bVar9;
+  
+  uVar6 = *param_1;
+  bVar1 = *(byte *)(param_1 + 8);
+  uVar5 = uVar6 * 2;
+  if (*(byte *)(param_1 + 1) < 0x40) {
+    uVar5 = uVar5 & ~(-1L << (*(byte *)(param_1 + 1) & 0x3f));
+  }
+  uVar7 = param_1[2];
+  *param_1 = ((uint)(uVar6 >> 0x18) ^ (uint)(uVar6 >> 0x13) ^ (uint)(uVar6 >> 0xb) ^
+             (uint)(uVar6 >> 7)) & 1 | uVar5;
+  uVar6 = uVar7 * 2;
+  if (*(byte *)(param_1 + 3) < 0x40) {
+    uVar6 = uVar6 & ~(-1L << (*(byte *)(param_1 + 3) & 0x3f));
+  }
+  uVar8 = param_1[4];
+  param_1[2] = ((uint)(uVar7 >> 0x17) ^ (uint)(uVar7 >> 0x1e) ^ (uint)(uVar7 >> 0xf) ^
+               (uint)(uVar7 >> 0xb)) & 1 | uVar6;
+  uVar7 = uVar8 * 2;
+  if (*(byte *)(param_1 + 5) < 0x40) {
+    uVar7 = uVar7 & ~(-1L << (*(byte *)(param_1 + 5) & 0x3f));
+  }
+  uVar2 = param_1[6];
+  param_1[4] = ((uint)(uVar8 >> 0x20) ^ (uint)(uVar8 >> 0x1b) ^ (uint)(uVar8 >> 0x17) ^
+               (uint)(uVar8 >> 3)) & 1 | uVar7;
+  uVar4 = (uint)(uVar2 >> 0x20);
+  uVar8 = uVar2 * 2;
+  if (*(byte *)(param_1 + 7) < 0x40) {
+    uVar8 = uVar8 & ~(-1L << (*(byte *)(param_1 + 7) & 0x3f));
+  }
+  uVar3 = (uint)(uVar5 >> 0x17) & 1;
+  param_1[6] = (uVar4 >> 3 ^ uVar4 >> 6 ^ (uint)(uVar2 >> 0x1b) ^ (uint)(uVar2 >> 3)) & 1 | uVar8;
+  bVar9 = bVar1 >> 2;
+  uVar4 = uVar3 | (uint)(uVar6 >> 0x16) & 2 | (uint)(uVar7 >> 0x1d) & 4 | (uint)(uVar8 >> 0x1c) & 8;
+  *(ushort *)(param_1 + 8) =
+       CONCAT11((byte)uVar4,
+                (byte)(((bVar1 & 1 ^ (int)(bVar1 & 3) >> 1 | (bVar1 & 3) * 2 & 3) ^ (uint)bVar9 ^
+                       uVar3 + ((int)uVar4 >> 3) + ((int)uVar4 >> 2 & 1U) + ((int)uVar4 >> 1 & 1U) +
+                       (uint)bVar9 >> 1) << 2) | bVar9) & 0xff0f;
+  *(byte *)((long)param_1 + 0x42) =
+       (bVar9 ^ (byte)uVar4 ^ (byte)((int)uVar4 >> 3) ^ (byte)((int)uVar4 >> 2) ^
+       (byte)((int)uVar4 >> 1)) & 1;
+  return;
+}
+

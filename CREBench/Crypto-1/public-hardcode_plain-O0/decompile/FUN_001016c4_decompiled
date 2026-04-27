@@ -1,0 +1,7 @@
+
+undefined8 FUN_001016c4(void)
+
+{
+  return 0xec57e80a;
+}
+

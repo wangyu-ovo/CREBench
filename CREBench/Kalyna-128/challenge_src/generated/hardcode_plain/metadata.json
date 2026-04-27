@@ -1,0 +1,10 @@
+{
+  "challenge": "Kalyna-128",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "d9f782a46e3304e73d1b30d799767d41",
+  "key": "7ad03d0f159bab139b8e20ca5ba8fb81",
+  "iv": "",
+  "target_ciphertext": "f5de18318c07ee290eb47f38967d8b64",
+  "test_vectors_path": "CREBench/Kalyna-128/test_vectors-hardcode_plain.json"
+}

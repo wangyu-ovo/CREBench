@@ -1,0 +1,10 @@
+{
+  "challenge": "AES-128-CBC",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "4c715932e60fb56e716a5d9af88f5c5764eaea10fb79399b5dd1b69f960d3253",
+  "key": "b2ba5c6043a020bc99712b1968a8d677",
+  "iv": "aa1673460a4595d9ece4e8c347307803",
+  "target_ciphertext": "73f4cb471908f1071977600498b7b5a27a97f35fdb3e94c3b604bc43240dcdb0",
+  "test_vectors_path": "CREBench/AES-128-CBC/test_vectors-weak_prng_seeded.json"
+}

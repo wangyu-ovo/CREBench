@@ -1,0 +1,17 @@
+
+void FUN_00101ca0(long param_1,long param_2)
+
+{
+  long lVar1;
+  long extraout_RDX;
+  
+  FUN_00101c90();
+  lVar1 = 0;
+  do {
+    *(byte *)(extraout_RDX + lVar1) = *(byte *)(param_1 + lVar1) ^ *(byte *)(param_2 + lVar1);
+    lVar1 = lVar1 + 1;
+  } while (lVar1 != 0x100);
+  FUN_00101c90();
+  return;
+}
+

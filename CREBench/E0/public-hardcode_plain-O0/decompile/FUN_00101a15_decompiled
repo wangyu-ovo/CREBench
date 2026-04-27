@@ -1,0 +1,17 @@
+
+undefined FUN_00101a15(long param_1)
+
+{
+  undefined uVar1;
+  undefined uVar2;
+  
+  uVar2 = *(undefined *)(param_1 + 0x40);
+  uVar1 = FUN_001019a8(param_1);
+  *(undefined *)(param_1 + 0x41) = uVar1;
+  uVar1 = FUN_0010180c(*(undefined *)(param_1 + 0x40),*(undefined *)(param_1 + 0x41));
+  *(undefined *)(param_1 + 0x40) = uVar1;
+  uVar2 = FUN_00101876(uVar2,*(undefined *)(param_1 + 0x41));
+  *(undefined *)(param_1 + 0x42) = uVar2;
+  return *(undefined *)(param_1 + 0x42);
+}
+

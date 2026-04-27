@@ -1,0 +1,10 @@
+{
+  "challenge": "GOST-28147-89",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "db7cb84818efe61e",
+  "key": "230ff04bf82d8cff4957975af3eaf5875b35bf2d48abae0810394c4f51b92a68",
+  "iv": "",
+  "target_ciphertext": "a2b27484078b7014",
+  "test_vectors_path": "CREBench/GOST-28147-89/test_vectors-weak_prng_seeded.json"
+}

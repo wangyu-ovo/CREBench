@@ -1,0 +1,10 @@
+{
+  "challenge": "LOKI97",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "b71bd2fa62e987bd5ed5e227ffe7d8d992fca702ac1e627e1352745e1bfb857d",
+  "key": "7e93756fb6efde96745e10fe9e01d40fdc547f09b762ba8d0a502db6309d7bd2",
+  "iv": "9aec79c7d834e4aa331c4b6a1b8039cf",
+  "target_ciphertext": "fbdc6537f80c0fe3bff894f6cbb7a4821a8c3b0027fa9ae0e5fabe9a2dadf030",
+  "test_vectors_path": "CREBench/LOKI97/test_vectors-fragmented_build.json"
+}

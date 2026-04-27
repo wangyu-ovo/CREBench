@@ -1,0 +1,23 @@
+
+void FUN_001016b3(uint *param_1,long param_2)
+
+{
+  uint uVar1;
+  uint local_1c;
+  uint local_18;
+  int local_14;
+  
+  local_1c = *param_1;
+  local_18 = param_1[1];
+  for (local_14 = 0; local_14 < 0x10; local_14 = local_14 + 1) {
+    uVar1 = local_1c ^ *(uint *)(param_2 + (long)local_14 * 4);
+    local_1c = FUN_00101617(uVar1,param_2 + 0x48);
+    local_1c = local_18 ^ local_1c;
+    local_18 = uVar1;
+  }
+  uVar1 = *(uint *)(param_2 + 0x40);
+  *param_1 = local_18 ^ *(uint *)(param_2 + 0x44);
+  param_1[1] = local_1c ^ uVar1;
+  return;
+}
+

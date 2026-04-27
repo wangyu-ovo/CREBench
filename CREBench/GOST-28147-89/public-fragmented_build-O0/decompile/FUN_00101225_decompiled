@@ -1,0 +1,24 @@
+
+void FUN_00101225(void)
+
+{
+  undefined4 uVar1;
+  uint local_14;
+  uint local_10;
+  
+  if (DAT_00105040 != '\x01') {
+    for (local_14 = 0; local_14 < 4; local_14 = local_14 + 1) {
+      for (local_10 = 0; local_10 < 0x100; local_10 = local_10 + 1) {
+        uVar1 = FUN_00101209((uint)(byte)(&DAT_00102020)
+                                         [(ulong)(local_14 * 2 + 1) * 0x10 + (ulong)(local_10 >> 4)]
+                             << 4 | (uint)(byte)(&DAT_00102020)
+                                                [(ulong)(local_14 * 2) * 0x10 +
+                                                 (ulong)(local_10 & 0xf)],local_14 * 8 + 0xb);
+        *(undefined4 *)(&DAT_00104040 + ((ulong)local_14 * 0x100 + (ulong)local_10) * 4) = uVar1;
+      }
+    }
+    DAT_00105040 = '\x01';
+  }
+  return;
+}
+

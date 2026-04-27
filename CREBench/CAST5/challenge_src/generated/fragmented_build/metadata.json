@@ -1,0 +1,10 @@
+{
+  "challenge": "CAST5",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "37a740c0ea9b7629d52b3a3987675fe6bf4a239e7e848a3fb2b8008b5055ca2e",
+  "key": "40fef2d7276dd6edde5182ec457380db",
+  "iv": "eddcfbfd69683b94",
+  "target_ciphertext": "5a776b38fbfe5492ab36d986b04c59b84179391447e3fcf415e502416af35128",
+  "test_vectors_path": "CREBench/CAST5/test_vectors-fragmented_build.json"
+}

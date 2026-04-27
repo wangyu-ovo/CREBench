@@ -1,0 +1,427 @@
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined4 FUN_001010e0(int param_1,undefined8 *param_2)
+
+{
+  char cVar1;
+  undefined uVar2;
+  char *__s;
+  short sVar3;
+  short sVar4;
+  short sVar5;
+  short sVar6;
+  short sVar7;
+  short sVar8;
+  short sVar9;
+  byte bVar10;
+  byte bVar11;
+  undefined auVar12 [16];
+  undefined auVar13 [16];
+  undefined auVar14 [16];
+  undefined auVar15 [16];
+  undefined auVar16 [16];
+  undefined8 uVar17;
+  byte bVar18;
+  int iVar19;
+  size_t sVar20;
+  ulong uVar21;
+  byte bVar22;
+  uint uVar23;
+  uint uVar24;
+  long lVar25;
+  ulong uVar26;
+  ulong uVar27;
+  undefined8 *puVar28;
+  uint uVar29;
+  uint uVar30;
+  ulong uVar31;
+  ulong *puVar32;
+  ulong *puVar33;
+  ulong uVar34;
+  uint uVar35;
+  undefined4 uVar36;
+  ulong uVar37;
+  ulong uVar38;
+  long in_FS_OFFSET;
+  undefined auVar39 [12];
+  undefined auVar40 [16];
+  undefined auVar44 [16];
+  undefined auVar48 [16];
+  undefined auVar51 [16];
+  undefined auVar52 [16];
+  undefined2 uVar56;
+  undefined2 uVar57;
+  short sVar58;
+  undefined auVar59 [16];
+  ulong local_2f0;
+  byte local_2e8;
+  byte local_2e7;
+  byte local_2e6;
+  byte local_2e5;
+  byte local_2e4;
+  byte local_2e3;
+  byte local_2e2;
+  byte local_2e1;
+  ulong local_2e0;
+  ulong local_2d8;
+  ulong local_2d0;
+  ulong local_2c8;
+  ulong local_2c0;
+  ulong local_2b8;
+  ulong local_2b0;
+  ulong local_2a8;
+  ulong local_2a0;
+  ulong local_298;
+  ulong local_290;
+  ulong local_288;
+  ulong local_280;
+  undefined8 local_258;
+  undefined8 local_250;
+  undefined8 local_248;
+  undefined8 uStack_240;
+  undefined8 local_238;
+  undefined8 uStack_230;
+  undefined8 local_228;
+  undefined8 local_220;
+  undefined8 local_218;
+  undefined8 uStack_210;
+  undefined8 local_208;
+  undefined local_200 [144];
+  undefined8 local_170;
+  ulong local_128 [12];
+  undefined local_c8 [144];
+  ulong local_38;
+  long local_30;
+  undefined auVar41 [16];
+  undefined auVar45 [16];
+  undefined auVar42 [16];
+  undefined auVar46 [16];
+  undefined auVar49 [16];
+  undefined auVar43 [16];
+  undefined auVar47 [16];
+  undefined auVar50 [16];
+  undefined2 uVar53;
+  undefined2 uVar54;
+  int iVar55;
+  
+  local_30 = *(long *)(in_FS_OFFSET + 0x28);
+  if (param_1 == 2) {
+    __s = (char *)param_2[1];
+    sVar20 = strlen(__s);
+    if (sVar20 == 0x20) {
+      lVar25 = 0;
+      do {
+        cVar1 = __s[lVar25 * 2];
+        iVar19 = (int)cVar1;
+        if ((byte)(cVar1 - 0x30U) < 10) {
+          uVar23 = iVar19 - 0x30;
+        }
+        else if ((byte)(cVar1 + 0x9fU) < 6) {
+          uVar23 = iVar19 - 0x57;
+        }
+        else {
+          uVar23 = iVar19 - 0x37;
+          if (5 < (byte)(cVar1 + 0xbfU)) {
+            uVar23 = 0xffffffff;
+          }
+        }
+        cVar1 = __s[lVar25 * 2 + 1];
+        iVar19 = (int)cVar1;
+        if ((byte)(cVar1 - 0x30U) < 10) {
+          uVar29 = iVar19 - 0x30;
+        }
+        else if ((byte)(cVar1 + 0x9fU) < 6) {
+          uVar29 = iVar19 - 0x57;
+        }
+        else {
+          if (5 < (byte)(cVar1 + 0xbfU)) goto LAB_001011ef;
+          uVar29 = iVar19 - 0x37;
+        }
+        if ((int)(uVar23 | uVar29) < 0) goto LAB_001011ef;
+        *(byte *)((long)&local_228 + lVar25) = (byte)(uVar23 << 4) | (byte)uVar29;
+        lVar25 = lVar25 + 1;
+      } while (lVar25 != 0x10);
+      FUN_00101bd0(&local_238,0x10);
+      uVar29 = 0xffffff8a;
+      uVar23 = 0x42;
+      local_248 = _DAT_001032a0;
+      uStack_240 = _UNK_001032a8;
+      puVar32 = local_128;
+      do {
+        puVar33 = puVar32 + 1;
+        *puVar32 = (((((((ulong)(uVar23 & 0xff) << 8 | (ulong)(uVar29 & 0xff)) << 8 |
+                       (ulong)((uVar29 ^ 0xffffffc0) & 0xff)) << 8 |
+                      (ulong)((uVar23 ^ 0xffffffdb) & 0xff)) << 8 |
+                     (ulong)(~(uVar23 >> 7 & 1 | (uVar29 & 0xff) * 2) & 0xff)) << 8 |
+                    (ulong)(~(uVar23 * 2 | uVar29 >> 7 & 1) & 0xff)) << 8 |
+                   (ulong)((uVar29 ^ 0xffffffe1) & 0xff)) << 8 |
+                   (ulong)((uVar23 ^ 0xffffffb7) & 0xff);
+        uVar30 = uVar29 & 1;
+        uVar35 = uVar23 ^ 0xffffffa8;
+        if (uVar30 == 0) {
+          uVar35 = uVar23;
+        }
+        uVar23 = uVar29 & 0xff;
+        if (uVar30 != 0) {
+          uVar23 = (uVar29 ^ 0x30) & 0xff;
+        }
+        uVar23 = uVar35 >> 1 & 0x7f | uVar23 << 7;
+        uVar24 = uVar29 ^ 0x30;
+        if ((char)uVar30 == '\0') {
+          uVar24 = uVar29;
+        }
+        uVar29 = uVar24 >> 1 & 0x7f | uVar35 << 7;
+        puVar32 = puVar33;
+      } while (puVar33 != &local_38);
+      auVar59 = (undefined  [16])0x0;
+      FUN_00101c60(&local_218,&local_238,local_128,0xc);
+      auVar16 = _DAT_00103290;
+      uVar37 = (ulong)local_218._7_1_;
+      local_2a0 = (ulong)local_218._1_1_;
+      local_2e8 = uStack_210._2_1_;
+      local_290 = (ulong)local_218._3_1_;
+      local_2e6 = uStack_210._4_1_;
+      local_2d8 = (ulong)local_218._7_1_;
+      local_298 = (ulong)local_218._2_1_;
+      local_2d0 = uStack_210 & 0xff;
+      local_2e5 = uStack_210._5_1_;
+      uVar27 = (ulong)local_218._5_1_;
+      local_2e7 = uStack_210._3_1_;
+      local_208 = local_238;
+      uVar17 = local_208;
+      local_2e0 = (ulong)local_218._6_1_;
+      local_288 = (ulong)local_218._5_1_;
+      uVar26 = uStack_210 >> 0x38;
+      local_2e4 = (byte)local_218;
+      auVar13._8_8_ = uStack_230;
+      auVar13._0_8_ = local_238;
+      local_2e3 = (byte)uStack_210;
+      local_2e1 = uStack_210._6_1_;
+      lVar25 = 0;
+      local_280 = (ulong)local_218._4_1_;
+      local_2e2 = uStack_210._1_1_;
+      local_2f0 = local_218 & 0xff;
+      local_2a8 = (ulong)uStack_210._6_1_;
+      local_2b0 = (ulong)uStack_210._5_1_;
+      local_2b8 = (ulong)uStack_210._4_1_;
+      local_2c0 = (ulong)uStack_210._3_1_;
+      uVar23 = (uint)local_218._6_1_;
+      local_2c8 = (ulong)uStack_210._2_1_;
+      uVar35 = (uint)local_218._4_1_;
+      uVar29 = (uint)local_218._3_1_;
+      uVar34 = (ulong)local_218._2_1_;
+      uVar31 = (ulong)local_218._1_1_;
+      uVar21 = (ulong)uStack_210._1_1_;
+      uVar38 = uVar26;
+      do {
+        auVar12._8_8_ =
+             ((((((uVar26 << 8 | local_2a8) << 8 | local_2b0) << 8 | local_2b8) << 8 | local_2c0) <<
+               8 | local_2c8) << 8 | uVar21) << 8 | local_2d0;
+        auVar12._0_8_ =
+             ((((((local_2d8 << 8 | local_2e0) << 8 | local_288) << 8 | local_280) << 8 | local_290)
+               << 8 | local_298) << 8 | local_2a0) << 8 | local_2f0;
+        uVar30 = (uint)lVar25 & 1;
+        iVar19 = -(uint)(-(uint)(uVar30 == auVar59._0_4_) == auVar59._0_4_);
+        iVar55 = -(uint)(-(uint)(uVar30 == auVar59._4_4_) == auVar59._4_4_);
+        auVar39._0_8_ = CONCAT44(iVar55,iVar19);
+        auVar39._8_4_ = -(uint)(-(uint)(uVar30 == auVar59._8_4_) == auVar59._8_4_);
+        sVar58 = -(ushort)(-(uint)(uVar30 == auVar59._12_4_) == auVar59._12_4_);
+        uVar56 = (undefined2)auVar39._8_4_;
+        uVar57 = (undefined2)((uint)auVar39._8_4_ >> 0x10);
+        uVar53 = (undefined2)((uint)iVar55 >> 0x10);
+        auVar43._12_2_ = uVar53;
+        auVar43._0_12_ = auVar39;
+        auVar43._14_2_ = uVar53;
+        uVar54 = (undefined2)iVar55;
+        auVar42._12_4_ = auVar43._12_4_;
+        auVar42._0_10_ = auVar39._0_10_;
+        auVar42._10_2_ = uVar54;
+        auVar41._10_6_ = auVar42._10_6_;
+        auVar41._8_2_ = uVar54;
+        auVar41._0_8_ = auVar39._0_8_;
+        uVar53 = (undefined2)((uint)iVar19 >> 0x10);
+        auVar14._2_8_ = auVar41._8_8_;
+        auVar14._0_2_ = uVar53;
+        auVar14._10_6_ = 0;
+        auVar51._0_2_ = (undefined2)iVar19;
+        auVar40._12_4_ = 0;
+        auVar40._0_12_ = SUB1612(auVar14 << 0x30,4);
+        auVar40 = auVar40 << 0x20;
+        auVar47._0_12_ = auVar40._0_12_;
+        auVar47._12_2_ = uVar53;
+        auVar47._14_2_ = uVar57;
+        auVar46._12_4_ = auVar47._12_4_;
+        auVar46._0_10_ = auVar40._0_10_;
+        auVar46._10_2_ = uVar57;
+        auVar45._10_6_ = auVar46._10_6_;
+        auVar45._0_8_ = auVar40._0_8_;
+        auVar45._8_2_ = uVar53;
+        auVar15._2_8_ = auVar45._8_8_;
+        auVar15._0_2_ = uVar56;
+        auVar15._10_6_ = 0;
+        auVar44._12_4_ = 0;
+        auVar44._0_12_ = SUB1612(auVar15 << 0x30,4);
+        auVar44 = auVar44 << 0x20;
+        auVar50._0_12_ = auVar44._0_12_;
+        auVar50._12_2_ = uVar56;
+        auVar50._14_2_ = sVar58;
+        auVar49._12_4_ = auVar50._12_4_;
+        auVar49._0_10_ = auVar44._0_10_;
+        auVar49._10_2_ = uVar54;
+        auVar48._10_6_ = auVar49._10_6_;
+        auVar48._0_8_ = auVar44._0_8_;
+        auVar48._8_2_ = auVar51._0_2_;
+        auVar51._8_8_ = auVar48._8_8_;
+        auVar51._6_2_ = sVar58;
+        auVar51._4_2_ = uVar56;
+        auVar51._2_2_ = uVar54;
+        auVar51 = auVar51 & auVar16;
+        sVar58 = auVar51._0_2_;
+        sVar3 = auVar51._2_2_;
+        auVar52[1] = (0 < sVar3) * (sVar3 < 0xff) * auVar51[2] - (0xff < sVar3);
+        auVar52[0] = (0 < sVar58) * (sVar58 < 0xff) * auVar51[0] - (0xff < sVar58);
+        sVar4 = auVar51._4_2_;
+        auVar52[2] = (0 < sVar4) * (sVar4 < 0xff) * auVar51[4] - (0xff < sVar4);
+        sVar5 = auVar51._6_2_;
+        auVar52[3] = (0 < sVar5) * (sVar5 < 0xff) * auVar51[6] - (0xff < sVar5);
+        sVar6 = auVar51._8_2_;
+        auVar52[4] = (0 < sVar6) * (sVar6 < 0xff) * auVar51[8] - (0xff < sVar6);
+        sVar7 = auVar51._10_2_;
+        auVar52[5] = (0 < sVar7) * (sVar7 < 0xff) * auVar51[10] - (0xff < sVar7);
+        sVar8 = auVar51._12_2_;
+        auVar52[6] = (0 < sVar8) * (sVar8 < 0xff) * auVar51[12] - (0xff < sVar8);
+        sVar9 = auVar51._14_2_;
+        auVar52[7] = (0 < sVar9) * (sVar9 < 0xff) * auVar51[14] - (0xff < sVar9);
+        auVar52[8] = (0 < sVar58) * (sVar58 < 0xff) * auVar51[0] - (0xff < sVar58);
+        auVar52[9] = (0 < sVar3) * (sVar3 < 0xff) * auVar51[2] - (0xff < sVar3);
+        auVar52[10] = (0 < sVar4) * (sVar4 < 0xff) * auVar51[4] - (0xff < sVar4);
+        auVar52[11] = (0 < sVar5) * (sVar5 < 0xff) * auVar51[6] - (0xff < sVar5);
+        auVar52[12] = (0 < sVar6) * (sVar6 < 0xff) * auVar51[8] - (0xff < sVar6);
+        auVar52[13] = (0 < sVar7) * (sVar7 < 0xff) * auVar51[10] - (0xff < sVar7);
+        auVar52[14] = (0 < sVar8) * (sVar8 < 0xff) * auVar51[12] - (0xff < sVar8);
+        auVar52[15] = (0 < sVar9) * (sVar9 < 0xff) * auVar51[14] - (0xff < sVar9);
+        *(undefined (*) [16])(local_200 + lVar25 * 0x10) =
+             ~auVar52 & (auVar12 ^ *(undefined (*) [16])(local_c8 + lVar25 * 0x10)) |
+             (auVar12 ^ *(undefined (*) [16])(local_c8 + lVar25 * 0x10) ^ auVar13) & auVar52;
+        bVar22 = local_2e4 << 7 | (byte)(uVar31 >> 1) & 0x7f;
+        uVar31 = (ulong)((int)uVar31 << 7 | (uint)CONCAT71((int7)(uVar34 >> 8),(byte)uVar34 >> 1));
+        uVar34 = (ulong)((int)uVar34 << 7 | CONCAT31((int3)(uVar29 >> 8),(byte)uVar29 >> 1));
+        uVar29 = uVar29 << 7 | CONCAT31((int3)(uVar35 >> 8),(byte)uVar35 >> 1);
+        uVar35 = uVar35 << 7 | (uint)CONCAT71((int7)(uVar27 >> 8),(byte)uVar27 >> 1);
+        uVar27 = (ulong)((int)uVar27 << 7 | CONCAT31((int3)(uVar23 >> 8),(byte)uVar23 >> 1));
+        uVar23 = uVar23 << 7 | (uint)CONCAT71((int7)(uVar37 >> 8),(byte)uVar37 >> 1);
+        uVar37 = (ulong)((int)uVar37 << 7 | (uint)uVar38 & 0x7f);
+        bVar10 = local_2e3 * '\x02';
+        local_2e3 = local_2e3 >> 7 | local_2e4 & 0xfe;
+        bVar18 = local_2e2 * '\x02';
+        local_2e2 = bVar10 | local_2e2 >> 7;
+        bVar18 = bVar18 | local_2e8 >> 7;
+        bVar10 = local_2e7 * '\x02';
+        local_2e7 = local_2e8 * '\x02' | local_2e7 >> 7;
+        bVar11 = local_2e6 * '\x02';
+        local_2e6 = bVar10 | local_2e6 >> 7;
+        bVar10 = local_2e5 * '\x02';
+        local_2e5 = bVar11 | local_2e5 >> 7;
+        uVar30 = (uint)local_2e1;
+        local_2d8 = uVar37 & 0xff;
+        uVar24 = (uint)local_2e1;
+        local_2e0 = (ulong)(uVar23 & 0xff);
+        local_288 = uVar27 & 0xff;
+        local_2e1 = bVar10 | local_2e1 >> 7;
+        local_2f0 = (ulong)bVar22;
+        local_280 = (ulong)(uVar35 & 0xff);
+        uVar38 = (ulong)(uVar30 + uVar24 | (uint)(uVar38 >> 7) & 1);
+        local_290 = (ulong)(uVar29 & 0xff);
+        local_2a8 = (ulong)local_2e1;
+        local_2d0 = (ulong)local_2e3;
+        local_298 = uVar34 & 0xff;
+        local_2a0 = uVar31 & 0xff;
+        uVar26 = uVar38 & 0xff;
+        local_2b0 = (ulong)local_2e5;
+        local_2b8 = (ulong)local_2e6;
+        local_2c0 = (ulong)local_2e7;
+        lVar25 = lVar25 + 1;
+        local_2c8 = (ulong)bVar18;
+        uVar21 = (ulong)local_2e2;
+        local_2e8 = bVar18;
+        local_2e4 = bVar22;
+      } while (lVar25 != 9);
+      local_170 = uStack_230;
+      local_208._1_1_ = (byte)((ulong)local_238 >> 8);
+      local_208._3_1_ = (byte)((ulong)local_238 >> 0x18);
+      local_208._2_1_ = (byte)((ulong)local_238 >> 0x10);
+      local_218 = CONCAT44(CONCAT13((byte)((ulong)local_228 >> 0x38) ^ local_208._3_1_,
+                                    CONCAT12((byte)((ulong)local_228 >> 0x30) ^ local_208._2_1_,
+                                             CONCAT11((byte)((ulong)local_228 >> 0x28) ^
+                                                      local_208._1_1_,
+                                                      (byte)((ulong)local_228 >> 0x20) ^
+                                                      (byte)local_238))),(int)local_228);
+      local_208._5_1_ = (byte)((ulong)local_238 >> 0x28);
+      local_208._6_1_ = (byte)((ulong)local_238 >> 0x30);
+      local_208._7_1_ = (byte)((ulong)local_238 >> 0x38);
+      uStack_210 = CONCAT44(CONCAT13((byte)((ulong)local_220 >> 0x38) ^ local_208._7_1_,
+                                     CONCAT12((byte)((ulong)local_220 >> 0x30) ^ local_208._6_1_,
+                                              CONCAT11((byte)((ulong)local_220 >> 0x28) ^
+                                                       local_208._5_1_,
+                                                       (byte)((ulong)local_220 >> 0x20) ^
+                                                       (byte)((ulong)local_238 >> 0x20)))),
+                            (int)local_220);
+      local_208 = uVar17;
+      FUN_00101c60(local_128,&local_218,local_200,0x12,uVar31,uVar34,
+                   ((((((local_2d8 << 8 | local_2e0) << 8 | local_288) << 8 | local_280) << 8 |
+                     local_290) << 8 | local_298) << 8 | local_2a0) << 8 | local_2f0,
+                   ((((((uVar26 << 8 | local_2a8) << 8 | local_2b0) << 8 | local_2b8) << 8 |
+                     local_2c0) << 8 | local_2c8) << 8 | uVar21) << 8 | local_2d0);
+      local_258 = CONCAT44((uint)CONCAT11((byte)((ulong)uStack_230 >> 8) ^
+                                          (byte)(local_128[0] >> 0x28),
+                                          (byte)(local_128[0] >> 0x20) ^ (byte)uStack_230) |
+                           (((uint)(ushort)(local_128[0] >> 0x30) ^
+                            (uint)((ulong)uStack_230 >> 0x10)) & 0xff) << 0x10 |
+                           ((uint)(byte)(local_128[0] >> 0x38) ^ (uint)((ulong)uStack_230 >> 0x18))
+                           << 0x18,(int)local_128[0]);
+      local_250 = CONCAT44((uint)CONCAT11((byte)((ulong)uStack_230 >> 0x28) ^
+                                          (byte)(local_128[1] >> 0x28),
+                                          (byte)(local_128[1] >> 0x20) ^
+                                          (byte)((ulong)uStack_230 >> 0x20)) |
+                           ((ushort)((ushort)(local_128[1] >> 0x30) ^
+                                    (ushort)((ulong)uStack_230 >> 0x30)) & 0xff) << 0x10 |
+                           (uint)(byte)((byte)(local_128[1] >> 0x38) ^
+                                       (byte)((ulong)uStack_230 >> 0x38)) << 0x18,(int)local_128[1])
+      ;
+      __printf_chk(1,"Ciphertext(hex): ");
+      puVar28 = &local_258;
+      do {
+        uVar2 = *(undefined *)puVar28;
+        puVar28 = (undefined8 *)((long)puVar28 + 1);
+        __printf_chk(1,&DAT_00103030,uVar2);
+      } while (&local_248 != puVar28);
+      __printf_chk(1,"\n");
+      iVar19 = memcmp(&local_258,&local_248,0x10);
+      if (iVar19 == 0) {
+        __printf_chk(1,"True!");
+        uVar36 = 0;
+      }
+      else {
+        uVar36 = 1;
+        __printf_chk(1,"False");
+      }
+    }
+    else {
+LAB_001011ef:
+      uVar36 = 1;
+      __fprintf_chk(*(undefined8 *)PTR_stderr_00104ff8,1,
+                    "Bad input hex. Expecting 32 hex chars (16 bytes).\n");
+    }
+  }
+  else {
+    uVar36 = 1;
+    __fprintf_chk(*(undefined8 *)PTR_stderr_00104ff8,1,"Usage: %s <32-hex-chars>\n",*param_2);
+  }
+  if (local_30 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return uVar36;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+

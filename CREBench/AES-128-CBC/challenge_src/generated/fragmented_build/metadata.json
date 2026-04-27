@@ -1,0 +1,10 @@
+{
+  "challenge": "AES-128-CBC",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "4c715932e60fb56e716a5d9af88f5c5764eaea10fb79399b5dd1b69f960d3253",
+  "key": "69353609274909a7b8026d1477d46d38",
+  "iv": "aa1673460a4595d9ece4e8c347307803",
+  "target_ciphertext": "2d4ce6adbf7166097c0c584d43c86a82d32bed23d4035dc9423355d2514cc259",
+  "test_vectors_path": "CREBench/AES-128-CBC/test_vectors-fragmented_build.json"
+}

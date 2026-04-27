@@ -1,0 +1,10 @@
+{
+  "challenge": "E0",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "5d07e9f0b2864a34e95d81269be6737dee209297bec4d63fd6ff04c0faa3b29d",
+  "key": "b1956b159bec6792a6b00211d4e462a9",
+  "iv": "bc97e80950eb8751577f",
+  "target_ciphertext": "065ff2226879429ee9b8d300bd61497c34d212d7b9c39f9ca44af5ebaa17188d",
+  "test_vectors_path": "CREBench/E0/test_vectors-weak_prng_seeded.json"
+}

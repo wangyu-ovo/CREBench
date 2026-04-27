@@ -1,0 +1,17 @@
+
+undefined FUN_001015c4(byte param_1,byte param_2)
+
+{
+  undefined uVar1;
+  
+  if ((param_1 == 0) || (param_2 == 0)) {
+    uVar1 = 0;
+  }
+  else {
+    uVar1 = (&DAT_0010c040)
+            [((uint)(byte)(&DAT_0010c140)[(int)(uint)param_2] +
+             (uint)(byte)(&DAT_0010c140)[(int)(uint)param_1]) % 0xff];
+  }
+  return uVar1;
+}
+

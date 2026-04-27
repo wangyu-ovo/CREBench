@@ -1,0 +1,21 @@
+
+int FUN_001018cf(int param_1,int param_2,undefined4 param_3)
+
+{
+  int iVar1;
+  int iVar2;
+  uint uVar3;
+  byte bVar4;
+  undefined4 uVar5;
+  
+  uVar5 = FUN_00101743(param_2 - param_1,param_3);
+  bVar4 = FUN_0010170a(uVar5);
+  iVar1 = *(int *)(&DAT_001040a0 + (long)(int)(uint)bVar4 * 4);
+  bVar4 = FUN_00101719(uVar5);
+  iVar2 = *(int *)(&DAT_001044a0 + (long)(int)(uint)bVar4 * 4);
+  bVar4 = FUN_00101728(uVar5);
+  uVar3 = *(uint *)(&DAT_001048a0 + (long)(int)(uint)bVar4 * 4);
+  bVar4 = FUN_00101737(uVar5);
+  return (iVar1 + iVar2 ^ uVar3) - *(int *)(&DAT_00104ca0 + (long)(int)(uint)bVar4 * 4);
+}
+

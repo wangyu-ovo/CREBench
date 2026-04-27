@@ -1,0 +1,17 @@
+
+void FUN_00101870(long param_1,ulong param_2)
+
+{
+  uint local_1c;
+  ulong local_18;
+  
+  local_1c = 0xd3b0a6a6;
+  for (local_18 = 0; local_18 < param_2; local_18 = local_18 + 1) {
+    local_1c = local_1c * 0x19660d + 0x3c6ef35f;
+    *(byte *)(local_18 + param_1) =
+         (byte)(local_1c >> (sbyte)(((uint)local_18 & 3) << 3)) ^
+         (&DAT_001020a0)[(uint)local_18 & 0xf];
+  }
+  return;
+}
+

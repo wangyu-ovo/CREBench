@@ -1,0 +1,10 @@
+{
+  "challenge": "E0",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "5d07e9f0b2864a34e95d81269be6737dee209297bec4d63fd6ff04c0faa3b29d",
+  "key": "b7d43bdd235c6078ea28e76f7afaf849",
+  "iv": "bc97e80950eb8751577f",
+  "target_ciphertext": "f3a8e1f701272e2d8177fc545bb8470e9fc30632833317fb984e4d4acff18e57",
+  "test_vectors_path": "CREBench/E0/test_vectors-fragmented_build.json"
+}

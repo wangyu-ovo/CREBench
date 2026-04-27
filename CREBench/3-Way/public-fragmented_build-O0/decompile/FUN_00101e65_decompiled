@@ -1,0 +1,40 @@
+
+void FUN_00101e65(uint *param_1,long param_2,long param_3)
+
+{
+  long in_FS_OFFSET;
+  uint local_24;
+  uint local_20;
+  uint local_1c;
+  uint local_18;
+  uint local_14;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_24 = FUN_00101803(param_2);
+  local_20 = FUN_00101803(param_2 + 4);
+  local_1c = FUN_00101803(param_2 + 8);
+  FUN_001018a7(&local_24,&local_20,&local_1c);
+  local_18 = 0xb1b1;
+  for (local_14 = 0; local_14 < param_1[3]; local_14 = local_14 + 1) {
+    local_24 = local_24 ^ *param_1 ^ local_18 << 0x10;
+    local_20 = local_20 ^ param_1[1];
+    local_1c = local_1c ^ param_1[2] ^ local_18;
+    FUN_00101aa3(&local_24,&local_20,&local_1c);
+    local_18 = FUN_00101aec(local_18);
+  }
+  local_24 = local_24 ^ *param_1 ^ local_18 << 0x10;
+  local_20 = local_20 ^ param_1[1];
+  local_1c = local_1c ^ param_1[2] ^ local_18;
+  FUN_0010199e(&local_24,&local_20,&local_1c);
+  FUN_001018a7(&local_24,&local_20,&local_1c);
+  FUN_00101854(param_3,local_24);
+  FUN_00101854(param_3 + 4,local_20);
+  FUN_00101854(param_3 + 8,local_1c);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

@@ -1,0 +1,68 @@
+
+void FUN_00101a39(long param_1,byte *param_2,byte *param_3,undefined *param_4,ulong param_5)
+
+{
+  byte *pbVar1;
+  byte *pbVar2;
+  byte *pbVar3;
+  byte *pbVar4;
+  byte *pbVar5;
+  byte *pbVar6;
+  byte *pbVar7;
+  undefined *puVar8;
+  byte bVar9;
+  long in_FS_OFFSET;
+  undefined *local_58;
+  byte *local_50;
+  uint local_38;
+  uint local_34;
+  ulong local_28;
+  uint local_18;
+  uint local_14;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  if ((((param_1 != 0) && (param_2 != (byte *)0x0)) && (param_3 != (byte *)0x0)) &&
+     ((param_4 != (undefined *)0x0 && ((param_5 & 7) == 0)))) {
+    local_38 = (uint)*param_2 << 0x18 | (uint)param_2[1] << 0x10 | (uint)param_2[2] << 8 |
+               (uint)param_2[3];
+    local_34 = (uint)param_2[4] << 0x18 | (uint)param_2[5] << 0x10 | (uint)param_2[6] << 8 |
+               (uint)param_2[7];
+    local_58 = param_4;
+    local_50 = param_3;
+    for (local_28 = 0; local_28 < param_5; local_28 = local_28 + 8) {
+      pbVar1 = local_50 + 1;
+      bVar9 = *local_50;
+      pbVar2 = local_50 + 2;
+      pbVar3 = local_50 + 3;
+      pbVar4 = local_50 + 4;
+      pbVar5 = local_50 + 5;
+      pbVar6 = local_50 + 6;
+      pbVar7 = local_50 + 7;
+      local_50 = local_50 + 8;
+      local_18 = ((uint)bVar9 << 0x18 | (uint)*pbVar1 << 0x10 | (uint)*pbVar2 << 8 | (uint)*pbVar3)
+                 ^ local_38;
+      local_14 = ((uint)*pbVar4 << 0x18 | (uint)*pbVar5 << 0x10 | (uint)*pbVar6 << 8 | (uint)*pbVar7
+                 ) ^ local_34;
+      FUN_00101732(&local_18,param_1);
+      local_38 = local_18;
+      local_34 = local_14;
+      *local_58 = (char)(local_18 >> 0x18);
+      local_58[1] = (char)(local_18 >> 0x10);
+      local_58[2] = (char)(local_18 >> 8);
+      local_58[3] = (char)local_18;
+      local_58[4] = (char)(local_14 >> 0x18);
+      local_58[5] = (char)(local_14 >> 0x10);
+      puVar8 = local_58 + 7;
+      local_58[6] = (char)(local_14 >> 8);
+      local_58 = local_58 + 8;
+      *puVar8 = (char)local_14;
+    }
+  }
+  if (local_10 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+

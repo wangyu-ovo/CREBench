@@ -1,0 +1,10 @@
+{
+  "challenge": "Clefia",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "7f432af2a53a1f80aee8dda2ef7d074b",
+  "key": "f22f2bf350d3094676a275334856abf2",
+  "iv": "",
+  "target_ciphertext": "fb4b734f0757a28269d5e85c10e2a463",
+  "test_vectors_path": "CREBench/Clefia/test_vectors-hardcode_plain.json"
+}

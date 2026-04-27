@@ -1,0 +1,77 @@
+
+void FUN_00101209(long param_1,long param_2)
+
+{
+  int iVar1;
+  long in_FS_OFFSET;
+  int local_98;
+  uint local_94;
+  long local_90;
+  ulong local_88 [4];
+  undefined8 local_68;
+  undefined8 local_60;
+  undefined8 local_58;
+  undefined8 local_50;
+  undefined8 local_48;
+  undefined8 local_40;
+  ulong local_38;
+  undefined8 local_30;
+  undefined8 local_28;
+  ulong local_20;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_88[0] = 0;
+  local_88[1] = 0;
+  for (local_98 = 0; local_98 < 0x10; local_98 = local_98 + 1) {
+    iVar1 = local_98;
+    if (local_98 < 0) {
+      iVar1 = local_98 + 7;
+    }
+    local_88[iVar1 >> 3] =
+         local_88[iVar1 >> 3] |
+         (ulong)*(byte *)(param_2 + local_98) << ((byte)(local_98 % 8 << 3) & 0x3f);
+  }
+  local_88[2] = 0;
+  local_88[3] = 0;
+  local_68 = 0;
+  local_60 = 0;
+  local_50 = 0;
+  local_48 = 0;
+  local_40 = 0;
+  local_38 = 0;
+  local_30 = 0;
+  local_28 = 0;
+  local_20 = 0;
+  local_58 = 5;
+  FUN_00102784(&local_58,&local_48,local_88,2);
+  FUN_0010247a(&local_48,&local_58,local_88);
+  FUN_001017da(&local_58,&local_48,local_88);
+  FUN_001014ec(&local_48,local_88 + 2);
+  local_90 = 0x1000100010001;
+  local_38 = local_88[0];
+  local_30 = local_88[1];
+  local_20 = local_88[0];
+  local_28 = local_88[1];
+  for (local_94 = 0; local_94 < 0xb; local_94 = local_94 + 2) {
+    FUN_001028dc(local_88 + 2,&local_68,local_90,2);
+    if ((local_94 >> 1 & 1) == 0) {
+      FUN_00102784(&local_38,&local_48,&local_68,2);
+    }
+    else {
+      FUN_00102784(&local_28,&local_48,&local_68,2);
+    }
+    FUN_0010247a(&local_48,&local_58,&local_68);
+    FUN_001017da(&local_58,(ulong)(local_94 * 2) * 8 + param_1,&local_68);
+    if (local_94 != 10) {
+      FUN_00102874(param_1 + (ulong)(local_94 * 2) * 8,(ulong)((local_94 + 1) * 2) * 8 + param_1);
+    }
+    local_90 = local_90 << 1;
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

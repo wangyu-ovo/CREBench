@@ -1,0 +1,17 @@
+
+void FUN_00102340(long param_1,long param_2)
+
+{
+  long lVar1;
+  long extraout_RDX;
+  
+  FUN_00102330();
+  lVar1 = 0;
+  do {
+    *(uint *)(extraout_RDX + lVar1) = *(uint *)(param_1 + lVar1) ^ *(uint *)(param_2 + lVar1);
+    lVar1 = lVar1 + 4;
+  } while (lVar1 != 0x400);
+  FUN_00102330();
+  return;
+}
+

@@ -1,0 +1,10 @@
+{
+  "challenge": "Kasumi",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "50fae1dd5af66ee6",
+  "key": "fb7ce38c59b4c17387021e4a2956c73e",
+  "iv": "",
+  "target_ciphertext": "5b87ffbd25221faf",
+  "test_vectors_path": "CREBench/Kasumi/test_vectors-hardcode_plain.json"
+}

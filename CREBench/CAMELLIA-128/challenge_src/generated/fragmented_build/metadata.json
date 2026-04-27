@@ -1,0 +1,10 @@
+{
+  "challenge": "CAMELLIA-128",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "f8ef2e4cfd48fd89206e39540910acb6",
+  "key": "8d6afe491bf1c1ef0fb643a072b1c425",
+  "iv": "",
+  "target_ciphertext": "2f3de21c0eb028cb002d792de3f3b674",
+  "test_vectors_path": "CREBench/CAMELLIA-128/test_vectors-fragmented_build.json"
+}

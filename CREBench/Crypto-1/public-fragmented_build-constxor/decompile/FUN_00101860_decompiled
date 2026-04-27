@@ -1,0 +1,18 @@
+
+uint FUN_00101860(uint param_1)
+
+{
+  byte bVar1;
+  ulong uVar2;
+  
+  uVar2 = (ulong)param_1;
+  FUN_001017c0();
+  bVar1 = (byte)(DAT_00104040 >> ((byte)(uVar2 >> 0x10) & 0xf)) & 1 |
+          (byte)(DAT_00104034 >> ((byte)((uVar2 & 0xffffffff) >> 4) & 0xf)) & 8 |
+          (byte)(DAT_00104038 >> ((byte)(uVar2 >> 8) & 0xf)) & 4 |
+          (byte)(DAT_00104030 >> ((byte)uVar2 & 0xf)) & 0x10 |
+          (byte)(DAT_0010403c >> ((byte)(uVar2 >> 0xc) & 0xf)) & 2;
+  FUN_00101810();
+  return DAT_00104044 >> (bVar1 & 0x1f) & 1;
+}
+

@@ -1,0 +1,52 @@
+name: loki97
+publc_path: CREBench/LOKI97/public
+flag: b71bd2fa62e987bd5ed5e227ffe7d8d992fca702ac1e627e1352745e1bfb857d
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: LOKI97-CBC
+algorithm_aliases:
+  - LOKI97
+  - LOKI 97
+  - LOKI97 CBC
+  - loki97_cbc
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/LOKI97/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: cbc_direct
+  key_source_file: CREBench/LOKI97/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1727740800
+  key_seed_note: fixed_timestamp_utc_2024_10_01_00_00_00
+  key_length_bytes: 32
+  block_size_bytes: 16
+  iv_length_bytes: 16
+  target_length_bytes: 32
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: loki97_magic
+  compile_define: CONSTXOR_LOKI97_TABLES
+  source_file: src/loki97.c
+  tables:
+    - symbol: loki97_magic
+      ctype: uint32_t
+      accessor: constxor_loki97_magic
+

@@ -1,0 +1,10 @@
+{
+  "challenge": "Kuznyechik-128-ECB",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "f2e55e6ecdc7adf46adafac99b08662ee4234749f7d973fab460cee2cc97984e",
+  "key": "cb2b85bea5758954e41e3451aee00c3e982a81a124e3aa1d42e88fa0152c406c",
+  "iv": "",
+  "target_ciphertext": "4eff41804ca9f831272be71b8cda944f9eb93bb3837ae8a45bd3a882bcec7b90",
+  "test_vectors_path": "CREBench/Kuznyechik-128-ECB/test_vectors-weak_prng_seeded.json"
+}

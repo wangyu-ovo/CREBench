@@ -1,0 +1,10 @@
+{
+  "challenge": "ChaCha20",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "53535a92ee92e3aaef03b97d86baa8637fe13109944b9cd1978e064e3242926b",
+  "key": "1c1e579449da88b2163ab7187b6bb19bb8be7506669c66b065e05320c1649ee7",
+  "iv": "b31f2a2e568154e3c866b850",
+  "target_ciphertext": "c0f14602aeb7856c848f814d3da9a1186a9c9a6c0eecf31bea42ebd6e16a68a0",
+  "test_vectors_path": "CREBench/ChaCha20/test_vectors-weak_prng_seeded.json"
+}

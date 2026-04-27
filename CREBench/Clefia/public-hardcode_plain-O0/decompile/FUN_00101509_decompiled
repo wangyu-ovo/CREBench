@@ -1,0 +1,12 @@
+
+void FUN_00101509(long param_1,ulong param_2)
+
+{
+  ulong local_18;
+  
+  for (local_18 = 0; local_18 < param_2; local_18 = local_18 + 1) {
+    *(undefined *)(local_18 + param_1) = (&DAT_00103080)[(uint)local_18 & 0xf];
+  }
+  return;
+}
+

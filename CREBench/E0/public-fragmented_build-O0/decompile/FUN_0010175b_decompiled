@@ -1,0 +1,16 @@
+
+uint FUN_0010175b(undefined param_1,byte param_2)
+
+{
+  char cVar1;
+  char cVar2;
+  char cVar3;
+  char cVar4;
+  
+  cVar1 = FUN_00101653(param_1,1,4);
+  cVar2 = FUN_00101653(param_1,2,4);
+  cVar3 = FUN_00101653(param_1,3,4);
+  cVar4 = FUN_00101653(param_1,4,4);
+  return (uint)param_2 + (uint)(byte)(cVar4 + cVar1 + cVar2 + cVar3) >> 1;
+}
+

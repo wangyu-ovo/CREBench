@@ -1,0 +1,28 @@
+
+undefined8 FUN_001017fc(char *param_1,long param_2,ulong param_3)
+
+{
+  int iVar1;
+  int iVar2;
+  size_t sVar3;
+  undefined8 uVar4;
+  ulong local_18;
+  
+  sVar3 = strlen(param_1);
+  if (sVar3 == param_3 * 2) {
+    for (local_18 = 0; local_18 < param_3; local_18 = local_18 + 1) {
+      iVar1 = FUN_001017a9((int)param_1[local_18 * 2]);
+      iVar2 = FUN_001017a9((int)param_1[local_18 * 2 + 1]);
+      if ((iVar1 < 0) || (iVar2 < 0)) {
+        return 0;
+      }
+      *(byte *)(local_18 + param_2) = (byte)(iVar1 << 4) | (byte)iVar2;
+    }
+    uVar4 = 1;
+  }
+  else {
+    uVar4 = 0;
+  }
+  return uVar4;
+}
+

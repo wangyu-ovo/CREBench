@@ -1,0 +1,7 @@
+
+uint FUN_001015dc(ulong param_1,byte param_2)
+
+{
+  return (uint)(param_1 >> (param_2 & 0x3f)) & 1;
+}
+

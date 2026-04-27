@@ -1,0 +1,56 @@
+name: aes_cbc
+publc_path: CREBench/AES-128-CBC/public
+flag: 4c715932e60fb56e716a5d9af88f5c5764eaea10fb79399b5dd1b69f960d3253
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: AES-128-CBC
+algorithm_aliases:
+  - AES-128
+  - AES CBC
+  - AES-CBC-128
+  - aes_128_cbc
+  - aes_cbc
+  - aes
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/AES-128-CBC/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: cbc_direct
+  key_source_file: CREBench/AES-128-CBC/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1704067200
+  key_seed_note: fixed_timestamp_utc_2024_01_01_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 16
+  iv_length_bytes: 16
+  target_length_bytes: 32
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: aes128_tables
+  compile_define: CONSTXOR_AES_TABLES
+  source_file: src/aes.c
+  tables:
+    - symbol: sbox
+      ctype: uint8_t
+      accessor: constxor_aes_sbox
+    - symbol: Rcon
+      ctype: uint32_t
+      accessor: constxor_aes_rcon

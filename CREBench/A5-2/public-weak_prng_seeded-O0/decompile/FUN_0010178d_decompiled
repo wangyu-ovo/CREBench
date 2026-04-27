@@ -1,0 +1,37 @@
+
+void FUN_0010178d(undefined4 *param_1,int param_2)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  uint uVar4;
+  undefined4 uVar5;
+  undefined4 *puVar6;
+  undefined4 *puVar7;
+  uint *puVar8;
+  
+  puVar6 = (undefined4 *)FUN_0010161a();
+  puVar7 = (undefined4 *)FUN_0010162b();
+  puVar8 = (uint *)FUN_0010163c();
+  uVar1 = (uint)((*puVar8 & param_1[3]) != 0);
+  uVar2 = (uint)((puVar8[1] & param_1[3]) != 0);
+  uVar3 = (uint)((puVar8[2] & param_1[3]) != 0);
+  uVar4 = FUN_0010171a(uVar1,uVar2,uVar3);
+  if ((param_2 != 0) || (uVar4 == uVar1)) {
+    uVar5 = FUN_00101758(*param_1,*puVar6,*puVar7);
+    *param_1 = uVar5;
+  }
+  if ((param_2 != 0) || (uVar4 == uVar2)) {
+    uVar5 = FUN_00101758(param_1[1],puVar6[1],puVar7[1]);
+    param_1[1] = uVar5;
+  }
+  if ((param_2 != 0) || (uVar4 == uVar3)) {
+    uVar5 = FUN_00101758(param_1[2],puVar6[2],puVar7[2]);
+    param_1[2] = uVar5;
+  }
+  uVar5 = FUN_00101758(param_1[3],puVar6[3],puVar7[3]);
+  param_1[3] = uVar5;
+  return;
+}
+

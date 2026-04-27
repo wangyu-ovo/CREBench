@@ -1,0 +1,10 @@
+{
+  "challenge": "IDEA",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "07128db9a5f03f0d",
+  "key": "a40295b76fc7516f80a9a54e3690f398",
+  "iv": "",
+  "target_ciphertext": "e5378a052758b091",
+  "test_vectors_path": "CREBench/IDEA/test_vectors-fragmented_build.json"
+}

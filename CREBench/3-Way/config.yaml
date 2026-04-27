@@ -1,0 +1,51 @@
+name: threeway
+publc_path: CREBench/3-Way/public
+flag: 5296ba4623d5f79dc7a304be31e852ac3700734b2a67ad686e3a5d098f1c82aa16638a8adb7f115f9059421838708ed5
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: 3-WAY-ECB
+algorithm_aliases:
+  - 3-Way
+  - 3Way
+  - threeway
+  - 3-way-ecb
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/3-Way/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: fragmented_build
+
+template_metadata:
+  wrapper_family: multi_block_ecb
+  key_source_file: CREBench/3-Way/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1701388800
+  key_seed_note: fixed_timestamp_utc_2023_12_01_00_00_00
+  key_length_bytes: 12
+  block_size_bytes: 12
+  iv_length_bytes: 0
+  target_length_bytes: 48
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: threeway_magic
+  compile_define: CONSTXOR_THREEWAY_TABLES
+  source_file: src/threeway.c
+  tables:
+    - symbol: threeway_magic
+      ctype: uint32_t
+      accessor: constxor_threeway_magic

@@ -1,0 +1,357 @@
+
+undefined8 FUN_00101b16(ulong *param_1,ulong *param_2)
+
+{
+  long lVar1;
+  ulong uVar2;
+  ulong uVar3;
+  long in_FS_OFFSET;
+  uint local_64;
+  undefined8 local_58;
+  undefined8 local_50;
+  ulong local_48;
+  ulong local_40;
+  byte local_38;
+  byte bStack_37;
+  byte bStack_36;
+  byte bStack_35;
+  byte bStack_34;
+  byte bStack_33;
+  byte bStack_32;
+  byte bStack_31;
+  byte local_30;
+  byte bStack_2f;
+  byte bStack_2e;
+  byte bStack_2d;
+  byte bStack_2c;
+  byte bStack_2b;
+  byte bStack_2a;
+  byte bStack_29;
+  
+  lVar1 = *(long *)(in_FS_OFFSET + 0x28);
+  if (DAT_0013c440 == 0) {
+    FUN_00101896();
+  }
+  local_58 = *param_2;
+  local_50 = param_2[1];
+  local_48 = param_2[2];
+  local_40 = param_2[3];
+  *param_1 = local_58;
+  param_1[1] = local_50;
+  param_1[2] = local_48;
+  param_1[3] = local_40;
+  for (local_64 = 1; local_64 < 9; local_64 = local_64 + 1) {
+    uVar2 = (&DAT_0013c240)[(ulong)(local_64 - 1) * 2] ^ local_58;
+    uVar3 = (&DAT_0013c248)[(ulong)(local_64 - 1) * 2] ^ local_50;
+    local_38 = (byte)uVar2;
+    bStack_37 = (byte)(uVar2 >> 8);
+    bStack_36 = (byte)(uVar2 >> 0x10);
+    bStack_35 = (byte)(uVar2 >> 0x18);
+    bStack_34 = (byte)(uVar2 >> 0x20);
+    bStack_33 = (byte)(uVar2 >> 0x28);
+    bStack_32 = (byte)(uVar2 >> 0x30);
+    bStack_31 = (byte)(uVar2 >> 0x38);
+    local_30 = (byte)uVar3;
+    bStack_2f = (byte)(uVar3 >> 8);
+    bStack_2e = (byte)(uVar3 >> 0x10);
+    bStack_2d = (byte)(uVar3 >> 0x18);
+    bStack_2c = (byte)(uVar3 >> 0x20);
+    bStack_2b = (byte)(uVar3 >> 0x28);
+    bStack_2a = (byte)(uVar3 >> 0x30);
+    bStack_29 = (byte)(uVar3 >> 0x38);
+    uVar2 = local_48 ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_29 + 0xf00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + (long)(int)(uint)local_38 * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_37 + 0x100) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_36 + 0x200) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_35 + 0x300) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_34 + 0x400) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_33 + 0x500) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_32 + 0x600) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_31 + 0x700) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)local_30 + 0x800) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2f + 0x900) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2e + 0xa00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2d + 0xb00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2c + 0xc00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2b + 0xd00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2a + 0xe00) * 0x10);
+    uVar3 = local_40 ^
+            *(ulong *)(&DAT_0011b248 + (long)(int)(uint)bStack_29 * 0x10) ^
+            *(ulong *)(&DAT_0010c248 + (long)(int)(uint)local_38 * 0x10) ^
+            *(ulong *)(&DAT_0010d248 + (long)(int)(uint)bStack_37 * 0x10) ^
+            *(ulong *)(&DAT_0010e248 + (long)(int)(uint)bStack_36 * 0x10) ^
+            *(ulong *)(&DAT_0010f248 + (long)(int)(uint)bStack_35 * 0x10) ^
+            *(ulong *)(&DAT_00110248 + (long)(int)(uint)bStack_34 * 0x10) ^
+            *(ulong *)(&DAT_00111248 + (long)(int)(uint)bStack_33 * 0x10) ^
+            *(ulong *)(&DAT_00112248 + (long)(int)(uint)bStack_32 * 0x10) ^
+            *(ulong *)(&DAT_00113248 + (long)(int)(uint)bStack_31 * 0x10) ^
+            *(ulong *)(&DAT_00114248 + (long)(int)(uint)local_30 * 0x10) ^
+            *(ulong *)(&DAT_00115248 + (long)(int)(uint)bStack_2f * 0x10) ^
+            *(ulong *)(&DAT_00116248 + (long)(int)(uint)bStack_2e * 0x10) ^
+            *(ulong *)(&DAT_00117248 + (long)(int)(uint)bStack_2d * 0x10) ^
+            *(ulong *)(&DAT_00118248 + (long)(int)(uint)bStack_2c * 0x10) ^
+            *(ulong *)(&DAT_00119248 + (long)(int)(uint)bStack_2b * 0x10) ^
+            *(ulong *)(&DAT_0011a248 + (long)(int)(uint)bStack_2a * 0x10);
+    local_48 = local_58;
+    local_40 = local_50;
+    local_58 = uVar2;
+    local_50 = uVar3;
+  }
+  param_1[4] = local_58;
+  param_1[5] = local_50;
+  param_1[6] = local_48;
+  param_1[7] = local_40;
+  for (local_64 = 9; local_64 < 0x11; local_64 = local_64 + 1) {
+    uVar2 = (&DAT_0013c240)[(ulong)(local_64 - 1) * 2] ^ local_58;
+    uVar3 = (&DAT_0013c248)[(ulong)(local_64 - 1) * 2] ^ local_50;
+    local_38 = (byte)uVar2;
+    bStack_37 = (byte)(uVar2 >> 8);
+    bStack_36 = (byte)(uVar2 >> 0x10);
+    bStack_35 = (byte)(uVar2 >> 0x18);
+    bStack_34 = (byte)(uVar2 >> 0x20);
+    bStack_33 = (byte)(uVar2 >> 0x28);
+    bStack_32 = (byte)(uVar2 >> 0x30);
+    bStack_31 = (byte)(uVar2 >> 0x38);
+    local_30 = (byte)uVar3;
+    bStack_2f = (byte)(uVar3 >> 8);
+    bStack_2e = (byte)(uVar3 >> 0x10);
+    bStack_2d = (byte)(uVar3 >> 0x18);
+    bStack_2c = (byte)(uVar3 >> 0x20);
+    bStack_2b = (byte)(uVar3 >> 0x28);
+    bStack_2a = (byte)(uVar3 >> 0x30);
+    bStack_29 = (byte)(uVar3 >> 0x38);
+    uVar2 = local_48 ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_29 + 0xf00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + (long)(int)(uint)local_38 * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_37 + 0x100) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_36 + 0x200) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_35 + 0x300) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_34 + 0x400) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_33 + 0x500) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_32 + 0x600) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_31 + 0x700) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)local_30 + 0x800) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2f + 0x900) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2e + 0xa00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2d + 0xb00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2c + 0xc00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2b + 0xd00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2a + 0xe00) * 0x10);
+    uVar3 = local_40 ^
+            *(ulong *)(&DAT_0011b248 + (long)(int)(uint)bStack_29 * 0x10) ^
+            *(ulong *)(&DAT_0010c248 + (long)(int)(uint)local_38 * 0x10) ^
+            *(ulong *)(&DAT_0010d248 + (long)(int)(uint)bStack_37 * 0x10) ^
+            *(ulong *)(&DAT_0010e248 + (long)(int)(uint)bStack_36 * 0x10) ^
+            *(ulong *)(&DAT_0010f248 + (long)(int)(uint)bStack_35 * 0x10) ^
+            *(ulong *)(&DAT_00110248 + (long)(int)(uint)bStack_34 * 0x10) ^
+            *(ulong *)(&DAT_00111248 + (long)(int)(uint)bStack_33 * 0x10) ^
+            *(ulong *)(&DAT_00112248 + (long)(int)(uint)bStack_32 * 0x10) ^
+            *(ulong *)(&DAT_00113248 + (long)(int)(uint)bStack_31 * 0x10) ^
+            *(ulong *)(&DAT_00114248 + (long)(int)(uint)local_30 * 0x10) ^
+            *(ulong *)(&DAT_00115248 + (long)(int)(uint)bStack_2f * 0x10) ^
+            *(ulong *)(&DAT_00116248 + (long)(int)(uint)bStack_2e * 0x10) ^
+            *(ulong *)(&DAT_00117248 + (long)(int)(uint)bStack_2d * 0x10) ^
+            *(ulong *)(&DAT_00118248 + (long)(int)(uint)bStack_2c * 0x10) ^
+            *(ulong *)(&DAT_00119248 + (long)(int)(uint)bStack_2b * 0x10) ^
+            *(ulong *)(&DAT_0011a248 + (long)(int)(uint)bStack_2a * 0x10);
+    local_48 = local_58;
+    local_40 = local_50;
+    local_58 = uVar2;
+    local_50 = uVar3;
+  }
+  param_1[8] = local_58;
+  param_1[9] = local_50;
+  param_1[10] = local_48;
+  param_1[0xb] = local_40;
+  for (local_64 = 0x11; local_64 < 0x19; local_64 = local_64 + 1) {
+    uVar2 = (&DAT_0013c240)[(ulong)(local_64 - 1) * 2] ^ local_58;
+    uVar3 = (&DAT_0013c248)[(ulong)(local_64 - 1) * 2] ^ local_50;
+    local_38 = (byte)uVar2;
+    bStack_37 = (byte)(uVar2 >> 8);
+    bStack_36 = (byte)(uVar2 >> 0x10);
+    bStack_35 = (byte)(uVar2 >> 0x18);
+    bStack_34 = (byte)(uVar2 >> 0x20);
+    bStack_33 = (byte)(uVar2 >> 0x28);
+    bStack_32 = (byte)(uVar2 >> 0x30);
+    bStack_31 = (byte)(uVar2 >> 0x38);
+    local_30 = (byte)uVar3;
+    bStack_2f = (byte)(uVar3 >> 8);
+    bStack_2e = (byte)(uVar3 >> 0x10);
+    bStack_2d = (byte)(uVar3 >> 0x18);
+    bStack_2c = (byte)(uVar3 >> 0x20);
+    bStack_2b = (byte)(uVar3 >> 0x28);
+    bStack_2a = (byte)(uVar3 >> 0x30);
+    bStack_29 = (byte)(uVar3 >> 0x38);
+    uVar2 = local_48 ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_29 + 0xf00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + (long)(int)(uint)local_38 * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_37 + 0x100) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_36 + 0x200) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_35 + 0x300) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_34 + 0x400) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_33 + 0x500) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_32 + 0x600) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_31 + 0x700) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)local_30 + 0x800) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2f + 0x900) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2e + 0xa00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2d + 0xb00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2c + 0xc00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2b + 0xd00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2a + 0xe00) * 0x10);
+    uVar3 = local_40 ^
+            *(ulong *)(&DAT_0011b248 + (long)(int)(uint)bStack_29 * 0x10) ^
+            *(ulong *)(&DAT_0010c248 + (long)(int)(uint)local_38 * 0x10) ^
+            *(ulong *)(&DAT_0010d248 + (long)(int)(uint)bStack_37 * 0x10) ^
+            *(ulong *)(&DAT_0010e248 + (long)(int)(uint)bStack_36 * 0x10) ^
+            *(ulong *)(&DAT_0010f248 + (long)(int)(uint)bStack_35 * 0x10) ^
+            *(ulong *)(&DAT_00110248 + (long)(int)(uint)bStack_34 * 0x10) ^
+            *(ulong *)(&DAT_00111248 + (long)(int)(uint)bStack_33 * 0x10) ^
+            *(ulong *)(&DAT_00112248 + (long)(int)(uint)bStack_32 * 0x10) ^
+            *(ulong *)(&DAT_00113248 + (long)(int)(uint)bStack_31 * 0x10) ^
+            *(ulong *)(&DAT_00114248 + (long)(int)(uint)local_30 * 0x10) ^
+            *(ulong *)(&DAT_00115248 + (long)(int)(uint)bStack_2f * 0x10) ^
+            *(ulong *)(&DAT_00116248 + (long)(int)(uint)bStack_2e * 0x10) ^
+            *(ulong *)(&DAT_00117248 + (long)(int)(uint)bStack_2d * 0x10) ^
+            *(ulong *)(&DAT_00118248 + (long)(int)(uint)bStack_2c * 0x10) ^
+            *(ulong *)(&DAT_00119248 + (long)(int)(uint)bStack_2b * 0x10) ^
+            *(ulong *)(&DAT_0011a248 + (long)(int)(uint)bStack_2a * 0x10);
+    local_48 = local_58;
+    local_40 = local_50;
+    local_58 = uVar2;
+    local_50 = uVar3;
+  }
+  param_1[0xc] = local_58;
+  param_1[0xd] = local_50;
+  param_1[0xe] = local_48;
+  param_1[0xf] = local_40;
+  for (local_64 = 0x19; local_64 < 0x21; local_64 = local_64 + 1) {
+    uVar2 = (&DAT_0013c240)[(ulong)(local_64 - 1) * 2] ^ local_58;
+    uVar3 = (&DAT_0013c248)[(ulong)(local_64 - 1) * 2] ^ local_50;
+    local_38 = (byte)uVar2;
+    bStack_37 = (byte)(uVar2 >> 8);
+    bStack_36 = (byte)(uVar2 >> 0x10);
+    bStack_35 = (byte)(uVar2 >> 0x18);
+    bStack_34 = (byte)(uVar2 >> 0x20);
+    bStack_33 = (byte)(uVar2 >> 0x28);
+    bStack_32 = (byte)(uVar2 >> 0x30);
+    bStack_31 = (byte)(uVar2 >> 0x38);
+    local_30 = (byte)uVar3;
+    bStack_2f = (byte)(uVar3 >> 8);
+    bStack_2e = (byte)(uVar3 >> 0x10);
+    bStack_2d = (byte)(uVar3 >> 0x18);
+    bStack_2c = (byte)(uVar3 >> 0x20);
+    bStack_2b = (byte)(uVar3 >> 0x28);
+    bStack_2a = (byte)(uVar3 >> 0x30);
+    bStack_29 = (byte)(uVar3 >> 0x38);
+    uVar2 = local_48 ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_29 + 0xf00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + (long)(int)(uint)local_38 * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_37 + 0x100) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_36 + 0x200) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_35 + 0x300) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_34 + 0x400) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_33 + 0x500) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_32 + 0x600) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_31 + 0x700) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)local_30 + 0x800) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2f + 0x900) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2e + 0xa00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2d + 0xb00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2c + 0xc00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2b + 0xd00) * 0x10) ^
+            *(ulong *)(&DAT_0010c240 + ((long)(int)(uint)bStack_2a + 0xe00) * 0x10);
+    uVar3 = local_40 ^
+            *(ulong *)(&DAT_0011b248 + (long)(int)(uint)bStack_29 * 0x10) ^
+            *(ulong *)(&DAT_0010c248 + (long)(int)(uint)local_38 * 0x10) ^
+            *(ulong *)(&DAT_0010d248 + (long)(int)(uint)bStack_37 * 0x10) ^
+            *(ulong *)(&DAT_0010e248 + (long)(int)(uint)bStack_36 * 0x10) ^
+            *(ulong *)(&DAT_0010f248 + (long)(int)(uint)bStack_35 * 0x10) ^
+            *(ulong *)(&DAT_00110248 + (long)(int)(uint)bStack_34 * 0x10) ^
+            *(ulong *)(&DAT_00111248 + (long)(int)(uint)bStack_33 * 0x10) ^
+            *(ulong *)(&DAT_00112248 + (long)(int)(uint)bStack_32 * 0x10) ^
+            *(ulong *)(&DAT_00113248 + (long)(int)(uint)bStack_31 * 0x10) ^
+            *(ulong *)(&DAT_00114248 + (long)(int)(uint)local_30 * 0x10) ^
+            *(ulong *)(&DAT_00115248 + (long)(int)(uint)bStack_2f * 0x10) ^
+            *(ulong *)(&DAT_00116248 + (long)(int)(uint)bStack_2e * 0x10) ^
+            *(ulong *)(&DAT_00117248 + (long)(int)(uint)bStack_2d * 0x10) ^
+            *(ulong *)(&DAT_00118248 + (long)(int)(uint)bStack_2c * 0x10) ^
+            *(ulong *)(&DAT_00119248 + (long)(int)(uint)bStack_2b * 0x10) ^
+            *(ulong *)(&DAT_0011a248 + (long)(int)(uint)bStack_2a * 0x10);
+    local_48 = local_58;
+    local_40 = local_50;
+    local_58 = uVar2;
+    local_50 = uVar3;
+  }
+  param_1[0x10] = local_58;
+  param_1[0x11] = local_50;
+  param_1[0x12] = local_48;
+  param_1[0x13] = local_40;
+  for (local_64 = 0; local_64 < 0x14; local_64 = local_64 + 2) {
+    if (local_64 == 0) {
+      param_1[0x14] = *param_1;
+      param_1[0x15] = param_1[1];
+    }
+    else {
+      uVar2 = param_1[local_64];
+      uVar3 = param_1[local_64 + 1];
+      local_58._0_1_ = (byte)uVar2;
+      local_58._1_1_ = (byte)(uVar2 >> 8);
+      local_58._2_1_ = (byte)(uVar2 >> 0x10);
+      local_58._3_1_ = (byte)(uVar2 >> 0x18);
+      local_58._4_1_ = (byte)(uVar2 >> 0x20);
+      local_58._5_1_ = (byte)(uVar2 >> 0x28);
+      local_58._6_1_ = (byte)(uVar2 >> 0x30);
+      local_58._7_1_ = (byte)(uVar2 >> 0x38);
+      local_50._0_1_ = (byte)uVar3;
+      local_50._1_1_ = (byte)(uVar3 >> 8);
+      local_50._2_1_ = (byte)(uVar3 >> 0x10);
+      local_50._3_1_ = (byte)(uVar3 >> 0x18);
+      local_50._4_1_ = (byte)(uVar3 >> 0x20);
+      local_50._5_1_ = (byte)(uVar3 >> 0x28);
+      local_50._6_1_ = (byte)(uVar3 >> 0x30);
+      local_50._7_1_ = (byte)(uVar3 >> 0x38);
+      param_1[(ulong)local_64 + 0x14] =
+           *(ulong *)(&DAT_0012c240 + (long)(int)(uint)(byte)local_58 * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)local_58._1_1_ + 0x100) * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)local_58._2_1_ + 0x200) * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)local_58._3_1_ + 0x300) * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)local_58._4_1_ + 0x400) * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)local_58._5_1_ + 0x500) * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)local_58._6_1_ + 0x600) * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)local_58._7_1_ + 0x700) * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)(byte)local_50 + 0x800) * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)local_50._1_1_ + 0x900) * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)local_50._2_1_ + 0xa00) * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)local_50._3_1_ + 0xb00) * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)local_50._4_1_ + 0xc00) * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)local_50._5_1_ + 0xd00) * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)local_50._6_1_ + 0xe00) * 0x10) ^
+           *(ulong *)(&DAT_0012c240 + ((long)(int)(uint)local_50._7_1_ + 0xf00) * 0x10);
+      param_1[(ulong)(local_64 + 1) + 0x14] =
+           *(ulong *)(&DAT_0012c248 + (long)(int)(uint)(byte)local_58 * 0x10) ^
+           *(ulong *)(&DAT_0012d248 + (long)(int)(uint)local_58._1_1_ * 0x10) ^
+           *(ulong *)(&DAT_0012e248 + (long)(int)(uint)local_58._2_1_ * 0x10) ^
+           *(ulong *)(&DAT_0012f248 + (long)(int)(uint)local_58._3_1_ * 0x10) ^
+           *(ulong *)(&DAT_00130248 + (long)(int)(uint)local_58._4_1_ * 0x10) ^
+           *(ulong *)(&DAT_00131248 + (long)(int)(uint)local_58._5_1_ * 0x10) ^
+           *(ulong *)(&DAT_00132248 + (long)(int)(uint)local_58._6_1_ * 0x10) ^
+           *(ulong *)(&DAT_00133248 + (long)(int)(uint)local_58._7_1_ * 0x10) ^
+           *(ulong *)(&DAT_00134248 + (long)(int)(uint)(byte)local_50 * 0x10) ^
+           *(ulong *)(&DAT_00135248 + (long)(int)(uint)local_50._1_1_ * 0x10) ^
+           *(ulong *)(&DAT_00136248 + (long)(int)(uint)local_50._2_1_ * 0x10) ^
+           *(ulong *)(&DAT_00137248 + (long)(int)(uint)local_50._3_1_ * 0x10) ^
+           *(ulong *)(&DAT_00138248 + (long)(int)(uint)local_50._4_1_ * 0x10) ^
+           *(ulong *)(&DAT_00139248 + (long)(int)(uint)local_50._5_1_ * 0x10) ^
+           *(ulong *)(&DAT_0013a248 + (long)(int)(uint)local_50._6_1_ * 0x10) ^
+           *(ulong *)(&DAT_0013b248 + (long)(int)(uint)local_50._7_1_ * 0x10);
+    }
+  }
+  if (lVar1 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return 0;
+}
+

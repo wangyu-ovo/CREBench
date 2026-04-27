@@ -1,0 +1,19 @@
+
+int FUN_001012ef(undefined4 param_1,int param_2)
+
+{
+  ushort uVar1;
+  ushort uVar2;
+  
+  uVar1 = FUN_00101209((ushort)((uint)param_1 >> 0x10) ^
+                       *(ushort *)(&DAT_00104050 + (long)param_2 * 2),
+                       *(undefined2 *)(&DAT_00104080 + (long)param_2 * 2));
+  uVar1 = uVar1 ^ (ushort)param_1;
+  uVar2 = FUN_00101209((ushort)param_1 ^ *(ushort *)(&DAT_00104060 + (long)param_2 * 2),
+                       *(undefined2 *)(&DAT_00104090 + (long)param_2 * 2));
+  uVar2 = uVar2 ^ uVar1;
+  uVar1 = FUN_00101209(uVar1 ^ *(ushort *)(&DAT_00104070 + (long)param_2 * 2),
+                       *(undefined2 *)(&DAT_001040a0 + (long)param_2 * 2));
+  return (uint)(uVar1 ^ uVar2) + (uint)uVar2 * 0x10000;
+}
+

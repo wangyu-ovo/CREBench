@@ -1,0 +1,40 @@
+
+void FUN_0010162f(long param_1)
+
+{
+  long in_FS_OFFSET;
+  int local_44;
+  ushort auStack_38 [8];
+  ushort auStack_28 [12];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (local_44 = 0; local_44 < 8; local_44 = local_44 + 1) {
+    auStack_38[local_44] =
+         (ushort)*(byte *)(param_1 + (long)local_44 * 2) * 0x100 +
+         (ushort)*(byte *)(param_1 + (long)local_44 * 2 + 1);
+  }
+  for (local_44 = 0; local_44 < 8; local_44 = local_44 + 1) {
+    auStack_28[local_44] = auStack_38[local_44] ^ *(ushort *)(&DAT_00102520 + (long)local_44 * 2);
+  }
+  for (local_44 = 0; local_44 < 8; local_44 = local_44 + 1) {
+    *(ushort *)(&DAT_00104030 + (long)local_44 * 2) =
+         auStack_38[local_44] >> 0xf | auStack_38[local_44] * 2;
+    *(ushort *)(&DAT_00104040 + (long)local_44 * 2) = auStack_28[(int)(local_44 + 2U & 7)];
+    *(ushort *)(&DAT_00104050 + (long)local_44 * 2) =
+         auStack_38[(int)(local_44 + 1U & 7)] >> 0xb | auStack_38[(int)(local_44 + 1U & 7)] << 5;
+    *(ushort *)(&DAT_00104060 + (long)local_44 * 2) =
+         auStack_38[(int)(local_44 + 5U & 7)] >> 8 | auStack_38[(int)(local_44 + 5U & 7)] << 8;
+    *(ushort *)(&DAT_00104070 + (long)local_44 * 2) =
+         auStack_38[(int)(local_44 + 6U & 7)] >> 3 | auStack_38[(int)(local_44 + 6U & 7)] << 0xd;
+    *(ushort *)(&DAT_00104080 + (long)local_44 * 2) = auStack_28[(int)(local_44 + 4U & 7)];
+    *(ushort *)(&DAT_00104090 + (long)local_44 * 2) = auStack_28[(int)(local_44 + 3U & 7)];
+    *(ushort *)(&DAT_001040a0 + (long)local_44 * 2) = auStack_28[(int)(local_44 + 7U & 7)];
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

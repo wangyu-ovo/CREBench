@@ -1,0 +1,10 @@
+{
+  "challenge": "Crypto-1",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "ea7fa6d2995a6d44f2e27c41a819417a0dc897d206cc45da040603c99135c2a9",
+  "key": "40210e98073b",
+  "iv": "85faa3c99c17c77d",
+  "target_ciphertext": "2f017b85f48a2bb92ae9c865f88b3d4e04768ff8ab3666a58b6b04c64bc61cc2",
+  "test_vectors_path": "CREBench/Crypto-1/test_vectors-hardcode_plain.json"
+}

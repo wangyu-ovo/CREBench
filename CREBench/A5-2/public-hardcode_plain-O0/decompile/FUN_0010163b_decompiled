@@ -1,0 +1,7 @@
+
+uint FUN_0010163b(uint param_1)
+
+{
+  return param_1 % 0x33 << 5 | param_1 / 0x52e << 0xb | param_1 % 0x1a;
+}
+

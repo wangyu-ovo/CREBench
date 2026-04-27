@@ -1,0 +1,72 @@
+
+void FUN_00101ba0(ulong *param_1)
+
+{
+  byte bVar1;
+  ulong uVar2;
+  char cVar3;
+  char cVar4;
+  uint uVar5;
+  uint uVar6;
+  ulong uVar7;
+  ulong uVar8;
+  ulong uVar9;
+  byte bVar10;
+  
+  uVar9 = (ulong)*(byte *)(param_1 + 8);
+  FUN_00101b00();
+  uVar8 = *param_1;
+  uVar7 = uVar8 * 2;
+  if (*(byte *)(param_1 + 1) < 0x40) {
+    uVar7 = uVar7 & ~(-1L << (*(byte *)(param_1 + 1) & 0x3f));
+  }
+  uVar2 = param_1[2];
+  *param_1 = ((uint)(uVar8 >> (DAT_00104030 - 1U & 0x3f)) ^
+              (uint)(uVar8 >> (DAT_00104031 - 1U & 0x3f)) ^
+              (uint)(uVar8 >> (DAT_00104032 - 1U & 0x3f)) ^
+             (uint)(uVar8 >> (DAT_00104033 - 1U & 0x3f))) & 1 | uVar7;
+  cVar3 = DAT_00104038;
+  uVar8 = uVar2 * 2;
+  if (*(byte *)(param_1 + 3) < 0x40) {
+    uVar8 = uVar8 & ~(-1L << (*(byte *)(param_1 + 3) & 0x3f));
+  }
+  uVar7 = param_1[4];
+  param_1[2] = ((uint)(uVar2 >> (DAT_00104035 - 1U & 0x3f)) ^
+                (uint)(uVar2 >> (DAT_00104034 - 1U & 0x3f)) ^
+                (uint)(uVar2 >> (DAT_00104036 - 1U & 0x3f)) ^
+               (uint)(uVar2 >> (DAT_00104037 - 1U & 0x3f))) & 1 | uVar8;
+  cVar4 = DAT_0010403d;
+  uVar8 = uVar7 * 2;
+  if (*(byte *)(param_1 + 5) < 0x40) {
+    uVar8 = uVar8 & ~(-1L << (*(byte *)(param_1 + 5) & 0x3f));
+  }
+  param_1[4] = ((uint)(uVar7 >> (cVar3 - 1U & 0x3f)) ^ (uint)(uVar7 >> (DAT_00104039 - 1U & 0x3f)) ^
+                (uint)(uVar7 >> (DAT_0010403a - 1U & 0x3f)) ^
+               (uint)(uVar7 >> (DAT_0010403b - 1U & 0x3f))) & 1 | uVar8;
+  uVar8 = param_1[6];
+  uVar7 = uVar8 * 2;
+  if (*(byte *)(param_1 + 7) < 0x40) {
+    uVar7 = uVar7 & ~(-1L << (*(byte *)(param_1 + 7) & 0x3f));
+  }
+  param_1[6] = uVar7 | ((uint)(uVar8 >> (cVar4 - 1U & 0x3f)) ^
+                        (uint)(uVar8 >> (DAT_0010403c - 1U & 0x3f)) ^
+                        (uint)(uVar8 >> (DAT_0010403e - 1U & 0x3f)) ^
+                       (uint)(uVar8 >> (DAT_0010403f - 1U & 0x3f))) & 1;
+  FUN_00101b50();
+  uVar5 = (uint)(*param_1 >> (DAT_00104040 & 0x3f)) & 1;
+  uVar6 = uVar5 | (uint)(param_1[2] >> (DAT_00104041 & 0x3f)) & 2 |
+          (uint)(param_1[4] >> (DAT_00104042 & 0x3f)) & 4 |
+          (uint)(param_1[6] >> (DAT_00104043 & 0x3f)) & 8;
+  bVar1 = *(byte *)(param_1 + 8);
+  bVar10 = bVar1 >> 2;
+  *(ushort *)(param_1 + 8) =
+       CONCAT11((byte)uVar6,
+                (byte)(((bVar1 & 1 ^ (int)(bVar1 & 3) >> 1 | (bVar1 & 3) * 2 & 3) ^ (uint)bVar10 ^
+                       uVar5 + ((int)uVar6 >> 3) + ((int)uVar6 >> 2 & 1U) + ((int)uVar6 >> 1 & 1U) +
+                       (uint)bVar10 >> 1) << 2) | bVar10) & 0xff0f;
+  *(byte *)((long)param_1 + 0x42) =
+       ((byte)((uVar9 & 0xffffffff) >> 2) & 0x3f ^ (byte)uVar6 ^ (byte)((int)uVar6 >> 3) ^
+        (byte)((int)uVar6 >> 2) ^ (byte)((int)uVar6 >> 1)) & 1;
+  return;
+}
+

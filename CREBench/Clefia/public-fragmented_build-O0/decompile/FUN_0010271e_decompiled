@@ -1,0 +1,45 @@
+
+void FUN_0010271e(long param_1,long param_2)
+
+{
+  long in_FS_OFFSET;
+  long local_1c0;
+  uint local_1b0;
+  undefined2 local_1aa;
+  undefined local_1a8 [16];
+  undefined auStack_198 [16];
+  undefined local_188 [160];
+  undefined auStack_e8 [216];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_1aa = 0xc0b5;
+  FUN_001021c8(local_188,&local_1aa,0x2e);
+  FUN_00101cdc(local_1a8,param_2,local_188,10);
+  FUN_00101609(param_1,param_2,param_2 + 0x10,8);
+  local_1c0 = param_1 + 8;
+  for (local_1b0 = 0; (int)local_1b0 < 0xd; local_1b0 = local_1b0 + 1) {
+    if (((int)local_1b0 / 2 & 1U) == 0) {
+      FUN_00101609(local_1c0,local_1a8,auStack_e8 + (int)(local_1b0 << 4),0x10);
+      if ((local_1b0 & 1) != 0) {
+        FUN_00101609(local_1c0,local_1c0,param_2 + 0x10,0x10);
+      }
+      FUN_00101f36(local_1a8);
+    }
+    else {
+      FUN_00101609(local_1c0,auStack_198,auStack_e8 + (int)(local_1b0 << 4),0x10);
+      if ((local_1b0 & 1) != 0) {
+        FUN_00101609(local_1c0,local_1c0,param_2,0x10);
+      }
+      FUN_00101f36(auStack_198);
+    }
+    local_1c0 = local_1c0 + 0x10;
+  }
+  FUN_00101609(local_1c0,param_2 + 8,param_2 + 0x18,8);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

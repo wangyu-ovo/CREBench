@@ -1,0 +1,10 @@
+{
+  "challenge": "LEA",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "5bffff0deaf73419825d76a908ffa19d",
+  "key": "baabd7dabc44f6ebb72549adda10882f",
+  "iv": "",
+  "target_ciphertext": "20bf62a07605b9570187850b019ac5c9",
+  "test_vectors_path": "CREBench/LEA/test_vectors-fragmented_build.json"
+}

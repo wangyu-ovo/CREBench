@@ -1,0 +1,10 @@
+{
+  "challenge": "LEA",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "5bffff0deaf73419825d76a908ffa19d",
+  "key": "6194555b4a7e2a0a6c541553c5eb1dab",
+  "iv": "",
+  "target_ciphertext": "a25e6719e8291299f25e49fe25404d1c",
+  "test_vectors_path": "CREBench/LEA/test_vectors-weak_prng_seeded.json"
+}

@@ -1,0 +1,205 @@
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+bool FUN_001010e0(int param_1,undefined8 *param_2)
+
+{
+  ushort *puVar1;
+  char cVar2;
+  undefined uVar3;
+  undefined3 uVar4;
+  ushort uVar5;
+  int iVar6;
+  uint uVar7;
+  size_t sVar8;
+  uint uVar9;
+  ulong *puVar10;
+  long lVar11;
+  ushort *puVar12;
+  char *pcVar13;
+  ulong *puVar14;
+  undefined4 *puVar15;
+  ushort *puVar16;
+  ushort *puVar17;
+  long in_FS_OFFSET;
+  bool bVar18;
+  byte bVar19;
+  ulong local_10d0;
+  ulong local_10c8 [9];
+  ulong local_1080 [512];
+  ulong local_80;
+  ulong local_78 [2];
+  undefined8 local_68;
+  undefined4 local_58;
+  undefined4 uStack_54;
+  undefined4 uStack_50;
+  undefined4 uStack_4c;
+  undefined local_48;
+  undefined uStack_47;
+  undefined local_46;
+  ushort local_45 [6];
+  ushort local_38 [4];
+  long local_30;
+  
+  bVar19 = 0;
+  local_30 = *(long *)(in_FS_OFFSET + 0x28);
+  if (param_1 == 2) {
+    FUN_00101670(&local_48);
+    pcVar13 = (char *)param_2[1];
+    local_58 = _DAT_00104170;
+    uStack_54 = _UNK_00104174;
+    uStack_50 = _UNK_00104178;
+    uStack_4c = _UNK_0010417c;
+    sVar8 = strlen(pcVar13);
+    if (sVar8 == 0x20) {
+      lVar11 = 0;
+      do {
+        cVar2 = pcVar13[lVar11 * 2];
+        iVar6 = (int)cVar2;
+        if ((byte)(cVar2 - 0x30U) < 10) {
+          uVar7 = iVar6 - 0x30;
+        }
+        else if ((byte)(cVar2 + 0x9fU) < 6) {
+          uVar7 = iVar6 - 0x57;
+        }
+        else {
+          uVar7 = iVar6 - 0x37;
+          if (5 < (byte)(cVar2 + 0xbfU)) {
+            uVar7 = 0xffffffff;
+          }
+        }
+        cVar2 = pcVar13[lVar11 * 2 + 1];
+        iVar6 = (int)cVar2;
+        if ((byte)(cVar2 - 0x30U) < 10) {
+          uVar9 = iVar6 - 0x30;
+        }
+        else if ((byte)(cVar2 + 0x9fU) < 6) {
+          uVar9 = iVar6 - 0x57;
+        }
+        else {
+          if (5 < (byte)(cVar2 + 0xbfU)) goto LAB_00101229;
+          uVar9 = iVar6 - 0x37;
+        }
+        if ((int)(uVar7 | uVar9) < 0) goto LAB_00101229;
+        *(byte *)((long)&local_68 + lVar11) = (byte)(uVar7 << 4) | (byte)uVar9;
+        lVar11 = lVar11 + 1;
+      } while (lVar11 != 0x10);
+      FUN_00101790();
+      puVar15 = &DAT_00107060;
+      puVar10 = local_10c8;
+      for (lVar11 = 0x12; lVar11 != 0; lVar11 = lVar11 + -1) {
+        *(undefined4 *)puVar10 = *puVar15;
+        puVar15 = puVar15 + (ulong)bVar19 * -2 + 1;
+        puVar10 = (ulong *)((long)puVar10 + (ulong)bVar19 * -8 + 4);
+      }
+      puVar17 = local_45;
+      puVar16 = (ushort *)&local_46;
+      FUN_001017d0();
+      puVar10 = &DAT_00106060;
+      puVar14 = local_1080;
+      for (lVar11 = 0x200; lVar11 != 0; lVar11 = lVar11 + -1) {
+        *puVar14 = *puVar10;
+        puVar10 = puVar10 + (ulong)bVar19 * -2 + 1;
+        puVar14 = puVar14 + (ulong)bVar19 * -2 + 1;
+      }
+      puVar10 = local_10c8;
+      puVar12 = (ushort *)&local_48;
+      do {
+        while ((ushort *)((long)puVar12 + 1U) < local_38) {
+          uVar5 = *puVar12 << 8 | *puVar12 >> 8;
+          if (puVar12 + 1 < local_38) {
+            uVar4 = CONCAT21(uVar5,*(undefined *)(puVar12 + 1));
+            if ((ushort *)((long)puVar12 + 3U) < local_38) {
+              puVar1 = puVar12 + 2;
+              uVar7 = CONCAT31(uVar4,*(undefined *)((long)puVar12 + 3));
+              puVar12 = puVar1;
+              if (local_38 <= puVar1) {
+                puVar12 = (ushort *)&local_48;
+              }
+            }
+            else {
+              uVar7 = CONCAT31(uVar4,local_48);
+              puVar12 = (ushort *)&uStack_47;
+            }
+          }
+          else {
+            uVar7 = CONCAT31(CONCAT21(uVar5,local_48),uStack_47);
+            puVar12 = puVar16;
+          }
+          *(uint *)puVar10 = *(uint *)puVar10 ^ uVar7;
+          puVar10 = (ulong *)((long)puVar10 + 4);
+          if (puVar10 == local_1080) goto LAB_00101345;
+        }
+        *(uint *)puVar10 =
+             *(uint *)puVar10 ^
+             CONCAT31(CONCAT21(CONCAT11(*(undefined *)puVar12,local_48),uStack_47),local_46);
+        puVar10 = (ulong *)((long)puVar10 + 4);
+        puVar12 = puVar17;
+      } while (puVar10 != local_1080);
+LAB_00101345:
+      local_10d0 = 0;
+      puVar10 = local_10c8;
+      do {
+        puVar14 = puVar10 + 1;
+        FUN_001016d0(&local_10d0,local_10c8);
+        *puVar10 = local_10d0;
+        puVar10 = puVar14;
+      } while (puVar14 != local_1080);
+      do {
+        puVar10 = puVar14 + 1;
+        FUN_001016d0(&local_10d0,local_10c8);
+        *puVar14 = local_10d0;
+        puVar14 = puVar10;
+      } while (puVar10 != &local_80);
+      lVar11 = 0;
+      local_10d0 = DAT_00104168;
+      do {
+        uVar7 = *(uint *)((long)&local_68 + lVar11);
+        uVar9 = *(uint *)((long)&local_68 + lVar11 + 4);
+        local_10d0 = CONCAT44(uVar9 >> 0x18 | (uVar9 & 0xff0000) >> 8 | (uVar9 & 0xff00) << 8 |
+                              uVar9 << 0x18,
+                              uVar7 >> 0x18 | (uVar7 & 0xff0000) >> 8 | (uVar7 & 0xff00) << 8 |
+                              uVar7 << 0x18) ^ local_10d0;
+        FUN_001016d0(&local_10d0,local_10c8);
+        uVar7 = (uint)(local_10d0 >> 0x20);
+        *(ulong *)((long)local_78 + lVar11) =
+             (((((((ulong)(uVar7 & 0xff) << 8 | (ulong)(uVar7 >> 8 & 0xff)) << 8 |
+                 (ulong)(uVar7 >> 0x10 & 0xff)) << 8 | (ulong)(uVar7 >> 0x18)) << 8 |
+               local_10d0 & 0xff) << 8 | local_10d0 >> 8 & 0xff) << 8 | local_10d0 >> 0x10 & 0xff)
+             << 8 | local_10d0 >> 0x18 & 0xff;
+        lVar11 = lVar11 + 8;
+      } while (lVar11 != 0x10);
+      __printf_chk(1,"Ciphertext(hex): ");
+      puVar10 = local_78;
+      do {
+        uVar3 = *(undefined *)puVar10;
+        puVar10 = (ulong *)((long)puVar10 + 1);
+        __printf_chk(1,&DAT_0010411f,uVar3);
+      } while (puVar10 != &local_68);
+      __printf_chk(1,"\n");
+      iVar6 = memcmp(local_78,&local_68 + 2,0x10);
+      pcVar13 = "True";
+      if (iVar6 != 0) {
+        pcVar13 = "False";
+      }
+      __printf_chk(1,"Match: %s\n",pcVar13);
+      bVar18 = iVar6 != 0;
+    }
+    else {
+LAB_00101229:
+      __fprintf_chk(*(undefined8 *)PTR_stderr_00105ff8,1,
+                    "Bad input hex. Expecting 32 hex chars (16 bytes).\n");
+      bVar18 = true;
+    }
+  }
+  else {
+    __fprintf_chk(*(undefined8 *)PTR_stderr_00105ff8,1,"Usage: %s <32-hex-chars>\n",*param_2);
+    bVar18 = true;
+  }
+  if (local_30 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return bVar18;
+}
+

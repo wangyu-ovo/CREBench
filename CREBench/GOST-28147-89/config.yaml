@@ -1,0 +1,55 @@
+name: gost_28147_89
+publc_path: CREBench/GOST-28147-89/public
+flag: db7cb84818efe61e
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: GOST-28147-89-ECB
+algorithm_aliases:
+  - GOST-28147-89
+  - GOST 28147 89
+  - GOST ECB
+  - gost_28147_89
+  - Gost
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/GOST-28147-89/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: weak_prng_seeded
+
+template_metadata:
+  wrapper_family: single_block_direct
+  key_source_file: CREBench/GOST-28147-89/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1711929600
+  key_seed_note: fixed_timestamp_utc_2024_04_01_00_00_00
+  key_length_bytes: 32
+  block_size_bytes: 8
+  iv_length_bytes: 0
+  target_length_bytes: 8
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: gost_tables
+  compile_define: CONSTXOR_GOST_TABLES
+  source_file: src/gost-constant.c
+  extra_source_files:
+    - src/gost.c
+  tables:
+    - symbol: sBox
+      ctype: uint8_t
+      accessor: constxor_gost_sbox
+

@@ -1,0 +1,22 @@
+
+uint FUN_00102560(uint param_1,uint param_2,byte param_3)
+
+{
+  ulong uVar1;
+  ulong uVar2;
+  int iVar3;
+  int iVar4;
+  
+  uVar1 = (ulong)((param_2 ^ param_1) << (param_3 & 0x1f) |
+                 (param_2 ^ param_1) >> 0x20 - (param_3 & 0x1f));
+  FUN_001023b0();
+  iVar3 = *(int *)(&DAT_00109060 + (uVar1 >> 0x18 & 0xff) * 4);
+  FUN_00102400();
+  iVar4 = *(int *)(&DAT_00109460 + (uVar1 >> 0x10 & 0xff) * 4);
+  FUN_00102450();
+  uVar2 = uVar1 & 0xff;
+  iVar3 = iVar3 + *(int *)(&DAT_00109860 + (uVar1 >> 8 & 0xff) * 4);
+  FUN_001024a0();
+  return iVar3 - iVar4 ^ *(uint *)(&DAT_00109c60 + uVar2 * 4);
+}
+

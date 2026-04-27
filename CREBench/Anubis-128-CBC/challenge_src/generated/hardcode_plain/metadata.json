@@ -1,0 +1,10 @@
+{
+  "challenge": "Anubis-128-CBC",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "7cc0cc72b35db4d5ee8e86a0f54cec11ed3c88dc282c2247fafbe94bffc2e493",
+  "key": "a5675fc641dcfafda81470502ee80d05",
+  "iv": "4c7335141dc00c0b797acbe34b76eeec",
+  "target_ciphertext": "dd64b0f43b7ea8e848262339cdbf144ccdae83d54771bfec8308012d18d792af",
+  "test_vectors_path": "CREBench/Anubis-128-CBC/test_vectors-hardcode_plain.json"
+}

@@ -1,0 +1,17 @@
+
+void FUN_001019c8(undefined8 param_1,undefined8 param_2,long param_3)
+
+{
+  uint uVar1;
+  ulong local_10;
+  
+  uVar1 = FUN_001015cb(param_3);
+  FUN_001015cb(param_3 + 4);
+  FUN_001017da(param_1,param_2);
+  for (local_10 = 0; local_10 < 4; local_10 = local_10 + 1) {
+    FUN_00101960(param_1,(byte)(uVar1 >> (('\x03' - (char)local_10) * '\b' & 0x1fU)) ^
+                         *(byte *)(param_3 + local_10 + 4),0);
+  }
+  return;
+}
+

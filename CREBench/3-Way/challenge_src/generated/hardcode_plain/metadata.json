@@ -1,0 +1,10 @@
+{
+  "challenge": "3-Way",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "5296ba4623d5f79dc7a304be31e852ac3700734b2a67ad686e3a5d098f1c82aa16638a8adb7f115f9059421838708ed5",
+  "key": "b3213f192463f081bfe0ad9f",
+  "iv": "",
+  "target_ciphertext": "b9c76c667cb75a9564ef163a3813c2de68ea26d7f0c1a3b06fbb7cd967f473851119113c163d1c7687050fcbcddfc547",
+  "test_vectors_path": "CREBench/3-Way/test_vectors-hardcode_plain.json"
+}

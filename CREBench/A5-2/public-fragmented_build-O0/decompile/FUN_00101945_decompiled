@@ -1,0 +1,13 @@
+
+bool FUN_00101945(uint param_1,uint param_2,char param_3)
+
+{
+  bool bVar1;
+  
+  bVar1 = (param_1 & param_2) != 0;
+  if (param_3 != '\0') {
+    bVar1 = !bVar1;
+  }
+  return bVar1;
+}
+

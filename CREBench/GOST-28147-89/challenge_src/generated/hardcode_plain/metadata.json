@@ -1,0 +1,10 @@
+{
+  "challenge": "GOST-28147-89",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "db7cb84818efe61e",
+  "key": "d95d0482e58d87ca67019804f35f60b0e15cbf087b92ced123988c061b8dcd91",
+  "iv": "",
+  "target_ciphertext": "54b484528dac8e19",
+  "test_vectors_path": "CREBench/GOST-28147-89/test_vectors-hardcode_plain.json"
+}

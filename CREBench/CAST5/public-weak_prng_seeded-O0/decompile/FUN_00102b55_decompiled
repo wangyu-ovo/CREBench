@@ -1,0 +1,48 @@
+
+void FUN_00102b55(undefined4 *param_1,long param_2,long param_3)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  uint uVar4;
+  uint local_10;
+  uint local_c;
+  
+  uVar1 = FUN_0010163e(param_2);
+  uVar2 = FUN_0010163e(param_2 + 4);
+  uVar3 = FUN_0010172f(uVar2,*param_1,param_1[0x10]);
+  uVar4 = FUN_001017e8(uVar1 ^ uVar3,param_1[1],param_1[0x11]);
+  local_10 = FUN_0010189f(uVar2 ^ uVar4,param_1[2],param_1[0x12]);
+  local_10 = uVar1 ^ uVar3 ^ local_10;
+  local_c = FUN_0010172f(local_10,param_1[3],param_1[0x13]);
+  local_c = uVar2 ^ uVar4 ^ local_c;
+  uVar1 = FUN_001017e8(local_c,param_1[4],param_1[0x14]);
+  local_10 = local_10 ^ uVar1;
+  uVar1 = FUN_0010189f(local_10,param_1[5],param_1[0x15]);
+  local_c = local_c ^ uVar1;
+  uVar1 = FUN_0010172f(local_c,param_1[6],param_1[0x16]);
+  local_10 = local_10 ^ uVar1;
+  uVar1 = FUN_001017e8(local_10,param_1[7],param_1[0x17]);
+  local_c = local_c ^ uVar1;
+  uVar1 = FUN_0010189f(local_c,param_1[8],param_1[0x18]);
+  local_10 = local_10 ^ uVar1;
+  uVar1 = FUN_0010172f(local_10,param_1[9],param_1[0x19]);
+  local_c = local_c ^ uVar1;
+  uVar1 = FUN_001017e8(local_c,param_1[10],param_1[0x1a]);
+  local_10 = local_10 ^ uVar1;
+  uVar1 = FUN_0010189f(local_10,param_1[0xb],param_1[0x1b]);
+  local_c = local_c ^ uVar1;
+  if (0xc < (uint)param_1[0x20]) {
+    uVar1 = FUN_0010172f(local_c,param_1[0xc],param_1[0x1c]);
+    uVar2 = FUN_001017e8(local_10 ^ uVar1,param_1[0xd],param_1[0x1d]);
+    uVar3 = FUN_0010189f(local_c ^ uVar2,param_1[0xe],param_1[0x1e]);
+    local_10 = local_10 ^ uVar1 ^ uVar3;
+    uVar1 = FUN_0010172f(local_10,param_1[0xf],param_1[0x1f]);
+    local_c = local_c ^ uVar2 ^ uVar1;
+  }
+  FUN_0010168d(param_3,local_c);
+  FUN_0010168d(param_3 + 4,local_10);
+  return;
+}
+

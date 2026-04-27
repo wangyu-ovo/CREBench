@@ -1,0 +1,15 @@
+
+int FUN_00101401(undefined4 param_1,int param_2)
+
+{
+  ushort uVar1;
+  ushort uVar2;
+  ushort uVar3;
+  
+  uVar1 = (ushort)((uint)param_1 >> 0x10);
+  uVar2 = *(ushort *)(&DAT_00104030 + (long)param_2 * 2) & uVar1;
+  uVar2 = (ushort)param_1 ^ (uVar2 >> 0xf | uVar2 * 2);
+  uVar3 = *(ushort *)(&DAT_00104040 + (long)param_2 * 2) | uVar2;
+  return (uint)uVar2 + (uint)(ushort)(uVar1 ^ (uVar3 >> 0xf | uVar3 * 2)) * 0x10000;
+}
+

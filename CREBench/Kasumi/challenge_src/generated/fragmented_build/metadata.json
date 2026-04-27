@@ -1,0 +1,10 @@
+{
+  "challenge": "Kasumi",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "50fae1dd5af66ee6",
+  "key": "02ce25635bdea089519e5726af20c811",
+  "iv": "",
+  "target_ciphertext": "ae89588a530ecb50",
+  "test_vectors_path": "CREBench/Kasumi/test_vectors-fragmented_build.json"
+}

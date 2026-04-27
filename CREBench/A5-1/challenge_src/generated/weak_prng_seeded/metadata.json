@@ -1,0 +1,10 @@
+{
+  "challenge": "A5-1",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "c6e8351cd878213d2fd4c720d0e7af1b1cb39f58b4fc34e071583ea8b64ed8a9",
+  "key": "d2ad38f9a0020e44",
+  "iv": "a708311f",
+  "target_ciphertext": "a9c43e952285ae1c2dcaf71013046f6b7c3d1108bd3d7542f423ceb9778ef1b0",
+  "test_vectors_path": "CREBench/A5-1/test_vectors-weak_prng_seeded.json"
+}

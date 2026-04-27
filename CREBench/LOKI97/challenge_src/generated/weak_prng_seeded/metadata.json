@@ -1,0 +1,10 @@
+{
+  "challenge": "LOKI97",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "b71bd2fa62e987bd5ed5e227ffe7d8d992fca702ac1e627e1352745e1bfb857d",
+  "key": "177940216765e177aeb26dc3fe6998d8cb0a3477bc80a5cfabff8c3dc99c04c5",
+  "iv": "9aec79c7d834e4aa331c4b6a1b8039cf",
+  "target_ciphertext": "f1cf0f5345310900ce4a43f68dcaeb5bd502cf0ed00852086b88b8fa12546120",
+  "test_vectors_path": "CREBench/LOKI97/test_vectors-weak_prng_seeded.json"
+}

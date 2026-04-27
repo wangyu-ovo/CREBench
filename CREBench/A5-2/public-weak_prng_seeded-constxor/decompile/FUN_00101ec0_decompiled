@@ -1,0 +1,34 @@
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_00101ec0(uint *param_1)
+
+{
+  uint uVar1;
+  
+  FUN_001019d0();
+  FUN_00101a20();
+  FUN_00101a70();
+  uVar1 = DAT_00104060 & *param_1;
+  uVar1 = uVar1 >> 0x10 ^ uVar1;
+  uVar1 = uVar1 ^ uVar1 >> 8;
+  *param_1 = *param_1 * 2 & _DAT_00104080 |
+             0x6996U >> (((byte)uVar1 ^ (byte)(uVar1 >> 4)) & 0xf) & 1;
+  uVar1 = DAT_00104064 & param_1[1];
+  uVar1 = uVar1 >> 0x10 ^ uVar1;
+  uVar1 = uVar1 ^ uVar1 >> 8;
+  param_1[1] = param_1[1] * 2 & _DAT_00104084 |
+               0x6996U >> (((byte)uVar1 ^ (byte)(uVar1 >> 4)) & 0xf) & 1;
+  uVar1 = DAT_00104068 & param_1[2];
+  uVar1 = uVar1 >> 0x10 ^ uVar1;
+  uVar1 = uVar1 ^ uVar1 >> 8;
+  param_1[2] = param_1[2] * 2 & _DAT_00104088 |
+               0x6996U >> (((byte)uVar1 ^ (byte)(uVar1 >> 4)) & 0xf) & 1;
+  uVar1 = DAT_0010406c & param_1[3];
+  uVar1 = uVar1 >> 0x10 ^ uVar1;
+  uVar1 = uVar1 ^ uVar1 >> 8;
+  param_1[3] = param_1[3] * 2 & _DAT_0010408c |
+               0x6996U >> (((byte)uVar1 ^ (byte)(uVar1 >> 4)) & 0xf) & 1;
+  return;
+}
+

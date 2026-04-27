@@ -1,0 +1,63 @@
+name: bf
+publc_path: CREBench/BF-CBC-Official/public
+flag: e5f849d32149fac307c739c3684de2d6
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: Blowfish-CBC
+algorithm_aliases:
+  - Blowfish
+  - BF
+  - BF-CBC
+  - Blowfish CBC
+  - blowfish_cbc
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/BF-CBC-Official/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: weak_prng_seeded
+
+template_metadata:
+  wrapper_family: cbc_direct
+  key_source_file: CREBench/BF-CBC-Official/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1724889600
+  key_seed_note: fixed_timestamp_utc_2024_08_29_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 8
+  iv_length_bytes: 8
+  target_length_bytes: 16
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: blowfish_tables
+  compile_define: CONSTXOR_BLOWFISH_TABLES
+  source_file: src/blowfish.c
+  tables:
+    - symbol: bf_init_p
+      ctype: uint32_t
+      source_ctype: BF_LONG
+      accessor: constxor_blowfish_p
+      object_symbol: bf_init
+      value_offset: 0
+      value_count: 18
+    - symbol: bf_init_s
+      ctype: uint32_t
+      source_ctype: BF_LONG
+      accessor: constxor_blowfish_s
+      object_symbol: bf_init
+      value_offset: 18
+      value_count: 1024

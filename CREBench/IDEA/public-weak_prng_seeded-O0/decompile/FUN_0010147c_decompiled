@@ -1,0 +1,58 @@
+
+void FUN_0010147c(undefined *param_1,undefined *param_2,undefined8 param_3)
+
+{
+  ushort uVar1;
+  short sVar2;
+  short sVar3;
+  ushort uVar4;
+  undefined2 uVar5;
+  undefined2 uVar6;
+  long in_FS_OFFSET;
+  ushort local_88;
+  ushort local_86;
+  ushort local_84;
+  ushort local_82;
+  uint local_7c;
+  short local_78 [48];
+  undefined2 local_18;
+  short local_16;
+  short local_14;
+  undefined2 local_12;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  FUN_00101209(param_3,local_78);
+  local_88 = CONCAT11(*param_1,param_1[1]);
+  local_86 = CONCAT11(param_1[2],param_1[3]);
+  local_84 = CONCAT11(param_1[4],param_1[5]);
+  local_82 = CONCAT11(param_1[6],param_1[7]);
+  for (local_7c = 0; local_7c < 8; local_7c = local_7c + 1) {
+    local_88 = FUN_0010137d(local_88,local_78[local_7c * 6]);
+    sVar2 = local_78[local_7c * 6 + 1];
+    uVar1 = local_84 + local_78[local_7c * 6 + 2];
+    local_82 = FUN_0010137d(local_82,local_78[local_7c * 6 + 3]);
+    sVar3 = FUN_0010137d(local_88 ^ uVar1,local_78[local_7c * 6 + 4]);
+    uVar4 = FUN_0010137d(sVar3 + (local_86 + sVar2 ^ local_82),local_78[local_7c * 6 + 5]);
+    local_88 = local_88 ^ uVar4;
+    local_82 = local_82 ^ sVar3 + uVar4;
+    local_84 = sVar3 + uVar4 ^ local_86 + sVar2;
+    local_86 = uVar1 ^ uVar4;
+  }
+  uVar5 = FUN_0010137d(local_88,local_18);
+  uVar6 = FUN_0010137d(local_82,local_12);
+  *param_2 = (char)((ushort)uVar5 >> 8);
+  param_2[1] = (char)uVar5;
+  param_2[2] = (char)((ushort)(local_84 + local_16) >> 8);
+  param_2[3] = (char)(local_84 + local_16);
+  param_2[4] = (char)((ushort)(local_86 + local_14) >> 8);
+  param_2[5] = (char)(local_86 + local_14);
+  param_2[6] = (char)((ushort)uVar6 >> 8);
+  param_2[7] = (char)uVar6;
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

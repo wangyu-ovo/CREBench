@@ -1,0 +1,8 @@
+
+void FUN_001010a0(void)
+
+{
+  (*(code *)PTR___cxa_finalize_00103ff8)();
+  return;
+}
+

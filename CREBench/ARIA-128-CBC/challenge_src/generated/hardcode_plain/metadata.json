@@ -1,0 +1,10 @@
+{
+  "challenge": "ARIA-128-CBC",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "a2de34fee476c9cfd0c74d18266729e89cf0b801836e7251a77b5ea094ebb736",
+  "key": "fc78a6f4e0569115f7695c44178b793c",
+  "iv": "4518eeb548482e6c02ce25b6a13fae94",
+  "target_ciphertext": "6496eaf4798a711d7f52dfcff49152a47106c2be4fcbe1b1d287a796659687d6",
+  "test_vectors_path": "CREBench/ARIA-128-CBC/test_vectors-hardcode_plain.json"
+}

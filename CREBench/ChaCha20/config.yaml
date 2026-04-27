@@ -1,0 +1,53 @@
+name: chacha20
+publc_path: CREBench/ChaCha20/public
+flag: 53535a92ee92e3aaef03b97d86baa8637fe13109944b9cd1978e064e3242926b
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: ChaCha20
+algorithm_aliases:
+  - ChaCha
+  - CHACHA20
+  - ChaCha-20
+  - chacha20
+  - chacha
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/ChaCha20/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: stream_nonce_direct
+  key_source_file: CREBench/ChaCha20/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1738368001
+  key_seed_note: fixed_timestamp_utc_2025_02_01_00_00_01
+  key_length_bytes: 32
+  block_size_bytes: 64
+  iv_length_bytes: 12
+  target_length_bytes: 32
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: chacha_sigma
+  compile_define: CONSTXOR_CHACHA20_TABLES
+  source_file: src/chacha20.c
+  tables:
+    - symbol: chacha_sigma
+      ctype: uint32_t
+      accessor: constxor_chacha_sigma
+

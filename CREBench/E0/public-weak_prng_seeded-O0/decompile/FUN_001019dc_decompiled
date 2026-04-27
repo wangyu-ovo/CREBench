@@ -1,0 +1,15 @@
+
+void FUN_001019dc(long param_1)
+
+{
+  long lVar1;
+  ulong local_18;
+  
+  lVar1 = FUN_001015ce();
+  for (local_18 = 0; local_18 < 4; local_18 = local_18 + 1) {
+    FUN_00101655(param_1 + local_18 * 0x10,local_18 * 4 + lVar1);
+  }
+  FUN_0010193a(param_1);
+  return;
+}
+

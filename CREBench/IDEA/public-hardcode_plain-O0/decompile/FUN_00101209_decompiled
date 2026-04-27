@@ -1,0 +1,37 @@
+
+void FUN_00101209(long param_1,long param_2)
+
+{
+  int iVar1;
+  long in_FS_OFFSET;
+  int local_88;
+  int local_84;
+  int local_80;
+  ushort auStack_78 [52];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (local_88 = 0; local_88 < 8; local_88 = local_88 + 1) {
+    auStack_78[local_88] =
+         CONCAT11(*(undefined *)(param_1 + local_88 * 2),
+                  *(undefined *)(param_1 + (long)(local_88 * 2) + 1));
+  }
+  for (local_84 = 8; local_84 < 0x34; local_84 = local_84 + 1) {
+    iVar1 = local_84 + -8;
+    if (local_84 + -8 < 0) {
+      iVar1 = local_84 + -1;
+    }
+    iVar1 = (iVar1 >> 3) * 8;
+    auStack_78[local_84] =
+         auStack_78[iVar1 + (local_84 + 2) % 8] >> 7 | auStack_78[iVar1 + (local_84 + 1) % 8] << 9;
+  }
+  for (local_80 = 0; local_80 < 0x34; local_80 = local_80 + 1) {
+    *(ushort *)((long)local_80 * 2 + param_2) = auStack_78[local_80];
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

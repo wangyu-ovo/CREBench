@@ -1,0 +1,10 @@
+{
+  "challenge": "ChaCha20",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "53535a92ee92e3aaef03b97d86baa8637fe13109944b9cd1978e064e3242926b",
+  "key": "e0a4c06b536bd3044c6d98d11cdefe26d4df45fddcb7ab32bb563905e9d16050",
+  "iv": "b31f2a2e568154e3c866b850",
+  "target_ciphertext": "2a5cfbfa0b9a2322474ed1b5ee8fd355dcab6133e2da1317ac99e07bb8e994d9",
+  "test_vectors_path": "CREBench/ChaCha20/test_vectors-hardcode_plain.json"
+}

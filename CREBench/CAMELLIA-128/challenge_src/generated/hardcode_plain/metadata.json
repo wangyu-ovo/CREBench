@@ -1,0 +1,10 @@
+{
+  "challenge": "CAMELLIA-128",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "f8ef2e4cfd48fd89206e39540910acb6",
+  "key": "f51aacebd5770b97aa68d7262cdc5a7b",
+  "iv": "",
+  "target_ciphertext": "4bcb9519e908a76152e91cc006c6f249",
+  "test_vectors_path": "CREBench/CAMELLIA-128/test_vectors-hardcode_plain.json"
+}

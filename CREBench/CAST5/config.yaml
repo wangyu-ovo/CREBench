@@ -1,0 +1,74 @@
+name: cast5
+publc_path: CREBench/CAST5/public
+flag: 37a740c0ea9b7629d52b3a3987675fe6bf4a239e7e848a3fb2b8008b5055ca2e
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: CAST5-CBC
+algorithm_aliases:
+  - CAST5
+  - CAST-128
+  - CAST5 CBC
+  - cast5_cbc
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/CAST5/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: weak_prng_seeded
+
+template_metadata:
+  wrapper_family: cbc_direct
+  key_source_file: CREBench/CAST5/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1725494400
+  key_seed_note: fixed_timestamp_utc_2024_09_05_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 8
+  iv_length_bytes: 8
+  target_length_bytes: 32
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: cast5_sboxes
+  compile_define: CONSTXOR_CAST5_TABLES
+  source_file: src/cast5.c
+  table_source_file: src/cast5_sboxes.h
+  tables:
+    - symbol: cast_sbox1
+      ctype: uint32_t
+      accessor: constxor_cast5_sbox1
+    - symbol: cast_sbox2
+      ctype: uint32_t
+      accessor: constxor_cast5_sbox2
+    - symbol: cast_sbox3
+      ctype: uint32_t
+      accessor: constxor_cast5_sbox3
+    - symbol: cast_sbox4
+      ctype: uint32_t
+      accessor: constxor_cast5_sbox4
+    - symbol: cast_sbox5
+      ctype: uint32_t
+      accessor: constxor_cast5_sbox5
+    - symbol: cast_sbox6
+      ctype: uint32_t
+      accessor: constxor_cast5_sbox6
+    - symbol: cast_sbox7
+      ctype: uint32_t
+      accessor: constxor_cast5_sbox7
+    - symbol: cast_sbox8
+      ctype: uint32_t
+      accessor: constxor_cast5_sbox8
+

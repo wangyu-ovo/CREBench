@@ -1,0 +1,32 @@
+
+void FUN_00101655(ulong *param_1,char *param_2)
+
+{
+  char cVar1;
+  char cVar2;
+  char cVar3;
+  char cVar4;
+  ulong uVar5;
+  ulong uVar6;
+  ulong uVar7;
+  ulong uVar8;
+  ulong uVar9;
+  ulong uVar10;
+  
+  uVar5 = *param_1;
+  cVar1 = *param_2;
+  uVar6 = *param_1;
+  cVar2 = param_2[1];
+  uVar7 = *param_1;
+  cVar3 = param_2[2];
+  uVar8 = *param_1;
+  cVar4 = param_2[3];
+  uVar9 = *param_1;
+  uVar10 = FUN_001015f0(*(undefined *)(param_1 + 1));
+  *param_1 = uVar10 & uVar9 * 2 |
+             (ulong)(((uint)(uVar8 >> (cVar4 - 1U & 0x3f)) ^
+                     (uint)(uVar5 >> (cVar1 - 1U & 0x3f)) ^ (uint)(uVar6 >> (cVar2 - 1U & 0x3f)) ^
+                     (uint)(uVar7 >> (cVar3 - 1U & 0x3f))) & 1);
+  return;
+}
+

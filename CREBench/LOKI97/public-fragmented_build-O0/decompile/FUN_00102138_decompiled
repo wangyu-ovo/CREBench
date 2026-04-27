@@ -1,0 +1,29 @@
+
+void FUN_00102138(long param_1,long param_2,long param_3)
+
+{
+  int iVar1;
+  undefined8 uVar2;
+  undefined8 uVar3;
+  int local_30;
+  int local_2c;
+  undefined8 local_28;
+  undefined8 local_20;
+  
+  local_28 = FUN_00101973(param_2);
+  local_20 = FUN_00101973(param_2 + 8);
+  local_30 = 0;
+  for (local_2c = 0; local_2c < 0x10; local_2c = local_2c + 1) {
+    uVar2 = FUN_001018c9(local_20,*(undefined8 *)(param_1 + (long)local_30 * 8));
+    iVar1 = local_30 + 2;
+    uVar3 = FUN_00101aae(uVar2,*(undefined8 *)(param_1 + (long)(local_30 + 1) * 8));
+    local_30 = local_30 + 3;
+    uVar2 = FUN_001018c9(uVar2,*(undefined8 *)(param_1 + (long)iVar1 * 8));
+    local_20 = FUN_00101947(local_28,uVar3);
+    local_28 = uVar2;
+  }
+  FUN_00101a19(param_3,local_20);
+  FUN_00101a19(param_3 + 8,local_28);
+  return;
+}
+

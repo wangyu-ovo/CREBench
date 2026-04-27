@@ -1,0 +1,65 @@
+
+void FUN_00101be8(long param_1,undefined4 param_2,long param_3,long param_4)
+
+{
+  undefined uVar1;
+  uint uVar2;
+  uint uVar3;
+  long in_FS_OFFSET;
+  int local_58;
+  int local_54;
+  int local_50;
+  int local_4c;
+  int local_48;
+  uint local_38;
+  uint local_34;
+  uint local_30;
+  uint local_2c;
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  local_38 = 0;
+  local_34 = 0;
+  local_30 = 0;
+  local_2c = 0;
+  uVar2 = FUN_0010163b(param_2);
+  for (local_58 = 0; local_58 < 0x40; local_58 = local_58 + 1) {
+    uVar3 = (int)(uint)*(byte *)(param_1 + (7 - (local_58 >> 3))) >> ((byte)local_58 & 7) & 1;
+    FUN_00101759(&local_38,1);
+    local_38 = local_38 ^ uVar3;
+    local_34 = local_34 ^ uVar3;
+    local_30 = local_30 ^ uVar3;
+    local_2c = local_2c ^ uVar3;
+  }
+  for (local_54 = 0; local_54 < 0x16; local_54 = local_54 + 1) {
+    uVar3 = uVar2 >> ((byte)local_54 & 0x1f) & 1;
+    FUN_00101759(&local_38,1);
+    local_38 = local_38 ^ uVar3;
+    local_34 = local_34 ^ uVar3;
+    local_30 = local_30 ^ uVar3;
+    local_2c = local_2c ^ uVar3;
+  }
+  local_38 = local_38 | 0x8000;
+  local_34 = local_34 | 0x10000;
+  local_30 = local_30 | 0x40000;
+  local_2c = local_2c | 0x400;
+  for (local_50 = 0; local_50 < 99; local_50 = local_50 + 1) {
+    FUN_00101759(&local_38,0);
+  }
+  for (local_4c = 0; local_4c < 0x72; local_4c = local_4c + 1) {
+    FUN_00101759(&local_38,0);
+    uVar1 = FUN_00101922(&local_38);
+    *(undefined *)(local_4c + param_3) = uVar1;
+  }
+  for (local_48 = 0; local_48 < 0x72; local_48 = local_48 + 1) {
+    FUN_00101759(&local_38,0);
+    uVar1 = FUN_00101922(&local_38);
+    *(undefined *)(local_48 + param_4) = uVar1;
+  }
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

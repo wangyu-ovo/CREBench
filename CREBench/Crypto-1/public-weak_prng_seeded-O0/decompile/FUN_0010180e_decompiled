@@ -1,0 +1,23 @@
+
+void FUN_0010180e(uint *param_1,undefined8 param_2)
+
+{
+  uint uVar1;
+  byte bVar2;
+  undefined8 uVar3;
+  uint local_1c;
+  
+  uVar3 = FUN_00101652(param_2);
+  *param_1 = 0;
+  param_1[1] = 0;
+  for (local_1c = 0x2f; 0 < (int)local_1c; local_1c = local_1c - 2) {
+    uVar1 = *param_1;
+    bVar2 = FUN_001015dc(uVar3,local_1c - 1 ^ 7);
+    *param_1 = uVar1 * 2 | (uint)bVar2;
+    uVar1 = param_1[1];
+    bVar2 = FUN_001015dc(uVar3,local_1c ^ 7);
+    param_1[1] = uVar1 * 2 | (uint)bVar2;
+  }
+  return;
+}
+

@@ -1,0 +1,7 @@
+
+int FUN_00101466(ushort param_1)
+
+{
+  return -(uint)param_1;
+}
+

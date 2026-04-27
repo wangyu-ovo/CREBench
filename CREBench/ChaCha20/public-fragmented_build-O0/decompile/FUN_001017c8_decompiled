@@ -1,0 +1,72 @@
+
+void FUN_001017c8(long param_1,long param_2,undefined4 param_3,long param_4)
+
+{
+  int iVar1;
+  int *piVar2;
+  long in_FS_OFFSET;
+  ulong local_c8;
+  ulong local_c0;
+  ulong local_b8;
+  int local_a8 [4];
+  undefined8 local_98;
+  undefined8 local_90;
+  undefined8 local_88;
+  undefined8 local_80;
+  undefined4 local_78;
+  undefined4 uStack_74;
+  undefined4 local_70;
+  undefined4 uStack_6c;
+  undefined8 local_68;
+  undefined8 local_60;
+  undefined8 local_58;
+  undefined8 local_50;
+  undefined8 local_48;
+  undefined8 local_40;
+  undefined8 local_38;
+  undefined8 local_30;
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  piVar2 = (int *)FUN_001017b7();
+  local_a8[0] = *piVar2;
+  local_a8[1] = piVar2[1];
+  local_a8[2] = piVar2[2];
+  local_a8[3] = piVar2[3];
+  for (local_c8 = 0; local_c8 < 8; local_c8 = local_c8 + 1) {
+    iVar1 = FUN_001015d8(param_1 + local_c8 * 4);
+    local_a8[local_c8 + 4] = iVar1;
+  }
+  local_78 = param_3;
+  uStack_74 = FUN_001015d8(param_2);
+  local_70 = FUN_001015d8(param_2 + 4);
+  uStack_6c = FUN_001015d8(param_2 + 8);
+  local_68 = CONCAT44(local_a8[1],local_a8[0]);
+  local_60 = CONCAT44(local_a8[3],local_a8[2]);
+  local_58 = local_98;
+  local_50 = local_90;
+  local_48 = local_88;
+  local_40 = local_80;
+  local_38 = CONCAT44(uStack_74,local_78);
+  local_30 = CONCAT44(uStack_6c,local_70);
+  for (local_c0 = 0; local_c0 < 10; local_c0 = local_c0 + 1) {
+    FUN_00101698(&local_68,&local_58,&local_48,&local_38);
+    FUN_00101698((long)&local_68 + 4,(long)&local_58 + 4,(long)&local_48 + 4,(long)&local_38 + 4);
+    FUN_00101698(&local_60,&local_50,&local_40,&local_30);
+    FUN_00101698((long)&local_60 + 4,(long)&local_50 + 4,(long)&local_40 + 4,(long)&local_30 + 4);
+    FUN_00101698(&local_68,(long)&local_58 + 4,&local_40,(long)&local_30 + 4);
+    FUN_00101698((long)&local_68 + 4,&local_50,(long)&local_40 + 4,&local_38);
+    FUN_00101698(&local_60,(long)&local_50 + 4,&local_48,(long)&local_38 + 4);
+    FUN_00101698((long)&local_60 + 4,&local_58,(long)&local_48 + 4,&local_30);
+  }
+  for (local_b8 = 0; local_b8 < 0x10; local_b8 = local_b8 + 1) {
+    FUN_00101629(param_4 + local_b8 * 4,
+                 *(int *)((long)&local_68 + local_b8 * 4) + local_a8[local_b8]);
+  }
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

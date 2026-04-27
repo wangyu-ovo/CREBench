@@ -1,0 +1,10 @@
+{
+  "challenge": "IDEA",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "07128db9a5f03f0d",
+  "key": "98968269b3de5337517d90ec495b0443",
+  "iv": "",
+  "target_ciphertext": "d84ae0028dbda528",
+  "test_vectors_path": "CREBench/IDEA/test_vectors-hardcode_plain.json"
+}

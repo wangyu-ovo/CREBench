@@ -1,0 +1,54 @@
+name: idea
+publc_path: CREBench/IDEA/public
+flag: 07128db9a5f03f0d
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: IDEA-ECB
+algorithm_aliases:
+  - IDEA
+  - IDEA ECB
+  - idea_ecb
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/IDEA/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: single_block_direct
+  key_source_file: CREBench/IDEA/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1714521600
+  key_seed_note: fixed_timestamp_utc_2024_05_01_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 8
+  iv_length_bytes: 0
+  target_length_bytes: 8
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: idea_magic
+  compile_define: CONSTXOR_IDEA_TABLES
+  source_file: src/idea-math.c
+  extra_source_files:
+    - src/idea-key.c
+    - src/idea.c
+  tables:
+    - symbol: idea_magic
+      ctype: uint32_t
+      accessor: constxor_idea_magic
+

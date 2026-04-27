@@ -1,0 +1,41 @@
+
+void FUN_001021d9(undefined8 *param_1,long *param_2,long *param_3)
+
+{
+  *param_2 = CONCAT17((&DAT_0010c720)[(int)(uint)(byte)((ulong)param_1[1] >> 0x38)],
+                      CONCAT16((&DAT_0010c620)[(int)((ushort)((ulong)param_1[1] >> 0x30) & 0xff)],
+                               CONCAT15((&DAT_0010c520)
+                                        [(int)((uint)((ulong)param_1[1] >> 0x28) & 0xff)],
+                                        CONCAT14((&DAT_0010c420)
+                                                 [(int)((uint)((ulong)param_1[1] >> 0x20) & 0xff)],
+                                                 CONCAT13((&DAT_0010c720)
+                                                          [(int)((uint)((ulong)*param_1 >> 0x18) &
+                                                                0xff)],
+                                                          CONCAT12((&DAT_0010c620)
+                                                                   [(int)((uint)((ulong)*param_1 >>
+                                                                                0x10) & 0xff)],
+                                                                   CONCAT11((&DAT_0010c520)
+                                                                            [(int)((uint)((ulong)*
+                                                  param_1 >> 8) & 0xff)],
+                                                  (&DAT_0010c420)[(int)((uint)*param_1 & 0xff)])))))
+                              )) - *param_3;
+  param_2[1] = CONCAT17((&DAT_0010c720)[(int)(uint)(byte)((ulong)*param_1 >> 0x38)],
+                        CONCAT16((&DAT_0010c620)[(int)((ushort)((ulong)*param_1 >> 0x30) & 0xff)],
+                                 CONCAT15((&DAT_0010c520)
+                                          [(int)((uint)((ulong)*param_1 >> 0x28) & 0xff)],
+                                          CONCAT14((&DAT_0010c420)
+                                                   [(int)((uint)((ulong)*param_1 >> 0x20) & 0xff)],
+                                                   CONCAT13((&DAT_0010c720)
+                                                            [(int)((uint)((ulong)param_1[1] >> 0x18)
+                                                                  & 0xff)],
+                                                            CONCAT12((&DAT_0010c620)
+                                                                     [(int)((uint)((ulong)param_1[1]
+                                                                                  >> 0x10) & 0xff)],
+                                                                     CONCAT11((&DAT_0010c520)
+                                                                              [(int)((uint)((ulong)
+                                                  param_1[1] >> 8) & 0xff)],
+                                                  (&DAT_0010c420)[(int)((uint)param_1[1] & 0xff)])))
+                                                  )))) - param_3[1];
+  return;
+}
+

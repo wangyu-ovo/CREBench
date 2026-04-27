@@ -1,0 +1,125 @@
+
+undefined8 FUN_0010167f(long param_1,long param_2,ulong param_3)
+
+{
+  uint uVar1;
+  int iVar2;
+  int iVar3;
+  undefined8 uVar4;
+  long in_FS_OFFSET;
+  int local_90;
+  int local_8c;
+  int local_88;
+  uint local_84;
+  uint local_80;
+  uint local_7c;
+  uint local_78;
+  uint local_6c [13];
+  uint local_38 [10];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  if (((param_3 < 0x10) || (0x28 < param_3)) || ((param_3 & 3) != 0)) {
+    uVar4 = 0xffffffff;
+  }
+  else {
+    iVar2 = (int)(param_3 >> 2);
+    iVar3 = iVar2 + 8;
+    *(int *)(param_1 + 0x260) = iVar3;
+    for (local_90 = 0; local_90 < iVar2; local_90 = local_90 + 1) {
+      local_6c[(long)local_90 + 1] =
+           (uint)*(byte *)(param_2 + (local_90 << 2)) << 0x18 |
+           (uint)*(byte *)(param_2 + (long)(local_90 << 2) + 1) << 0x10 |
+           (uint)*(byte *)(param_2 + (long)(local_90 << 2) + 2) << 8 |
+           (uint)*(byte *)(param_2 + (long)(local_90 << 2) + 3);
+    }
+    for (local_8c = 0; local_8c <= iVar3; local_8c = local_8c + 1) {
+      local_84 = *(uint *)(&DAT_001040c0 + (long)(int)(local_6c[(long)(iVar2 + -1) + 1] >> 0x18) * 4
+                          );
+      local_80 = *(uint *)(&DAT_001040c0 +
+                          (long)(int)(local_6c[(long)(iVar2 + -1) + 1] >> 0x10 & 0xff) * 4);
+      local_7c = *(uint *)(&DAT_001040c0 +
+                          (long)(int)(local_6c[(long)(iVar2 + -1) + 1] >> 8 & 0xff) * 4);
+      local_78 = *(uint *)(&DAT_001040c0 + (long)(int)(local_6c[(long)(iVar2 + -1) + 1] & 0xff) * 4)
+      ;
+      for (local_88 = iVar2 + -2; -1 < local_88; local_88 = local_88 + -1) {
+        local_84 = *(uint *)(&DAT_001044c0 + (long)(int)(local_84 & 0xff) * 4) & 0xff ^
+                   *(uint *)(&DAT_001040c0 + (long)(int)(local_6c[(long)local_88 + 1] >> 0x18) * 4)
+                   ^ *(uint *)(&DAT_001044c0 + (long)(int)(local_84 >> 0x18) * 4) & 0xff000000 ^
+                   *(uint *)(&DAT_001044c0 + (long)(int)(local_84 >> 0x10 & 0xff) * 4) & 0xff0000 ^
+                   *(uint *)(&DAT_001044c0 + (long)(int)(local_84 >> 8 & 0xff) * 4) & 0xff00;
+        local_80 = *(uint *)(&DAT_001044c0 + (long)(int)(local_80 & 0xff) * 4) & 0xff ^
+                   *(uint *)(&DAT_001040c0 +
+                            (long)(int)(local_6c[(long)local_88 + 1] >> 0x10 & 0xff) * 4) ^
+                   *(uint *)(&DAT_001044c0 + (long)(int)(local_80 >> 0x18) * 4) & 0xff000000 ^
+                   *(uint *)(&DAT_001044c0 + (long)(int)(local_80 >> 0x10 & 0xff) * 4) & 0xff0000 ^
+                   *(uint *)(&DAT_001044c0 + (long)(int)(local_80 >> 8 & 0xff) * 4) & 0xff00;
+        local_7c = *(uint *)(&DAT_001044c0 + (long)(int)(local_7c & 0xff) * 4) & 0xff ^
+                   *(uint *)(&DAT_001040c0 +
+                            (long)(int)(local_6c[(long)local_88 + 1] >> 8 & 0xff) * 4) ^
+                   *(uint *)(&DAT_001044c0 + (long)(int)(local_7c >> 0x18) * 4) & 0xff000000 ^
+                   *(uint *)(&DAT_001044c0 + (long)(int)(local_7c >> 0x10 & 0xff) * 4) & 0xff0000 ^
+                   *(uint *)(&DAT_001044c0 + (long)(int)(local_7c >> 8 & 0xff) * 4) & 0xff00;
+        local_78 = *(uint *)(&DAT_001044c0 + (long)(int)(local_78 & 0xff) * 4) & 0xff ^
+                   *(uint *)(&DAT_001040c0 + (long)(int)(local_6c[(long)local_88 + 1] & 0xff) * 4) ^
+                   *(uint *)(&DAT_001044c0 + (long)(int)(local_78 >> 0x18) * 4) & 0xff000000 ^
+                   *(uint *)(&DAT_001044c0 + (long)(int)(local_78 >> 0x10 & 0xff) * 4) & 0xff0000 ^
+                   *(uint *)(&DAT_001044c0 + (long)(int)(local_78 >> 8 & 0xff) * 4) & 0xff00;
+      }
+      *(uint *)(param_1 + (long)local_8c * 0x10) = local_84;
+      *(uint *)((long)local_8c * 0x10 + param_1 + 4) = local_80;
+      *(uint *)((long)local_8c * 0x10 + param_1 + 8) = local_7c;
+      *(uint *)((long)local_8c * 0x10 + param_1 + 0xc) = local_78;
+      for (local_90 = 0; local_90 < iVar2; local_90 = local_90 + 1) {
+        local_38[local_90] =
+             *(uint *)(&DAT_001030c0 + (long)(int)(local_6c[(long)local_90 + 1] >> 0x18) * 4) ^
+             *(uint *)(&DAT_001034c0 +
+                      (long)(int)(local_6c[(long)((local_90 + iVar2 + -1) % iVar2) + 1] >> 0x10 &
+                                 0xff) * 4) ^
+             *(uint *)(&DAT_001038c0 +
+                      (long)(int)(local_6c[(long)((local_90 + iVar2 + -2) % iVar2) + 1] >> 8 & 0xff)
+                      * 4) ^
+             *(uint *)(&DAT_00103cc0 +
+                      (long)(int)(local_6c[(long)((local_90 + iVar2 + -3) % iVar2) + 1] & 0xff) * 4)
+        ;
+      }
+      local_6c[1] = local_38[0] ^
+                    (*(uint *)(&DAT_001030c0 + (long)(local_8c << 2) * 4) & 0xff000000 |
+                    *(uint *)(&DAT_001034c0 + (long)(local_8c * 4 + 1) * 4) & 0xff0000) ^
+                    *(uint *)(&DAT_001038c0 + (long)(local_8c * 4 + 2) * 4) & 0xff00 ^
+                    *(uint *)(&DAT_00103cc0 + (long)(local_8c * 4 + 3) * 4) & 0xff;
+      for (local_90 = 1; local_90 < iVar2; local_90 = local_90 + 1) {
+        local_6c[(long)local_90 + 1] = local_38[local_90];
+      }
+    }
+    for (local_90 = 0; local_90 < 4; local_90 = local_90 + 1) {
+      *(undefined4 *)(param_1 + ((long)local_90 + 0x4c) * 4) =
+           *(undefined4 *)(param_1 + ((long)iVar3 * 4 + (long)local_90) * 4);
+      *(undefined4 *)(param_1 + ((long)iVar3 * 4 + (long)local_90 + 0x4c) * 4) =
+           *(undefined4 *)(param_1 + (long)local_90 * 4);
+    }
+    for (local_8c = 1; local_8c < iVar3; local_8c = local_8c + 1) {
+      for (local_90 = 0; local_90 < 4; local_90 = local_90 + 1) {
+        uVar1 = *(uint *)(param_1 + ((long)(iVar3 - local_8c) * 4 + (long)local_90) * 4);
+        *(uint *)(param_1 + ((long)local_8c * 4 + (long)local_90 + 0x4c) * 4) =
+             *(uint *)(&DAT_001030c0 +
+                      (ulong)(*(uint *)(&DAT_001040c0 + (long)(int)(uVar1 >> 0x18) * 4) & 0xff) * 4)
+             ^ *(uint *)(&DAT_001034c0 +
+                        (ulong)(*(uint *)(&DAT_001040c0 + (long)(int)(uVar1 >> 0x10 & 0xff) * 4) &
+                               0xff) * 4) ^
+             *(uint *)(&DAT_001038c0 +
+                      (ulong)(*(uint *)(&DAT_001040c0 + (long)(int)(uVar1 >> 8 & 0xff) * 4) & 0xff)
+                      * 4) ^
+             *(uint *)(&DAT_00103cc0 +
+                      (ulong)(*(uint *)(&DAT_001040c0 + (long)(int)(uVar1 & 0xff) * 4) & 0xff) * 4);
+      }
+    }
+    uVar4 = 0;
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar4;
+}
+

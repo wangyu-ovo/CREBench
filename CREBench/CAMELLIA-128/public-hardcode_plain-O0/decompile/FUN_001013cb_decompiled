@@ -1,0 +1,35 @@
+
+ulong FUN_001013cb(ulong param_1,ulong param_2)
+
+{
+  byte bVar1;
+  byte bVar2;
+  byte bVar3;
+  byte bVar4;
+  byte bVar5;
+  byte bVar6;
+  byte bVar7;
+  byte bVar8;
+  byte bVar9;
+  byte bVar10;
+  
+  param_1 = param_1 ^ param_2;
+  bVar9 = (&DAT_00103060)[(int)(uint)(byte)(param_1 >> 0x38)];
+  bVar1 = (&DAT_00103160)[(int)(uint)(byte)(param_1 >> 0x30)];
+  bVar2 = (&DAT_00103260)[(int)(uint)(byte)(param_1 >> 0x28)];
+  bVar3 = (&DAT_00103360)[(int)(uint)(byte)(param_1 >> 0x20)];
+  bVar10 = (&DAT_00103260)[(int)(uint)(byte)(param_1 >> 0x10)];
+  bVar8 = (&DAT_00103360)[(int)(uint)(byte)(param_1 >> 8)];
+  bVar4 = bVar9 ^ bVar3 ^ (&DAT_00103160)[(int)(uint)(byte)(param_1 >> 0x18)] ^ bVar10 ^ bVar8;
+  bVar5 = bVar4 ^ bVar9 ^ bVar1 ^ bVar2;
+  bVar6 = bVar5 ^ bVar1 ^ bVar8 ^ (&DAT_00103060)[(int)(uint)(byte)param_1];
+  bVar7 = bVar6 ^ bVar9 ^ bVar1 ^ bVar3;
+  bVar8 = bVar7 ^ bVar9 ^ bVar10 ^ bVar8;
+  bVar9 = bVar8 ^ bVar9 ^ bVar2;
+  bVar10 = bVar9 ^ (&DAT_00103160)[(int)(uint)(byte)(param_1 >> 0x18)] ^ bVar10;
+  return (ulong)bVar4 |
+         (ulong)(byte)(bVar10 ^ bVar1 ^ bVar2 ^ bVar3) << 0x38 | (ulong)(bVar9 ^ bVar3) << 0x30 |
+         (ulong)bVar7 << 0x28 | (ulong)bVar5 << 0x20 | (ulong)bVar10 << 0x18 | (ulong)bVar8 << 0x10
+         | (ulong)bVar6 << 8;
+}
+

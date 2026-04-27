@@ -1,0 +1,201 @@
+
+void FUN_00101c30(ulong *param_1,ulong *param_2,byte *param_3,int param_4)
+
+{
+  byte *pbVar1;
+  byte bVar2;
+  ulong uVar3;
+  ulong uVar4;
+  byte bVar5;
+  byte bVar6;
+  byte bVar7;
+  byte bVar8;
+  byte bVar9;
+  uint uVar10;
+  ulong uVar11;
+  byte bVar12;
+  byte bVar14;
+  byte bVar15;
+  byte bVar16;
+  byte bVar17;
+  byte bVar18;
+  byte bVar19;
+  byte bVar20;
+  byte bVar21;
+  ulong local_70;
+  byte local_65;
+  byte local_64;
+  byte local_63;
+  byte local_62;
+  byte local_61;
+  ulong local_60;
+  ulong local_50;
+  ulong local_48;
+  byte local_40;
+  byte local_3f;
+  byte local_3e;
+  byte local_3d;
+  byte local_3c;
+  byte bVar13;
+  
+  uVar3 = *param_2;
+  uVar4 = param_2[1];
+  uVar11 = uVar3 >> 0x20;
+  local_70 = uVar4 >> 8 & 0xff;
+  local_60 = uVar3 >> 8 & 0xff;
+  local_3f = (byte)(uVar3 >> 0x28);
+  local_50 = uVar3 >> 0x38;
+  local_3c = (byte)(uVar4 >> 0x28);
+  local_3d = (byte)(uVar4 >> 0x30);
+  local_48 = uVar4 >> 0x38;
+  pbVar1 = param_3 + (long)param_4 * 8;
+  local_3e = (byte)(uVar4 >> 0x20);
+  local_65 = (byte)uVar4;
+  local_64 = (byte)uVar3;
+  local_63 = (byte)(uVar3 >> 0x10);
+  bVar7 = (byte)(uVar4 >> 0x10);
+  local_61 = (byte)(uVar3 >> 0x18);
+  local_40 = (byte)(uVar4 >> 0x18);
+  bVar5 = (byte)(uVar3 >> 0x30);
+  while( true ) {
+    local_62 = bVar7;
+    bVar7 = (&DAT_00103040)[local_64 ^ *param_3];
+    bVar6 = (&DAT_00103140)[(byte)local_60 ^ param_3[1]];
+    bVar2 = (&DAT_00103040)[local_63 ^ param_3[2]];
+    bVar8 = (&DAT_00103140)[local_61 ^ param_3[3]];
+    bVar13 = bVar6 ^ 0xe;
+    if (-1 < (char)bVar6) {
+      bVar13 = bVar6;
+    }
+    bVar18 = bVar13 << 1 | (char)bVar13 < '\0';
+    bVar13 = bVar2 ^ 0xe;
+    if (-1 < (char)bVar2) {
+      bVar13 = bVar2;
+    }
+    bVar14 = bVar13 << 1 | (char)bVar13 < '\0';
+    bVar13 = bVar14 ^ 0xe;
+    if (-1 < (char)bVar14) {
+      bVar13 = bVar14;
+    }
+    bVar21 = bVar13 << 1 | (char)bVar13 < '\0';
+    bVar13 = bVar8 ^ 0xe;
+    if (-1 < (char)bVar8) {
+      bVar13 = bVar8;
+    }
+    bVar17 = bVar13 << 1 | (char)bVar13 < '\0';
+    bVar13 = bVar17 ^ 0xe;
+    if (-1 < (char)bVar17) {
+      bVar13 = bVar17;
+    }
+    bVar20 = bVar13 << 1 | (char)bVar13 < '\0';
+    bVar13 = bVar7 ^ 0xe;
+    if (-1 < (char)bVar7) {
+      bVar13 = bVar7;
+    }
+    bVar12 = bVar13 << 1 | (char)bVar13 < '\0';
+    bVar13 = bVar12 ^ 0xe;
+    if (-1 < (char)bVar12) {
+      bVar13 = bVar12;
+    }
+    bVar9 = bVar13 << 1 | (char)bVar13 < '\0';
+    bVar13 = bVar18 ^ 0xe;
+    if (-1 < (char)bVar18) {
+      bVar13 = bVar18;
+    }
+    bVar19 = bVar13 << 1 | (char)bVar13 < '\0';
+    bVar13 = (byte)local_50 ^ bVar8 ^ bVar14 ^ bVar12 ^ bVar9 ^ bVar19;
+    bVar5 = bVar5 ^ bVar2 ^ bVar18 ^ bVar17 ^ bVar9 ^ bVar19;
+    bVar14 = local_3f ^ bVar6 ^ bVar14 ^ bVar21 ^ bVar20 ^ bVar12;
+    uVar10 = (uint)(byte)(bVar7 ^ bVar18 ^ bVar21 ^ bVar17 ^ bVar20) ^ (uint)uVar11;
+    local_3f = (byte)local_70;
+    bVar6 = (&DAT_00103040)[(byte)local_70 ^ param_3[5]];
+    bVar2 = (&DAT_00103140)[local_65 ^ param_3[4]];
+    bVar7 = (&DAT_00103140)[local_62 ^ param_3[6]];
+    bVar8 = (&DAT_00103040)[local_40 ^ param_3[7]];
+    bVar18 = bVar6 ^ 0xe;
+    if (-1 < (char)bVar6) {
+      bVar18 = bVar6;
+    }
+    bVar21 = bVar18 << 1 | (char)bVar18 < '\0';
+    bVar18 = bVar21 ^ 0xe;
+    if (-1 < (char)bVar21) {
+      bVar18 = bVar21;
+    }
+    bVar18 = bVar18 << 1 | (char)bVar18 < '\0';
+    if ((char)bVar18 < '\0') {
+      bVar18 = bVar18 ^ 0xe;
+    }
+    bVar17 = bVar18 << 1 | (char)bVar18 < '\0';
+    bVar18 = bVar7 ^ 0xe;
+    if (-1 < (char)bVar7) {
+      bVar18 = bVar7;
+    }
+    bVar20 = bVar18 << 1 | (char)bVar18 < '\0';
+    bVar18 = bVar8 ^ 0xe;
+    if (-1 < (char)bVar8) {
+      bVar18 = bVar8;
+    }
+    bVar12 = bVar18 << 1 | (char)bVar18 < '\0';
+    bVar18 = bVar12 ^ 0xe;
+    if (-1 < (char)bVar12) {
+      bVar18 = bVar12;
+    }
+    bVar18 = bVar18 << 1 | (char)bVar18 < '\0';
+    if ((char)bVar18 < '\0') {
+      bVar18 = bVar18 ^ 0xe;
+    }
+    bVar9 = bVar18 << 1 | (char)bVar18 < '\0';
+    bVar18 = bVar2 ^ 0xe;
+    if (-1 < (char)bVar2) {
+      bVar18 = bVar2;
+    }
+    bVar19 = bVar18 << 1 | (char)bVar18 < '\0';
+    bVar18 = bVar19 ^ 0xe;
+    if (-1 < (char)bVar19) {
+      bVar18 = bVar19;
+    }
+    bVar18 = bVar18 << 1 | (char)bVar18 < '\0';
+    if ((char)bVar18 < '\0') {
+      bVar18 = bVar18 ^ 0xe;
+    }
+    bVar15 = bVar18 << 1 | (char)bVar18 < '\0';
+    bVar18 = bVar20 ^ 0xe;
+    if (-1 < (char)bVar20) {
+      bVar18 = bVar20;
+    }
+    bVar18 = bVar18 << 1 | (char)bVar18 < '\0';
+    if ((char)bVar18 < '\0') {
+      bVar18 = bVar18 ^ 0xe;
+    }
+    bVar18 = bVar18 << 1 | (char)bVar18 < '\0';
+    bVar16 = (byte)local_48 ^ bVar8 ^ bVar21 ^ bVar19 ^ bVar15 ^ bVar18;
+    bVar7 = bVar7 ^ bVar21 ^ bVar17 ^ bVar9 ^ bVar19 ^ local_3d;
+    bVar8 = bVar6 ^ bVar20 ^ bVar12 ^ bVar15 ^ bVar18 ^ local_3c;
+    bVar6 = bVar2 ^ bVar17 ^ bVar20 ^ bVar12 ^ bVar9 ^ local_3e;
+    param_3 = param_3 + 8;
+    if (param_3 == pbVar1) break;
+    uVar11 = (ulong)local_65;
+    local_48 = (ulong)local_61;
+    local_3c = (byte)local_60;
+    local_50 = (ulong)local_40;
+    local_3e = local_64;
+    local_3d = local_63;
+    local_70 = (ulong)bVar8;
+    local_60 = (ulong)bVar14;
+    local_65 = bVar6;
+    local_64 = (byte)uVar10;
+    local_63 = bVar5;
+    local_61 = bVar13;
+    local_40 = bVar16;
+    bVar5 = local_62;
+  }
+  param_1[1] = CONCAT71(CONCAT61(CONCAT51(CONCAT41(CONCAT31(CONCAT21(CONCAT11(bVar16,bVar7),bVar8),
+                                                            bVar6),local_40),local_62),
+                                 (byte)local_70),local_65);
+  *param_1 = (local_60 |
+             ((ulong)local_63 |
+             (((ulong)CONCAT21(CONCAT11(bVar13,bVar5),bVar14) << 8 | (ulong)(uVar10 & 0xff)) << 8 |
+             (ulong)local_61) << 8) << 8) << 8 | (ulong)local_64;
+  return;
+}
+

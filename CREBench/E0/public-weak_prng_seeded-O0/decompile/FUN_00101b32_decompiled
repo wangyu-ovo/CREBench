@@ -1,0 +1,100 @@
+
+void FUN_00101b32(ulong *param_1,byte *param_2,byte *param_3)
+
+{
+  byte bVar1;
+  byte bVar2;
+  byte bVar3;
+  byte bVar4;
+  undefined uVar5;
+  long in_FS_OFFSET;
+  undefined local_59;
+  int local_54;
+  ulong local_50;
+  ulong local_48 [4];
+  undefined8 local_28;
+  undefined8 local_20;
+  undefined local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_28 = 0;
+  local_20 = 0;
+  local_18 = 0;
+  local_59 = 0;
+  bVar1 = param_3[6];
+  bVar2 = param_3[7];
+  bVar3 = param_3[8];
+  bVar4 = param_3[9];
+  FUN_00101ac6(param_1);
+  local_48[0] = (ulong)param_3[2] << 0x29 |
+                (ulong)(bVar4 & 1) | (ulong)*param_2 * 2 | (ulong)param_2[4] << 9 |
+                (ulong)param_2[8] << 0x11 | (ulong)param_2[0xc] << 0x19 | (ulong)bVar2 << 0x21;
+  local_48[1] = (ulong)param_3[3] << 0x2f |
+                (ulong)bVar1 * 8 | (ulong)param_2[1] << 7 | (ulong)param_2[5] << 0xf |
+                (ulong)param_2[9] << 0x17 | (ulong)param_2[0xd] << 0x1f | (ulong)*param_3 << 0x27 |
+                1;
+  local_48[2] = (ulong)param_3[4] << 0x29 |
+                (ulong)(bVar4 >> 1) | (ulong)param_2[2] * 2 | (ulong)param_2[6] << 9 |
+                (ulong)param_2[10] << 0x11 | (ulong)param_2[0xe] << 0x19 | (ulong)bVar3 << 0x21;
+  local_48[3] = (ulong)param_3[5] << 0x2f |
+                (ulong)(bVar1 >> 4) * 8 | (ulong)param_2[3] << 7 | (ulong)param_2[7] << 0xf |
+                (ulong)param_2[0xb] << 0x17 | (ulong)param_2[0xf] << 0x1f |
+                (ulong)param_3[1] << 0x27 | 7;
+  for (local_54 = 0; local_54 < 0xf0; local_54 = local_54 + 1) {
+    if (local_54 < 0x27) {
+      *(undefined *)(param_1 + 8) = 0;
+    }
+    else if (local_54 == 0xee) {
+      local_59 = *(undefined *)(param_1 + 8);
+    }
+    FUN_00101a49(param_1);
+    if ((local_54 < 0x19) && ((*param_1 & 1) != 0)) {
+      *param_1 = *param_1 - 1;
+    }
+    if ((local_54 < 0x1f) && ((param_1[2] & 1) != 0)) {
+      param_1[2] = param_1[2] - 1;
+    }
+    if ((local_54 < 0x21) && ((param_1[4] & 1) != 0)) {
+      param_1[4] = param_1[4] - 1;
+    }
+    if ((local_54 < 0x27) && ((param_1[6] & 1) != 0)) {
+      param_1[6] = param_1[6] - 1;
+    }
+    *param_1 = *param_1 ^ (ulong)((uint)local_48[0] & 1);
+    param_1[2] = param_1[2] ^ (ulong)((uint)local_48[1] & 1);
+    param_1[4] = param_1[4] ^ (ulong)((uint)local_48[2] & 1);
+    param_1[6] = param_1[6] ^ (ulong)((uint)local_48[3] & 1);
+    for (local_50 = 0; local_50 < 4; local_50 = local_50 + 1) {
+      local_48[local_50] = local_48[local_50] >> 1;
+    }
+    if (0x6e < local_54) {
+      *(byte *)((long)&local_28 + (long)(local_54 + -0x6f >> 3)) =
+           *(byte *)((long)&local_28 + (long)(local_54 + -0x6f >> 3)) >> 1 |
+           *(char *)((long)param_1 + 0x42) << 7;
+    }
+  }
+  *param_1 = (ulong)CONCAT12((undefined)local_20,CONCAT11(local_28._4_1_,(undefined)local_28)) |
+             (ulong)((local_20._4_1_ & 1) << 0x18);
+  param_1[2] = (ulong)CONCAT13(local_20._4_1_ >> 1,
+                               CONCAT12(local_20._1_1_,CONCAT11(local_28._5_1_,local_28._1_1_)));
+  param_1[4] = (ulong)CONCAT13(local_20._5_1_,
+                               CONCAT12(local_20._2_1_,CONCAT11(local_28._6_1_,local_28._2_1_))) |
+               ((ulong)local_20._7_1_ & 1) << 0x20;
+  param_1[6] = (ulong)CONCAT14(local_20._7_1_ >> 1,
+                               CONCAT13(local_20._6_1_,
+                                        CONCAT12(local_20._3_1_,
+                                                 CONCAT11(local_28._7_1_,local_28._3_1_))));
+  uVar5 = FUN_0010193a(param_1);
+  *(undefined *)((long)param_1 + 0x41) = uVar5;
+  uVar5 = FUN_001018aa(*(undefined *)(param_1 + 8),*(undefined *)((long)param_1 + 0x41));
+  *(undefined *)((long)param_1 + 0x42) = uVar5;
+  uVar5 = FUN_00101840(local_59,*(undefined *)((long)param_1 + 0x41));
+  *(undefined *)(param_1 + 8) = uVar5;
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

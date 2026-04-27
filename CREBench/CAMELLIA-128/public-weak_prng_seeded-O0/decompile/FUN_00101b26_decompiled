@@ -1,0 +1,59 @@
+
+undefined4 FUN_00101b26(int *param_1)
+
+{
+  undefined8 uVar1;
+  undefined4 local_14;
+  
+  local_14 = 0xffffffff;
+  if ((*param_1 == 1) || (*param_1 == 2)) {
+    uVar1 = *(undefined8 *)(param_1 + 2);
+    *(undefined8 *)(param_1 + 2) = *(undefined8 *)(param_1 + 6);
+    *(undefined8 *)(param_1 + 6) = uVar1;
+    uVar1 = *(undefined8 *)(param_1 + 4);
+    *(undefined8 *)(param_1 + 4) = *(undefined8 *)(param_1 + 8);
+    *(undefined8 *)(param_1 + 8) = uVar1;
+    uVar1 = *(undefined8 *)(param_1 + 10);
+    *(undefined8 *)(param_1 + 10) = *(undefined8 *)(param_1 + 0x2c);
+    *(undefined8 *)(param_1 + 0x2c) = uVar1;
+    uVar1 = *(undefined8 *)(param_1 + 0xc);
+    *(undefined8 *)(param_1 + 0xc) = *(undefined8 *)(param_1 + 0x2a);
+    *(undefined8 *)(param_1 + 0x2a) = uVar1;
+    uVar1 = *(undefined8 *)(param_1 + 0xe);
+    *(undefined8 *)(param_1 + 0xe) = *(undefined8 *)(param_1 + 0x28);
+    *(undefined8 *)(param_1 + 0x28) = uVar1;
+    uVar1 = *(undefined8 *)(param_1 + 0x10);
+    *(undefined8 *)(param_1 + 0x10) = *(undefined8 *)(param_1 + 0x26);
+    *(undefined8 *)(param_1 + 0x26) = uVar1;
+    uVar1 = *(undefined8 *)(param_1 + 0x12);
+    *(undefined8 *)(param_1 + 0x12) = *(undefined8 *)(param_1 + 0x24);
+    *(undefined8 *)(param_1 + 0x24) = uVar1;
+    uVar1 = *(undefined8 *)(param_1 + 0x14);
+    *(undefined8 *)(param_1 + 0x14) = *(undefined8 *)(param_1 + 0x22);
+    *(undefined8 *)(param_1 + 0x22) = uVar1;
+    uVar1 = *(undefined8 *)(param_1 + 0x16);
+    *(undefined8 *)(param_1 + 0x16) = *(undefined8 *)(param_1 + 0x20);
+    *(undefined8 *)(param_1 + 0x20) = uVar1;
+    uVar1 = *(undefined8 *)(param_1 + 0x18);
+    *(undefined8 *)(param_1 + 0x18) = *(undefined8 *)(param_1 + 0x1e);
+    *(undefined8 *)(param_1 + 0x1e) = uVar1;
+    uVar1 = *(undefined8 *)(param_1 + 0x1a);
+    *(undefined8 *)(param_1 + 0x1a) = *(undefined8 *)(param_1 + 0x1c);
+    *(undefined8 *)(param_1 + 0x1c) = uVar1;
+    uVar1 = *(undefined8 *)(param_1 + 0x2e);
+    *(undefined8 *)(param_1 + 0x2e) = *(undefined8 *)(param_1 + 0x34);
+    *(undefined8 *)(param_1 + 0x34) = uVar1;
+    uVar1 = *(undefined8 *)(param_1 + 0x30);
+    *(undefined8 *)(param_1 + 0x30) = *(undefined8 *)(param_1 + 0x32);
+    *(undefined8 *)(param_1 + 0x32) = uVar1;
+    if (*param_1 == 1) {
+      *param_1 = 2;
+    }
+    else {
+      *param_1 = 1;
+    }
+    local_14 = 0;
+  }
+  return local_14;
+}
+

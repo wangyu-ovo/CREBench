@@ -1,0 +1,49 @@
+
+undefined8 FUN_0010141c(int param_1,undefined8 *param_2)
+
+{
+  int iVar1;
+  undefined4 uVar2;
+  undefined8 uVar3;
+  long in_FS_OFFSET;
+  undefined local_60 [8];
+  undefined local_58 [32];
+  undefined local_38 [40];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  if (param_1 == 2) {
+    iVar1 = FUN_0010129c(param_2[1],local_58,0x20);
+    if (iVar1 == 0) {
+      fwrite("Bad input hex. Expecting 64 hex chars (32 bytes).\n",1,0x32,stderr);
+      uVar3 = 1;
+    }
+    else {
+      FUN_001015f7(local_60,8);
+      uVar2 = FUN_00101371(&DAT_0010209e);
+      FUN_00101c3a(local_60,uVar2,local_58,local_38,0x20);
+      printf("Ciphertext(hex): ");
+      FUN_001013c4(local_38,0x20);
+      putchar(10);
+      iVar1 = memcmp(local_38,&DAT_001020c0,0x20);
+      if (iVar1 == 0) {
+        puts("Match: True");
+        uVar3 = 0;
+      }
+      else {
+        puts("Match: False");
+        uVar3 = 2;
+      }
+    }
+  }
+  else {
+    fprintf(stderr,"Usage: %s <64-hex-chars>\n",*param_2);
+    uVar3 = 1;
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar3;
+}
+

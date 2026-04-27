@@ -1,0 +1,10 @@
+{
+  "challenge": "E0",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "5d07e9f0b2864a34e95d81269be6737dee209297bec4d63fd6ff04c0faa3b29d",
+  "key": "8d178b0aaef3e6cb8c6b7cd107672f1a",
+  "iv": "bc97e80950eb8751577f",
+  "target_ciphertext": "dd94aada697956dfcfe13aca0e1967c8e0e99dcf7da302bd72c324a59b9e485f",
+  "test_vectors_path": "CREBench/E0/test_vectors-hardcode_plain.json"
+}

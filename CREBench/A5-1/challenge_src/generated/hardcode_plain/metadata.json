@@ -1,0 +1,10 @@
+{
+  "challenge": "A5-1",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "c6e8351cd878213d2fd4c720d0e7af1b1cb39f58b4fc34e071583ea8b64ed8a9",
+  "key": "c780d031e8833c51",
+  "iv": "a708311f",
+  "target_ciphertext": "f890c0755b38eccd5f3e3a83f251ef6223158773133e8b9347ead1dc7ccea5f5",
+  "test_vectors_path": "CREBench/A5-1/test_vectors-hardcode_plain.json"
+}

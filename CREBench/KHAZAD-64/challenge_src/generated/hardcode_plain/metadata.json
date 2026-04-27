@@ -1,0 +1,10 @@
+{
+  "challenge": "KHAZAD-64",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "d1061c0085ab775d169f158c62c2ad5d38a2521552cd0f239896a70deca827f4",
+  "key": "0079ba0b96ec2fa168af031d5c7d487b",
+  "iv": "",
+  "target_ciphertext": "a1cc59a3506ea23bf3ffb0aa306417670cbce14337893c3093c225fe1583d68a",
+  "test_vectors_path": "CREBench/KHAZAD-64/test_vectors-hardcode_plain.json"
+}

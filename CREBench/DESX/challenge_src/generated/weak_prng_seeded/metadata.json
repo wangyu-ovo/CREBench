@@ -1,0 +1,10 @@
+{
+  "challenge": "DESX",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "6f381a6bd9f1be2f53893ea8f85083703562bd47cea9fa458abd4028276179a9",
+  "key": "e00a7c8a135cc7aa26f6973052d9167fe105e715f9276a87",
+  "iv": "3ebec1c21e3f1692",
+  "target_ciphertext": "baf9b3a06fb65467facd022110e08423dc1510a01bddfc41f1a1cb941eef60b8",
+  "test_vectors_path": "CREBench/DESX/test_vectors-weak_prng_seeded.json"
+}

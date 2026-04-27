@@ -1,0 +1,10 @@
+{
+  "challenge": "Crypto-1",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "ea7fa6d2995a6d44f2e27c41a819417a0dc897d206cc45da040603c99135c2a9",
+  "key": "84b462d523b5",
+  "iv": "85faa3c99c17c77d",
+  "target_ciphertext": "011dbb2f50d0ad01f6af123d24188d11c83458fe6d6161d3752b190e425eaf00",
+  "test_vectors_path": "CREBench/Crypto-1/test_vectors-fragmented_build.json"
+}

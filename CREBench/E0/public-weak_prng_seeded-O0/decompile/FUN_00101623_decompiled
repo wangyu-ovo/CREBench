@@ -1,0 +1,7 @@
+
+uint FUN_00101623(byte param_1,char param_2,char param_3)
+
+{
+  return (int)(uint)param_1 >> (param_3 - param_2 & 0x1fU) & 1;
+}
+

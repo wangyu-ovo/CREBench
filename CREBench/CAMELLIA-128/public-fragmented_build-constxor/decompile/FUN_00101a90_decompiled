@@ -1,0 +1,55 @@
+
+ulong FUN_00101a90(ulong param_1,ulong param_2)
+
+{
+  byte bVar1;
+  byte bVar2;
+  byte bVar3;
+  byte bVar4;
+  byte bVar5;
+  byte bVar6;
+  byte bVar7;
+  uint uVar8;
+  uint uVar9;
+  uint uVar10;
+  uint uVar11;
+  uint uVar12;
+  uint uVar13;
+  uint uVar14;
+  undefined *puVar15;
+  uint uVar16;
+  undefined *puVar17;
+  
+  param_1 = param_1 ^ param_2;
+  puVar15 = &DAT_00104380;
+  puVar17 = &DAT_00104280;
+  FUN_00101990();
+  bVar1 = puVar15[param_1 >> 0x38];
+  FUN_001019d0();
+  bVar2 = (&DAT_00104080)[param_1 >> 0x30 & 0xff];
+  FUN_00101a10();
+  bVar3 = (&DAT_00104180)[param_1 >> 0x28 & 0xff];
+  FUN_00101a50();
+  uVar8 = (uint)(byte)puVar17[param_1 >> 0x20 & 0xff];
+  FUN_001019d0();
+  bVar4 = (&DAT_00104080)[param_1 >> 0x18 & 0xff];
+  FUN_00101a10();
+  bVar5 = (&DAT_00104180)[param_1 >> 0x10 & 0xff];
+  FUN_00101a50();
+  bVar6 = puVar17[param_1 >> 8 & 0xff];
+  uVar13 = uVar8;
+  FUN_00101990();
+  uVar16 = uVar8 ^ bVar4 ^ (uint)bVar1 ^ (uint)bVar5 ^ (uint)bVar6;
+  bVar7 = bVar2 ^ bVar3;
+  uVar8 = (bVar1 ^ bVar7) ^ uVar16;
+  uVar14 = (byte)(bVar2 ^ bVar6 ^ puVar15[param_1 & 0xff]) ^ uVar8;
+  uVar12 = bVar2 ^ uVar13 ^ (uint)bVar1 ^ uVar14;
+  uVar9 = (byte)(bVar6 ^ bVar5 ^ bVar1) ^ uVar12;
+  uVar10 = (bVar3 ^ bVar1) ^ uVar9;
+  uVar11 = (bVar4 ^ bVar5) ^ uVar10;
+  return CONCAT44(uVar8,uVar16) & 0xff000000ff | (ulong)(uVar14 & 0xff) << 8 |
+         (ulong)(uVar12 & 0xff) << 0x28 | (ulong)(uVar9 & 0xff) << 0x10 |
+         (ulong)((uVar10 ^ uVar13) & 0xff) << 0x30 | (ulong)(uVar11 & 0xff) << 0x18 |
+         (ulong)(uVar13 ^ bVar7 ^ uVar11) << 0x38;
+}
+

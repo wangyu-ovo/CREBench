@@ -1,0 +1,31 @@
+
+void FUN_00101a00(uint *param_1)
+
+{
+  uint uVar1;
+  bool bVar2;
+  bool bVar3;
+  uint uVar4;
+  
+  uVar1 = param_1[3];
+  bVar3 = (bool)((byte)uVar1 >> 7);
+  bVar2 = 1 < (uVar1 >> 10 & 1) + (uVar1 >> 3 & 1) + (uint)bVar3;
+  if ((bool)((byte)(uVar1 >> 10) & 1) == bVar2) {
+    uVar4 = *param_1 & 0x72000;
+    *param_1 = 0x6996U >> (((byte)(uVar4 >> 0x10) ^ (byte)(uVar4 >> 0xc)) & 0xf) & 1 |
+               *param_1 * 2 & 0x7ffff;
+  }
+  if ((bool)((byte)(uVar1 >> 3) & 1) == bVar2) {
+    param_1[1] = 0x6996U >> (sbyte)((param_1[1] & 0x300000) >> 0x14) & 1 | param_1[1] * 2 & 0x3fffff
+    ;
+  }
+  if (bVar3 == bVar2) {
+    uVar4 = param_1[2] & 0x700080;
+    param_1[2] = 0x6996U >> ((byte)((byte)(uVar4 >> 0x10) ^ (byte)uVar4) >> 4) & 1 |
+                 param_1[2] * 2 & 0x7fffff;
+  }
+  param_1[3] = 0x6996U >> ((byte)((uVar1 & 0x10800) >> 8) | (byte)((uVar1 & 0x10800) >> 0x10)) & 1 |
+               uVar1 * 2 & 0x1ffff;
+  return;
+}
+

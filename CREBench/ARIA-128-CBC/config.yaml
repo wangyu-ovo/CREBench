@@ -1,0 +1,62 @@
+name: aria
+publc_path: CREBench/ARIA-128-CBC/public
+flag: a2de34fee476c9cfd0c74d18266729e89cf0b801836e7251a77b5ea094ebb736
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: ARIA-128-CBC
+algorithm_aliases:
+  - ARIA-128
+  - ARIA
+  - ARIA-128-CBC
+  - ARIA CBC
+  - aria_128_cbc
+  - aria_cbc
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/ARIA-128-CBC/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: cbc_direct
+  key_source_file: CREBench/ARIA-128-CBC/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1706659200
+  key_seed_note: fixed_timestamp_utc_2024_01_31_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 16
+  iv_length_bytes: 16
+  target_length_bytes: 32
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: aria_tables
+  compile_define: CONSTXOR_ARIA_TABLES
+  source_file: src/aria.c
+  tables:
+    - symbol: S1
+      ctype: uint32_t
+      accessor: constxor_aria_s1
+    - symbol: S2
+      ctype: uint32_t
+      accessor: constxor_aria_s2
+    - symbol: X1
+      ctype: uint32_t
+      accessor: constxor_aria_x1
+    - symbol: X2
+      ctype: uint32_t
+      accessor: constxor_aria_x2

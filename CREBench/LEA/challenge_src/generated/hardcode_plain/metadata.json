@@ -1,0 +1,10 @@
+{
+  "challenge": "LEA",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "5bffff0deaf73419825d76a908ffa19d",
+  "key": "69233a904fbc76bc4698856522ae0901",
+  "iv": "",
+  "target_ciphertext": "67708f43235890399dbb5749e1d6e550",
+  "test_vectors_path": "CREBench/LEA/test_vectors-hardcode_plain.json"
+}

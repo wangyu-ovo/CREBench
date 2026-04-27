@@ -1,0 +1,10 @@
+{
+  "challenge": "Kalyna-128",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "d9f782a46e3304e73d1b30d799767d41",
+  "key": "a93a817d4a6bf159c2fd4b5ff04f4d8c",
+  "iv": "",
+  "target_ciphertext": "f1a7baa4286d4e7e607a67741f245342",
+  "test_vectors_path": "CREBench/Kalyna-128/test_vectors-weak_prng_seeded.json"
+}

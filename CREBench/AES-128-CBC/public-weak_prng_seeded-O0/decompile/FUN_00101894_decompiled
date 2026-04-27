@@ -1,0 +1,25 @@
+
+void FUN_00101894(long param_1)
+
+{
+  undefined uVar1;
+  
+  uVar1 = *(undefined *)(param_1 + 1);
+  *(undefined *)(param_1 + 1) = *(undefined *)(param_1 + 5);
+  *(undefined *)(param_1 + 5) = *(undefined *)(param_1 + 9);
+  *(undefined *)(param_1 + 9) = *(undefined *)(param_1 + 0xd);
+  *(undefined *)(param_1 + 0xd) = uVar1;
+  uVar1 = *(undefined *)(param_1 + 2);
+  *(undefined *)(param_1 + 2) = *(undefined *)(param_1 + 10);
+  *(undefined *)(param_1 + 10) = uVar1;
+  uVar1 = *(undefined *)(param_1 + 6);
+  *(undefined *)(param_1 + 6) = *(undefined *)(param_1 + 0xe);
+  *(undefined *)(param_1 + 0xe) = uVar1;
+  uVar1 = *(undefined *)(param_1 + 3);
+  *(undefined *)(param_1 + 3) = *(undefined *)(param_1 + 0xf);
+  *(undefined *)(param_1 + 0xf) = *(undefined *)(param_1 + 0xb);
+  *(undefined *)(param_1 + 0xb) = *(undefined *)(param_1 + 7);
+  *(undefined *)(param_1 + 7) = uVar1;
+  return;
+}
+

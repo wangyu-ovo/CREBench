@@ -1,0 +1,30 @@
+
+void FUN_00101b30(ulong *param_1,long *param_2,long *param_3)
+
+{
+  ulong uVar1;
+  ulong uVar2;
+  
+  uVar1 = param_1[1];
+  uVar2 = *param_1;
+  *param_2 = (*(ulong *)(&DAT_001058a0 + (uVar1 >> 0x38) * 8) ^
+              *(ulong *)(&DAT_001020a0 + (uVar2 & 0xff) * 8) ^
+              *(ulong *)(&DAT_001028a0 + (uVar2 >> 8 & 0xff) * 8) ^
+              *(ulong *)(&DAT_001030a0 + (uVar2 >> 0x10 & 0xff) * 8) ^
+              *(ulong *)(&DAT_001038a0 + (uVar2 >> 0x18 & 0xff) * 8) ^
+              *(ulong *)(&DAT_001040a0 + (uVar1 >> 0x20 & 0xff) * 8) ^
+              *(ulong *)(&DAT_001048a0 + (uVar1 >> 0x28 & 0xff) * 8) ^
+             *(ulong *)(&DAT_001050a0 + (uVar1 >> 0x30 & 0xff) * 8)) + *param_3;
+  uVar1 = param_1[1];
+  uVar2 = *param_1;
+  param_2[1] = (*(ulong *)(&DAT_001058a0 + (uVar2 >> 0x38) * 8) ^
+                *(ulong *)(&DAT_001020a0 + (uVar1 & 0xff) * 8) ^
+                *(ulong *)(&DAT_001028a0 + (uVar1 >> 8 & 0xff) * 8) ^
+                *(ulong *)(&DAT_001030a0 + (uVar1 >> 0x10 & 0xff) * 8) ^
+                *(ulong *)(&DAT_001038a0 + (uVar1 >> 0x18 & 0xff) * 8) ^
+                *(ulong *)(&DAT_001040a0 + (uVar2 >> 0x20 & 0xff) * 8) ^
+                *(ulong *)(&DAT_001048a0 + (uVar2 >> 0x28 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001050a0 + (uVar2 >> 0x30 & 0xff) * 8)) + param_3[1];
+  return;
+}
+

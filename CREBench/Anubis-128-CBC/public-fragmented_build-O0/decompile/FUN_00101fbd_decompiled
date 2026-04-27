@@ -1,0 +1,80 @@
+
+void FUN_00101fbd(long param_1,int param_2,long param_3,long param_4)
+
+{
+  uint uVar1;
+  long in_FS_OFFSET;
+  int local_44;
+  int local_40;
+  uint local_38 [4];
+  uint local_28 [6];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (local_40 = 0; local_40 < 4; local_40 = local_40 + 1) {
+    local_38[local_40] =
+         (uint)*(byte *)(param_3 + (local_40 << 2)) << 0x18 ^
+         (uint)*(byte *)(param_3 + (long)(local_40 << 2) + 1) << 0x10 ^
+         (uint)*(byte *)(param_3 + (long)(local_40 << 2) + 2) << 8 ^
+         (uint)*(byte *)(param_3 + (long)(local_40 << 2) + 3) ^
+         *(uint *)(param_1 + (long)local_40 * 4);
+  }
+  for (local_44 = 1; local_44 < param_2; local_44 = local_44 + 1) {
+    local_28[0] = *(uint *)(param_1 + (long)local_44 * 0x10) ^
+                  *(uint *)(&DAT_001030c0 + (long)(int)(local_38[0] >> 0x18) * 4) ^
+                  *(uint *)(&DAT_001034c0 + (long)(int)(local_38[1] >> 0x18) * 4) ^
+                  *(uint *)(&DAT_001038c0 + (long)(int)(local_38[2] >> 0x18) * 4) ^
+                  *(uint *)(&DAT_00103cc0 + (long)(int)(local_38[3] >> 0x18) * 4);
+    local_28[1] = *(uint *)(param_1 + (long)local_44 * 0x10 + 4) ^
+                  *(uint *)(&DAT_001030c0 + (long)(int)(local_38[0] >> 0x10 & 0xff) * 4) ^
+                  *(uint *)(&DAT_001034c0 + (long)(int)(local_38[1] >> 0x10 & 0xff) * 4) ^
+                  *(uint *)(&DAT_001038c0 + (long)(int)(local_38[2] >> 0x10 & 0xff) * 4) ^
+                  *(uint *)(&DAT_00103cc0 + (long)(int)(local_38[3] >> 0x10 & 0xff) * 4);
+    local_28[2] = *(uint *)(param_1 + (long)local_44 * 0x10 + 8) ^
+                  *(uint *)(&DAT_001030c0 + (long)(int)(local_38[0] >> 8 & 0xff) * 4) ^
+                  *(uint *)(&DAT_001034c0 + (long)(int)(local_38[1] >> 8 & 0xff) * 4) ^
+                  *(uint *)(&DAT_001038c0 + (long)(int)(local_38[2] >> 8 & 0xff) * 4) ^
+                  *(uint *)(&DAT_00103cc0 + (long)(int)(local_38[3] >> 8 & 0xff) * 4);
+    local_28[3] = *(uint *)(param_1 + (long)local_44 * 0x10 + 0xc) ^
+                  *(uint *)(&DAT_001030c0 + (long)(int)(local_38[0] & 0xff) * 4) ^
+                  *(uint *)(&DAT_001034c0 + (long)(int)(local_38[1] & 0xff) * 4) ^
+                  *(uint *)(&DAT_001038c0 + (long)(int)(local_38[2] & 0xff) * 4) ^
+                  *(uint *)(&DAT_00103cc0 + (long)(int)(local_38[3] & 0xff) * 4);
+    for (local_40 = 0; local_40 < 4; local_40 = local_40 + 1) {
+      local_38[local_40] = local_28[local_40];
+    }
+  }
+  local_28[0] = *(uint *)(param_1 + (long)param_2 * 0x10) ^
+                (*(uint *)(&DAT_001030c0 + (long)(int)(local_38[0] >> 0x18) * 4) & 0xff000000 |
+                *(uint *)(&DAT_001034c0 + (long)(int)(local_38[1] >> 0x18) * 4) & 0xff0000) ^
+                *(uint *)(&DAT_001038c0 + (long)(int)(local_38[2] >> 0x18) * 4) & 0xff00 ^
+                *(uint *)(&DAT_00103cc0 + (long)(int)(local_38[3] >> 0x18) * 4) & 0xff;
+  local_28[1] = *(uint *)(param_1 + (long)param_2 * 0x10 + 4) ^
+                (*(uint *)(&DAT_001030c0 + (long)(int)(local_38[0] >> 0x10 & 0xff) * 4) & 0xff000000
+                | *(uint *)(&DAT_001034c0 + (long)(int)(local_38[1] >> 0x10 & 0xff) * 4) & 0xff0000)
+                ^ *(uint *)(&DAT_001038c0 + (long)(int)(local_38[2] >> 0x10 & 0xff) * 4) & 0xff00 ^
+                *(uint *)(&DAT_00103cc0 + (long)(int)(local_38[3] >> 0x10 & 0xff) * 4) & 0xff;
+  local_28[2] = *(uint *)(param_1 + (long)param_2 * 0x10 + 8) ^
+                (*(uint *)(&DAT_001030c0 + (long)(int)(local_38[0] >> 8 & 0xff) * 4) & 0xff000000 |
+                *(uint *)(&DAT_001034c0 + (long)(int)(local_38[1] >> 8 & 0xff) * 4) & 0xff0000) ^
+                *(uint *)(&DAT_001038c0 + (long)(int)(local_38[2] >> 8 & 0xff) * 4) & 0xff00 ^
+                *(uint *)(&DAT_00103cc0 + (long)(int)(local_38[3] >> 8 & 0xff) * 4) & 0xff;
+  local_28[3] = *(uint *)(param_1 + (long)param_2 * 0x10 + 0xc) ^
+                (*(uint *)(&DAT_001030c0 + (long)(int)(local_38[0] & 0xff) * 4) & 0xff000000 |
+                *(uint *)(&DAT_001034c0 + (long)(int)(local_38[1] & 0xff) * 4) & 0xff0000) ^
+                *(uint *)(&DAT_001038c0 + (long)(int)(local_38[2] & 0xff) * 4) & 0xff00 ^
+                *(uint *)(&DAT_00103cc0 + (long)(int)(local_38[3] & 0xff) * 4) & 0xff;
+  for (local_40 = 0; local_40 < 4; local_40 = local_40 + 1) {
+    uVar1 = local_28[local_40];
+    *(char *)(param_4 + (local_40 << 2)) = (char)(uVar1 >> 0x18);
+    *(char *)(param_4 + (long)(local_40 << 2) + 1) = (char)(uVar1 >> 0x10);
+    *(char *)(param_4 + (long)(local_40 << 2) + 2) = (char)(uVar1 >> 8);
+    *(char *)(param_4 + (long)(local_40 << 2) + 3) = (char)uVar1;
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

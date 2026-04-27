@@ -1,0 +1,14 @@
+
+void FUN_001018e0(uint *param_1,uint *param_2)
+
+{
+  uint *extraout_RDX;
+  
+  FUN_001018d0();
+  *extraout_RDX = *param_1 ^ *param_2;
+  extraout_RDX[1] = param_1[1] ^ param_2[1];
+  extraout_RDX[2] = param_1[2] ^ param_2[2];
+  FUN_001018d0();
+  return;
+}
+

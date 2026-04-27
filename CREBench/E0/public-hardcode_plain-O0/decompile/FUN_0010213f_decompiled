@@ -1,0 +1,25 @@
+
+void FUN_0010213f(undefined8 param_1,undefined8 param_2,long param_3,long param_4,ulong param_5)
+
+{
+  byte bVar1;
+  byte bVar2;
+  long in_FS_OFFSET;
+  ulong local_70;
+  undefined local_68 [72];
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  FUN_00101afe(local_68,param_1,param_2);
+  for (local_70 = 0; local_70 < param_5; local_70 = local_70 + 1) {
+    bVar1 = *(byte *)(local_70 + param_3);
+    bVar2 = FUN_001020ea(local_68);
+    *(byte *)(local_70 + param_4) = bVar2 ^ bVar1;
+  }
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

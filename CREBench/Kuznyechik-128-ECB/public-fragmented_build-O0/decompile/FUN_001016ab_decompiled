@@ -1,0 +1,26 @@
+
+byte FUN_001016ab(byte param_1,byte param_2)
+
+{
+  byte bVar1;
+  byte local_20;
+  byte local_1c;
+  byte local_9;
+  
+  local_9 = 0;
+  local_1c = param_1;
+  for (local_20 = param_2; local_20 != 0; local_20 = local_20 >> 1) {
+    if ((local_20 & 1) != 0) {
+      local_9 = local_9 ^ local_1c;
+    }
+    if ((char)local_1c < '\0') {
+      bVar1 = 0xc3;
+    }
+    else {
+      bVar1 = 0;
+    }
+    local_1c = bVar1 ^ local_1c * '\x02';
+  }
+  return local_9;
+}
+

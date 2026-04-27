@@ -1,0 +1,10 @@
+{
+  "challenge": "Kalyna-128",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "d9f782a46e3304e73d1b30d799767d41",
+  "key": "b2c6105cba7ebb865e5a518a0401ca63",
+  "iv": "",
+  "target_ciphertext": "bd3bcbb66b55842f669eb8d0ffc90e36",
+  "test_vectors_path": "CREBench/Kalyna-128/test_vectors-fragmented_build.json"
+}

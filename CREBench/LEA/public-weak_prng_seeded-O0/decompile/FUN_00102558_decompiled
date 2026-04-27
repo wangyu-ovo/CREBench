@@ -1,0 +1,281 @@
+
+void FUN_00102558(long param_1,long param_2,long param_3)
+
+{
+  int iVar1;
+  uint uVar2;
+  undefined4 uVar3;
+  long lVar4;
+  undefined8 *puVar5;
+  long in_FS_OFFSET;
+  int local_284;
+  int local_280;
+  int local_27c;
+  undefined8 local_278;
+  undefined8 local_270;
+  undefined8 local_268;
+  undefined8 local_260;
+  uint local_258;
+  uint local_254;
+  uint local_250;
+  uint local_24c;
+  uint local_248;
+  uint local_244;
+  uint local_240;
+  uint local_23c;
+  uint local_238;
+  uint local_234;
+  uint local_230;
+  uint local_22c;
+  uint local_228;
+  uint local_224;
+  uint local_220;
+  uint local_21c;
+  uint local_218;
+  uint local_214;
+  uint local_210;
+  uint local_20c;
+  uint local_208;
+  uint local_204;
+  uint local_200;
+  uint local_1fc;
+  uint local_1f8;
+  uint local_1f4;
+  uint local_1f0;
+  uint local_1ec;
+  uint local_1e8;
+  uint local_1e4;
+  uint local_1e0;
+  uint local_1dc;
+  uint local_1d8;
+  uint local_1d4;
+  uint local_1d0;
+  uint local_1cc;
+  uint local_1c8;
+  uint local_1c4;
+  uint local_1c0;
+  uint local_1bc;
+  uint local_1b8;
+  uint local_1b4;
+  uint local_1b0;
+  uint local_1ac;
+  uint local_1a8;
+  uint local_1a4;
+  uint local_1a0;
+  uint local_19c;
+  uint local_198;
+  uint local_194;
+  uint local_190;
+  uint local_18c;
+  uint local_188;
+  uint local_184;
+  uint local_180;
+  uint local_17c;
+  uint local_178;
+  uint local_174;
+  uint local_170;
+  uint local_16c;
+  uint local_168;
+  uint local_164;
+  uint local_160;
+  uint local_15c;
+  uint local_158;
+  uint local_154;
+  uint local_150;
+  uint local_14c;
+  uint local_148;
+  uint local_144;
+  uint local_140;
+  uint local_13c;
+  uint local_138;
+  uint local_134;
+  uint local_130;
+  uint local_12c;
+  uint local_128;
+  uint local_124;
+  uint local_120;
+  uint local_11c;
+  uint local_118;
+  uint local_114;
+  uint local_110;
+  uint local_10c;
+  uint local_108;
+  uint local_104;
+  uint local_100;
+  uint local_fc;
+  uint local_f8;
+  uint local_f4;
+  uint local_f0;
+  uint local_ec;
+  uint local_e8;
+  uint local_e4;
+  uint local_e0;
+  uint local_dc;
+  uint local_d8;
+  uint local_d4;
+  uint local_d0;
+  uint local_cc;
+  uint local_c8;
+  uint local_c4;
+  uint local_c0;
+  uint local_bc;
+  uint local_b8;
+  uint local_b4;
+  uint local_b0;
+  uint local_ac;
+  uint local_a8;
+  uint local_a4;
+  uint local_a0;
+  uint local_9c;
+  uint local_98;
+  uint local_94;
+  uint local_90;
+  uint local_8c;
+  uint local_88;
+  uint local_84;
+  uint local_80;
+  uint local_7c;
+  uint local_78;
+  uint local_74;
+  uint local_70;
+  uint local_6c;
+  uint local_68;
+  uint local_64;
+  uint local_60;
+  uint local_5c;
+  uint local_58;
+  uint local_54;
+  uint local_50;
+  uint local_4c;
+  uint local_48;
+  uint local_44;
+  uint local_40;
+  uint local_3c;
+  uint local_38;
+  uint local_34;
+  uint local_30;
+  uint local_2c;
+  uint local_28;
+  uint local_24;
+  uint local_20;
+  uint local_1c;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  puVar5 = (undefined8 *)&local_258;
+  for (lVar4 = 0x48; lVar4 != 0; lVar4 = lVar4 + -1) {
+    *puVar5 = 0;
+    puVar5 = puVar5 + 1;
+  }
+  local_278 = 0;
+  local_270 = 0;
+  local_268 = 0;
+  local_260 = 0;
+  for (local_284 = 0; local_284 < 4; local_284 = local_284 + 1) {
+    *(uint *)((long)&local_268 + (long)local_284 * 4) =
+         CONCAT13(*(undefined *)(param_3 + (long)(local_284 << 2) + 3),
+                  CONCAT12(*(undefined *)(param_3 + (long)(local_284 << 2) + 2),
+                           CONCAT11(*(undefined *)(param_3 + (long)(local_284 << 2) + 1),
+                                    *(undefined *)(param_3 + (local_284 << 2)))));
+  }
+  FUN_00101209(&local_258,&local_268);
+  for (local_280 = 0; local_280 < 0x10; local_280 = local_280 + 1) {
+    iVar1 = local_280;
+    if (local_280 < 0) {
+      iVar1 = local_280 + 3;
+    }
+    *(uint *)((long)&local_278 + (long)(iVar1 >> 2) * 4) =
+         *(uint *)((long)&local_278 + (long)(iVar1 >> 2) * 4) |
+         (uint)*(byte *)(param_1 + local_280) << ((byte)(local_280 % 4 << 3) & 0x1f);
+  }
+  uVar2 = FUN_0010253c((local_248 ^ (uint)local_270) + (local_270._4_4_ ^ local_244),3);
+  local_270._4_4_ = uVar2;
+  local_270._0_4_ = FUN_0010253c((local_250 ^ local_278._4_4_) + ((uint)local_270 ^ local_24c),5);
+  uVar2 = FUN_00102520((local_258 ^ (uint)local_278) + (local_278._4_4_ ^ local_254),9);
+  local_278._4_4_ = uVar2;
+  local_278._0_4_ = FUN_0010253c((local_230 ^ local_270._4_4_) + ((uint)local_278 ^ local_22c),3);
+  local_270._4_4_ = FUN_0010253c((local_238 ^ (uint)local_270) + (local_270._4_4_ ^ local_234),5);
+  local_270._0_4_ = FUN_00102520((local_240 ^ local_278._4_4_) + ((uint)local_270 ^ local_23c),9);
+  local_278._4_4_ = FUN_0010253c((local_218 ^ (uint)local_278) + (local_278._4_4_ ^ local_214),3);
+  local_278._0_4_ = FUN_0010253c((local_220 ^ local_270._4_4_) + ((uint)local_278 ^ local_21c),5);
+  local_270._4_4_ = FUN_00102520((local_228 ^ (uint)local_270) + (local_270._4_4_ ^ local_224),9);
+  local_270._0_4_ = FUN_0010253c((local_200 ^ local_278._4_4_) + ((uint)local_270 ^ local_1fc),3);
+  local_278._4_4_ = FUN_0010253c((local_208 ^ (uint)local_278) + (local_278._4_4_ ^ local_204),5);
+  local_278._0_4_ = FUN_00102520((local_210 ^ local_270._4_4_) + ((uint)local_278 ^ local_20c),9);
+  local_270._4_4_ = FUN_0010253c((local_1e8 ^ (uint)local_270) + (local_270._4_4_ ^ local_1e4),3);
+  local_270._0_4_ = FUN_0010253c((local_1f0 ^ local_278._4_4_) + ((uint)local_270 ^ local_1ec),5);
+  local_278._4_4_ = FUN_00102520((local_1f8 ^ (uint)local_278) + (local_278._4_4_ ^ local_1f4),9);
+  local_278._0_4_ = FUN_0010253c((local_1d0 ^ local_270._4_4_) + ((uint)local_278 ^ local_1cc),3);
+  local_270._4_4_ = FUN_0010253c((local_1d8 ^ (uint)local_270) + (local_270._4_4_ ^ local_1d4),5);
+  local_270._0_4_ = FUN_00102520((local_1e0 ^ local_278._4_4_) + ((uint)local_270 ^ local_1dc),9);
+  local_278._4_4_ = FUN_0010253c((local_1b8 ^ (uint)local_278) + (local_278._4_4_ ^ local_1b4),3);
+  local_278._0_4_ = FUN_0010253c((local_1c0 ^ local_270._4_4_) + ((uint)local_278 ^ local_1bc),5);
+  local_270._4_4_ = FUN_00102520((local_1c8 ^ (uint)local_270) + (local_270._4_4_ ^ local_1c4),9);
+  local_270._0_4_ = FUN_0010253c((local_1a0 ^ local_278._4_4_) + ((uint)local_270 ^ local_19c),3);
+  local_278._4_4_ = FUN_0010253c((local_1a8 ^ (uint)local_278) + (local_278._4_4_ ^ local_1a4),5);
+  local_278._0_4_ = FUN_00102520((local_1b0 ^ local_270._4_4_) + ((uint)local_278 ^ local_1ac),9);
+  local_270._4_4_ = FUN_0010253c((local_188 ^ (uint)local_270) + (local_270._4_4_ ^ local_184),3);
+  local_270._0_4_ = FUN_0010253c((local_190 ^ local_278._4_4_) + ((uint)local_270 ^ local_18c),5);
+  local_278._4_4_ = FUN_00102520((local_198 ^ (uint)local_278) + (local_278._4_4_ ^ local_194),9);
+  local_278._0_4_ = FUN_0010253c((local_170 ^ local_270._4_4_) + ((uint)local_278 ^ local_16c),3);
+  local_270._4_4_ = FUN_0010253c((local_178 ^ (uint)local_270) + (local_270._4_4_ ^ local_174),5);
+  local_270._0_4_ = FUN_00102520((local_180 ^ local_278._4_4_) + ((uint)local_270 ^ local_17c),9);
+  local_278._4_4_ = FUN_0010253c((local_158 ^ (uint)local_278) + (local_278._4_4_ ^ local_154),3);
+  local_278._0_4_ = FUN_0010253c((local_160 ^ local_270._4_4_) + ((uint)local_278 ^ local_15c),5);
+  local_270._4_4_ = FUN_00102520((local_168 ^ (uint)local_270) + (local_270._4_4_ ^ local_164),9);
+  local_270._0_4_ = FUN_0010253c((local_140 ^ local_278._4_4_) + ((uint)local_270 ^ local_13c),3);
+  local_278._4_4_ = FUN_0010253c((local_148 ^ (uint)local_278) + (local_278._4_4_ ^ local_144),5);
+  local_278._0_4_ = FUN_00102520((local_150 ^ local_270._4_4_) + ((uint)local_278 ^ local_14c),9);
+  local_270._4_4_ = FUN_0010253c((local_128 ^ (uint)local_270) + (local_270._4_4_ ^ local_124),3);
+  local_270._0_4_ = FUN_0010253c((local_130 ^ local_278._4_4_) + ((uint)local_270 ^ local_12c),5);
+  local_278._4_4_ = FUN_00102520((local_138 ^ (uint)local_278) + (local_278._4_4_ ^ local_134),9);
+  local_278._0_4_ = FUN_0010253c((local_110 ^ local_270._4_4_) + ((uint)local_278 ^ local_10c),3);
+  local_270._4_4_ = FUN_0010253c((local_118 ^ (uint)local_270) + (local_270._4_4_ ^ local_114),5);
+  local_270._0_4_ = FUN_00102520((local_120 ^ local_278._4_4_) + ((uint)local_270 ^ local_11c),9);
+  local_278._4_4_ = FUN_0010253c((local_f8 ^ (uint)local_278) + (local_278._4_4_ ^ local_f4),3);
+  local_278._0_4_ = FUN_0010253c((local_100 ^ local_270._4_4_) + ((uint)local_278 ^ local_fc),5);
+  local_270._4_4_ = FUN_00102520((local_108 ^ (uint)local_270) + (local_270._4_4_ ^ local_104),9);
+  local_270._0_4_ = FUN_0010253c((local_e0 ^ local_278._4_4_) + ((uint)local_270 ^ local_dc),3);
+  local_278._4_4_ = FUN_0010253c((local_e8 ^ (uint)local_278) + (local_278._4_4_ ^ local_e4),5);
+  local_278._0_4_ = FUN_00102520((local_f0 ^ local_270._4_4_) + ((uint)local_278 ^ local_ec),9);
+  local_270._4_4_ = FUN_0010253c((local_c8 ^ (uint)local_270) + (local_270._4_4_ ^ local_c4),3);
+  local_270._0_4_ = FUN_0010253c((local_d0 ^ local_278._4_4_) + ((uint)local_270 ^ local_cc),5);
+  local_278._4_4_ = FUN_00102520((local_d8 ^ (uint)local_278) + (local_278._4_4_ ^ local_d4),9);
+  local_278._0_4_ = FUN_0010253c((local_b0 ^ local_270._4_4_) + ((uint)local_278 ^ local_ac),3);
+  local_270._4_4_ = FUN_0010253c((local_b8 ^ (uint)local_270) + (local_270._4_4_ ^ local_b4),5);
+  local_270._0_4_ = FUN_00102520((local_c0 ^ local_278._4_4_) + ((uint)local_270 ^ local_bc),9);
+  local_278._4_4_ = FUN_0010253c((local_98 ^ (uint)local_278) + (local_278._4_4_ ^ local_94),3);
+  local_278._0_4_ = FUN_0010253c((local_a0 ^ local_270._4_4_) + ((uint)local_278 ^ local_9c),5);
+  local_270._4_4_ = FUN_00102520((local_a8 ^ (uint)local_270) + (local_270._4_4_ ^ local_a4),9);
+  local_270._0_4_ = FUN_0010253c((local_80 ^ local_278._4_4_) + ((uint)local_270 ^ local_7c),3);
+  local_278._4_4_ = FUN_0010253c((local_88 ^ (uint)local_278) + (local_278._4_4_ ^ local_84),5);
+  local_278._0_4_ = FUN_00102520((local_90 ^ local_270._4_4_) + ((uint)local_278 ^ local_8c),9);
+  local_270._4_4_ = FUN_0010253c((local_68 ^ (uint)local_270) + (local_270._4_4_ ^ local_64),3);
+  local_270._0_4_ = FUN_0010253c((local_70 ^ local_278._4_4_) + ((uint)local_270 ^ local_6c),5);
+  local_278._4_4_ = FUN_00102520((local_78 ^ (uint)local_278) + (local_278._4_4_ ^ local_74),9);
+  local_278._0_4_ = FUN_0010253c((local_50 ^ local_270._4_4_) + ((uint)local_278 ^ local_4c),3);
+  local_270._4_4_ = FUN_0010253c((local_58 ^ (uint)local_270) + (local_270._4_4_ ^ local_54),5);
+  local_270._0_4_ = FUN_00102520((local_60 ^ local_278._4_4_) + ((uint)local_270 ^ local_5c),9);
+  local_278._4_4_ = FUN_0010253c((local_38 ^ (uint)local_278) + (local_278._4_4_ ^ local_34),3);
+  local_278._0_4_ = FUN_0010253c((local_40 ^ local_270._4_4_) + ((uint)local_278 ^ local_3c),5);
+  local_270._4_4_ = FUN_00102520((local_48 ^ (uint)local_270) + (local_270._4_4_ ^ local_44),9);
+  local_270._0_4_ = FUN_0010253c((local_20 ^ local_278._4_4_) + ((uint)local_270 ^ local_1c),3);
+  local_278._4_4_ = FUN_0010253c((local_28 ^ (uint)local_278) + (local_278._4_4_ ^ local_24),5);
+  uVar3 = FUN_00102520((local_30 ^ local_270._4_4_) + ((uint)local_278 ^ local_2c),9);
+  local_278 = CONCAT44(local_278._4_4_,uVar3);
+  for (local_27c = 0; local_27c < 0x10; local_27c = local_27c + 1) {
+    iVar1 = local_27c;
+    if (local_27c < 0) {
+      iVar1 = local_27c + 3;
+    }
+    *(char *)(param_2 + local_27c) =
+         (char)(*(uint *)((long)&local_278 + (long)(iVar1 >> 2) * 4) >>
+               ((byte)(local_27c % 4 << 3) & 0x1f));
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

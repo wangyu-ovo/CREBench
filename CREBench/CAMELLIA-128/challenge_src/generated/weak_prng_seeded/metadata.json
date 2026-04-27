@@ -1,0 +1,10 @@
+{
+  "challenge": "CAMELLIA-128",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "f8ef2e4cfd48fd89206e39540910acb6",
+  "key": "5444401d627cbea5c7839ef681b254fb",
+  "iv": "",
+  "target_ciphertext": "f7e913aa787c485c47b3e37742c5c4bd",
+  "test_vectors_path": "CREBench/CAMELLIA-128/test_vectors-weak_prng_seeded.json"
+}

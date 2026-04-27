@@ -1,0 +1,10 @@
+{
+  "challenge": "CAST5",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "37a740c0ea9b7629d52b3a3987675fe6bf4a239e7e848a3fb2b8008b5055ca2e",
+  "key": "03ba2c23d06acbbb7d93638ee00cd063",
+  "iv": "eddcfbfd69683b94",
+  "target_ciphertext": "e51a7083b1d5fcb6e2641fb7d169822b35f5f51af21c96750a5ccd6c5bcdcd9a",
+  "test_vectors_path": "CREBench/CAST5/test_vectors-hardcode_plain.json"
+}

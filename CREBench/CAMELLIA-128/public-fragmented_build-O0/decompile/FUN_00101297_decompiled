@@ -1,0 +1,36 @@
+
+void FUN_00101297(ulong *param_1,byte param_2,ulong *param_3,ulong *param_4)
+
+{
+  ulong uVar1;
+  byte bVar2;
+  ulong local_28;
+  ulong local_20;
+  
+  bVar2 = param_2 & 0x3f;
+  if (bVar2 == 0) {
+    local_28 = *param_1;
+    local_20 = param_1[1];
+  }
+  else {
+    local_28 = param_1[1] >> (0x40 - bVar2 & 0x3f) | *param_1 << bVar2;
+    local_20 = *param_1 >> (0x40 - bVar2 & 0x3f) | param_1[1] << bVar2;
+  }
+  uVar1 = local_28;
+  if ((param_2 & 0x40) != 0) {
+    if ((param_2 & 0x40) != 0x40) {
+                    /* WARNING: Subroutine does not return */
+      __assert_fail("0","../src/camellia.c",0x59,"r128");
+    }
+    local_28 = local_20;
+    local_20 = uVar1;
+  }
+  if (param_3 != (ulong *)0x0) {
+    *param_3 = local_28;
+  }
+  if (param_4 != (ulong *)0x0) {
+    *param_4 = local_20;
+  }
+  return;
+}
+

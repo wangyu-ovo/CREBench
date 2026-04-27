@@ -1,0 +1,10 @@
+{
+  "challenge": "Clefia",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "7f432af2a53a1f80aee8dda2ef7d074b",
+  "key": "73ed8124819d0916de5306cccfea2dbe",
+  "iv": "",
+  "target_ciphertext": "2208a4a151117b56c3443789c042f1ec",
+  "test_vectors_path": "CREBench/Clefia/test_vectors-fragmented_build.json"
+}

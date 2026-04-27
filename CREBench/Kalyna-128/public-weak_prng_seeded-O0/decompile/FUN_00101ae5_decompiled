@@ -1,0 +1,65 @@
+
+void FUN_00101ae5(ulong *param_1)
+
+{
+  *param_1 = *(ulong *)(&DAT_00108020 +
+                       (long)(int)(uint)(byte)(&DAT_0010c020)[(int)((uint)*param_1 & 0xff)] * 8) ^
+             *(ulong *)(&DAT_00108020 +
+                       ((long)(int)(uint)(byte)(&DAT_0010c120)[(int)((uint)(*param_1 >> 8) & 0xff)]
+                       + 0x100) * 8) ^
+             *(ulong *)(&DAT_00108020 +
+                       ((long)(int)(uint)(byte)(&DAT_0010c220)
+                                               [(int)((uint)(*param_1 >> 0x10) & 0xff)] + 0x200) * 8
+                       ) ^
+             *(ulong *)(&DAT_00108020 +
+                       ((long)(int)(uint)(byte)(&DAT_0010c320)
+                                               [(int)((uint)(*param_1 >> 0x18) & 0xff)] + 0x300) * 8
+                       ) ^
+             *(ulong *)(&DAT_00108020 +
+                       ((long)(int)(uint)(byte)(&DAT_0010c020)
+                                               [(int)((uint)(*param_1 >> 0x20) & 0xff)] + 0x400) * 8
+                       ) ^
+             *(ulong *)(&DAT_00108020 +
+                       ((long)(int)(uint)(byte)(&DAT_0010c120)
+                                               [(int)((uint)(*param_1 >> 0x28) & 0xff)] + 0x500) * 8
+                       ) ^
+             *(ulong *)(&DAT_00108020 +
+                       ((long)(int)(uint)(byte)(&DAT_0010c220)
+                                               [(int)((ushort)(*param_1 >> 0x30) & 0xff)] + 0x600) *
+                       8) ^
+             *(ulong *)(&DAT_00108020 +
+                       ((long)(int)(uint)(byte)(&DAT_0010c320)[(int)(uint)(byte)(*param_1 >> 0x38)]
+                       + 0x700) * 8);
+  param_1[1] = *(ulong *)(&DAT_00108020 +
+                         ((long)(int)(uint)(byte)(&DAT_0010c320)
+                                                 [(int)(uint)(byte)(param_1[1] >> 0x38)] + 0x700) *
+                         8) ^
+               *(ulong *)(&DAT_00108020 +
+                         (long)(int)(uint)(byte)(&DAT_0010c020)[(int)((uint)param_1[1] & 0xff)] * 8)
+               ^ *(ulong *)(&DAT_00108020 +
+                           ((long)(int)(uint)(byte)(&DAT_0010c120)
+                                                   [(int)((uint)(param_1[1] >> 8) & 0xff)] + 0x100)
+                           * 8) ^
+               *(ulong *)(&DAT_00108020 +
+                         ((long)(int)(uint)(byte)(&DAT_0010c220)
+                                                 [(int)((uint)(param_1[1] >> 0x10) & 0xff)] + 0x200)
+                         * 8) ^
+               *(ulong *)(&DAT_00108020 +
+                         ((long)(int)(uint)(byte)(&DAT_0010c320)
+                                                 [(int)((uint)(param_1[1] >> 0x18) & 0xff)] + 0x300)
+                         * 8) ^
+               *(ulong *)(&DAT_00108020 +
+                         ((long)(int)(uint)(byte)(&DAT_0010c020)
+                                                 [(int)((uint)(param_1[1] >> 0x20) & 0xff)] + 0x400)
+                         * 8) ^
+               *(ulong *)(&DAT_00108020 +
+                         ((long)(int)(uint)(byte)(&DAT_0010c120)
+                                                 [(int)((uint)(param_1[1] >> 0x28) & 0xff)] + 0x500)
+                         * 8) ^
+               *(ulong *)(&DAT_00108020 +
+                         ((long)(int)(uint)(byte)(&DAT_0010c220)
+                                                 [(int)((ushort)(param_1[1] >> 0x30) & 0xff)] +
+                         0x600) * 8);
+  return;
+}
+

@@ -1,0 +1,10 @@
+{
+  "challenge": "ARIA-128-CBC",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "a2de34fee476c9cfd0c74d18266729e89cf0b801836e7251a77b5ea094ebb736",
+  "key": "0f6a0fa4c2f39f9b112055953418629c",
+  "iv": "4518eeb548482e6c02ce25b6a13fae94",
+  "target_ciphertext": "67a0769381c8ff330157ccd586008888290c15bc88eba82a2b0c8902bd752b43",
+  "test_vectors_path": "CREBench/ARIA-128-CBC/test_vectors-weak_prng_seeded.json"
+}

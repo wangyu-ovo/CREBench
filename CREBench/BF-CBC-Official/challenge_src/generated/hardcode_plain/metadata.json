@@ -1,0 +1,10 @@
+{
+  "challenge": "BF-CBC-Official",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "e5f849d32149fac307c739c3684de2d6",
+  "key": "f3e4cad283c93528f2fbcc92f5750792",
+  "iv": "9d6e99ef3422d9b4",
+  "target_ciphertext": "2763077adfa031bb87372cadf3fd2bfa",
+  "test_vectors_path": "CREBench/BF-CBC-Official/test_vectors-hardcode_plain.json"
+}

@@ -1,0 +1,15 @@
+
+void FUN_00101a92(void *param_1)
+
+{
+  long lVar1;
+  ulong local_18;
+  
+  lVar1 = FUN_00101589();
+  memset(param_1,0,0x48);
+  for (local_18 = 0; local_18 < 4; local_18 = local_18 + 1) {
+    *(undefined *)((long)param_1 + local_18 * 0x10 + 8) = *(undefined *)(local_18 + lVar1);
+  }
+  return;
+}
+

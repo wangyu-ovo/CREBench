@@ -1,0 +1,10 @@
+{
+  "challenge": "ARIA-128-CBC",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "a2de34fee476c9cfd0c74d18266729e89cf0b801836e7251a77b5ea094ebb736",
+  "key": "240c75355976ec97e0777bb9f46a663a",
+  "iv": "4518eeb548482e6c02ce25b6a13fae94",
+  "target_ciphertext": "f73a4cc6d65012c41e0b16887447124f2b24c95358c178c07b8c9e0c1639e1bb",
+  "test_vectors_path": "CREBench/ARIA-128-CBC/test_vectors-fragmented_build.json"
+}

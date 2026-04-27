@@ -1,0 +1,37 @@
+
+byte FUN_00101922(uint *param_1)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  undefined uVar4;
+  undefined uVar5;
+  undefined uVar6;
+  byte bVar7;
+  byte bVar8;
+  byte bVar9;
+  undefined4 *puVar10;
+  undefined *puVar11;
+  
+  puVar10 = (undefined4 *)FUN_00101619();
+  puVar11 = (undefined *)FUN_0010162a();
+  uVar1 = *param_1;
+  uVar2 = param_1[1];
+  uVar3 = param_1[2];
+  uVar4 = FUN_001018e1(*param_1,puVar10[2],puVar11[2]);
+  uVar5 = FUN_001018e1(*param_1,puVar10[1],puVar11[1]);
+  uVar6 = FUN_001018e1(*param_1,*puVar10,*puVar11);
+  bVar7 = FUN_001016e6(uVar6,uVar5,uVar4);
+  uVar4 = FUN_001018e1(param_1[1],puVar10[5],puVar11[5]);
+  uVar5 = FUN_001018e1(param_1[1],puVar10[4],puVar11[4]);
+  uVar6 = FUN_001018e1(param_1[1],puVar10[3],puVar11[3]);
+  bVar8 = FUN_001016e6(uVar6,uVar5,uVar4);
+  uVar4 = FUN_001018e1(param_1[2],puVar10[8],puVar11[8]);
+  uVar5 = FUN_001018e1(param_1[2],puVar10[7],puVar11[7]);
+  uVar6 = FUN_001018e1(param_1[2],puVar10[6],puVar11[6]);
+  bVar9 = FUN_001016e6(uVar6,uVar5,uVar4);
+  return (((byte)(uVar3 >> 0x16) ^ (byte)(uVar1 >> 0x12) ^ (byte)(uVar2 >> 0x15)) & 1 ^ bVar7 ^
+          bVar8 ^ bVar9) & 1;
+}
+

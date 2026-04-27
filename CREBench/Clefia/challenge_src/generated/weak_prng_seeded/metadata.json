@@ -1,0 +1,10 @@
+{
+  "challenge": "Clefia",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "7f432af2a53a1f80aee8dda2ef7d074b",
+  "key": "ccd1f53b4f7ed65b46b6557753388c9a",
+  "iv": "",
+  "target_ciphertext": "7407ea7c43c388f3f2964f55e75e88a3",
+  "test_vectors_path": "CREBench/Clefia/test_vectors-weak_prng_seeded.json"
+}

@@ -1,0 +1,42 @@
+
+undefined8 FUN_00101ba0(undefined4 *param_1,long param_2,int param_3)
+
+{
+  undefined8 uVar1;
+  long in_FS_OFFSET;
+  int local_3c;
+  undefined4 local_1c;
+  undefined4 local_18;
+  undefined4 local_14;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  if ((param_1 == (undefined4 *)0x0) || (param_2 == 0)) {
+    uVar1 = 0xffffffff;
+  }
+  else {
+    local_3c = param_3;
+    if (param_3 == 0) {
+      local_3c = 0xb;
+    }
+    local_1c = FUN_0010172c(param_2);
+    local_18 = FUN_0010172c(param_2 + 4);
+    local_14 = FUN_0010172c(param_2 + 8);
+    FUN_0010196b(&local_1c,&local_18,&local_14);
+    FUN_00101874(&local_1c,&local_18,&local_14);
+    local_1c = FUN_001016f5(local_1c);
+    local_18 = FUN_001016f5(local_18);
+    local_14 = FUN_001016f5(local_14);
+    param_1[3] = local_3c;
+    *param_1 = local_1c;
+    param_1[1] = local_18;
+    param_1[2] = local_14;
+    uVar1 = 0;
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar1;
+}
+

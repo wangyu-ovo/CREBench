@@ -1,0 +1,10 @@
+{
+  "challenge": "Kuznyechik-128-ECB",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "f2e55e6ecdc7adf46adafac99b08662ee4234749f7d973fab460cee2cc97984e",
+  "key": "9ad17718caea053b2d806a1eb5ac69fdf1aa6431b75670889daaf595096a4687",
+  "iv": "",
+  "target_ciphertext": "8f430ce1c47a0861b244616ce221c937a24cfc63ddf1785dfa38df49f0af63b8",
+  "test_vectors_path": "CREBench/Kuznyechik-128-ECB/test_vectors-hardcode_plain.json"
+}

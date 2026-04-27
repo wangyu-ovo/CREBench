@@ -1,0 +1,50 @@
+name: e0
+publc_path: CREBench/E0/public
+flag: 5d07e9f0b2864a34e95d81269be6737dee209297bec4d63fd6ff04c0faa3b29d
+flag_type: hex
+
+algorithm: E0
+algorithm_aliases:
+  - Bluetooth E0
+  - bluetooth-e0
+  - e0
+
+instance_metadata:
+  generated_root: CREBench/E0/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: stream_nonce_direct
+  key_source_file: CREBench/E0/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1738454403
+  key_seed_note: fixed_timestamp_utc_2025_02_02_00_00_03
+  key_length_bytes: 16
+  block_size_bytes: 1
+  iv_length_bytes: 10
+  target_length_bytes: 32
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: e0_core_constants
+  compile_define: CONSTXOR_E0_TABLES
+  source_file: src/e0.c
+  tables:
+    - symbol: e0_register_sizes
+      ctype: uint8_t
+      accessor: constxor_e0_register_sizes
+    - symbol: e0_feedback_taps
+      ctype: uint8_t
+      accessor: constxor_e0_feedback_taps
+    - symbol: e0_output_shifts
+      ctype: uint8_t
+      accessor: constxor_e0_output_shifts
+

@@ -1,0 +1,10 @@
+{
+  "challenge": "KHAZAD-64",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "d1061c0085ab775d169f158c62c2ad5d38a2521552cd0f239896a70deca827f4",
+  "key": "5b2983879d3854928f3a68c9eb4b6773",
+  "iv": "",
+  "target_ciphertext": "986bc03993e71856d82c202ba23b910f55ec2dbc02f2ee8cab185e5b42d8c240",
+  "test_vectors_path": "CREBench/KHAZAD-64/test_vectors-weak_prng_seeded.json"
+}

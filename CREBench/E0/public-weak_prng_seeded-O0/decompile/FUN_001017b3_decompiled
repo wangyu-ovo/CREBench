@@ -1,0 +1,12 @@
+
+byte FUN_001017b3(char param_1)
+
+{
+  byte bVar1;
+  byte bVar2;
+  
+  bVar1 = FUN_00101623(param_1,2,2);
+  bVar2 = FUN_00101623(param_1,1,2);
+  return (param_1 * '\x02' | bVar2 ^ bVar1) & 3;
+}
+

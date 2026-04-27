@@ -1,0 +1,47 @@
+
+ulong FUN_00101b70(undefined8 param_1,ulong param_2)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  uint uVar4;
+  
+  uVar1 = (uint)((ulong)param_1 >> 0x20);
+  uVar4 = (uVar1 ^ (uint)param_1) & (uint)(param_2 >> 0x20);
+  uVar3 = (uint)param_1 ^ uVar4;
+  uVar4 = uVar4 ^ uVar1;
+  uVar2 = *(uint *)(&DAT_00104060 + (ulong)(byte)(&DAT_00104860)[uVar3 & 0x7ff] * 8) >> 4 |
+          *(uint *)(&DAT_00104060 + (ulong)(byte)(&DAT_00105060)[uVar4 & 0x1fff] * 8) |
+          *(uint *)(&DAT_00104060 + (ulong)(byte)(&DAT_00104860)[uVar3 >> 0x10 & 0x7ff] * 8) >> 6 |
+          *(uint *)(&DAT_00104060 + (ulong)(byte)(&DAT_00105060)[uVar3 >> 8 & 0x1fff] * 8) >> 5 |
+          *(uint *)(&DAT_00104060 + (ulong)(byte)(&DAT_00105060)[uVar4 >> 0x10 & 0x1fff] * 8) >> 2 |
+          *(uint *)(&DAT_00104060 + (ulong)(byte)(&DAT_00104860)[uVar4 >> 8 & 0x7ff] * 8) >> 1 |
+          *(uint *)(&DAT_00104060 +
+                   (ulong)(byte)(&DAT_00105060)[uVar3 >> 0x18 | (uVar4 & 0x1f) << 8] * 8) >> 7 |
+          *(uint *)(&DAT_00104060 +
+                   (ulong)(byte)(&DAT_00104860)[(uVar3 & 7) << 8 | uVar4 >> 0x18] * 8) >> 3;
+  uVar1 = *(uint *)(&DAT_00104064 + (ulong)(byte)(&DAT_00104860)[uVar3 & 0x7ff] * 8) >> 4 |
+          *(uint *)(&DAT_00104064 + (ulong)(byte)(&DAT_00105060)[uVar4 & 0x1fff] * 8) |
+          *(uint *)(&DAT_00104064 + (ulong)(byte)(&DAT_00104860)[uVar3 >> 0x10 & 0x7ff] * 8) >> 6 |
+          *(uint *)(&DAT_00104064 + (ulong)(byte)(&DAT_00105060)[uVar3 >> 8 & 0x1fff] * 8) >> 5 |
+          *(uint *)(&DAT_00104064 + (ulong)(byte)(&DAT_00105060)[uVar4 >> 0x10 & 0x1fff] * 8) >> 2 |
+          *(uint *)(&DAT_00104064 + (ulong)(byte)(&DAT_00104860)[uVar4 >> 8 & 0x7ff] * 8) >> 1 |
+          *(uint *)(&DAT_00104064 +
+                   (ulong)(byte)(&DAT_00105060)[uVar3 >> 0x18 | (uVar4 & 0x1f) << 8] * 8) >> 7 |
+          *(uint *)(&DAT_00104064 +
+                   (ulong)(byte)(&DAT_00104860)[(uVar3 & 7) << 8 | uVar4 >> 0x18] * 8) >> 3;
+  return CONCAT44((uint)(byte)(&DAT_00105060)[uVar1 >> 8 & 0xff | (uint)param_2 * 8 & 0x1f00] << 8,
+                  (uint)(byte)(&DAT_00105060)[uVar2 >> 8 & 0xff | (uint)(param_2 >> 0xd) & 0x1f00]
+                  << 8) |
+         CONCAT44((uint)(byte)(&DAT_00104860)[uVar1 >> 0x10 & 0xff | (uint)(param_2 >> 2) & 0x700]
+                  << 0x10,(uint)(byte)(&DAT_00104860)
+                                      [uVar2 >> 0x10 & 0xff | (uint)(param_2 >> 0x12) & 0x700] <<
+                          0x10) |
+         (ulong)CONCAT41((uint)(byte)(&DAT_00104860)[(uint)(param_2 >> 5) & 0x700 | uVar1 >> 0x18]
+                         << 0x18,(&DAT_00104860)[(uint)(param_2 >> 0x15) & 0x700 | uVar2 >> 0x18])
+         << 0x18 | (ulong)CONCAT14((&DAT_00105060)[uVar1 & 0xff | ((uint)param_2 & 0x1f) << 8],
+                                   (uint)(byte)(&DAT_00105060)
+                                               [uVar2 & 0xff | (uint)(param_2 >> 8) & 0x1f00]);
+}
+

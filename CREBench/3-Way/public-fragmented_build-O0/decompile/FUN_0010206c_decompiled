@@ -1,0 +1,12 @@
+
+void FUN_0010206c(undefined8 param_1,long param_2,long param_3,ulong param_4)
+
+{
+  ulong local_10;
+  
+  for (local_10 = 0; local_10 < param_4; local_10 = local_10 + 0xc) {
+    FUN_00101e65(param_1,param_2 + local_10,param_3 + local_10);
+  }
+  return;
+}
+

@@ -1,0 +1,10 @@
+{
+  "challenge": "DES",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "52b992307d0819318c416b0110e525a91921d3164d1db17c6d405434a5bdcade",
+  "key": "d25c07854a38e304",
+  "iv": "0540dd2723290802",
+  "target_ciphertext": "15028d0d2af9206690af96b7fe7d4fac27f8abb401df1d07ed9e85c76739883b",
+  "test_vectors_path": "CREBench/DES/test_vectors-weak_prng_seeded.json"
+}

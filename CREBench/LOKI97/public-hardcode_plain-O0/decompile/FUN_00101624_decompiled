@@ -1,0 +1,22 @@
+
+uint FUN_00101624(uint param_1,uint param_2,uint param_3,int param_4)
+
+{
+  uint local_20;
+  uint local_1c;
+  uint local_c;
+  
+  local_c = 0;
+  local_1c = param_1;
+  for (local_20 = param_2; local_20 != 0; local_20 = (int)local_20 >> 1) {
+    if ((local_20 & 1) != 0) {
+      local_c = local_c ^ local_1c;
+    }
+    local_1c = local_1c << 1;
+    if (param_4 <= (int)local_1c) {
+      local_1c = local_1c ^ param_3;
+    }
+  }
+  return local_c;
+}
+

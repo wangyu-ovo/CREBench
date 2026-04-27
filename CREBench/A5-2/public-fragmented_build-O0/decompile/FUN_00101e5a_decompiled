@@ -1,0 +1,20 @@
+
+void FUN_00101e5a(undefined8 param_1,undefined4 param_2,long param_3)
+
+{
+  long in_FS_OFFSET;
+  undefined local_108 [128];
+  undefined local_88 [120];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  FUN_00101c4c(param_1,param_2,local_108,local_88);
+  FUN_00101ba4(local_108,0x72,param_3);
+  FUN_00101ba4(local_88,0x72,param_3 + 0xf);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

@@ -1,0 +1,10 @@
+{
+  "challenge": "DESX",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "6f381a6bd9f1be2f53893ea8f85083703562bd47cea9fa458abd4028276179a9",
+  "key": "1feff783d55fc5f3e700ba41cdef8198734101e157bda17f",
+  "iv": "3ebec1c21e3f1692",
+  "target_ciphertext": "6e8d9aa52ff01df2f0158a9ecc277bff8cdc883ae94330f8bddea5918b8eba31",
+  "test_vectors_path": "CREBench/DESX/test_vectors-fragmented_build.json"
+}

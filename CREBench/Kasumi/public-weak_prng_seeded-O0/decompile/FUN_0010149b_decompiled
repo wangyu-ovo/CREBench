@@ -1,0 +1,37 @@
+
+void FUN_0010149b(byte *param_1)
+
+{
+  int iVar1;
+  undefined4 uVar2;
+  uint uVar3;
+  uint local_20;
+  uint local_1c;
+  int local_18;
+  
+  local_18 = 0;
+  local_20 = (uint)param_1[3] +
+             (uint)*param_1 * 0x1000000 + (uint)param_1[1] * 0x10000 + (uint)param_1[2] * 0x100;
+  local_1c = (uint)param_1[7] +
+             (uint)param_1[4] * 0x1000000 + (uint)param_1[5] * 0x10000 + (uint)param_1[6] * 0x100;
+  do {
+    uVar2 = FUN_00101401(local_20,local_18);
+    iVar1 = local_18 + 1;
+    uVar3 = FUN_001012ef(uVar2,local_18);
+    local_1c = local_1c ^ uVar3;
+    uVar2 = FUN_001012ef(local_1c,iVar1);
+    local_18 = local_18 + 2;
+    uVar3 = FUN_00101401(uVar2,iVar1);
+    local_20 = local_20 ^ uVar3;
+  } while (local_18 < 8);
+  *param_1 = (byte)(local_20 >> 0x18);
+  param_1[4] = (byte)(local_1c >> 0x18);
+  param_1[1] = (byte)(local_20 >> 0x10);
+  param_1[5] = (byte)(local_1c >> 0x10);
+  param_1[2] = (byte)(local_20 >> 8);
+  param_1[6] = (byte)(local_1c >> 8);
+  param_1[3] = (byte)local_20;
+  param_1[7] = (byte)local_1c;
+  return;
+}
+

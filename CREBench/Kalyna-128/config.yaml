@@ -1,0 +1,69 @@
+name: kalyna_128
+publc_path: CREBench/Kalyna-128/public
+flag: d9f782a46e3304e73d1b30d799767d41
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: Kalyna-128-ECB
+algorithm_aliases:
+  - Kalyna-128
+  - Kalyna ECB
+  - kalyna_128
+  - kalyna
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/Kalyna-128/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: fragmented_build
+
+template_metadata:
+  wrapper_family: single_block_direct
+  key_source_file: CREBench/Kalyna-128/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1717200000
+  key_seed_note: fixed_timestamp_utc_2024_06_01_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 16
+  iv_length_bytes: 0
+  target_length_bytes: 16
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: kalyna_tables
+  compile_define: CONSTXOR_KALYNA_TABLES
+  source_file: src/kalyna-constant.c
+  extra_source_files:
+    - src/kalyna-key.c
+    - src/kalyna-utility.c
+    - src/kalyna.c
+  tables:
+    - symbol: T
+      ctype: uint64_t
+      source_ctype: word64
+      accessor: constxor_kalyna_t
+    - symbol: IT
+      ctype: uint64_t
+      source_ctype: word64
+      accessor: constxor_kalyna_it
+    - symbol: S
+      ctype: uint8_t
+      source_ctype: byte
+      accessor: constxor_kalyna_s
+    - symbol: IS
+      ctype: uint8_t
+      source_ctype: byte
+      accessor: constxor_kalyna_is
+

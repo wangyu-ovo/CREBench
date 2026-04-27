@@ -1,0 +1,10 @@
+{
+  "challenge": "Lucifer-128-ECB",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "4cde8c3e531d8400971b8e064f31e7c627fb6bd1ece498fb510b10fb2756fb21",
+  "key": "980bab3cab021c968956971a99249b0b",
+  "iv": "",
+  "target_ciphertext": "33c27c4fd0ee403a11e26a9e03d76942dd20abe1bc9337e8bdb32cde0c7a84c5",
+  "test_vectors_path": "CREBench/Lucifer-128-ECB/test_vectors-hardcode_plain.json"
+}

@@ -1,0 +1,24 @@
+
+undefined8 FUN_0010290b(undefined8 param_1,undefined8 param_2,int param_3)
+
+{
+  undefined8 uVar1;
+  
+  if (param_3 == 0x80) {
+    FUN_001022f9(param_1,param_2);
+    uVar1 = 0x12;
+  }
+  else if (param_3 == 0xc0) {
+    FUN_0010246a(param_1,param_2);
+    uVar1 = 0x16;
+  }
+  else if (param_3 == 0x100) {
+    FUN_001026ee(param_1,param_2);
+    uVar1 = 0x1a;
+  }
+  else {
+    uVar1 = 0;
+  }
+  return uVar1;
+}
+

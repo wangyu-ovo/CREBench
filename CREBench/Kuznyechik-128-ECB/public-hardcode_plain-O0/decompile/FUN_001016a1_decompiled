@@ -1,0 +1,18 @@
+
+void FUN_001016a1(void)
+
+{
+  byte bVar1;
+  uint local_10;
+  uint local_c;
+  
+  local_10 = 1;
+  for (local_c = 0; local_c < 0x100; local_c = local_c + 1) {
+    (&DAT_0010c140)[local_10] = (char)local_c;
+    (&DAT_0010c040)[local_c] = (char)local_10;
+    bVar1 = FUN_00101647(local_10,3);
+    local_10 = (uint)bVar1;
+  }
+  return;
+}
+

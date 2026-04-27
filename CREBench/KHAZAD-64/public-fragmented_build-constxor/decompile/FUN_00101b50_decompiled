@@ -1,0 +1,18 @@
+
+void FUN_00101b50(long param_1,long param_2,undefined8 param_3,long param_4)
+
+{
+  long lVar1;
+  undefined auVar2 [16];
+  
+  param_4 = param_4 << 3;
+  auVar2 = FUN_00101b40();
+  lVar1 = auVar2._0_8_;
+  do {
+    *(ulong *)(auVar2._8_8_ + lVar1) = *(ulong *)(param_1 + lVar1) ^ *(ulong *)(param_2 + lVar1);
+    lVar1 = lVar1 + 8;
+  } while (lVar1 != param_4);
+  FUN_00101b40();
+  return;
+}
+

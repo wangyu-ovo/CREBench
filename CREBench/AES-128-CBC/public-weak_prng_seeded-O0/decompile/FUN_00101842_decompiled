@@ -1,0 +1,12 @@
+
+void FUN_00101842(long param_1)
+
+{
+  int local_c;
+  
+  for (local_c = 0; local_c < 0x10; local_c = local_c + 1) {
+    *(undefined *)(param_1 + local_c) = (&DAT_001020a0)[(int)(uint)*(byte *)(param_1 + local_c)];
+  }
+  return;
+}
+

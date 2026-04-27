@@ -1,0 +1,10 @@
+{
+  "challenge": "Kuznyechik-128-ECB",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "f2e55e6ecdc7adf46adafac99b08662ee4234749f7d973fab460cee2cc97984e",
+  "key": "c96b8831a297a595a137402f369f97d0f4076a728258d752ed8c2ff6d17c4ca0",
+  "iv": "",
+  "target_ciphertext": "08ae1e674a8bf8f196dccaa9fa5c60594e7900fce379ff85dae6ef9dfa9a3d3e",
+  "test_vectors_path": "CREBench/Kuznyechik-128-ECB/test_vectors-fragmented_build.json"
+}

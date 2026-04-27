@@ -1,0 +1,85 @@
+name: khazad
+publc_path: CREBench/KHAZAD-64/public
+flag: d1061c0085ab775d169f158c62c2ad5d38a2521552cd0f239896a70deca827f4
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: KHAZAD-64-ECB
+algorithm_aliases:
+  - KHAZAD
+  - KHAZAD-64
+  - KHAZAD ECB
+  - khazad_64_ecb
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/KHAZAD-64/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: multi_block_ecb
+  key_source_file: CREBench/KHAZAD-64/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1727740800
+  key_seed_note: fixed_timestamp_utc_2024_10_01_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 8
+  iv_length_bytes: 0
+  target_length_bytes: 32
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: khazad_tables
+  compile_define: CONSTXOR_KHAZAD_TABLES
+  source_file: src/khazad.c
+  tables:
+    - symbol: T0
+      source_ctype: ulong64
+      ctype: uint64_t
+      accessor: constxor_khazad_t0
+    - symbol: T1
+      source_ctype: ulong64
+      ctype: uint64_t
+      accessor: constxor_khazad_t1
+    - symbol: T2
+      source_ctype: ulong64
+      ctype: uint64_t
+      accessor: constxor_khazad_t2
+    - symbol: T3
+      source_ctype: ulong64
+      ctype: uint64_t
+      accessor: constxor_khazad_t3
+    - symbol: T4
+      source_ctype: ulong64
+      ctype: uint64_t
+      accessor: constxor_khazad_t4
+    - symbol: T5
+      source_ctype: ulong64
+      ctype: uint64_t
+      accessor: constxor_khazad_t5
+    - symbol: T6
+      source_ctype: ulong64
+      ctype: uint64_t
+      accessor: constxor_khazad_t6
+    - symbol: T7
+      source_ctype: ulong64
+      ctype: uint64_t
+      accessor: constxor_khazad_t7
+    - symbol: c
+      source_ctype: ulong64
+      ctype: uint64_t
+      accessor: constxor_khazad_c
+

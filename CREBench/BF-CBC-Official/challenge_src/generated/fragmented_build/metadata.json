@@ -1,0 +1,10 @@
+{
+  "challenge": "BF-CBC-Official",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "e5f849d32149fac307c739c3684de2d6",
+  "key": "616d9dc49eec2b74b14bf3e19354b1ce",
+  "iv": "9d6e99ef3422d9b4",
+  "target_ciphertext": "597e07c5da7f140e350436ad2d931d49",
+  "test_vectors_path": "CREBench/BF-CBC-Official/test_vectors-fragmented_build.json"
+}

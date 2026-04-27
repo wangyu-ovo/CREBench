@@ -1,0 +1,15 @@
+
+byte FUN_001020ea(long param_1)
+
+{
+  byte local_d;
+  int local_c;
+  
+  local_d = 0;
+  for (local_c = 0; local_c < 8; local_c = local_c + 1) {
+    local_d = local_d | (byte)((*(byte *)(param_1 + 0x42) & 1) << ((byte)local_c & 0x1f));
+    FUN_00101a15(param_1);
+  }
+  return local_d;
+}
+

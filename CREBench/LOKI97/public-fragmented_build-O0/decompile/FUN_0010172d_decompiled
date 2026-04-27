@@ -1,0 +1,43 @@
+
+void FUN_0010172d(void)
+
+{
+  byte bVar1;
+  undefined uVar2;
+  uint local_38;
+  uint local_34;
+  int local_30;
+  uint local_2c;
+  int local_28;
+  int local_20;
+  
+  if (DAT_00108040 == 0) {
+    for (local_38 = 0; (int)local_38 < 0x2000; local_38 = local_38 + 1) {
+      uVar2 = FUN_001016d4(local_38 ^ 0x1fff,0x2911,0x2000);
+      (&DAT_00105040)[(int)local_38] = uVar2;
+    }
+    for (local_34 = 0; (int)local_34 < 0x800; local_34 = local_34 + 1) {
+      uVar2 = FUN_001016d4(local_34 ^ 0x7ff,0xaa7,0x800);
+      (&DAT_00107040)[(int)local_34] = uVar2;
+    }
+    for (local_30 = 0; local_30 < 0x100; local_30 = local_30 + 1) {
+      local_2c = 0;
+      bVar1 = 7;
+      for (local_28 = 0; local_28 < 4; local_28 = local_28 + 1) {
+        local_2c = local_2c | (local_30 >> ((byte)local_28 & 0x1f) & 1U) << (bVar1 & 0x1f);
+        bVar1 = bVar1 + 8;
+      }
+      *(uint *)(&DAT_00107844 + (long)local_30 * 8) = local_2c;
+      local_2c = 0;
+      bVar1 = 7;
+      for (local_20 = 4; local_20 < 8; local_20 = local_20 + 1) {
+        local_2c = local_2c | (local_30 >> ((byte)local_20 & 0x1f) & 1U) << (bVar1 & 0x1f);
+        bVar1 = bVar1 + 8;
+      }
+      *(uint *)(&DAT_00107840 + (long)local_30 * 8) = local_2c;
+    }
+    DAT_00108040 = 1;
+  }
+  return;
+}
+

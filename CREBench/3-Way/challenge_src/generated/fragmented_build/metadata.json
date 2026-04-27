@@ -1,0 +1,10 @@
+{
+  "challenge": "3-Way",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "5296ba4623d5f79dc7a304be31e852ac3700734b2a67ad686e3a5d098f1c82aa16638a8adb7f115f9059421838708ed5",
+  "key": "a3b99ea44fac666d255f1812",
+  "iv": "",
+  "target_ciphertext": "82588ac25885c15acb9753c33472cf96edfff3e9b088645c64ee651d570faa73e4404e914e3f66f48420047d6179662b",
+  "test_vectors_path": "CREBench/3-Way/test_vectors-fragmented_build.json"
+}

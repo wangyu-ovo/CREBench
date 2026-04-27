@@ -1,0 +1,16 @@
+
+undefined2 FUN_00101409(undefined2 param_1)
+
+{
+  undefined2 uVar1;
+  undefined2 local_e;
+  uint local_c;
+  
+  local_e = param_1;
+  for (local_c = 0; local_c < 0xf; local_c = local_c + 1) {
+    uVar1 = FUN_0010137d(local_e,local_e);
+    local_e = FUN_0010137d(uVar1,param_1);
+  }
+  return local_e;
+}
+

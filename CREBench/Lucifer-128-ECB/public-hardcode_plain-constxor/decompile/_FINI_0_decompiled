@@ -1,0 +1,15 @@
+
+void _FINI_0(void)
+
+{
+  if (DAT_00104020 == '\0') {
+    if (PTR___cxa_finalize_00103ff0 != (undefined *)0x0) {
+      __cxa_finalize(PTR_LOOP_00104008);
+    }
+    FUN_001017b0();
+    DAT_00104020 = 1;
+    return;
+  }
+  return;
+}
+

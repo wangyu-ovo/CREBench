@@ -1,0 +1,52 @@
+name: crypto1
+publc_path: CREBench/Crypto-1/public
+flag: ea7fa6d2995a6d44f2e27c41a819417a0dc897d206cc45da040603c99135c2a9
+flag_type: hex
+
+algorithm: Crypto-1
+algorithm_aliases:
+  - Crypto1
+  - CRYPTO1
+  - MIFARE Crypto1
+  - crypto-1
+  - crypto1
+
+instance_metadata:
+  generated_root: CREBench/Crypto-1/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: stream_nonce_direct
+  key_source_file: CREBench/Crypto-1/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1738454404
+  key_seed_note: fixed_timestamp_utc_2025_02_02_00_00_04
+  key_length_bytes: 6
+  block_size_bytes: 1
+  iv_length_bytes: 8
+  target_length_bytes: 32
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: crypto1_core_constants
+  compile_define: CONSTXOR_CRYPTO1_TABLES
+  source_file: src/crypto1_stream.c
+  tables:
+    - symbol: crypto1_feedback_masks
+      ctype: uint32_t
+      accessor: constxor_crypto1_feedback_masks
+    - symbol: crypto1_filter_masks
+      ctype: uint32_t
+      accessor: constxor_crypto1_filter_masks
+    - symbol: crypto1_filter_output
+      ctype: uint32_t
+      accessor: constxor_crypto1_filter_output
+

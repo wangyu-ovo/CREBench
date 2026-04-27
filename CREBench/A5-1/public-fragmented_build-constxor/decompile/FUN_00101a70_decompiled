@@ -1,0 +1,46 @@
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_00101a70(uint *param_1)
+
+{
+  uint uVar1;
+  uint uVar2;
+  bool bVar3;
+  uint uVar4;
+  uint uVar5;
+  bool bVar6;
+  bool bVar7;
+  bool bVar8;
+  
+  FUN_00101980();
+  FUN_001019d0();
+  FUN_00101a20();
+  uVar5 = *param_1;
+  uVar1 = param_1[1];
+  bVar6 = (uVar5 & _DAT_00104018) != 0;
+  bVar7 = (uVar1 & _DAT_0010401c) != 0;
+  uVar2 = param_1[2];
+  bVar8 = (uVar2 & _DAT_00104020) != 0;
+  bVar3 = 1 < (byte)(bVar6 + bVar7 + bVar8);
+  if (bVar6 == bVar3) {
+    uVar4 = (DAT_00104028 & uVar5) >> 0x10 ^ DAT_00104028 & uVar5;
+    uVar4 = uVar4 ^ uVar4 >> 8;
+    *param_1 = uVar5 * 2 & _DAT_00104038 | 0x6996U >> (((byte)uVar4 ^ (byte)(uVar4 >> 4)) & 0xf) & 1
+    ;
+  }
+  if (bVar7 == bVar3) {
+    uVar5 = (DAT_0010402c & uVar1) >> 0x10 ^ DAT_0010402c & uVar1;
+    uVar5 = uVar5 ^ uVar5 >> 8;
+    param_1[1] = uVar1 * 2 & _DAT_0010403c |
+                 0x6996U >> (((byte)uVar5 ^ (byte)(uVar5 >> 4)) & 0xf) & 1;
+  }
+  if (bVar8 == bVar3) {
+    uVar5 = (DAT_00104030 & uVar2) >> 0x10 ^ DAT_00104030 & uVar2;
+    uVar5 = uVar5 ^ uVar5 >> 8;
+    param_1[2] = uVar2 * 2 & _DAT_00104040 |
+                 0x6996U >> (((byte)uVar5 ^ (byte)(uVar5 >> 4)) & 0xf) & 1;
+  }
+  return;
+}
+

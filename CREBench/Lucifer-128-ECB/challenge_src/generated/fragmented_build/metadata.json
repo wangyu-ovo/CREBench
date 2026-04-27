@@ -1,0 +1,10 @@
+{
+  "challenge": "Lucifer-128-ECB",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "4cde8c3e531d8400971b8e064f31e7c627fb6bd1ece498fb510b10fb2756fb21",
+  "key": "5e3b1e8213683c1f1f39d81e4edfea2b",
+  "iv": "",
+  "target_ciphertext": "16daa6ece655c897bb3e939228f27a9878d09df2293ee4f3cf9e2712b09243d5",
+  "test_vectors_path": "CREBench/Lucifer-128-ECB/test_vectors-fragmented_build.json"
+}

@@ -1,0 +1,10 @@
+{
+  "challenge": "DES",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "52b992307d0819318c416b0110e525a91921d3164d1db17c6d405434a5bdcade",
+  "key": "d72bb0d5614c92b2",
+  "iv": "0540dd2723290802",
+  "target_ciphertext": "15635bd5e99563de77bef971b7e91e76e7afd5ecc018b2bcfcd8025dfa88c2a0",
+  "test_vectors_path": "CREBench/DES/test_vectors-fragmented_build.json"
+}

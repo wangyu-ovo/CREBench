@@ -1,0 +1,10 @@
+{
+  "challenge": "Kasumi",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "50fae1dd5af66ee6",
+  "key": "8de0d936e23089b9ff093f3a1aba2ef3",
+  "iv": "",
+  "target_ciphertext": "248bd1a30eb1567f",
+  "test_vectors_path": "CREBench/Kasumi/test_vectors-weak_prng_seeded.json"
+}

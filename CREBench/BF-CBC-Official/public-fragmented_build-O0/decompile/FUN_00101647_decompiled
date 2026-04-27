@@ -1,0 +1,10 @@
+
+int FUN_00101647(uint param_1,long param_2)
+
+{
+  return (*(int *)(param_2 + (ulong)(param_1 >> 0x18) * 4) +
+          *(int *)(param_2 + (ulong)((param_1 >> 0x10 & 0xff) + 0x100) * 4) ^
+         *(uint *)(param_2 + (ulong)((param_1 >> 8 & 0xff) + 0x200) * 4)) +
+         *(int *)(param_2 + (ulong)((param_1 & 0xff) + 0x300) * 4);
+}
+

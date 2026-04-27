@@ -1,0 +1,14 @@
+
+void FUN_00101c20(undefined8 param_1)
+
+{
+  if (DAT_0010c040 != 0) {
+    return;
+  }
+  FUN_00101bd0(param_1,&DAT_00102040,&DAT_0010c060,0x800);
+  FUN_00101be0(&DAT_00106040);
+  FUN_00101bd0();
+  DAT_0010c040 = 1;
+  return;
+}
+

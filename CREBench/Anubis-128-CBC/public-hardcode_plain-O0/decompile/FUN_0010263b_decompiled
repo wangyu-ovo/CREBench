@@ -1,0 +1,8 @@
+
+void FUN_0010263b(long param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  FUN_00101f59(param_1 + 0x130,*(undefined4 *)(param_1 + 0x260),param_2,param_3);
+  return;
+}
+

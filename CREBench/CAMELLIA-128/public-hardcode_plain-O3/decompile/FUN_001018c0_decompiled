@@ -1,0 +1,34 @@
+
+void FUN_001018c0(ulong *param_1,byte param_2,ulong *param_3,ulong *param_4)
+
+{
+  ulong uVar1;
+  ulong uVar2;
+  ulong uVar3;
+  byte bVar4;
+  
+  uVar2 = *param_1;
+  uVar1 = param_1[1];
+  bVar4 = param_2 & 0x3f;
+  if (bVar4 != 0) {
+    uVar3 = uVar1 << bVar4 | uVar2 >> (0x40 - bVar4 & 0x3f);
+    uVar1 = uVar2 << bVar4 | uVar1 >> (0x40 - bVar4 & 0x3f);
+    uVar2 = uVar1;
+    if ((param_2 & 0x40) == 0) {
+      uVar2 = uVar3;
+      uVar3 = uVar1;
+    }
+    *param_3 = uVar3;
+    *param_4 = uVar2;
+    return;
+  }
+  uVar3 = uVar2;
+  if ((param_2 & 0x40) == 0) {
+    uVar3 = uVar1;
+    uVar1 = uVar2;
+  }
+  *param_3 = uVar1;
+  *param_4 = uVar3;
+  return;
+}
+

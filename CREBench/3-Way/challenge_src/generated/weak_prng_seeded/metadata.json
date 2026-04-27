@@ -1,0 +1,10 @@
+{
+  "challenge": "3-Way",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "5296ba4623d5f79dc7a304be31e852ac3700734b2a67ad686e3a5d098f1c82aa16638a8adb7f115f9059421838708ed5",
+  "key": "8f473fc65f9109d932153f04",
+  "iv": "",
+  "target_ciphertext": "75a610d44b0bbb6e2ab850130a87dc7895a51c7e33675132c0f5814deb636990792657ce25027c20060acc8fb328b909",
+  "test_vectors_path": "CREBench/3-Way/test_vectors-weak_prng_seeded.json"
+}

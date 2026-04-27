@@ -1,0 +1,7 @@
+
+undefined * FUN_001015ed(void)
+
+{
+  return &DAT_001030f0;
+}
+

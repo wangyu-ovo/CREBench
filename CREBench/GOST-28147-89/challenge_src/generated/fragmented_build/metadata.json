@@ -1,0 +1,10 @@
+{
+  "challenge": "GOST-28147-89",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "db7cb84818efe61e",
+  "key": "07dbb67a963b7325229b86562d0b84f83a9361b465736708b5912a99cfbd3ddb",
+  "iv": "",
+  "target_ciphertext": "7e4c77f563c64d8a",
+  "test_vectors_path": "CREBench/GOST-28147-89/test_vectors-fragmented_build.json"
+}

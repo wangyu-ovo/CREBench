@@ -1,0 +1,176 @@
+
+bool FUN_001010e0(int param_1,undefined8 *param_2)
+
+{
+  char cVar1;
+  undefined uVar2;
+  int iVar3;
+  uint uVar4;
+  size_t sVar5;
+  uint uVar6;
+  long lVar7;
+  uint uVar8;
+  uint uVar9;
+  char *pcVar10;
+  uint uVar11;
+  uint *puVar12;
+  uint uVar13;
+  uint uVar14;
+  ulong *puVar15;
+  long in_FS_OFFSET;
+  bool bVar16;
+  ulong *local_118;
+  byte local_108;
+  byte local_104;
+  uint local_e8;
+  uint local_e4;
+  uint local_e0;
+  int local_dc;
+  undefined local_d4 [12];
+  ulong local_c8 [6];
+  ulong local_98 [6];
+  ulong local_68 [7];
+  long local_30;
+  
+  local_30 = *(long *)(in_FS_OFFSET + 0x28);
+  if (param_1 == 2) {
+    puVar12 = &DAT_00102088;
+    puVar15 = local_68;
+    for (lVar7 = 0xc; lVar7 != 0; lVar7 = lVar7 + -1) {
+      *(uint *)puVar15 = *puVar12;
+      puVar12 = puVar12 + 1;
+      puVar15 = (ulong *)((long)puVar15 + 4);
+    }
+    FUN_00101690(local_d4);
+    pcVar10 = (char *)param_2[1];
+    sVar5 = strlen(pcVar10);
+    if (sVar5 == 0x60) {
+      lVar7 = 0;
+      do {
+        cVar1 = pcVar10[lVar7 * 2];
+        iVar3 = (int)cVar1;
+        if ((byte)(cVar1 - 0x30U) < 10) {
+          uVar4 = iVar3 - 0x30;
+        }
+        else if ((byte)(cVar1 + 0x9fU) < 6) {
+          uVar4 = iVar3 - 0x57;
+        }
+        else {
+          uVar4 = iVar3 - 0x37;
+          if (5 < (byte)(cVar1 + 0xbfU)) {
+            uVar4 = 0xffffffff;
+          }
+        }
+        cVar1 = pcVar10[lVar7 * 2 + 1];
+        iVar3 = (int)cVar1;
+        if ((byte)(cVar1 - 0x30U) < 10) {
+          uVar8 = iVar3 - 0x30;
+        }
+        else if ((byte)(cVar1 + 0x9fU) < 6) {
+          uVar8 = iVar3 - 0x57;
+        }
+        else {
+          if (5 < (byte)(cVar1 + 0xbfU)) goto LAB_00101227;
+          uVar8 = iVar3 - 0x37;
+        }
+        if ((int)(uVar4 | uVar8) < 0) goto LAB_00101227;
+        puVar15 = local_98;
+        *(byte *)((long)local_98 + lVar7) = (byte)(uVar4 << 4) | (byte)uVar8;
+        lVar7 = lVar7 + 1;
+      } while (lVar7 != 0x30);
+      FUN_00101740(&local_e8,local_d4,0xb);
+      local_118 = local_c8;
+      do {
+        uVar4 = *(uint *)puVar15;
+        uVar8 = *(uint *)((long)puVar15 + 4);
+        uVar6 = *(uint *)(puVar15 + 1);
+        uVar13 = uVar4 >> 0x18 | (uVar4 & 0xff0000) >> 8 | (uVar4 & 0xff00) << 8 | uVar4 << 0x18;
+        uVar4 = uVar8 >> 0x18 | (uVar8 & 0xff0000) >> 8 | (uVar8 & 0xff00) << 8 | uVar8 << 0x18;
+        uVar8 = uVar6 >> 0x18 | (uVar6 & 0xff0000) >> 8 | (uVar6 & 0xff00) << 8 | uVar6 << 0x18;
+        if (local_dc == 0) {
+          uVar6 = 0xb0b;
+        }
+        else {
+          iVar3 = 0;
+          uVar6 = 0xb0b;
+          do {
+            uVar4 = uVar4 ^ local_e4;
+            uVar8 = local_e0 ^ uVar6 ^ uVar8;
+            uVar13 = uVar6 << 0x10 ^ local_e8 ^ uVar13;
+            uVar9 = uVar4 ^ uVar8 ^ uVar13;
+            uVar14 = (uVar9 << 0x10 | uVar9 >> 0x10) ^ (uVar9 << 8 | uVar9 >> 0x18);
+            uVar11 = uVar8 >> 8 ^ uVar4 << 8 ^ uVar13 << 0x18;
+            uVar9 = uVar4 << 0x18 ^ uVar4 >> 0x18 ^ uVar8 << 8 ^ uVar13 >> 8;
+            uVar4 = uVar4 ^ uVar9 ^ uVar14;
+            uVar8 = uVar8 ^ uVar9 << 0x10 ^ uVar14 ^ uVar11 >> 0x10;
+            uVar9 = uVar8 << 1 | (uint)((int)uVar8 < 0);
+            uVar6 = uVar6 * 2;
+            uVar13 = uVar14 ^ uVar11 ^ uVar13 >> 0x18 ^ uVar13;
+            uVar11 = uVar13 >> 10 | uVar13 << 0x16;
+            uVar8 = (~uVar4 | uVar11) ^ uVar9;
+            uVar13 = (~uVar9 | uVar4) ^ uVar11;
+            uVar13 = uVar13 << 1 | (uint)((int)uVar13 < 0);
+            uVar8 = uVar8 >> 10 | uVar8 << 0x16;
+            uVar4 = (~uVar11 | uVar9) ^ uVar4;
+            if ((uVar6 & 0x10000) != 0) {
+              uVar6 = uVar6 ^ 0x11011;
+            }
+            iVar3 = iVar3 + 1;
+          } while (local_dc != iVar3);
+        }
+        uVar4 = uVar4 ^ local_e4;
+        uVar8 = uVar8 ^ uVar6 ^ local_e0;
+        uVar9 = uVar13 ^ local_e8 ^ uVar6 << 0x10;
+        uVar6 = uVar9 ^ uVar8 ^ uVar4;
+        uVar11 = (uVar6 << 0x10 | uVar6 >> 0x10) ^ (uVar6 << 8 | uVar6 >> 0x18);
+        uVar6 = (uVar13 ^ local_e8) << 0x18 ^ uVar8 >> 8 ^ uVar4 << 8;
+        uVar13 = uVar4 << 0x18 ^ uVar4 >> 0x18 ^ uVar9 >> 8 ^ uVar8 << 8;
+        uVar9 = uVar6 ^ uVar9 >> 0x18 ^ uVar11 ^ uVar9;
+        uVar4 = uVar4 ^ uVar13 ^ uVar11;
+        puVar15 = (ulong *)((long)puVar15 + 0xc);
+        local_104 = (byte)(uVar9 >> 0x10);
+        local_108 = (byte)(uVar9 >> 0x18);
+        *local_118 = (((((((ulong)(uVar4 & 0xff) << 8 | (ulong)(uVar4 >> 8 & 0xff)) << 8 |
+                         (ulong)(uVar4 >> 0x10 & 0xff)) << 8 | (ulong)(uVar4 >> 0x18)) << 8 |
+                       (ulong)(uVar9 & 0xff)) << 8 | (ulong)(uVar9 >> 8 & 0xff)) << 8 |
+                     (ulong)local_104) << 8 | (ulong)local_108;
+        uVar8 = uVar13 << 0x10 ^ uVar11 ^ uVar8;
+        uVar4 = uVar8 ^ uVar6 >> 0x10;
+        *(uint *)(local_118 + 1) =
+             uVar8 >> 0x18 | (uVar4 & 0xff0000) >> 8 | (uVar4 & 0xff00) << 8 | uVar4 << 0x18;
+        local_118 = (ulong *)((long)local_118 + 0xc);
+      } while (local_68 != puVar15);
+      __printf_chk(1,"Ciphertext(hex): ");
+      puVar15 = local_c8;
+      do {
+        uVar2 = *(undefined *)puVar15;
+        puVar15 = (ulong *)((long)puVar15 + 1);
+        __printf_chk(1,&DAT_0010203b,uVar2);
+      } while (local_98 != puVar15);
+      __printf_chk(1,"\n");
+      iVar3 = memcmp(local_c8,local_68,0x30);
+      pcVar10 = "True";
+      if (iVar3 != 0) {
+        pcVar10 = "False";
+      }
+      __printf_chk(1,"Match: %s\n",pcVar10);
+      bVar16 = iVar3 != 0;
+    }
+    else {
+LAB_00101227:
+      __fprintf_chk(*(undefined8 *)PTR_stderr_00103ff8,1,
+                    "Bad input hex. Expecting 96 hex chars (48 bytes).\n");
+      bVar16 = true;
+    }
+  }
+  else {
+    __fprintf_chk(*(undefined8 *)PTR_stderr_00103ff8,1,"Usage: %s <96-hex-chars>\n",*param_2);
+    bVar16 = true;
+  }
+  if (local_30 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return bVar16;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+

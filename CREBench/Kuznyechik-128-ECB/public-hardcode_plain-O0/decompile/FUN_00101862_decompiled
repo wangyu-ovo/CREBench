@@ -1,0 +1,39 @@
+
+void FUN_00101862(void)
+
+{
+  uint local_18;
+  uint local_14;
+  
+  if (DAT_0013c440 != 1) {
+    FUN_001016a1();
+    for (local_18 = 0; local_18 < 0x10; local_18 = local_18 + 1) {
+      for (local_14 = 0; local_14 < 0x100; local_14 = local_14 + 1) {
+        *(undefined8 *)(&DAT_0010c240 + ((ulong)local_18 * 0x100 + (ulong)local_14) * 0x10) = 0;
+        *(undefined8 *)(&DAT_0010c248 + ((ulong)local_18 * 0x100 + (ulong)local_14) * 0x10) = 0;
+        (&DAT_0010c240 + ((ulong)local_18 * 0x100 + (ulong)local_14) * 0x10)[local_18] =
+             (&DAT_0010a0c0)[local_14];
+        FUN_0010170a(&DAT_0010c240 + ((ulong)local_18 * 0x100 + (ulong)local_14) * 0x10);
+        *(undefined8 *)(&DAT_0011c240 + ((ulong)local_18 * 0x100 + (ulong)local_14) * 0x10) = 0;
+        *(undefined8 *)(&DAT_0011c248 + ((ulong)local_18 * 0x100 + (ulong)local_14) * 0x10) = 0;
+        (&DAT_0011c240 + ((ulong)local_18 * 0x100 + (ulong)local_14) * 0x10)[local_18] =
+             (&DAT_0010a1c0)[local_14];
+        FUN_001017b5(&DAT_0011c240 + ((ulong)local_18 * 0x100 + (ulong)local_14) * 0x10);
+        *(undefined8 *)(&DAT_0012c240 + ((ulong)local_18 * 0x100 + (ulong)local_14) * 0x10) = 0;
+        *(undefined8 *)(&DAT_0012c248 + ((ulong)local_18 * 0x100 + (ulong)local_14) * 0x10) = 0;
+        (&DAT_0012c240 + ((ulong)local_18 * 0x100 + (ulong)local_14) * 0x10)[local_18] =
+             (char)local_14;
+        FUN_001017b5(&DAT_0012c240 + ((ulong)local_18 * 0x100 + (ulong)local_14) * 0x10);
+      }
+    }
+    for (local_18 = 0; local_18 < 0x20; local_18 = local_18 + 1) {
+      (&DAT_0013c240)[(ulong)local_18 * 2] = 0;
+      (&DAT_0013c248)[(ulong)local_18 * 2] = 0;
+      *(char *)((long)&DAT_0013c248 + (ulong)local_18 * 0x10 + 7) = (char)local_18 + '\x01';
+      FUN_0010170a(&DAT_0013c240 + (ulong)local_18 * 2);
+    }
+    DAT_0013c440 = 1;
+  }
+  return;
+}
+

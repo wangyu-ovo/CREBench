@@ -1,0 +1,10 @@
+{
+  "challenge": "KHAZAD-64",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "d1061c0085ab775d169f158c62c2ad5d38a2521552cd0f239896a70deca827f4",
+  "key": "5072280c041d480c8c8c880962bab9d7",
+  "iv": "",
+  "target_ciphertext": "3b224ceeae6a67382f7bc014d257636987d034289babf343e265cf260491305d",
+  "test_vectors_path": "CREBench/KHAZAD-64/test_vectors-fragmented_build.json"
+}

@@ -1,0 +1,50 @@
+name: a5_1
+publc_path: CREBench/A5-1/public
+flag: c6e8351cd878213d2fd4c720d0e7af1b1cb39f58b4fc34e071583ea8b64ed8a9
+flag_type: hex
+
+algorithm: A5/1
+algorithm_aliases:
+  - A5-1
+  - GSM A5/1
+  - a5_1
+  - a5-1
+
+instance_metadata:
+  generated_root: CREBench/A5-1/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: stream_nonce_direct
+  key_source_file: CREBench/A5-1/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1738454400
+  key_seed_note: fixed_timestamp_utc_2025_02_02_00_00_00
+  key_length_bytes: 8
+  block_size_bytes: 1
+  iv_length_bytes: 4
+  target_length_bytes: 32
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: a51_core_constants
+  compile_define: CONSTXOR_A51_TABLES
+  source_file: src/a5_1.c
+  tables:
+    - symbol: a51_register_masks
+      ctype: uint32_t
+      accessor: constxor_a51_register_masks
+    - symbol: a51_register_taps
+      ctype: uint32_t
+      accessor: constxor_a51_register_taps
+    - symbol: a51_clock_bits
+      ctype: uint32_t
+      accessor: constxor_a51_clock_bits

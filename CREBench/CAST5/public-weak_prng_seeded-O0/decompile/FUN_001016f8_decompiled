@@ -1,0 +1,7 @@
+
+uint FUN_001016f8(uint param_1)
+
+{
+  return param_1 >> 8;
+}
+

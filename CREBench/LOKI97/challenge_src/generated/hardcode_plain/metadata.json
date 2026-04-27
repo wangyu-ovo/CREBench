@@ -1,0 +1,10 @@
+{
+  "challenge": "LOKI97",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "b71bd2fa62e987bd5ed5e227ffe7d8d992fca702ac1e627e1352745e1bfb857d",
+  "key": "37323cdc36471c5fa77253bb148eb5571a29cdcdf1527b968a151679f76eec7e",
+  "iv": "9aec79c7d834e4aa331c4b6a1b8039cf",
+  "target_ciphertext": "98d58c2ee69053048ad22767c55b4c7cf31bf81d7f731f1da1ca770b5cef5c8f",
+  "test_vectors_path": "CREBench/LOKI97/test_vectors-hardcode_plain.json"
+}

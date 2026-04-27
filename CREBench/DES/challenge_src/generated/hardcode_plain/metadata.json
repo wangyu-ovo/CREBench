@@ -1,0 +1,10 @@
+{
+  "challenge": "DES",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "52b992307d0819318c416b0110e525a91921d3164d1db17c6d405434a5bdcade",
+  "key": "240fd95846170630",
+  "iv": "0540dd2723290802",
+  "target_ciphertext": "6b255ea05ede055700b1af44c7e8fbd36f628cefe1ede732ab451698a06cbd3e",
+  "test_vectors_path": "CREBench/DES/test_vectors-hardcode_plain.json"
+}

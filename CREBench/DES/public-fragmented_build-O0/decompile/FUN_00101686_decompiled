@@ -1,0 +1,143 @@
+
+void FUN_00101686(long param_1,undefined4 *param_2)
+
+{
+  byte bVar1;
+  byte bVar2;
+  byte bVar3;
+  byte bVar4;
+  undefined8 uVar5;
+  char cVar6;
+  byte bVar7;
+  int iVar8;
+  int iVar9;
+  int iVar10;
+  byte bVar11;
+  byte local_19;
+  int local_14;
+  int local_10;
+  
+  memset(param_2,0,8);
+  for (local_14 = 0; local_14 < 0x38; local_14 = local_14 + 1) {
+    iVar10 = *(int *)(&DAT_001030a0 + (long)local_14 * 4);
+    iVar8 = iVar10 + -1;
+    if (iVar10 + -1 < 0) {
+      iVar8 = iVar10 + 6;
+    }
+    iVar9 = local_14;
+    if (local_14 < 0) {
+      iVar9 = local_14 + 7;
+    }
+    *(byte *)((long)param_2 + (long)(iVar9 >> 3)) =
+         (byte)((int)(uint)(byte)(((byte)(0x80 >> ((char)iVar10 - 1U & 7)) &
+                                  *(byte *)(param_1 + (iVar8 >> 3))) << ((char)iVar10 - 1U & 7)) >>
+               ((byte)local_14 & 7)) | *(byte *)((long)param_2 + (long)(iVar9 >> 3));
+  }
+  param_2[2] = *param_2;
+  *(byte *)((long)param_2 + 0xb) = *(byte *)((long)param_2 + 0xb) & 0xf0;
+  for (local_14 = 0; local_14 < 3; local_14 = local_14 + 1) {
+    *(char *)((long)param_2 + (long)local_14 + 0xc) =
+         *(char *)((long)param_2 + (long)(local_14 + 3)) << 4;
+    *(byte *)((long)param_2 + (long)local_14 + 0xc) =
+         *(byte *)((long)param_2 + (long)local_14 + 0xc) |
+         *(byte *)((long)param_2 + (long)(local_14 + 4)) >> 4;
+  }
+  *(char *)((long)param_2 + 0xf) = *(char *)((long)param_2 + 6) << 4;
+  for (local_14 = 1; local_14 < 0x11; local_14 = local_14 + 1) {
+    uVar5 = *(undefined8 *)((long)(param_2 + (long)local_14 * 4 + -4) + 8);
+    *(undefined8 *)(param_2 + (long)local_14 * 4) =
+         *(undefined8 *)(param_2 + (long)local_14 * 4 + -4);
+    *(undefined8 *)((long)(param_2 + (long)local_14 * 4) + 8) = uVar5;
+    if (*(int *)(&DAT_00103280 + (long)local_14 * 4) == 1) {
+      bVar7 = 0x80;
+    }
+    else {
+      bVar7 = 0xc0;
+    }
+    bVar1 = *(byte *)(param_2 + (long)local_14 * 4 + 2);
+    bVar2 = *(byte *)((long)param_2 + (long)local_14 * 0x10 + 9);
+    bVar3 = *(byte *)((long)param_2 + (long)local_14 * 0x10 + 10);
+    bVar4 = *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xb);
+    bVar11 = (byte)*(int *)(&DAT_00103280 + (long)local_14 * 4);
+    *(char *)(param_2 + (long)local_14 * 4 + 2) =
+         *(char *)(param_2 + (long)local_14 * 4 + 2) << (bVar11 & 0x1f);
+    *(byte *)(param_2 + (long)local_14 * 4 + 2) =
+         *(byte *)(param_2 + (long)local_14 * 4 + 2) |
+         (byte)((int)(uint)(bVar2 & bVar7) >> (8 - bVar11 & 0x1f));
+    *(char *)((long)param_2 + (long)local_14 * 0x10 + 9) =
+         *(char *)((long)param_2 + (long)local_14 * 0x10 + 9) << (bVar11 & 0x1f);
+    *(byte *)((long)param_2 + (long)local_14 * 0x10 + 9) =
+         *(byte *)((long)param_2 + (long)local_14 * 0x10 + 9) |
+         (byte)((int)(uint)(bVar3 & bVar7) >> (8 - bVar11 & 0x1f));
+    *(char *)((long)param_2 + (long)local_14 * 0x10 + 10) =
+         *(char *)((long)param_2 + (long)local_14 * 0x10 + 10) << (bVar11 & 0x1f);
+    *(byte *)((long)param_2 + (long)local_14 * 0x10 + 10) =
+         *(byte *)((long)param_2 + (long)local_14 * 0x10 + 10) |
+         (byte)((int)(uint)(bVar4 & bVar7) >> (8 - bVar11 & 0x1f));
+    *(char *)((long)param_2 + (long)local_14 * 0x10 + 0xb) =
+         *(char *)((long)param_2 + (long)local_14 * 0x10 + 0xb) << (bVar11 & 0x1f);
+    *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xb) =
+         *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xb) |
+         (byte)((int)(uint)(bVar1 & bVar7) >> (4 - bVar11 & 0x1f));
+    *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xb) =
+         *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xb) & 0xf0;
+    bVar1 = *(byte *)(param_2 + (long)local_14 * 4 + 3);
+    bVar2 = *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xd);
+    bVar3 = *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xe);
+    bVar4 = *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xf);
+    *(char *)(param_2 + (long)local_14 * 4 + 3) =
+         *(char *)(param_2 + (long)local_14 * 4 + 3) << (bVar11 & 0x1f);
+    *(byte *)(param_2 + (long)local_14 * 4 + 3) =
+         *(byte *)(param_2 + (long)local_14 * 4 + 3) |
+         (byte)((int)(uint)(bVar2 & bVar7) >> (8 - bVar11 & 0x1f));
+    *(char *)((long)param_2 + (long)local_14 * 0x10 + 0xd) =
+         *(char *)((long)param_2 + (long)local_14 * 0x10 + 0xd) << (bVar11 & 0x1f);
+    *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xd) =
+         *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xd) |
+         (byte)((int)(uint)(bVar3 & bVar7) >> (8 - bVar11 & 0x1f));
+    *(char *)((long)param_2 + (long)local_14 * 0x10 + 0xe) =
+         *(char *)((long)param_2 + (long)local_14 * 0x10 + 0xe) << (bVar11 & 0x1f);
+    *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xe) =
+         *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xe) |
+         (byte)((int)(uint)(bVar4 & bVar7) >> (8 - bVar11 & 0x1f));
+    *(char *)((long)param_2 + (long)local_14 * 0x10 + 0xf) =
+         *(char *)((long)param_2 + (long)local_14 * 0x10 + 0xf) << (bVar11 & 0x1f);
+    *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xf) =
+         *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xf) |
+         (byte)((int)(uint)(bVar1 & bVar7) >> (4 - bVar11 & 0x1f));
+    *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xf) =
+         *(byte *)((long)param_2 + (long)local_14 * 0x10 + 0xf) & 0xf0;
+    memset(param_2 + (long)local_14 * 4,0,8);
+    for (local_10 = 0; local_10 < 0x30; local_10 = local_10 + 1) {
+      iVar10 = *(int *)(&DAT_001032e0 + (long)local_10 * 4);
+      cVar6 = (char)iVar10;
+      if (iVar10 < 0x1d) {
+        iVar8 = iVar10 + -1;
+        if (iVar10 + -1 < 0) {
+          iVar8 = iVar10 + 6;
+        }
+        local_19 = ((byte)(0x80 >> (cVar6 - 1U & 7)) &
+                   *(byte *)((long)param_2 + (long)(iVar8 >> 3) + (long)local_14 * 0x10 + 8)) <<
+                   (cVar6 - 1U & 7);
+      }
+      else {
+        iVar8 = iVar10 + -0x1d;
+        if (iVar10 + -0x1d < 0) {
+          iVar8 = iVar10 + -0x16;
+        }
+        local_19 = ((byte)(0x80 >> (cVar6 - 0x1dU & 7)) &
+                   *(byte *)((long)param_2 + (long)(iVar8 >> 3) + (long)local_14 * 0x10 + 0xc)) <<
+                   (cVar6 - 0x1dU & 7);
+      }
+      iVar10 = local_10;
+      if (local_10 < 0) {
+        iVar10 = local_10 + 7;
+      }
+      *(byte *)((long)param_2 + (long)(iVar10 >> 3) + (long)local_14 * 0x10) =
+           *(byte *)((long)param_2 + (long)(iVar10 >> 3) + (long)local_14 * 0x10) |
+           (byte)((int)(uint)local_19 >> ((byte)local_10 & 7));
+    }
+  }
+  return;
+}
+

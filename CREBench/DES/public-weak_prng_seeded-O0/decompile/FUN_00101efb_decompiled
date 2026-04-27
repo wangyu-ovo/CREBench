@@ -1,0 +1,160 @@
+
+void FUN_00101efb(long param_1,void *param_2,long param_3,int param_4)
+
+{
+  int iVar1;
+  int iVar2;
+  int iVar3;
+  long in_FS_OFFSET;
+  int local_4c;
+  int local_48;
+  undefined4 local_3a;
+  undefined4 local_36;
+  undefined4 local_32;
+  undefined4 local_2e;
+  byte local_2a [4];
+  byte local_26 [6];
+  undefined4 local_20;
+  undefined4 local_1c;
+  undefined4 local_18;
+  undefined4 local_14;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  memset(&local_20,0,8);
+  memset(param_2,0,8);
+  for (local_4c = 0; local_4c < 0x40; local_4c = local_4c + 1) {
+    iVar3 = *(int *)(&DAT_00103180 + (long)local_4c * 4);
+    iVar1 = iVar3 + -1;
+    if (iVar3 + -1 < 0) {
+      iVar1 = iVar3 + 6;
+    }
+    iVar2 = local_4c;
+    if (local_4c < 0) {
+      iVar2 = local_4c + 7;
+    }
+    *(byte *)((long)&local_20 + (long)(iVar2 >> 3)) =
+         (byte)((int)(uint)(byte)(((byte)(0x80 >> ((char)iVar3 - 1U & 7)) &
+                                  *(byte *)(param_1 + (iVar1 >> 3))) << ((char)iVar3 - 1U & 7)) >>
+               ((byte)local_4c & 7)) | *(byte *)((long)&local_20 + (long)(iVar2 >> 3));
+  }
+  local_3a = local_20;
+  local_36 = local_1c;
+  for (local_48 = 1; local_48 < 0x11; local_48 = local_48 + 1) {
+    local_32 = local_36;
+    memset(local_26,0,6);
+    for (local_4c = 0; local_4c < 0x30; local_4c = local_4c + 1) {
+      iVar3 = *(int *)(&DAT_001033a0 + (long)local_4c * 4);
+      iVar1 = iVar3 + -1;
+      if (iVar3 + -1 < 0) {
+        iVar1 = iVar3 + 6;
+      }
+      iVar2 = local_4c;
+      if (local_4c < 0) {
+        iVar2 = local_4c + 7;
+      }
+      local_26[iVar2 >> 3] =
+           (byte)((int)(uint)(byte)(((byte)(0x80 >> ((char)iVar3 - 1U & 7)) &
+                                    *(byte *)((long)&local_36 + (long)(iVar1 >> 3))) <<
+                                   ((char)iVar3 - 1U & 7)) >> ((byte)local_4c & 7)) |
+           local_26[iVar2 >> 3];
+    }
+    iVar3 = local_48;
+    if (param_4 == 0) {
+      iVar3 = 0x11 - local_48;
+    }
+    for (local_4c = 0; local_4c < 6; local_4c = local_4c + 1) {
+      local_26[local_4c] =
+           local_26[local_4c] ^ *(byte *)((long)iVar3 * 0x10 + param_3 + (long)local_4c);
+    }
+    memset(local_2a,0,4);
+    local_2a[0] = (byte)*(undefined4 *)
+                         (&DAT_00103560 +
+                         (long)(int)((uint)(byte)((byte)((local_26[0] & 1) << 3) | local_26[1] >> 5)
+                                    + (uint)(local_26[0] & 2 |
+                                            (byte)((int)(uint)local_26[1] >> 4) & 1) * 0x10) * 4) |
+                  (byte)((*(uint *)(&DAT_00103460 +
+                                   (long)(int)((uint)((byte)((int)(uint)local_26[0] >> 3) & 0xf) +
+                                              (uint)((byte)((int)(uint)local_26[0] >> 6) & 2 |
+                                                    (byte)((int)(uint)local_26[0] >> 2) & 1) * 0x10)
+                                   * 4) & 0xff) << 4) | local_2a[0];
+    local_2a[1] = (byte)*(undefined4 *)
+                         (&DAT_00103760 +
+                         (long)(int)((uint)((byte)((int)(uint)local_26[2] >> 1) & 0xf) +
+                                    (uint)((byte)((int)(uint)local_26[2] >> 4) & 2 | local_26[2] & 1
+                                          ) * 0x10) * 4) |
+                  (byte)((*(uint *)(&DAT_00103660 +
+                                   (long)(int)((uint)(byte)(local_26[1] * '\x02' & 0xe |
+                                                           local_26[2] >> 7) +
+                                              (uint)((byte)((int)(uint)local_26[1] >> 2) & 2 |
+                                                    (byte)((int)(uint)local_26[2] >> 6) & 1) * 0x10)
+                                   * 4) & 0xff) << 4) | local_2a[1];
+    local_2a[2] = (byte)*(undefined4 *)
+                         (&DAT_00103960 +
+                         (long)(int)((uint)(byte)((byte)((local_26[3] & 1) << 3) | local_26[4] >> 5)
+                                    + (uint)(local_26[3] & 2 |
+                                            (byte)((int)(uint)local_26[4] >> 4) & 1) * 0x10) * 4) |
+                  (byte)((*(uint *)(&DAT_00103860 +
+                                   (long)(int)((uint)((byte)((int)(uint)local_26[3] >> 3) & 0xf) +
+                                              (uint)((byte)((int)(uint)local_26[3] >> 6) & 2 |
+                                                    (byte)((int)(uint)local_26[3] >> 2) & 1) * 0x10)
+                                   * 4) & 0xff) << 4) | local_2a[2];
+    local_2a[3] = (byte)*(undefined4 *)
+                         (&DAT_00103b60 +
+                         (long)(int)((uint)((byte)((int)(uint)local_26[5] >> 1) & 0xf) +
+                                    (uint)((byte)((int)(uint)local_26[5] >> 4) & 2 | local_26[5] & 1
+                                          ) * 0x10) * 4) |
+                  (byte)((*(uint *)(&DAT_00103a60 +
+                                   (long)(int)((uint)(byte)(local_26[4] * '\x02' & 0xe |
+                                                           local_26[5] >> 7) +
+                                              (uint)((byte)((int)(uint)local_26[4] >> 2) & 2 |
+                                                    (byte)((int)(uint)local_26[5] >> 6) & 1) * 0x10)
+                                   * 4) & 0xff) << 4) | local_2a[3];
+    memset(&local_2e,0,4);
+    for (local_4c = 0; local_4c < 0x20; local_4c = local_4c + 1) {
+      iVar3 = *(int *)(&DAT_00103c60 + (long)local_4c * 4);
+      iVar1 = iVar3 + -1;
+      if (iVar3 + -1 < 0) {
+        iVar1 = iVar3 + 6;
+      }
+      iVar2 = local_4c;
+      if (local_4c < 0) {
+        iVar2 = local_4c + 7;
+      }
+      local_2a[(long)(iVar2 >> 3) + -4] =
+           (byte)((int)(uint)(byte)(((byte)(0x80 >> ((char)iVar3 - 1U & 7)) & local_2a[iVar1 >> 3])
+                                   << ((char)iVar3 - 1U & 7)) >> ((byte)local_4c & 7)) |
+           local_2a[(long)(iVar2 >> 3) + -4];
+    }
+    for (local_4c = 0; local_4c < 4; local_4c = local_4c + 1) {
+      local_2a[(long)local_4c + -4] =
+           local_2a[(long)local_4c + -4] ^ *(byte *)((long)&local_3a + (long)local_4c);
+    }
+    local_3a = local_32;
+    local_36 = local_2e;
+  }
+  local_18 = local_36;
+  local_14 = local_3a;
+  for (local_4c = 0; local_4c < 0x40; local_4c = local_4c + 1) {
+    iVar3 = *(int *)(&DAT_00103ce0 + (long)local_4c * 4);
+    iVar1 = iVar3 + -1;
+    if (iVar3 + -1 < 0) {
+      iVar1 = iVar3 + 6;
+    }
+    iVar2 = local_4c;
+    if (local_4c < 0) {
+      iVar2 = local_4c + 7;
+    }
+    *(byte *)((long)param_2 + (long)(iVar2 >> 3)) =
+         *(byte *)((long)param_2 + (long)(iVar2 >> 3)) |
+         (byte)((int)(uint)(byte)(((byte)(0x80 >> ((char)iVar3 - 1U & 7)) &
+                                  *(byte *)((long)&local_18 + (long)(iVar1 >> 3))) <<
+                                 ((char)iVar3 - 1U & 7)) >> ((byte)local_4c & 7));
+  }
+  if (local_10 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+

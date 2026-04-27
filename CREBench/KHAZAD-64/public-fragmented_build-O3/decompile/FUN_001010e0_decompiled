@@ -1,0 +1,314 @@
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+bool FUN_001010e0(int param_1,undefined8 *param_2)
+
+{
+  char cVar1;
+  undefined uVar2;
+  ulong uVar3;
+  ulong uVar4;
+  int iVar5;
+  uint uVar6;
+  size_t sVar7;
+  ulong uVar8;
+  ulong uVar9;
+  ulong uVar10;
+  ulong uVar11;
+  ulong uVar12;
+  ulong uVar13;
+  ulong uVar14;
+  ulong uVar15;
+  ulong uVar16;
+  ulong uVar17;
+  ulong uVar18;
+  ulong uVar19;
+  ulong uVar20;
+  undefined8 *puVar21;
+  long lVar22;
+  ulong uVar23;
+  ulong uVar24;
+  ulong uVar25;
+  ulong uVar26;
+  ulong uVar27;
+  ulong uVar28;
+  ulong uVar29;
+  ulong uVar30;
+  char *pcVar31;
+  ulong *puVar32;
+  uint uVar33;
+  long in_FS_OFFSET;
+  bool bVar34;
+  byte local_a8;
+  byte local_a7;
+  byte local_a6;
+  byte local_a5;
+  byte local_a4;
+  byte local_a3;
+  byte local_a2;
+  byte local_a1;
+  byte local_a0;
+  byte local_9f;
+  byte local_9e;
+  byte local_9d;
+  byte local_9c;
+  byte local_9b;
+  byte local_9a;
+  byte local_99;
+  ulong local_98 [4];
+  undefined8 local_78;
+  undefined4 local_58;
+  undefined4 uStack_54;
+  undefined4 uStack_50;
+  undefined4 uStack_4c;
+  undefined4 local_48;
+  undefined4 uStack_44;
+  undefined4 uStack_40;
+  undefined4 uStack_3c;
+  long local_30;
+  
+  local_30 = *(long *)(in_FS_OFFSET + 0x28);
+  if (param_1 == 2) {
+    FUN_00101da0(&local_a8,0x10);
+    pcVar31 = (char *)param_2[1];
+    local_58 = _DAT_001060c0;
+    uStack_54 = _UNK_001060c4;
+    uStack_50 = _UNK_001060c8;
+    uStack_4c = _UNK_001060cc;
+    local_48 = _DAT_001060d0;
+    uStack_44 = _UNK_001060d4;
+    uStack_40 = _UNK_001060d8;
+    uStack_3c = _UNK_001060dc;
+    sVar7 = strlen(pcVar31);
+    if (sVar7 == 0x40) {
+      lVar22 = 0;
+      do {
+        cVar1 = pcVar31[lVar22 * 2];
+        iVar5 = (int)cVar1;
+        if ((byte)(cVar1 - 0x30U) < 10) {
+          uVar6 = iVar5 - 0x30;
+        }
+        else if ((byte)(cVar1 + 0x9fU) < 6) {
+          uVar6 = iVar5 - 0x57;
+        }
+        else {
+          uVar6 = iVar5 - 0x37;
+          if (5 < (byte)(cVar1 + 0xbfU)) {
+            uVar6 = 0xffffffff;
+          }
+        }
+        cVar1 = pcVar31[lVar22 * 2 + 1];
+        iVar5 = (int)cVar1;
+        if ((byte)(cVar1 - 0x30U) < 10) {
+          uVar33 = iVar5 - 0x30;
+        }
+        else if ((byte)(cVar1 + 0x9fU) < 6) {
+          uVar33 = iVar5 - 0x57;
+        }
+        else {
+          if (5 < (byte)(cVar1 + 0xbfU)) goto LAB_00101227;
+          uVar33 = iVar5 - 0x37;
+        }
+        if ((int)(uVar6 | uVar33) < 0) goto LAB_00101227;
+        puVar21 = &local_78;
+        *(byte *)((long)&local_78 + lVar22) = (byte)(uVar6 << 4) | (byte)uVar33;
+        lVar22 = lVar22 + 1;
+      } while (lVar22 != 0x20);
+      uVar8 = (ulong)local_a0 << 0x38 ^ (ulong)local_9f << 0x30;
+      uVar9 = uVar8 ^ local_99 ^ (ulong)local_9e << 0x28;
+      uVar10 = uVar9 ^ (ulong)local_9d << 0x20;
+      uVar11 = uVar10 ^ (ulong)local_9c << 0x18;
+      uVar12 = uVar11 ^ (ulong)local_9b << 0x10;
+      uVar13 = uVar12 ^ (ulong)local_9a << 8;
+      uVar23 = (ulong)local_a1 ^ *(ulong *)(&DAT_001028c0 + (uVar13 >> 8 & 0xff) * 8) ^
+               (ulong)local_a8 << 0x38 ^ (ulong)local_a7 << 0x30 ^ (ulong)local_a6 << 0x28 ^
+               (ulong)local_a5 << 0x20 ^ (ulong)local_a4 << 0x18 ^ (ulong)local_a3 << 0x10 ^
+               (ulong)local_a2 << 8 ^ *(ulong *)(&DAT_001058c0 + (ulong)local_a0 * 8) ^
+               *(ulong *)(&DAT_001020c0 + (uVar13 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001050c0 + (uVar8 >> 0x30 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001048c0 + (uVar9 >> 0x28 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001040c0 + (uVar10 >> 0x20 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001038c0 + (uVar11 >> 0x18 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001030c0 + (uVar12 >> 0x10 & 0xff) * 8) ^ 0xba542f7453d3d24d;
+      uVar14 = uVar13 ^ *(ulong *)(&DAT_001028c0 + (uVar23 >> 8 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001058c0 + (uVar23 >> 0x38) * 8) ^
+               *(ulong *)(&DAT_001020c0 + (uVar23 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001050c0 + (uVar23 >> 0x30 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001048c0 + (uVar23 >> 0x28 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001040c0 + (uVar23 >> 0x20 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001038c0 + (uVar23 >> 0x18 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001030c0 + (uVar23 >> 0x10 & 0xff) * 8) ^ 0x50ac8dbf70529a4c;
+      uVar15 = uVar23 ^ *(ulong *)(&DAT_001028c0 + (uVar14 >> 8 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001058c0 + (uVar14 >> 0x38) * 8) ^
+               *(ulong *)(&DAT_001020c0 + (uVar14 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001050c0 + (uVar14 >> 0x30 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001048c0 + (uVar14 >> 0x28 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001040c0 + (uVar14 >> 0x20 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001038c0 + (uVar14 >> 0x18 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001030c0 + (uVar14 >> 0x10 & 0xff) * 8) ^ 0xead597d133515ba6;
+      uVar16 = uVar14 ^ *(ulong *)(&DAT_001028c0 + (uVar15 >> 8 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001058c0 + (uVar15 >> 0x38) * 8) ^
+               *(ulong *)(&DAT_001020c0 + (uVar15 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001050c0 + (uVar15 >> 0x30 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001048c0 + (uVar15 >> 0x28 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001040c0 + (uVar15 >> 0x20 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001038c0 + (uVar15 >> 0x18 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001030c0 + (uVar15 >> 0x10 & 0xff) * 8) ^ 0xde48a899db32b7fc;
+      uVar17 = uVar15 ^ *(ulong *)(&DAT_001028c0 + (uVar16 >> 8 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001058c0 + (uVar16 >> 0x38) * 8) ^
+               *(ulong *)(&DAT_001020c0 + (uVar16 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001050c0 + (uVar16 >> 0x30 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001048c0 + (uVar16 >> 0x28 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001040c0 + (uVar16 >> 0x20 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001038c0 + (uVar16 >> 0x18 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001030c0 + (uVar16 >> 0x10 & 0xff) * 8) ^ 0xe39e919be2bb416e;
+      uVar18 = uVar16 ^ *(ulong *)(&DAT_001028c0 + (uVar17 >> 8 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001058c0 + (uVar17 >> 0x38) * 8) ^
+               *(ulong *)(&DAT_001020c0 + (uVar17 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001050c0 + (uVar17 >> 0x30 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001048c0 + (uVar17 >> 0x28 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001040c0 + (uVar17 >> 0x20 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001038c0 + (uVar17 >> 0x18 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001030c0 + (uVar17 >> 0x10 & 0xff) * 8) ^ 0xa5cb6b95a1f3b102;
+      uVar19 = uVar17 ^ *(ulong *)(&DAT_001028c0 + (uVar18 >> 8 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001058c0 + (uVar18 >> 0x38) * 8) ^
+               *(ulong *)(&DAT_001020c0 + (uVar18 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001050c0 + (uVar18 >> 0x30 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001048c0 + (uVar18 >> 0x28 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001040c0 + (uVar18 >> 0x20 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001038c0 + (uVar18 >> 0x18 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001030c0 + (uVar18 >> 0x10 & 0xff) * 8) ^ 0xccc41d14c363da5d;
+      uVar20 = uVar18 ^ *(ulong *)(&DAT_001028c0 + (uVar19 >> 8 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001058c0 + (uVar19 >> 0x38) * 8) ^
+               *(ulong *)(&DAT_001020c0 + (uVar19 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001050c0 + (uVar19 >> 0x30 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001048c0 + (uVar19 >> 0x28 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001040c0 + (uVar19 >> 0x20 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001038c0 + (uVar19 >> 0x18 & 0xff) * 8) ^
+               *(ulong *)(&DAT_001030c0 + (uVar19 >> 0x10 & 0xff) * 8) ^ 0x5fdc7dcd7f5a6c5c;
+      uVar8 = *(ulong *)(&DAT_001028c0 + (uVar20 >> 8 & 0xff) * 8);
+      uVar9 = *(ulong *)(&DAT_001058c0 + (uVar20 >> 0x38) * 8);
+      uVar10 = *(ulong *)(&DAT_001020c0 + (uVar20 & 0xff) * 8);
+      uVar11 = *(ulong *)(&DAT_001050c0 + (uVar20 >> 0x30 & 0xff) * 8);
+      uVar12 = *(ulong *)(&DAT_001048c0 + (uVar20 >> 0x28 & 0xff) * 8);
+      uVar13 = *(ulong *)(&DAT_001040c0 + (uVar20 >> 0x20 & 0xff) * 8);
+      uVar3 = *(ulong *)(&DAT_001038c0 + (uVar20 >> 0x18 & 0xff) * 8);
+      uVar4 = *(ulong *)(&DAT_001030c0 + (uVar20 >> 0x10 & 0xff) * 8);
+      puVar32 = local_98;
+      do {
+        uVar24 = (ulong)*(byte *)puVar21 << 0x38 ^ *(byte *)((long)puVar21 + 7) ^ uVar23;
+        uVar25 = uVar24 ^ (ulong)*(byte *)((long)puVar21 + 1) << 0x30;
+        uVar26 = uVar25 ^ (ulong)*(byte *)((long)puVar21 + 2) << 0x28;
+        uVar27 = uVar26 ^ (ulong)*(byte *)((long)puVar21 + 3) << 0x20;
+        uVar28 = uVar27 ^ (ulong)*(byte *)((long)puVar21 + 4) << 0x18;
+        uVar29 = uVar28 ^ (ulong)*(byte *)((long)puVar21 + 5) << 0x10;
+        uVar30 = uVar29 ^ (ulong)*(byte *)((long)puVar21 + 6) << 8;
+        uVar24 = *(ulong *)(&DAT_001058c0 + (uVar24 >> 0x38) * 8) ^
+                 *(ulong *)(&DAT_001020c0 + (uVar30 & 0xff) * 8) ^ uVar14 ^
+                 *(ulong *)(&DAT_001050c0 + (uVar25 >> 0x30 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001048c0 + (uVar26 >> 0x28 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001040c0 + (uVar27 >> 0x20 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001038c0 + (uVar28 >> 0x18 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001030c0 + (uVar29 >> 0x10 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001028c0 + (uVar30 >> 8 & 0xff) * 8);
+        uVar24 = *(ulong *)(&DAT_001058c0 + (uVar24 >> 0x38) * 8) ^
+                 *(ulong *)(&DAT_001020c0 + (uVar24 & 0xff) * 8) ^ uVar15 ^
+                 *(ulong *)(&DAT_001050c0 + (uVar24 >> 0x30 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001048c0 + (uVar24 >> 0x28 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001040c0 + (uVar24 >> 0x20 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001038c0 + (uVar24 >> 0x18 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001030c0 + (uVar24 >> 0x10 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001028c0 + (uVar24 >> 8 & 0xff) * 8);
+        uVar24 = *(ulong *)(&DAT_001058c0 + (uVar24 >> 0x38) * 8) ^
+                 *(ulong *)(&DAT_001020c0 + (uVar24 & 0xff) * 8) ^ uVar16 ^
+                 *(ulong *)(&DAT_001050c0 + (uVar24 >> 0x30 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001048c0 + (uVar24 >> 0x28 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001040c0 + (uVar24 >> 0x20 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001038c0 + (uVar24 >> 0x18 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001030c0 + (uVar24 >> 0x10 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001028c0 + (uVar24 >> 8 & 0xff) * 8);
+        uVar24 = *(ulong *)(&DAT_001058c0 + (uVar24 >> 0x38) * 8) ^
+                 *(ulong *)(&DAT_001020c0 + (uVar24 & 0xff) * 8) ^ uVar17 ^
+                 *(ulong *)(&DAT_001050c0 + (uVar24 >> 0x30 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001048c0 + (uVar24 >> 0x28 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001040c0 + (uVar24 >> 0x20 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001038c0 + (uVar24 >> 0x18 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001030c0 + (uVar24 >> 0x10 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001028c0 + (uVar24 >> 8 & 0xff) * 8);
+        uVar24 = *(ulong *)(&DAT_001058c0 + (uVar24 >> 0x38) * 8) ^
+                 *(ulong *)(&DAT_001020c0 + (uVar24 & 0xff) * 8) ^ uVar18 ^
+                 *(ulong *)(&DAT_001050c0 + (uVar24 >> 0x30 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001048c0 + (uVar24 >> 0x28 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001040c0 + (uVar24 >> 0x20 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001038c0 + (uVar24 >> 0x18 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001030c0 + (uVar24 >> 0x10 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001028c0 + (uVar24 >> 8 & 0xff) * 8);
+        uVar24 = *(ulong *)(&DAT_001058c0 + (uVar24 >> 0x38) * 8) ^
+                 *(ulong *)(&DAT_001020c0 + (uVar24 & 0xff) * 8) ^ uVar19 ^
+                 *(ulong *)(&DAT_001050c0 + (uVar24 >> 0x30 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001048c0 + (uVar24 >> 0x28 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001040c0 + (uVar24 >> 0x20 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001038c0 + (uVar24 >> 0x18 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001030c0 + (uVar24 >> 0x10 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001028c0 + (uVar24 >> 8 & 0xff) * 8);
+        uVar25 = *(ulong *)(&DAT_001058c0 + (uVar24 >> 0x38) * 8) ^
+                 *(ulong *)(&DAT_001020c0 + (uVar24 & 0xff) * 8) ^ uVar20 ^
+                 *(ulong *)(&DAT_001050c0 + (uVar24 >> 0x30 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001048c0 + (uVar24 >> 0x28 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001040c0 + (uVar24 >> 0x20 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001038c0 + (uVar24 >> 0x18 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001030c0 + (uVar24 >> 0x10 & 0xff) * 8) ^
+                 *(ulong *)(&DAT_001028c0 + (uVar24 >> 8 & 0xff) * 8);
+        uVar24 = (ulong)(byte)(&DAT_001020c0)[(uVar25 & 0xff) * 8] ^
+                 uVar19 ^ uVar8 ^ uVar9 ^ uVar10 ^ uVar11 ^ uVar12 ^ uVar13 ^ uVar3 ^ uVar4 ^
+                 0xf726ffede89d6f8e;
+        puVar21 = puVar21 + 1;
+        uVar25 = (ulong)((uint)*(undefined8 *)(&DAT_001030c0 + (uVar25 >> 0x10 & 0xff) * 8) &
+                        0xff0000) ^
+                 *(ulong *)(&DAT_001048c0 + (uVar25 >> 0x28 & 0xff) * 8) & 0xff0000000000 ^ uVar24 ^
+                 *(ulong *)(&DAT_001040c0 + (uVar25 >> 0x20 & 0xff) * 8) & 0xff00000000 ^
+                 (ulong)((uint)*(undefined8 *)(&DAT_001038c0 + (uVar25 >> 0x18 & 0xff) * 8) &
+                        0xff000000) ^
+                 (ulong)((uint)*(undefined8 *)(&DAT_001028c0 + (uVar25 >> 8 & 0xff) * 8) & 0xff00) ^
+                 (*(ulong *)(&DAT_001050c0 + (uVar25 >> 0x30 & 0xff) * 8) & 0xff000000000000 |
+                 *(ulong *)(&DAT_001058c0 + (uVar25 >> 0x38) * 8) & 0xff00000000000000);
+        *puVar32 = uVar25 >> 0x38 | (uVar25 & 0xff000000000000) >> 0x28 |
+                   (uVar25 & 0xff0000000000) >> 0x18 | (uVar25 & 0xff00000000) >> 8 |
+                   (uVar25 & 0xff000000) << 8 | (uVar25 & 0xff0000) << 0x18 |
+                   (uVar25 & 0xff00) << 0x28 | uVar24 << 0x38;
+        puVar32 = puVar32 + 1;
+      } while ((undefined8 *)&local_58 != puVar21);
+      __printf_chk(1,"Ciphertext(hex): ");
+      puVar32 = local_98;
+      do {
+        uVar2 = *(undefined *)puVar32;
+        puVar32 = (ulong *)((long)puVar32 + 1);
+        __printf_chk(1,&DAT_0010203b,uVar2);
+      } while (&local_78 != puVar32);
+      __printf_chk(1,"\n");
+      iVar5 = memcmp(local_98,&local_58,0x20);
+      pcVar31 = "True";
+      if (iVar5 != 0) {
+        pcVar31 = "False";
+      }
+      __printf_chk(1,"Match: %s\n",pcVar31);
+      bVar34 = iVar5 != 0;
+    }
+    else {
+LAB_00101227:
+      __fprintf_chk(*(undefined8 *)PTR_stderr_00107ff8,1,
+                    "Bad input hex. Expecting 64 hex chars (32 bytes).\n");
+      bVar34 = true;
+    }
+  }
+  else {
+    __fprintf_chk(*(undefined8 *)PTR_stderr_00107ff8,1,"Usage: %s <64-hex-chars>\n",*param_2);
+    bVar34 = true;
+  }
+  if (local_30 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return bVar34;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+

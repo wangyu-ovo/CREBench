@@ -1,0 +1,41 @@
+
+void FUN_00101997(long param_1)
+
+{
+  byte bVar1;
+  byte bVar2;
+  byte bVar3;
+  byte bVar4;
+  byte bVar5;
+  byte bVar6;
+  byte bVar7;
+  byte bVar8;
+  byte bVar9;
+  byte bVar10;
+  byte bVar11;
+  byte bVar12;
+  byte *pbVar13;
+  int local_1c;
+  
+  for (local_1c = 0; local_1c < 4; local_1c = local_1c + 1) {
+    pbVar13 = (byte *)(param_1 + (local_1c << 2));
+    bVar1 = *pbVar13;
+    bVar2 = pbVar13[1];
+    bVar3 = pbVar13[2];
+    bVar4 = pbVar13[3];
+    bVar5 = FUN_00101815(bVar1);
+    bVar6 = FUN_00101815(bVar2);
+    bVar7 = FUN_00101815(bVar2);
+    bVar8 = FUN_00101815(bVar3);
+    bVar9 = FUN_00101815(bVar3);
+    bVar10 = FUN_00101815(bVar4);
+    bVar11 = FUN_00101815(bVar1);
+    bVar12 = FUN_00101815(bVar4);
+    *pbVar13 = bVar6 ^ bVar2 ^ bVar5 ^ bVar3 ^ bVar4;
+    pbVar13[1] = bVar8 ^ bVar3 ^ bVar7 ^ bVar1 ^ bVar4;
+    pbVar13[2] = bVar10 ^ bVar4 ^ bVar1 ^ bVar2 ^ bVar9;
+    pbVar13[3] = bVar12 ^ bVar11 ^ bVar1 ^ bVar2 ^ bVar3;
+  }
+  return;
+}
+

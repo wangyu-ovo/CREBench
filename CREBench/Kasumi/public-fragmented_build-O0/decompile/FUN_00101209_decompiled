@@ -1,0 +1,14 @@
+
+short FUN_00101209(ushort param_1,ushort param_2)
+
+{
+  ushort uVar1;
+  ushort uVar2;
+  
+  uVar2 = *(ushort *)(&DAT_00102020 + (long)(int)(uint)(param_1 >> 7) * 2) ^ param_1 & 0x7f;
+  uVar1 = uVar2 & 0x7f ^ *(ushort *)(&DAT_00102420 + (long)(int)(uint)(param_1 & 0x7f) * 2) ^
+          param_2 >> 9;
+  uVar2 = *(ushort *)(&DAT_00102020 + (long)(int)(uint)(uVar2 ^ param_2 & 0x1ff) * 2) ^ uVar1;
+  return uVar2 + (uVar2 & 0x7f ^ *(ushort *)(&DAT_00102420 + (long)(int)(uint)uVar1 * 2)) * 0x200;
+}
+

@@ -1,0 +1,10 @@
+{
+  "challenge": "IDEA",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "07128db9a5f03f0d",
+  "key": "5c3a06afada4fd64ebf0fc0d31e93430",
+  "iv": "",
+  "target_ciphertext": "1ea61869e4bc3659",
+  "test_vectors_path": "CREBench/IDEA/test_vectors-weak_prng_seeded.json"
+}

@@ -1,0 +1,71 @@
+
+void FUN_0010162b(long param_1,long param_2,undefined8 param_3)
+
+{
+  byte bVar1;
+  undefined uVar2;
+  byte bVar3;
+  byte bVar4;
+  byte bVar5;
+  byte bVar6;
+  long in_FS_OFFSET;
+  byte local_2c;
+  byte local_2b;
+  byte local_2a;
+  byte local_29;
+  byte local_28;
+  byte local_27;
+  byte local_26;
+  byte local_25;
+  byte local_24;
+  byte local_23;
+  byte local_22;
+  byte local_21;
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  FUN_001015a5(&local_2c,param_2,param_3,4);
+  bVar6 = (&DAT_001030a0)[(int)(uint)local_2c];
+  local_23 = (&DAT_001031a0)[(int)(uint)local_2b];
+  local_22 = (&DAT_001030a0)[(int)(uint)local_2a];
+  local_21 = (&DAT_001031a0)[(int)(uint)local_29];
+  local_24 = bVar6;
+  bVar1 = FUN_001015ff(local_23);
+  uVar2 = FUN_001015ff(local_22);
+  bVar3 = FUN_001015ff(uVar2);
+  bVar4 = FUN_001015ff(local_21);
+  uVar2 = FUN_001015ff(local_21);
+  bVar5 = FUN_001015ff(uVar2);
+  local_28 = bVar5 ^ bVar4 ^ bVar6 ^ bVar1 ^ bVar3;
+  bVar6 = FUN_001015ff(local_24);
+  bVar6 = bVar6 ^ local_23;
+  bVar1 = FUN_001015ff(local_22);
+  uVar2 = FUN_001015ff(local_22);
+  bVar3 = FUN_001015ff(uVar2);
+  uVar2 = FUN_001015ff(local_21);
+  local_27 = FUN_001015ff(uVar2);
+  local_27 = local_27 ^ bVar6 ^ bVar3 ^ bVar1;
+  uVar2 = FUN_001015ff(local_24);
+  bVar6 = FUN_001015ff(uVar2);
+  bVar1 = FUN_001015ff(local_23);
+  uVar2 = FUN_001015ff(local_23);
+  bVar3 = FUN_001015ff(uVar2);
+  bVar6 = bVar6 ^ bVar3 ^ bVar1 ^ local_22;
+  local_26 = FUN_001015ff(local_21);
+  local_26 = local_26 ^ bVar6;
+  bVar6 = FUN_001015ff(local_24);
+  uVar2 = FUN_001015ff(local_24);
+  bVar1 = FUN_001015ff(uVar2);
+  uVar2 = FUN_001015ff(local_23);
+  bVar3 = FUN_001015ff(uVar2);
+  bVar4 = FUN_001015ff(local_22);
+  local_25 = local_21 ^ bVar6 ^ bVar1 ^ bVar3 ^ bVar4;
+  FUN_00101562(param_1,param_2,4);
+  FUN_001015a5(param_1 + 4,param_2 + 4,&local_28,4);
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

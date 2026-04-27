@@ -1,0 +1,67 @@
+name: anubis
+publc_path: CREBench/Anubis-128-CBC/public
+flag: 7cc0cc72b35db4d5ee8e86a0f54cec11ed3c88dc282c2247fafbe94bffc2e493
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: ANUBIS-128-CBC
+algorithm_aliases:
+  - ANUBIS-128
+  - ANUBIS
+  - ANUBIS CBC
+  - anubis_128_cbc
+  - anubis_cbc
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/Anubis-128-CBC/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: cbc_direct
+  key_source_file: CREBench/Anubis-128-CBC/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1727740800
+  key_seed_note: fixed_timestamp_utc_2024_10_01_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 16
+  iv_length_bytes: 16
+  target_length_bytes: 32
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: anubis_tables
+  compile_define: CONSTXOR_ANUBIS_TABLES
+  source_file: src/anubis.c
+  tables:
+    - symbol: T0
+      ctype: uint32_t
+      accessor: constxor_anubis_t0
+    - symbol: T1
+      ctype: uint32_t
+      accessor: constxor_anubis_t1
+    - symbol: T2
+      ctype: uint32_t
+      accessor: constxor_anubis_t2
+    - symbol: T3
+      ctype: uint32_t
+      accessor: constxor_anubis_t3
+    - symbol: T4
+      ctype: uint32_t
+      accessor: constxor_anubis_t4
+    - symbol: T5
+      ctype: uint32_t
+      accessor: constxor_anubis_t5

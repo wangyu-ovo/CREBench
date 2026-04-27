@@ -1,0 +1,10 @@
+{
+  "challenge": "Crypto-1",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "ea7fa6d2995a6d44f2e27c41a819417a0dc897d206cc45da040603c99135c2a9",
+  "key": "060989f98339",
+  "iv": "85faa3c99c17c77d",
+  "target_ciphertext": "da736adde7d0636dbb63cd8b0572dd0350bcdf3ffc0c09a1b332fb6a3c9e63c0",
+  "test_vectors_path": "CREBench/Crypto-1/test_vectors-weak_prng_seeded.json"
+}

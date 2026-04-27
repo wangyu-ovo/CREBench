@@ -1,0 +1,22 @@
+
+uint FUN_0010137d(ushort param_1,ushort param_2)
+
+{
+  ushort uVar1;
+  ushort uVar2;
+  uint uVar3;
+  
+  if (param_1 == 0) {
+    uVar3 = (uint)(ushort)(1 - param_2);
+  }
+  else if (param_2 == 0) {
+    uVar3 = (uint)(ushort)(1 - param_1);
+  }
+  else {
+    uVar1 = FUN_0010135a((uint)param_2 * (uint)param_1);
+    uVar2 = FUN_0010136a((uint)param_2 * (uint)param_1);
+    uVar3 = (uint)((uint)uVar1 < (uint)uVar2) + ((uint)uVar1 - (uint)uVar2);
+  }
+  return uVar3;
+}
+

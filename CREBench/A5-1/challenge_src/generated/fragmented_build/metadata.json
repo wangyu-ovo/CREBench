@@ -1,0 +1,10 @@
+{
+  "challenge": "A5-1",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "c6e8351cd878213d2fd4c720d0e7af1b1cb39f58b4fc34e071583ea8b64ed8a9",
+  "key": "16472433af0762f4",
+  "iv": "a708311f",
+  "target_ciphertext": "dc69f382b7a8aee2eacfcbef35452f49c59134ac8b94f62bfb494f83018efd3c",
+  "test_vectors_path": "CREBench/A5-1/test_vectors-fragmented_build.json"
+}

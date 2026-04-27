@@ -1,0 +1,13 @@
+
+undefined8 FUN_00101b50(uint *param_1)
+
+{
+  uint uVar1;
+  uint uVar2;
+  
+  uVar1 = *param_1;
+  uVar2 = param_1[1];
+  return CONCAT44(uVar2 >> 0x18 | (uVar2 & 0xff0000) >> 8 | (uVar2 & 0xff00) << 8 | uVar2 << 0x18,
+                  uVar1 >> 0x18 | (uVar1 & 0xff0000) >> 8 | (uVar1 & 0xff00) << 8 | uVar1 << 0x18);
+}
+

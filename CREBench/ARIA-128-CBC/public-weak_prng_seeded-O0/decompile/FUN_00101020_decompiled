@@ -1,0 +1,9 @@
+
+void FUN_00101020(void)
+
+{
+                    /* WARNING: Treating indirect jump as call */
+  (*(code *)PTR_00106f98)();
+  return;
+}
+

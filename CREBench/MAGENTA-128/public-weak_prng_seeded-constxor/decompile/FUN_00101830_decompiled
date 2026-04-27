@@ -1,0 +1,56 @@
+
+void FUN_00101830(undefined4 *param_1,uint *param_2)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  
+  uVar1 = *param_2;
+  uVar2 = param_2[2];
+  *param_1 = CONCAT13((&DAT_00104060)
+                      [(byte)((byte)(uVar2 >> 8) ^ (&DAT_00104060)[uVar1 >> 8 & 0xff])],
+                      CONCAT12((&DAT_00104060)
+                               [((uint)(byte)(&DAT_00104060)[(int)(uVar2 >> 8 & 0xff)] ^ uVar1 >> 8)
+                                & 0xff],CONCAT11((&DAT_00104060)
+                                                 [((byte)(&DAT_00104060)[uVar1 & 0xff] ^ uVar2) &
+                                                  0xff],(&DAT_00104060)
+                                                        [(byte)((byte)uVar1 ^
+                                                               (&DAT_00104060)[uVar2 & 0xff])])));
+  uVar1 = param_2[2];
+  uVar2 = *param_2 >> 0x18;
+  uVar3 = *param_2 >> 0x10;
+  param_1[1] = (uint)(byte)(&DAT_00104060)[(byte)((byte)(uVar1 >> 0x18) ^ (&DAT_00104060)[uVar2])]
+               << 0x18 | (uint)(byte)(&DAT_00104060)
+                                     [((byte)(&DAT_00104060)[uVar1 >> 0x10 & 0xff] ^ uVar3) & 0xff]
+                         | (uint)(byte)(&DAT_00104060)
+                                       [(byte)(&DAT_00104060)[(int)(uVar1 >> 0x18)] ^ uVar2] << 0x10
+               | (uint)(byte)(&DAT_00104060)
+                             [((uint)(byte)(&DAT_00104060)[uVar3 & 0xff] ^ uVar1 >> 0x10) & 0xff] <<
+                 8;
+  uVar1 = param_2[1];
+  uVar2 = param_2[3];
+  param_1[2] = CONCAT13((&DAT_00104060)
+                        [(byte)((byte)(uVar2 >> 8) ^ (&DAT_00104060)[uVar1 >> 8 & 0xff])],
+                        CONCAT12((&DAT_00104060)
+                                 [((uint)(byte)(&DAT_00104060)[(int)(uVar2 >> 8 & 0xff)] ^
+                                  uVar1 >> 8) & 0xff],
+                                 CONCAT11((&DAT_00104060)
+                                          [((byte)(&DAT_00104060)[uVar1 & 0xff] ^ uVar2) & 0xff],
+                                          (&DAT_00104060)
+                                          [(byte)((byte)uVar1 ^ (&DAT_00104060)[uVar2 & 0xff])])));
+  uVar1 = param_2[3];
+  uVar2 = param_2[1] >> 0x18;
+  uVar3 = param_2[1] >> 0x10;
+  param_1[3] = (uint)(byte)(&DAT_00104060)
+                           [((uint)(byte)(&DAT_00104060)[uVar3 & 0xff] ^ uVar1 >> 0x10) & 0xff] << 8
+               | (uint)(byte)(&DAT_00104060)[(byte)((byte)(uVar1 >> 0x18) ^ (&DAT_00104060)[uVar2])]
+                 << 0x18 | (uint)(byte)(&DAT_00104060)
+                                       [((byte)(&DAT_00104060)[uVar1 >> 0x10 & 0xff] ^ uVar3) & 0xff
+                                       ] |
+                           (uint)(byte)(&DAT_00104060)
+                                       [(byte)(&DAT_00104060)[(int)(uVar1 >> 0x18)] ^ uVar2] << 0x10
+  ;
+  return;
+}
+

@@ -1,0 +1,66 @@
+
+ulong FUN_0010122c(ulong param_1,ulong *param_2)
+
+{
+  ulong uVar1;
+  ulong uVar2;
+  ulong uVar3;
+  ulong uVar4;
+  ulong uVar5;
+  ulong uVar6;
+  ulong uVar7;
+  byte bVar8;
+  uint local_28;
+  int local_24;
+  ulong local_20;
+  ulong local_18;
+  
+  param_1 = param_1 ^ *param_2;
+  bVar8 = FUN_00101209(param_1,0);
+  uVar1 = *(ulong *)(&DAT_00102120 + (long)(int)(uint)bVar8 * 8);
+  bVar8 = FUN_00101209(param_1,1);
+  uVar2 = *(ulong *)(&DAT_00102120 + ((long)(int)(uint)bVar8 + 0x100) * 8);
+  bVar8 = FUN_00101209(param_1,2);
+  uVar3 = *(ulong *)(&DAT_00102120 + ((long)(int)(uint)bVar8 + 0x200) * 8);
+  bVar8 = FUN_00101209(param_1,3);
+  uVar4 = *(ulong *)(&DAT_00102120 + ((long)(int)(uint)bVar8 + 0x300) * 8);
+  bVar8 = FUN_00101209(param_1,4);
+  uVar5 = *(ulong *)(&DAT_00102120 + ((long)(int)(uint)bVar8 + 0x400) * 8);
+  bVar8 = FUN_00101209(param_1,5);
+  uVar6 = *(ulong *)(&DAT_00102120 + ((long)(int)(uint)bVar8 + 0x500) * 8);
+  bVar8 = FUN_00101209(param_1,6);
+  uVar7 = *(ulong *)(&DAT_00102120 + ((long)(int)(uint)bVar8 + 0x600) * 8);
+  bVar8 = FUN_00101209(param_1,7);
+  local_20 = param_2[1] ^
+             uVar1 ^ uVar2 ^ uVar3 ^ uVar4 ^ uVar5 ^ uVar6 ^ uVar7 ^
+             *(ulong *)(&DAT_00102120 + ((long)(int)(uint)bVar8 + 0x700) * 8);
+  for (local_28 = 2; local_28 < 6; local_28 = local_28 + 1) {
+    bVar8 = FUN_00101209(local_20,7);
+    uVar1 = *(ulong *)(&DAT_00102120 + (long)(int)(uint)bVar8 * 8);
+    bVar8 = FUN_00101209(local_20,6);
+    uVar2 = *(ulong *)(&DAT_00102120 + ((long)(int)(uint)bVar8 + 0x100) * 8);
+    bVar8 = FUN_00101209(local_20,5);
+    uVar3 = *(ulong *)(&DAT_00102120 + ((long)(int)(uint)bVar8 + 0x200) * 8);
+    bVar8 = FUN_00101209(local_20,4);
+    uVar4 = *(ulong *)(&DAT_00102120 + ((long)(int)(uint)bVar8 + 0x300) * 8);
+    bVar8 = FUN_00101209(local_20,3);
+    uVar5 = *(ulong *)(&DAT_00102120 + ((long)(int)(uint)bVar8 + 0x400) * 8);
+    bVar8 = FUN_00101209(local_20,2);
+    uVar6 = *(ulong *)(&DAT_00102120 + ((long)(int)(uint)bVar8 + 0x500) * 8);
+    bVar8 = FUN_00101209(local_20,1);
+    uVar7 = *(ulong *)(&DAT_00102120 + ((long)(int)(uint)bVar8 + 0x600) * 8);
+    bVar8 = FUN_00101209(local_20,0);
+    local_20 = param_2[local_28] ^
+               uVar1 ^ uVar2 ^ uVar3 ^ uVar4 ^ uVar5 ^ uVar6 ^ uVar7 ^
+               *(ulong *)(&DAT_00102120 + ((long)(int)(uint)bVar8 + 0x700) * 8);
+  }
+  local_18 = 0;
+  for (local_24 = 0; local_24 < 8; local_24 = local_24 + 1) {
+    bVar8 = FUN_00101209(local_20,local_24);
+    local_18 = local_18 |
+               (ulong)(byte)(&DAT_00102020)[(int)(uint)bVar8] <<
+               (('\a' - (char)local_24) * '\b' & 0x3fU);
+  }
+  return param_2[6] ^ local_18;
+}
+

@@ -1,0 +1,18 @@
+
+void FUN_0010161b(long param_1,int param_2,undefined8 param_3,ulong param_4)
+
+{
+  ulong uVar1;
+  int local_34;
+  ulong local_30;
+  
+  local_30 = param_4;
+  for (local_34 = 0; local_34 < param_2; local_34 = local_34 + 1) {
+    uVar1 = FUN_0010122c(local_30,param_3);
+    local_30 = FUN_001016c3(*(undefined8 *)(param_1 + (long)local_34 * 8));
+    local_30 = local_30 ^ uVar1;
+    *(ulong *)((long)local_34 * 8 + param_1) = local_30;
+  }
+  return;
+}
+

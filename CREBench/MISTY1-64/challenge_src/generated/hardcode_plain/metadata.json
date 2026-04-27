@@ -1,0 +1,10 @@
+{
+  "challenge": "MISTY1-64",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "c9dcc5f2845b8aa3c9289cbb781fa729992d703dc01d91d2e58a5d20f45402363b95618b7be29c6ca6f68a7704ab00826eb5e65d2854a6e78ad3150fcfcbc630",
+  "key": "6f29cc662a47c6281dd49ca72e6ba065",
+  "iv": "",
+  "target_ciphertext": "5d5a907a11f97bc5d823e6e5e58a727ae07ca5499f7a16ffff23f6a8fb5fe8feb5d8bd83e306f6b8273a1496cdb7c0ea484ff4f844fa3891b9da4eb3834b66f9",
+  "test_vectors_path": "CREBench/MISTY1-64/test_vectors-hardcode_plain.json"
+}

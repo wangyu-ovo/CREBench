@@ -1,0 +1,28 @@
+
+void FUN_001019ac(int *param_1,long param_2,long param_3)
+
+{
+  int iVar1;
+  int iVar2;
+  byte bVar3;
+  uint local_1c;
+  uint local_18;
+  uint local_14;
+  
+  iVar1 = FUN_0010162f(param_2);
+  iVar2 = FUN_0010162f(param_2 + 4);
+  local_1c = iVar1 + *param_1;
+  local_18 = iVar2 + param_1[1];
+  for (local_14 = 1; local_14 <= (uint)param_1[0x200]; local_14 = local_14 + 1) {
+    bVar3 = (byte)local_18 & 0x1f;
+    local_1c = param_1[local_14 * 2] +
+               ((local_1c ^ local_18) << bVar3 | (local_1c ^ local_18) >> 0x20 - bVar3);
+    bVar3 = (byte)local_1c & 0x1f;
+    local_18 = param_1[local_14 * 2 + 1] +
+               ((local_18 ^ local_1c) << bVar3 | (local_18 ^ local_1c) >> 0x20 - bVar3);
+  }
+  FUN_0010167c(param_3,local_1c);
+  FUN_0010167c(param_3 + 4,local_18);
+  return;
+}
+

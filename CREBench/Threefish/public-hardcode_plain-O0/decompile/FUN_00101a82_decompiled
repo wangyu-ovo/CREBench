@@ -1,0 +1,23 @@
+
+undefined8 FUN_00101a82(long param_1,long param_2,long param_3)
+
+{
+  undefined8 uVar1;
+  ulong local_10;
+  
+  if (((param_1 == 0) || (param_2 == 0)) || (param_3 != 0x40)) {
+    uVar1 = 0xffffffff;
+  }
+  else {
+    for (local_10 = 0; local_10 < 8; local_10 = local_10 + 1) {
+      uVar1 = FUN_001016e3(param_2 + local_10 * 8);
+      *(undefined8 *)(param_1 + local_10 * 8) = uVar1;
+    }
+    *(undefined8 *)(param_1 + 0x40) = 0;
+    *(undefined8 *)(param_1 + 0x48) = 0;
+    FUN_00101870(param_1);
+    uVar1 = 0;
+  }
+  return uVar1;
+}
+

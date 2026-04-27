@@ -1,0 +1,10 @@
+{
+  "challenge": "NOEKEON",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "b62e1a00b71ebe967e2e15bdf3a5e5dae3d3311e3e6a4aa60229ec3a34f99b5b",
+  "key": "003f2c87c604c160141eaf86a708318b",
+  "iv": "f1f579649e516eeaca2988e36aacf02f",
+  "target_ciphertext": "e87e1d821b49a207e1c26bff9e9159584dd338ebc2f6d710d1f6bde1ce69be1e",
+  "test_vectors_path": "CREBench/NOEKEON/test_vectors-fragmented_build.json"
+}

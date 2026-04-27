@@ -1,0 +1,10 @@
+{
+  "challenge": "XTEA",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "c59943fe857e33de",
+  "key": "ec4aa6ffa64ea18f8dafd8c9ba410f0b",
+  "iv": "",
+  "target_ciphertext": "6e05ac41ffe1ca58",
+  "test_vectors_path": "CREBench/XTEA/test_vectors-fragmented_build.json"
+}

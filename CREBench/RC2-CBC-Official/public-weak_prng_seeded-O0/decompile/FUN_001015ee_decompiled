@@ -1,0 +1,53 @@
+
+void FUN_001015ee(undefined *param_1,int param_2,long param_3,int param_4)
+
+{
+  int iVar1;
+  char cVar2;
+  byte bVar3;
+  int iVar4;
+  int local_38;
+  int local_34;
+  int local_28;
+  int local_24;
+  uint *local_18;
+  
+  *param_1 = 0;
+  local_34 = param_2;
+  if (0x80 < param_2) {
+    local_34 = 0x80;
+  }
+  local_38 = param_4;
+  if (param_4 < 1) {
+    local_38 = 0x400;
+  }
+  if (0x400 < local_38) {
+    local_38 = 0x400;
+  }
+  for (local_28 = 0; local_28 < local_34; local_28 = local_28 + 1) {
+    param_1[local_28] = *(undefined *)(param_3 + local_28);
+  }
+  cVar2 = param_1[(long)local_34 + -1];
+  local_24 = 0;
+  for (local_28 = local_34; local_28 < 0x80; local_28 = local_28 + 1) {
+    cVar2 = (&DAT_001020a0)[(byte)(cVar2 + param_1[local_24])];
+    param_1[local_28] = cVar2;
+    local_24 = local_24 + 1;
+  }
+  iVar4 = local_38 + 7 >> 3;
+  local_28 = 0x80 - iVar4;
+  bVar3 = (&DAT_001020a0)[(uint)(byte)param_1[local_28] & 0xff >> (-(char)local_38 & 7U)];
+  param_1[local_28] = bVar3;
+  while (iVar1 = local_28 + -1, local_28 != 0) {
+    bVar3 = (&DAT_001020a0)[param_1[iVar4 + iVar1] ^ bVar3];
+    param_1[iVar1] = bVar3;
+    local_28 = iVar1;
+  }
+  local_18 = (uint *)(param_1 + 0xfc);
+  for (local_28 = 0x7f; -1 < local_28; local_28 = local_28 + -2) {
+    *local_18 = (uint)CONCAT11(param_1[local_28],param_1[(long)local_28 + -1]);
+    local_18 = local_18 + -1;
+  }
+  return;
+}
+

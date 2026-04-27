@@ -1,0 +1,13 @@
+
+void FUN_001017d6(uint param_1,uint param_2,uint param_3,uint param_4,uint param_5,uint param_6,
+                 uint param_7,uint param_8,uint *param_9,uint *param_10,uint *param_11,
+                 uint *param_12)
+
+{
+  *param_9 = param_1 ^ param_5;
+  *param_10 = param_2 ^ param_6;
+  *param_11 = param_3 ^ param_7;
+  *param_12 = param_4 ^ param_8;
+  return;
+}
+

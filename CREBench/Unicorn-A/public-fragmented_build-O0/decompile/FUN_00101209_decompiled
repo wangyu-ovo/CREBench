@@ -1,0 +1,72 @@
+
+void FUN_00101209(undefined8 *param_1,undefined8 *param_2,undefined8 param_3)
+
+{
+  undefined8 uVar1;
+  long in_FS_OFFSET;
+  int local_15c;
+  uint local_150;
+  uint local_14c;
+  uint local_148 [4];
+  int local_138 [68];
+  int local_28;
+  int local_24;
+  int local_20;
+  int local_1c;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  FUN_001019c1(param_3,local_138);
+  uVar1 = param_1[1];
+  *param_2 = *param_1;
+  param_2[1] = uVar1;
+  for (local_15c = 0; local_15c < 4; local_15c = local_15c + 1) {
+    local_148[local_15c] = (uint)*(byte *)((long)param_2 + (long)(local_15c << 2)) << 0x18;
+    local_148[local_15c] =
+         local_148[local_15c] | (uint)*(byte *)((long)param_2 + (long)(local_15c << 2) + 1) << 0x10;
+    local_148[local_15c] =
+         local_148[local_15c] | (uint)*(byte *)((long)param_2 + (long)(local_15c << 2) + 2) << 8;
+    local_148[local_15c] =
+         local_148[local_15c] | (uint)*(byte *)((long)param_2 + (long)(local_15c << 2) + 3);
+  }
+  for (local_15c = 0; local_15c < 4; local_15c = local_15c + 1) {
+    local_148[local_15c] = local_148[local_15c] + *(int *)((long)local_138 + (long)(local_15c << 2))
+    ;
+  }
+  for (local_15c = 0; local_15c < 0x10; local_15c = local_15c + 1) {
+    FUN_001016a5(local_148[2],local_148[3],(long)local_138 + (long)((local_15c + 1) * 0x10),
+                 &local_150,&local_14c);
+    local_150 = local_148[0] ^ local_150;
+    local_14c = local_148[1] ^ local_14c;
+    local_148[0] = local_148[2];
+    local_148[1] = local_148[3];
+    local_148[2] = local_150;
+    local_148[3] = local_14c;
+  }
+  local_148[0] = local_148[0] - local_20;
+  local_148[1] = local_148[1] - local_1c;
+  local_148[2] = local_148[2] - local_28;
+  local_148[3] = local_148[3] - local_24;
+  *(char *)param_2 = (char)(local_148[2] >> 0x18);
+  *(char *)((long)param_2 + 1) = (char)(local_148[2] >> 0x10);
+  *(char *)((long)param_2 + 2) = (char)(local_148[2] >> 8);
+  *(char *)((long)param_2 + 3) = (char)local_148[2];
+  *(char *)((long)param_2 + 4) = (char)(local_148[3] >> 0x18);
+  *(char *)((long)param_2 + 5) = (char)(local_148[3] >> 0x10);
+  *(char *)((long)param_2 + 6) = (char)(local_148[3] >> 8);
+  *(char *)((long)param_2 + 7) = (char)local_148[3];
+  *(char *)(param_2 + 1) = (char)(local_148[0] >> 0x18);
+  *(char *)((long)param_2 + 9) = (char)(local_148[0] >> 0x10);
+  *(char *)((long)param_2 + 10) = (char)(local_148[0] >> 8);
+  *(char *)((long)param_2 + 0xb) = (char)local_148[0];
+  *(char *)((long)param_2 + 0xc) = (char)(local_148[1] >> 0x18);
+  *(char *)((long)param_2 + 0xd) = (char)(local_148[1] >> 0x10);
+  *(char *)((long)param_2 + 0xe) = (char)(local_148[1] >> 8);
+  *(char *)((long)param_2 + 0xf) = (char)local_148[1];
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

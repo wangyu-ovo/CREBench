@@ -1,0 +1,18 @@
+
+uint FUN_001017b5(undefined4 param_1)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  uint uVar4;
+  uint uVar5;
+  
+  uVar1 = FUN_0010172c(param_1);
+  uVar2 = FUN_00101649(uVar1,2);
+  uVar3 = FUN_00101649(uVar1,10);
+  uVar4 = FUN_00101649(uVar1,0x12);
+  uVar5 = FUN_00101649(uVar1,0x18);
+  return uVar5 ^ uVar2 ^ uVar1 ^ uVar3 ^ uVar4;
+}
+

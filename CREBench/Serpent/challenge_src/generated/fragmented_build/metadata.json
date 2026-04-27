@@ -1,0 +1,10 @@
+{
+  "challenge": "Serpent",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "ec4b46ae323cec71f659c934bd7d22fa",
+  "key": "8cdbe6a5e6c935f9e9a43d7700c26329",
+  "iv": "",
+  "target_ciphertext": "fa8ee633c96b6ab934d4d318c164ee8e",
+  "test_vectors_path": "CREBench/Serpent/test_vectors-fragmented_build.json"
+}

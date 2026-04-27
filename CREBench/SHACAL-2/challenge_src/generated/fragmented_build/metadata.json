@@ -1,0 +1,10 @@
+{
+  "challenge": "SHACAL-2",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "cb05bbf9bb43157d1446cd259c5ee25bcd04ef3c107afac7864184a7c2b3786c",
+  "key": "1b732b345c05dd4a746f9a5cfb1cd76adc915aacfc24b92be38ac191e28c11b7",
+  "iv": "dbeb531f4ba119ef36848e74289a45b7faf7af05402cabf779368f1d1640968c",
+  "target_ciphertext": "509662541b6d33cb91640c7e22c1b2839b7efaed5375ec19c15060e9be6514f1",
+  "test_vectors_path": "CREBench/SHACAL-2/test_vectors-fragmented_build.json"
+}

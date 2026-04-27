@@ -1,0 +1,60 @@
+
+void FUN_001025d0(undefined8 *param_1,uint *param_2)
+
+{
+  uint *puVar1;
+  uint uVar2;
+  uint uVar3;
+  uint uVar4;
+  uint uVar5;
+  uint uVar6;
+  uint uVar7;
+  uint uVar8;
+  
+  puVar1 = &DAT_00103040;
+  uVar5 = *param_2;
+  uVar6 = param_2[1];
+  uVar8 = param_2[2];
+  uVar2 = param_2[3];
+  uVar7 = (uVar5 >> 0x18 | (uVar5 & 0xff0000) >> 8 | (uVar5 & 0xff00) << 8 | uVar5 << 0x18) ^
+          0xa3b1bac6;
+  uVar5 = (uVar8 >> 0x18 | (uVar8 & 0xff0000) >> 8 | (uVar8 & 0xff00) << 8 | uVar8 << 0x18) ^
+          0x677d9197;
+  uVar6 = (uVar6 >> 0x18 | (uVar6 & 0xff0000) >> 8 | (uVar6 & 0xff00) << 8 | uVar6 << 0x18) ^
+          0x56aa3350;
+  uVar8 = (uVar2 >> 0x18 | (uVar2 & 0xff0000) >> 8 | (uVar2 & 0xff00) << 8 | uVar2 << 0x18) ^
+          0xb27022dc;
+  do {
+    uVar2 = uVar6 ^ uVar5 ^ uVar8 ^ *puVar1;
+    uVar4 = (uint)(byte)(&DAT_001030c0)[uVar2 >> 0x18] << 0x18 |
+            (uint)(byte)(&DAT_001030c0)[uVar2 & 0xff] |
+            (uint)(byte)(&DAT_001030c0)[uVar2 >> 0x10 & 0xff] << 0x10;
+    uVar2 = (uint)(byte)(&DAT_001030c0)[(int)(uVar2 >> 8 & 0xff)] << 8 | uVar4;
+    uVar7 = uVar7 ^ uVar2 ^ (uVar2 << 0xd | uVar4 >> 0x13) ^ (uVar2 >> 9 | uVar2 << 0x17);
+    uVar4 = uVar5 ^ uVar8 ^ puVar1[1] ^ uVar7;
+    uVar2 = (uint)(byte)(&DAT_001030c0)[uVar4 >> 0x18] << 0x18 |
+            (uint)(byte)(&DAT_001030c0)[uVar4 & 0xff] |
+            (uint)(byte)(&DAT_001030c0)[uVar4 >> 0x10 & 0xff] << 0x10;
+    uVar4 = uVar2 | (uint)(byte)(&DAT_001030c0)[(int)(uVar4 >> 8 & 0xff)] << 8;
+    uVar6 = uVar6 ^ (uVar4 << 0xd | uVar2 >> 0x13) ^ uVar4 ^ (uVar4 >> 9 | uVar4 << 0x17);
+    uVar2 = puVar1[2] ^ uVar8 ^ uVar7 ^ uVar6;
+    uVar4 = (uint)(byte)(&DAT_001030c0)[uVar2 >> 0x18] << 0x18 |
+            (uint)(byte)(&DAT_001030c0)[uVar2 & 0xff] |
+            (uint)(byte)(&DAT_001030c0)[uVar2 >> 0x10 & 0xff] << 0x10;
+    uVar3 = uVar4 | (uint)(byte)(&DAT_001030c0)[(int)(uVar2 >> 8 & 0xff)] << 8;
+    uVar2 = puVar1[3];
+    *param_1 = CONCAT44(uVar6,uVar7);
+    uVar5 = uVar5 ^ (uVar3 << 0xd | uVar4 >> 0x13) ^ uVar3 ^ (uVar3 >> 9 | uVar3 << 0x17);
+    uVar4 = uVar2 ^ uVar7 ^ uVar6 ^ uVar5;
+    uVar2 = (uint)(byte)(&DAT_001030c0)[uVar4 >> 0x18] << 0x18 |
+            (uint)(byte)(&DAT_001030c0)[uVar4 & 0xff] |
+            (uint)(byte)(&DAT_001030c0)[uVar4 >> 0x10 & 0xff] << 0x10;
+    uVar4 = uVar2 | (uint)(byte)(&DAT_001030c0)[(int)(uVar4 >> 8 & 0xff)] << 8;
+    uVar8 = uVar8 ^ (uVar4 << 0xd | uVar2 >> 0x13) ^ uVar4 ^ (uVar4 >> 9 | uVar4 << 0x17);
+    puVar1 = puVar1 + 4;
+    param_1[1] = CONCAT44(uVar8,uVar5);
+    param_1 = param_1 + 2;
+  } while (puVar1 != (uint *)&DAT_001030c0);
+  return;
+}
+

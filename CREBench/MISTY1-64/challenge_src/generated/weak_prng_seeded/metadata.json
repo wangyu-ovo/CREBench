@@ -1,0 +1,10 @@
+{
+  "challenge": "MISTY1-64",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "c9dcc5f2845b8aa3c9289cbb781fa729992d703dc01d91d2e58a5d20f45402363b95618b7be29c6ca6f68a7704ab00826eb5e65d2854a6e78ad3150fcfcbc630",
+  "key": "b64a67c134af0286d31ac62d94d736a4",
+  "iv": "",
+  "target_ciphertext": "ac82f2a3b07dd28b2a8ab412d57bd5d8b5d8c9351abe8ac047b586f6b1ee659f79bd64ac81bfa8bdec590cc65660674b29d98eb9b294acd8edb4e302c9ddf485",
+  "test_vectors_path": "CREBench/MISTY1-64/test_vectors-weak_prng_seeded.json"
+}

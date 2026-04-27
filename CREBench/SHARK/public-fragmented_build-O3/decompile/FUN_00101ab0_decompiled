@@ -1,0 +1,84 @@
+
+ulong FUN_00101ab0(ulong param_1)
+
+{
+  byte bVar1;
+  uint uVar2;
+  uint uVar3;
+  uint uVar4;
+  ulong uVar5;
+  int iVar6;
+  byte *pbVar7;
+  ulong uVar8;
+  byte *pbVar9;
+  
+  uVar8 = 0;
+  pbVar9 = &DAT_001020c0;
+  do {
+    iVar6 = 0x38;
+    pbVar7 = pbVar9;
+    do {
+      bVar1 = *pbVar7;
+      uVar5 = param_1 >> ((byte)iVar6 & 0x3f);
+      uVar3 = (uint)uVar5 & 1;
+      if ((uVar5 & 1) != 0) {
+        uVar3 = (uint)bVar1;
+      }
+      uVar4 = (uint)bVar1 + (uint)bVar1;
+      if ((char)bVar1 < '\0') {
+        uVar4 = (uint)bVar1 + (uint)bVar1 ^ 0xfffffff5;
+      }
+      if ((uVar5 & 2) != 0) {
+        uVar3 = uVar3 ^ uVar4;
+      }
+      uVar2 = uVar4 * 2;
+      if ((char)uVar4 < '\0') {
+        uVar2 = uVar4 * 2 ^ 0xfffffff5;
+      }
+      if ((uVar5 & 4) != 0) {
+        uVar3 = uVar3 ^ uVar2;
+      }
+      uVar4 = uVar2 * 2;
+      if ((char)uVar2 < '\0') {
+        uVar4 = uVar2 * 2 ^ 0xfffffff5;
+      }
+      if ((uVar5 & 8) != 0) {
+        uVar3 = uVar3 ^ uVar4;
+      }
+      uVar2 = uVar4 * 2;
+      if ((char)uVar4 < '\0') {
+        uVar2 = uVar4 * 2 ^ 0xfffffff5;
+      }
+      if ((uVar5 & 0x10) != 0) {
+        uVar3 = uVar3 ^ uVar2;
+      }
+      uVar4 = uVar2 * 2;
+      if ((char)uVar2 < '\0') {
+        uVar4 = uVar2 * 2 ^ 0xfffffff5;
+      }
+      if ((uVar5 & 0x20) != 0) {
+        uVar3 = uVar3 ^ uVar4;
+      }
+      uVar2 = uVar4 * 2;
+      if ((char)uVar4 < '\0') {
+        uVar2 = uVar4 * 2 ^ 0xfffffff5;
+      }
+      if ((uVar5 & 0x40) != 0) {
+        uVar3 = uVar3 ^ uVar2;
+      }
+      uVar4 = uVar2 * 2;
+      if ((char)uVar2 < '\0') {
+        uVar4 = uVar2 * 2 ^ 0xfffffff5;
+      }
+      if ((char)uVar5 < '\0') {
+        uVar3 = uVar4 ^ uVar3;
+      }
+      iVar6 = iVar6 + -8;
+      pbVar7 = pbVar7 + 1;
+      uVar8 = uVar8 ^ (ulong)(uVar3 & 0xff) << (-(char)pbVar9 - 8U & 0x3f);
+    } while (iVar6 != -8);
+    pbVar9 = pbVar9 + 8;
+  } while (pbVar9 != &DAT_00102100);
+  return uVar8;
+}
+

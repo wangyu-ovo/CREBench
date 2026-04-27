@@ -1,0 +1,40 @@
+
+void FUN_0010185f(long param_1,undefined8 param_2)
+
+{
+  uint uVar1;
+  uint local_1c;
+  uint local_18;
+  uint local_14;
+  uint local_10;
+  int local_c;
+  
+  local_1c = FUN_00101664(param_2,0);
+  local_1c = local_1c ^ 0xa3b1bac6;
+  local_18 = FUN_00101664(param_2,1);
+  local_18 = local_18 ^ 0x56aa3350;
+  local_14 = FUN_00101664(param_2,2);
+  local_14 = local_14 ^ 0x677d9197;
+  local_10 = FUN_00101664(param_2,3);
+  local_10 = local_10 ^ 0xb27022dc;
+  for (local_c = 0; local_c < 0x20; local_c = local_c + 4) {
+    uVar1 = FUN_0010181b(*(uint *)(&DAT_001031c0 + (long)local_c * 4) ^
+                         local_18 ^ local_14 ^ local_10);
+    local_1c = local_1c ^ uVar1;
+    uVar1 = FUN_0010181b(*(uint *)(&DAT_001031c0 + (long)(local_c + 1) * 4) ^
+                         local_14 ^ local_10 ^ local_1c);
+    local_18 = local_18 ^ uVar1;
+    uVar1 = FUN_0010181b(*(uint *)(&DAT_001031c0 + (long)(local_c + 2) * 4) ^
+                         local_10 ^ local_1c ^ local_18);
+    local_14 = local_14 ^ uVar1;
+    uVar1 = FUN_0010181b(*(uint *)(&DAT_001031c0 + (long)(local_c + 3) * 4) ^
+                         local_1c ^ local_18 ^ local_14);
+    local_10 = local_10 ^ uVar1;
+    *(uint *)(param_1 + (long)local_c * 4) = local_1c;
+    *(uint *)(param_1 + (long)(local_c + 1) * 4) = local_18;
+    *(uint *)(param_1 + (long)(local_c + 2) * 4) = local_14;
+    *(uint *)(param_1 + (long)(local_c + 3) * 4) = local_10;
+  }
+  return;
+}
+

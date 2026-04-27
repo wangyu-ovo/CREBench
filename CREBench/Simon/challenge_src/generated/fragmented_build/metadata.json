@@ -1,0 +1,10 @@
+{
+  "challenge": "Simon",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "3f39194df10c9d5b",
+  "key": "ee6ab84011ed0bba6ee07545",
+  "iv": "",
+  "target_ciphertext": "e2dadd24f45836c4",
+  "test_vectors_path": "CREBench/Simon/test_vectors-fragmented_build.json"
+}

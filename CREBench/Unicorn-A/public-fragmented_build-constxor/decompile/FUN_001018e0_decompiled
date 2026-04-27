@@ -1,0 +1,14 @@
+
+void FUN_001018e0(long param_1,ulong param_2)
+
+{
+  undefined uVar1;
+  ulong local_18;
+  
+  for (local_18 = 0; local_18 < param_2; local_18 = local_18 + 1) {
+    uVar1 = FUN_00101870((uint)local_18 & 0x1f);
+    *(undefined *)(param_1 + local_18) = uVar1;
+  }
+  return;
+}
+

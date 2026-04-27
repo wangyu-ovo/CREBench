@@ -1,0 +1,12 @@
+
+uint FUN_00101853(uint param_1)
+
+{
+  uint uVar1;
+  uint uVar2;
+  
+  uVar1 = FUN_00101730(param_1,0x11);
+  uVar2 = FUN_00101730(param_1,0x13);
+  return param_1 >> 10 ^ uVar1 ^ uVar2;
+}
+

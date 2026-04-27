@@ -1,0 +1,10 @@
+{
+  "challenge": "XTEA",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "c59943fe857e33de",
+  "key": "15eaa78afdc441a8a8b17488034c22a1",
+  "iv": "",
+  "target_ciphertext": "9712eda0dfe1eb69",
+  "test_vectors_path": "CREBench/XTEA/test_vectors-hardcode_plain.json"
+}

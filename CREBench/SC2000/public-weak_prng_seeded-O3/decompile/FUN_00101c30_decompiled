@@ -1,0 +1,59 @@
+
+void FUN_00101c30(undefined8 param_1,undefined4 param_2,uint param_3,uint *param_4,uint *param_5)
+
+{
+  long lVar1;
+  bool bVar2;
+  uint *puVar3;
+  uint uVar4;
+  ulong uVar5;
+  uint uVar6;
+  uint *puVar7;
+  long in_FS_OFFSET;
+  bool bVar8;
+  uint local_38;
+  uint local_34;
+  
+  puVar7 = &DAT_001022dc;
+  lVar1 = *(long *)(in_FS_OFFSET + 0x28);
+  FUN_00101bb0();
+  uVar5 = (ulong)local_34;
+  bVar2 = false;
+  uVar6 = 0;
+  puVar3 = puVar7;
+  do {
+    if ((uVar5 & 1) != 0) {
+      uVar6 = uVar6 ^ *puVar3;
+      bVar2 = true;
+    }
+    uVar5 = uVar5 >> 1;
+    bVar8 = puVar3 != (uint *)&DAT_00102260;
+    puVar3 = puVar3 + -1;
+  } while (bVar8);
+  if (!bVar2) {
+    uVar6 = 0;
+  }
+  FUN_00101bb0(param_2);
+  bVar2 = false;
+  uVar4 = 0;
+  do {
+    if ((local_38 & 1) != 0) {
+      uVar4 = uVar4 ^ *puVar7;
+      bVar2 = true;
+    }
+    local_38 = local_38 >> 1;
+    bVar8 = puVar7 != (uint *)&DAT_00102260;
+    puVar7 = puVar7 + -1;
+  } while (bVar8);
+  if (!bVar2) {
+    uVar4 = 0;
+  }
+  *param_4 = param_3 & uVar6 ^ uVar4;
+  *param_5 = ~param_3 & uVar4 ^ uVar6;
+  if (lVar1 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

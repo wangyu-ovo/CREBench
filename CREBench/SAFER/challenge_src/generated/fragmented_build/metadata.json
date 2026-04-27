@@ -1,0 +1,10 @@
+{
+  "challenge": "SAFER",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "b825a237d7f1f3806df89cd27aa495a76794234d22e8aa860b3a99090cde984c",
+  "key": "2a4a9494a5dbaea7356a9baa92c0f221",
+  "iv": "448d230f9cb9c873",
+  "target_ciphertext": "ae91aba0f3ad5e5595ac8c73e241f831f32e5c8bcaae4ff2ff26b8ec8c0123b7",
+  "test_vectors_path": "CREBench/SAFER/test_vectors-fragmented_build.json"
+}

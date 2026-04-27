@@ -1,0 +1,104 @@
+
+uint FUN_00101ff0(undefined8 param_1,uint param_2,int param_3,int param_4)
+
+{
+  uint uVar1;
+  uint *puVar2;
+  ulong uVar3;
+  uint uVar4;
+  uint uVar5;
+  uint *puVar6;
+  uint uVar7;
+  long in_FS_OFFSET;
+  uint local_3c;
+  uint local_38;
+  uint local_34;
+  long local_30;
+  
+  puVar6 = &DAT_0010511c;
+  uVar1 = 0;
+  local_30 = *(long *)(in_FS_OFFSET + 0x28);
+  local_34 = (uint)param_1;
+  FUN_00101ca0(param_1,&local_34);
+  uVar3 = (ulong)local_34;
+  puVar2 = &DAT_0010511c;
+  local_34 = 0;
+  while( true ) {
+    uVar5 = (uint)uVar3;
+    if ((uVar3 & 1) == 0) {
+      uVar3 = uVar3 >> 1;
+    }
+    else {
+      FUN_00101ea0();
+      uVar1 = uVar1 ^ *puVar2;
+      uVar3 = (ulong)(uVar5 >> 1);
+      local_34 = uVar1;
+    }
+    if (puVar2 == (uint *)&DAT_001050a0) break;
+    puVar2 = puVar2 + -1;
+  }
+  uVar5 = 0;
+  local_38 = param_2;
+  FUN_00101ca0(param_2,&local_38);
+  uVar3 = (ulong)local_38;
+  puVar2 = &DAT_0010511c;
+  local_38 = 0;
+  while( true ) {
+    uVar7 = (uint)uVar3;
+    if ((uVar3 & 1) == 0) {
+      uVar3 = uVar3 >> 1;
+    }
+    else {
+      FUN_00101ea0();
+      uVar5 = uVar5 ^ *puVar2;
+      uVar3 = (ulong)(uVar7 >> 1);
+      local_38 = uVar5;
+    }
+    if (puVar2 == (uint *)&DAT_001050a0) break;
+    puVar2 = puVar2 + -1;
+  }
+  local_3c = param_4 + param_3 * 4;
+  uVar7 = 0;
+  FUN_00101ca0(local_3c,&local_3c);
+  uVar3 = (ulong)local_3c;
+  puVar2 = &DAT_0010511c;
+  local_3c = 0;
+  while( true ) {
+    uVar4 = (uint)uVar3;
+    if ((uVar3 & 1) == 0) {
+      uVar3 = uVar3 >> 1;
+    }
+    else {
+      FUN_00101ea0();
+      uVar7 = uVar7 ^ *puVar2;
+      uVar3 = (ulong)(uVar4 >> 1);
+      local_3c = uVar7;
+    }
+    if (puVar2 == (uint *)&DAT_001050a0) break;
+    puVar2 = puVar2 + -1;
+  }
+  local_34 = (param_3 + 1) * uVar5 ^ uVar1 + uVar7;
+  FUN_00101ca0(local_34,&local_34);
+  uVar3 = (ulong)local_34;
+  uVar1 = 0;
+  local_34 = 0;
+  while( true ) {
+    uVar5 = (uint)uVar3;
+    if ((uVar3 & 1) == 0) {
+      uVar3 = uVar3 >> 1;
+    }
+    else {
+      FUN_00101ea0();
+      uVar3 = (ulong)(uVar5 >> 1);
+      uVar1 = uVar1 ^ *puVar6;
+    }
+    if (puVar6 == (uint *)&DAT_001050a0) break;
+    puVar6 = puVar6 + -1;
+  }
+  if (local_30 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar1;
+}
+

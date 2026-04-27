@@ -1,0 +1,49 @@
+
+void FUN_00101804(byte *param_1,undefined *param_2,long param_3)
+
+{
+  long in_FS_OFFSET;
+  int local_40;
+  uint local_3c;
+  int local_38;
+  uint local_30;
+  uint local_2c;
+  uint auStack_28 [6];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_30 = (uint)param_1[3] |
+             (uint)*param_1 << 0x18 | (uint)param_1[1] << 0x10 | (uint)param_1[2] << 8;
+  local_2c = (uint)param_1[7] |
+             (uint)param_1[4] << 0x18 | (uint)param_1[5] << 0x10 | (uint)param_1[6] << 8;
+  for (local_40 = 0; local_40 < 4; local_40 = local_40 + 1) {
+    auStack_28[local_40] =
+         (uint)*(byte *)(param_3 + (local_40 << 2)) << 0x18 |
+         (uint)*(byte *)(param_3 + (long)(local_40 << 2) + 1) << 0x10 |
+         (uint)*(byte *)(param_3 + (long)(local_40 << 2) + 2) << 8 |
+         (uint)*(byte *)(param_3 + (long)(local_40 << 2) + 3);
+  }
+  local_3c = 0xc6ef3720;
+  for (local_38 = 0; local_38 < 0x20; local_38 = local_38 + 1) {
+    local_2c = local_2c -
+               (local_3c + auStack_28[local_3c >> 0xb & 3] ^
+               (local_30 << 4 ^ local_30 >> 5) + local_30);
+    local_3c = local_3c + 0x61c88647;
+    local_30 = local_30 -
+               (local_3c + auStack_28[local_3c & 3] ^ (local_2c * 0x10 ^ local_2c >> 5) + local_2c);
+  }
+  *param_2 = (char)(local_30 >> 0x18);
+  param_2[1] = (char)(local_30 >> 0x10);
+  param_2[2] = (char)(local_30 >> 8);
+  param_2[3] = (char)local_30;
+  param_2[4] = (char)(local_2c >> 0x18);
+  param_2[5] = (char)(local_2c >> 0x10);
+  param_2[6] = (char)(local_2c >> 8);
+  param_2[7] = (char)local_2c;
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

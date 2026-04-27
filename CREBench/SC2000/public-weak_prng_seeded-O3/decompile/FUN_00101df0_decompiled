@@ -1,0 +1,96 @@
+
+uint FUN_00101df0(uint param_1,uint param_2,int param_3,int param_4)
+
+{
+  bool bVar1;
+  uint *puVar2;
+  ulong uVar3;
+  uint uVar4;
+  uint uVar5;
+  uint *puVar6;
+  uint uVar7;
+  long in_FS_OFFSET;
+  bool bVar8;
+  uint local_34;
+  long local_30;
+  
+  uVar7 = 0;
+  puVar6 = (uint *)&DAT_00102260;
+  local_30 = *(long *)(in_FS_OFFSET + 0x28);
+  local_34 = param_1;
+  FUN_00101bb0();
+  uVar3 = (ulong)local_34;
+  bVar1 = false;
+  puVar2 = &DAT_001022dc;
+  do {
+    if ((uVar3 & 1) != 0) {
+      uVar7 = uVar7 ^ *puVar2;
+      bVar1 = true;
+    }
+    uVar3 = uVar3 >> 1;
+    bVar8 = puVar6 != puVar2;
+    puVar2 = puVar2 + -1;
+  } while (bVar8);
+  if (!bVar1) {
+    uVar7 = 0;
+  }
+  FUN_00101bb0();
+  uVar3 = (ulong)param_2;
+  bVar1 = false;
+  uVar4 = 0;
+  puVar2 = &DAT_001022dc;
+  do {
+    if ((uVar3 & 1) != 0) {
+      uVar4 = uVar4 ^ *puVar2;
+      bVar1 = true;
+    }
+    uVar3 = uVar3 >> 1;
+    bVar8 = puVar2 != puVar6;
+    puVar2 = puVar2 + -1;
+  } while (bVar8);
+  uVar5 = 0;
+  if (bVar1) {
+    uVar5 = (param_3 + 1) * uVar4;
+  }
+  FUN_00101bb0();
+  uVar3 = (ulong)(uint)(param_4 + param_3 * 4);
+  bVar1 = false;
+  uVar4 = 0;
+  puVar2 = &DAT_001022dc;
+  do {
+    if ((uVar3 & 1) != 0) {
+      uVar4 = uVar4 ^ *puVar2;
+      bVar1 = true;
+    }
+    uVar3 = uVar3 >> 1;
+    bVar8 = puVar6 != puVar2;
+    puVar2 = puVar2 + -1;
+  } while (bVar8);
+  if (bVar1) {
+    uVar7 = uVar4 + uVar7;
+  }
+  local_34 = uVar5 ^ uVar7;
+  FUN_00101bb0(local_34,&local_34);
+  bVar1 = false;
+  uVar7 = 0;
+  puVar2 = &DAT_001022dc;
+  uVar4 = local_34;
+  do {
+    if ((uVar4 & 1) != 0) {
+      uVar7 = uVar7 ^ *puVar2;
+      bVar1 = true;
+    }
+    uVar4 = uVar4 >> 1;
+    bVar8 = puVar6 != puVar2;
+    puVar2 = puVar2 + -1;
+  } while (bVar8);
+  if (!bVar1) {
+    uVar7 = 0;
+  }
+  if (local_30 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar7;
+}
+

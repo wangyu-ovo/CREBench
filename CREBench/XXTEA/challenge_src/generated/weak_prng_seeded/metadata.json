@@ -1,0 +1,10 @@
+{
+  "challenge": "XXTEA",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "7d1542f9c529095472febefc6873da7c",
+  "key": "42660490f83b4cf3532bcbe38678b5d6",
+  "iv": "",
+  "target_ciphertext": "8853fdaf03e03523a217e12131678398",
+  "test_vectors_path": "CREBench/XXTEA/test_vectors-weak_prng_seeded.json"
+}

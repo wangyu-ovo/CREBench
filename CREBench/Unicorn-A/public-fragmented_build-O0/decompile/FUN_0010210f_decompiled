@@ -1,0 +1,51 @@
+
+undefined8 FUN_0010210f(int param_1,undefined8 *param_2)
+
+{
+  int iVar1;
+  undefined8 uVar2;
+  long in_FS_OFFSET;
+  undefined local_68 [16];
+  undefined8 local_58;
+  undefined8 local_50;
+  undefined local_48 [16];
+  undefined local_38 [40];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  if (param_1 == 2) {
+    iVar1 = FUN_00101fe2(param_2[1],local_68,0x10);
+    if (iVar1 == 0) {
+      fwrite("Bad input hex. Expecting 32 hex chars (16 bytes).\n",1,0x32,stderr);
+      uVar2 = 1;
+    }
+    else {
+      FUN_001022f9(local_38,0x20);
+      local_58 = 0xc407552f10531c5;
+      local_50 = 0xcbf72a39e7e55985;
+      FUN_00101209(local_68,local_48,local_38);
+      printf("Ciphertext(hex): ");
+      FUN_001020b7(local_48,0x10);
+      putchar(10);
+      iVar1 = memcmp(local_48,&local_58,0x10);
+      if (iVar1 == 0) {
+        printf("True!");
+        uVar2 = 0;
+      }
+      else {
+        printf("False!");
+        uVar2 = 1;
+      }
+    }
+  }
+  else {
+    fprintf(stderr,"Usage: %s <32-hex-chars>\n",*param_2);
+    uVar2 = 1;
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar2;
+}
+

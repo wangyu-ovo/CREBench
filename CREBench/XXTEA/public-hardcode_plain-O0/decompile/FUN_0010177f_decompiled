@@ -1,0 +1,55 @@
+
+void FUN_0010177f(long param_1,long param_2,long param_3)
+
+{
+  long in_FS_OFFSET;
+  int local_54;
+  int local_50;
+  int local_4c;
+  undefined8 local_48;
+  undefined8 local_40;
+  undefined8 local_38;
+  undefined8 local_30;
+  undefined8 local_28;
+  undefined8 local_20;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_48 = 0;
+  local_40 = 0;
+  local_38 = 0;
+  local_30 = 0;
+  local_28 = 0;
+  local_20 = 0;
+  for (local_54 = 0; local_54 < 4; local_54 = local_54 + 1) {
+    *(uint *)((long)&local_48 + (long)local_54 * 4) =
+         CONCAT13(*(undefined *)(param_1 + (long)(local_54 << 2) + 3),
+                  CONCAT12(*(undefined *)(param_1 + (long)(local_54 << 2) + 2),
+                           CONCAT11(*(undefined *)(param_1 + (long)(local_54 << 2) + 1),
+                                    *(undefined *)(param_1 + (local_54 << 2)))));
+  }
+  for (local_50 = 0; local_50 < 4; local_50 = local_50 + 1) {
+    *(uint *)((long)&local_28 + (long)local_50 * 4) =
+         CONCAT13(*(undefined *)(param_3 + (long)(local_50 << 2) + 3),
+                  CONCAT12(*(undefined *)(param_3 + (long)(local_50 << 2) + 2),
+                           CONCAT11(*(undefined *)(param_3 + (long)(local_50 << 2) + 1),
+                                    *(undefined *)(param_3 + (local_50 << 2)))));
+  }
+  FUN_0010158c(&local_48,4,&local_28,&local_38);
+  for (local_4c = 0; local_4c < 4; local_4c = local_4c + 1) {
+    *(char *)(param_2 + (local_4c << 2)) =
+         (char)*(undefined4 *)((long)&local_38 + (long)local_4c * 4);
+    *(char *)(param_2 + (long)(local_4c << 2) + 1) =
+         (char)((uint)*(undefined4 *)((long)&local_38 + (long)local_4c * 4) >> 8);
+    *(char *)(param_2 + (long)(local_4c << 2) + 2) =
+         (char)((uint)*(undefined4 *)((long)&local_38 + (long)local_4c * 4) >> 0x10);
+    *(char *)(param_2 + (long)(local_4c << 2) + 3) =
+         (char)((uint)*(undefined4 *)((long)&local_38 + (long)local_4c * 4) >> 0x18);
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

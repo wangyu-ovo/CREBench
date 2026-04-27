@@ -1,0 +1,10 @@
+{
+  "challenge": "SHARK",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "982700c197d58057",
+  "key": "ea02d67819421e1d2b864efaeffbdf4d",
+  "iv": "",
+  "target_ciphertext": "5c7b850cc184cdbc",
+  "test_vectors_path": "CREBench/SHARK/test_vectors-fragmented_build.json"
+}

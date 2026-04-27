@@ -1,0 +1,29 @@
+
+byte FUN_001014d6(byte param_1,byte param_2)
+
+{
+  byte bVar1;
+  bool bVar2;
+  byte local_20;
+  byte local_1c;
+  byte local_e;
+  int local_c;
+  
+  local_e = 0;
+  local_20 = param_2;
+  local_1c = param_1;
+  for (local_c = 0; local_c < 8; local_c = local_c + 1) {
+    if ((local_20 & 1) != 0) {
+      local_e = local_e ^ local_1c;
+    }
+    bVar1 = local_1c << 1;
+    bVar2 = (char)local_1c < '\0';
+    local_1c = bVar1;
+    if (bVar2) {
+      local_1c = bVar1 ^ 0xf5;
+    }
+    local_20 = local_20 >> 1;
+  }
+  return local_e;
+}
+

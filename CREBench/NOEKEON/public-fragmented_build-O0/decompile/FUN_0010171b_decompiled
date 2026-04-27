@@ -1,0 +1,7 @@
+
+uint FUN_0010171b(uint param_1,byte param_2)
+
+{
+  return param_1 << (param_2 & 0x1f) | param_1 >> 0x20 - (param_2 & 0x1f);
+}
+

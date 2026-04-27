@@ -1,0 +1,10 @@
+{
+  "challenge": "SEED",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "641dccf909f44d593bdcd35ae89ce632",
+  "key": "163df86c4179add6112fae9e2eb94b36",
+  "iv": "",
+  "target_ciphertext": "876b6209ba47a00ee8ce3fdc61b3d15f",
+  "test_vectors_path": "CREBench/SEED/test_vectors-fragmented_build.json"
+}

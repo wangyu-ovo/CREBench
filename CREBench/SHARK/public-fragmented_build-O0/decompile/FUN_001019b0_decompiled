@@ -1,0 +1,20 @@
+
+ulong FUN_001019b0(ulong param_1)
+
+{
+  byte bVar1;
+  uint local_18;
+  uint local_14;
+  ulong local_10;
+  
+  local_10 = 0;
+  for (local_18 = 0; local_18 < 8; local_18 = local_18 + 1) {
+    for (local_14 = 0; local_14 < 8; local_14 = local_14 + 1) {
+      bVar1 = FUN_00101955((&DAT_00106120)[(ulong)local_14 + (ulong)local_18 * 8],
+                           param_1 >> (('\a' - (char)local_14) * '\b' & 0x3fU) & 0xff);
+      local_10 = local_10 ^ (ulong)bVar1 << (('\a' - (char)local_18) * '\b' & 0x3fU);
+    }
+  }
+  return local_10;
+}
+

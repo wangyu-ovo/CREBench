@@ -1,0 +1,26 @@
+
+void FUN_00101ade(int *param_1,long param_2,long param_3)
+
+{
+  int iVar1;
+  byte bVar2;
+  uint local_1c;
+  uint local_18;
+  int local_14;
+  
+  local_1c = FUN_00101663(param_2);
+  local_18 = FUN_00101663(param_2 + 4);
+  for (local_14 = param_1[0x200]; local_14 != 0; local_14 = local_14 + -1) {
+    bVar2 = (byte)local_1c & 0x1f;
+    local_18 = (local_18 - param_1[local_14 * 2 + 1] >> bVar2 |
+               local_18 - param_1[local_14 * 2 + 1] << 0x20 - bVar2) ^ local_1c;
+    bVar2 = (byte)local_18 & 0x1f;
+    local_1c = (local_1c - param_1[(uint)(local_14 * 2)] >> bVar2 |
+               local_1c - param_1[(uint)(local_14 * 2)] << 0x20 - bVar2) ^ local_18;
+  }
+  iVar1 = param_1[1];
+  FUN_001016b0(param_3,local_1c - *param_1);
+  FUN_001016b0(param_3 + 4,local_18 - iVar1);
+  return;
+}
+

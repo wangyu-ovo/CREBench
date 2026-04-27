@@ -1,0 +1,51 @@
+
+void FUN_00101e98(undefined8 param_1,byte *param_2,undefined *param_3)
+
+{
+  byte bVar1;
+  byte bVar2;
+  byte bVar3;
+  byte bVar4;
+  uint uVar5;
+  uint uVar6;
+  uint uVar7;
+  uint uVar8;
+  undefined4 uVar9;
+  undefined4 uVar10;
+  
+  bVar1 = param_2[4];
+  bVar2 = param_2[5];
+  bVar3 = param_2[6];
+  bVar4 = param_2[7];
+  uVar5 = FUN_0010198e((uint)param_2[3] |
+                       (uint)*param_2 << 0x18 | (uint)param_2[1] << 0x10 | (uint)param_2[2] << 8,9,
+                       param_1);
+  uVar6 = FUN_0010198e((uint)bVar4 | (uint)bVar1 << 0x18 | (uint)bVar2 << 0x10 | (uint)bVar3 << 8,8,
+                       param_1);
+  uVar7 = FUN_00101705(uVar5,7,param_1);
+  uVar8 = FUN_00101705(uVar6 ^ uVar7,6,param_1);
+  uVar5 = FUN_0010198e(uVar5 ^ uVar8,7,param_1);
+  uVar6 = FUN_0010198e(uVar6 ^ uVar7,6,param_1);
+  uVar7 = FUN_00101705(uVar5,5,param_1);
+  uVar8 = FUN_00101705(uVar6 ^ uVar7,4,param_1);
+  uVar5 = FUN_0010198e(uVar5 ^ uVar8,5,param_1);
+  uVar6 = FUN_0010198e(uVar6 ^ uVar7,4,param_1);
+  uVar7 = FUN_00101705(uVar5,3,param_1);
+  uVar8 = FUN_00101705(uVar6 ^ uVar7,2,param_1);
+  uVar5 = FUN_0010198e(uVar5 ^ uVar8,3,param_1);
+  uVar6 = FUN_0010198e(uVar6 ^ uVar7,2,param_1);
+  uVar7 = FUN_00101705(uVar5,1,param_1);
+  uVar8 = FUN_00101705(uVar6 ^ uVar7,0,param_1);
+  uVar9 = FUN_0010198e(uVar5 ^ uVar8,1,param_1);
+  uVar10 = FUN_0010198e(uVar6 ^ uVar7,0,param_1);
+  *param_3 = (char)((uint)uVar10 >> 0x18);
+  param_3[1] = (char)((uint)uVar10 >> 0x10);
+  param_3[2] = (char)((uint)uVar10 >> 8);
+  param_3[3] = (char)uVar10;
+  param_3[4] = (char)((uint)uVar9 >> 0x18);
+  param_3[5] = (char)((uint)uVar9 >> 0x10);
+  param_3[6] = (char)((uint)uVar9 >> 8);
+  param_3[7] = (char)uVar9;
+  return;
+}
+

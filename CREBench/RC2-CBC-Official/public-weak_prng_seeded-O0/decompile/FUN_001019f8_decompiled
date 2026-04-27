@@ -1,0 +1,70 @@
+
+void FUN_001019f8(ulong *param_1,long param_2)
+
+{
+  int *piVar1;
+  uint uVar2;
+  uint uVar3;
+  uint uVar4;
+  int *piVar5;
+  ulong uVar6;
+  uint uVar7;
+  uint uVar8;
+  ulong uVar9;
+  uint uVar10;
+  ulong uVar11;
+  uint uVar12;
+  ulong uVar13;
+  int local_40;
+  int local_3c;
+  
+  uVar11 = *param_1 & 0xffff;
+  uVar6 = *param_1 >> 0x10 & 0xffffffff;
+  uVar9 = param_1[1] & 0xffff;
+  uVar13 = param_1[1] >> 0x10 & 0xffffffff;
+  local_3c = 3;
+  local_40 = 5;
+  piVar5 = (int *)(param_2 + 0xfc);
+  while( true ) {
+    do {
+      uVar2 = (uint)uVar9;
+      uVar4 = (uint)uVar11;
+      uVar3 = (uint)uVar6;
+      uVar12 = (((((uint)(uVar13 >> 5) | (int)uVar13 << 0xb) & 0xffff) - (~uVar2 & uVar4)) -
+               (uVar3 & uVar2)) - *piVar5 & 0xffff;
+      uVar13 = (ulong)uVar12;
+      uVar2 = ((((uint)(uVar9 >> 3) | (uVar2 & 7) << 0xd) - (~uVar3 & uVar12)) - (uVar3 & uVar4)) -
+              piVar5[-1];
+      uVar8 = uVar2 & 0xffff;
+      uVar9 = (ulong)uVar8;
+      piVar1 = piVar5 + -3;
+      uVar3 = ((((uVar3 >> 2 | uVar3 << 0xe) & 0xffff) - (~uVar4 & uVar8)) - (uVar12 & uVar4)) -
+              piVar5[-2];
+      uVar7 = uVar3 & 0xffff;
+      uVar6 = (ulong)uVar7;
+      piVar5 = piVar5 + -4;
+      uVar4 = ((((uint)(uVar11 >> 1) | (uVar4 & 1) << 0xf) - (~uVar12 & uVar7)) - (uVar8 & uVar12))
+              - *piVar1;
+      uVar10 = uVar4 & 0xffff;
+      uVar11 = (ulong)uVar10;
+      local_40 = local_40 + -1;
+    } while (local_40 != 0);
+    local_3c = local_3c + -1;
+    if (local_3c == 0) break;
+    if (local_3c == 2) {
+      local_40 = 6;
+    }
+    else {
+      local_40 = 5;
+    }
+    uVar12 = uVar12 - *(int *)((ulong)(uVar2 & 0x3f) * 4 + param_2);
+    uVar13 = (ulong)(uVar12 & 0xffff);
+    uVar9 = (ulong)(uVar8 - *(int *)((ulong)(uVar3 & 0x3f) * 4 + param_2) & 0xffff);
+    uVar6 = (ulong)(uVar7 - *(int *)((ulong)(uVar4 & 0x3f) * 4 + param_2) & 0xffff);
+    uVar11 = (ulong)(uVar10 - *(int *)((ulong)(uVar12 & 0x3f) * 4 + param_2) & 0xffff);
+  }
+  *param_1 = uVar6 << 0x10 | uVar11;
+  param_1[1] = (ulong)(uVar8 | uVar12 << 0x10);
+  return;
+}
+

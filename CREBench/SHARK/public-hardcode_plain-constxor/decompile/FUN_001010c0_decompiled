@@ -1,0 +1,199 @@
+
+undefined8 FUN_001010c0(int param_1,undefined8 *param_2)
+
+{
+  char cVar1;
+  undefined uVar2;
+  char *__s;
+  ulong uVar3;
+  int iVar4;
+  uint uVar5;
+  undefined8 uVar6;
+  size_t sVar7;
+  ulong uVar8;
+  uint uVar9;
+  long lVar10;
+  long *plVar11;
+  ulong *puVar12;
+  ulong *puVar13;
+  long in_FS_OFFSET;
+  ulong local_d8 [7];
+  ulong local_a0;
+  ulong local_98 [6];
+  ulong local_68;
+  long local_58;
+  undefined8 local_50;
+  byte local_48;
+  byte local_47;
+  byte local_46;
+  byte local_45;
+  byte local_44;
+  byte local_43;
+  byte local_42;
+  byte local_41;
+  byte local_40;
+  byte local_3f;
+  byte local_3e;
+  byte local_3d;
+  byte local_3c;
+  byte local_3b;
+  byte local_3a;
+  byte local_39;
+  long local_30;
+  
+  local_30 = *(long *)(in_FS_OFFSET + 0x28);
+  if (param_1 == 2) {
+    __s = (char *)param_2[1];
+    sVar7 = strlen(__s);
+    if (sVar7 == 0x10) {
+      lVar10 = 0;
+      do {
+        cVar1 = __s[lVar10 * 2];
+        iVar4 = (int)cVar1;
+        if ((byte)(cVar1 - 0x30U) < 10) {
+          uVar5 = iVar4 - 0x30;
+        }
+        else if ((byte)(cVar1 + 0x9fU) < 6) {
+          uVar5 = iVar4 - 0x57;
+        }
+        else {
+          uVar5 = iVar4 - 0x37;
+          if (5 < (byte)(cVar1 + 0xbfU)) {
+            uVar5 = 0xffffffff;
+          }
+        }
+        cVar1 = __s[lVar10 * 2 + 1];
+        iVar4 = (int)cVar1;
+        if ((byte)(cVar1 - 0x30U) < 10) {
+          uVar9 = iVar4 - 0x30;
+        }
+        else if ((byte)(cVar1 + 0x9fU) < 6) {
+          uVar9 = iVar4 - 0x57;
+        }
+        else {
+          if (5 < (byte)(cVar1 + 0xbfU)) goto LAB_001011e1;
+          uVar9 = iVar4 - 0x37;
+        }
+        if ((int)(uVar5 | uVar9) < 0) goto LAB_001011e1;
+        *(byte *)((long)&local_50 + lVar10) = (byte)(uVar5 << 4) | (byte)uVar9;
+        lVar10 = lVar10 + 1;
+      } while (lVar10 != 8);
+      lVar10 = 0;
+      FUN_001016c0(&local_48,0x10);
+      local_d8[0] = (ulong)local_47 << 0x30 | (ulong)local_48 << 0x38 | (ulong)local_41 |
+                    (ulong)local_46 << 0x28 | (ulong)local_45 << 0x20 | (ulong)local_44 << 0x18 |
+                    (ulong)local_43 << 0x10 | (ulong)local_42 << 8;
+      local_d8[1] = (ulong)local_40 << 0x38 | (ulong)local_3f << 0x30 | (ulong)local_39 |
+                    (ulong)local_3e << 0x28 | (ulong)local_3d << 0x20 | (ulong)local_3c << 0x18 |
+                    (ulong)local_3b << 0x10 | (ulong)local_3a << 8;
+      local_d8[2] = local_d8[0];
+      local_d8[3] = local_d8[1];
+      local_d8[4] = local_d8[0];
+      local_d8[5] = local_d8[1];
+      local_d8[6] = local_d8[0];
+      do {
+        FUN_00101800();
+        uVar8 = (&DAT_0010c180)[lVar10];
+        local_98[lVar10] = uVar8;
+        if (lVar10 == 0) {
+          local_98[0] = uVar8 >> 0x38 | (uVar8 & 0xff000000000000) >> 0x28 |
+                        (uVar8 & 0xff0000000000) >> 0x18 | (uVar8 & 0xff00000000) >> 8 |
+                        (uVar8 & 0xff000000) << 8 | (uVar8 & 0xff0000) << 0x18 |
+                        (uVar8 & 0xff00) << 0x28 | uVar8 << 0x38;
+        }
+        else {
+          if ((int)lVar10 == 6) {
+            uVar8 = FUN_00101a70();
+            local_68 = uVar8 >> 0x38 | (uVar8 & 0xff000000000000) >> 0x28 |
+                       (uVar8 & 0xff0000000000) >> 0x18 | (uVar8 & 0xff00000000) >> 8 |
+                       (uVar8 & 0xff000000) << 8 | (uVar8 & 0xff0000) << 0x18 |
+                       (uVar8 & 0xff00) << 0x28 | uVar8 << 0x38;
+          }
+          if (lVar10 == 6) goto LAB_00101380;
+        }
+        lVar10 = lVar10 + 1;
+      } while( true );
+    }
+LAB_001011e1:
+    __fprintf_chk(*(undefined8 *)PTR_stderr_0010bff8,1,
+                  "Bad input hex. Expecting 16 hex chars (8 bytes).\n");
+    uVar6 = 1;
+  }
+  else {
+    __fprintf_chk(*(undefined8 *)PTR_stderr_0010bff8,1,"Usage: %s <16-hex-chars>\n",*param_2);
+    uVar6 = 1;
+  }
+LAB_00101111:
+  if (local_30 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return uVar6;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+LAB_00101380:
+  uVar8 = 0;
+  puVar12 = local_d8;
+  do {
+    puVar13 = puVar12 + 1;
+    uVar8 = FUN_00101850(uVar8,local_98);
+    uVar3 = *puVar12;
+    uVar8 = uVar8 ^ (uVar3 >> 0x38 | (uVar3 & 0xff000000000000) >> 0x28 |
+                     (uVar3 & 0xff0000000000) >> 0x18 | (uVar3 & 0xff00000000) >> 8 |
+                     (uVar3 & 0xff000000) << 8 | (uVar3 & 0xff0000) << 0x18 |
+                     (uVar3 & 0xff00) << 0x28 | uVar3 << 0x38);
+    *puVar12 = uVar8;
+    puVar12 = puVar13;
+  } while (&local_a0 != puVar13);
+  plVar11 = &local_58;
+  local_d8[1] = local_d8[1] >> 0x38 | (local_d8[1] & 0xff000000000000) >> 0x28 |
+                (local_d8[1] & 0xff0000000000) >> 0x18 | (local_d8[1] & 0xff00000000) >> 8 |
+                (local_d8[1] & 0xff000000) << 8 | (local_d8[1] & 0xff0000) << 0x18 |
+                (local_d8[1] & 0xff00) << 0x28 | local_d8[1] << 0x38;
+  local_d8[4] = local_d8[4] >> 0x38 | (local_d8[4] & 0xff000000000000) >> 0x28 |
+                (local_d8[4] & 0xff0000000000) >> 0x18 | (local_d8[4] & 0xff00000000) >> 8 |
+                (local_d8[4] & 0xff000000) << 8 | (local_d8[4] & 0xff0000) << 0x18 |
+                (local_d8[4] & 0xff00) << 0x28 | local_d8[4] << 0x38;
+  local_d8[2] = local_d8[2] >> 0x38 | (local_d8[2] & 0xff000000000000) >> 0x28 |
+                (local_d8[2] & 0xff0000000000) >> 0x18 | (local_d8[2] & 0xff00000000) >> 8 |
+                (local_d8[2] & 0xff000000) << 8 | (local_d8[2] & 0xff0000) << 0x18 |
+                (local_d8[2] & 0xff00) << 0x28 | local_d8[2] << 0x38;
+  local_d8[3] = local_d8[3] >> 0x38 | (local_d8[3] & 0xff000000000000) >> 0x28 |
+                (local_d8[3] & 0xff0000000000) >> 0x18 | (local_d8[3] & 0xff00000000) >> 8 |
+                (local_d8[3] & 0xff000000) << 8 | (local_d8[3] & 0xff0000) << 0x18 |
+                (local_d8[3] & 0xff00) << 0x28 | local_d8[3] << 0x38;
+  local_d8[5] = local_d8[5] >> 0x38 | (local_d8[5] & 0xff000000000000) >> 0x28 |
+                (local_d8[5] & 0xff0000000000) >> 0x18 | (local_d8[5] & 0xff00000000) >> 8 |
+                (local_d8[5] & 0xff000000) << 8 | (local_d8[5] & 0xff0000) << 0x18 |
+                (local_d8[5] & 0xff00) << 0x28 | local_d8[5] << 0x38;
+  uVar8 = FUN_00101a70(local_d8[6] >> 0x38 | (local_d8[6] & 0xff000000000000) >> 0x28 |
+                       (local_d8[6] & 0xff0000000000) >> 0x18 | (local_d8[6] & 0xff00000000) >> 8 |
+                       (local_d8[6] & 0xff000000) << 8 | (local_d8[6] & 0xff0000) << 0x18 |
+                       (local_d8[6] & 0xff00) << 0x28 | local_d8[6] << 0x38);
+  local_d8[6] = uVar8 >> 0x38 | uVar8 << 0x38 | (uVar8 & 0xff00) << 0x28 |
+                (uVar8 & 0xff0000) << 0x18 | (uVar8 & 0xff000000) << 8 |
+                (ulong)((uint)(uVar8 >> 8) & 0xff000000) | (ulong)((uint)(uVar8 >> 0x18) & 0xff0000)
+                | (ulong)((uint)(uVar8 >> 0x28) & 0xff00);
+  local_58 = FUN_00101850((ulong)local_50._7_1_ << 0x38 |
+                          (ulong)local_50._6_1_ << 0x30 |
+                          (ulong)local_50._5_1_ << 0x28 |
+                          (ulong)local_50._4_1_ << 0x20 |
+                          (ulong)local_50._3_1_ << 0x18 |
+                          (ulong)local_50._2_1_ << 0x10 | (ulong)local_50._1_1_ << 8 |
+                          (ulong)(byte)local_50,local_d8);
+  __printf_chk(1,"Ciphertext(hex): ");
+  do {
+    uVar2 = *(undefined *)plVar11;
+    plVar11 = (long *)((long)plVar11 + 1);
+    __printf_chk(1,&DAT_0010a2ac,uVar2);
+  } while (&local_50 != plVar11);
+  __printf_chk(1,"\n");
+  if (DAT_0010a2be == local_58) {
+    __printf_chk(1,"True!");
+    uVar6 = 0;
+  }
+  else {
+    __printf_chk(1,"False!");
+    uVar6 = 1;
+  }
+  goto LAB_00101111;
+}
+

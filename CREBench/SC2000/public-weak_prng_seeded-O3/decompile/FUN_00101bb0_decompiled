@@ -1,0 +1,13 @@
+
+void FUN_00101bb0(uint param_1,uint *param_2)
+
+{
+  *param_2 = *(int *)(&DAT_00102360 + (ulong)(param_1 >> 0x1a) * 4) << 0x1a |
+             *(uint *)(&DAT_00102360 + (ulong)(param_1 & 0x3f) * 4) |
+             *(int *)(&DAT_001022e0 + (ulong)(param_1 >> 0x15 & 0x1f) * 4) << 0x15 |
+             *(int *)(&DAT_001022e0 + (ulong)(param_1 >> 0x10 & 0x1f) * 4) << 0x10 |
+             *(int *)(&DAT_001022e0 + (ulong)(param_1 >> 0xb & 0x1f) * 4) << 0xb |
+             *(int *)(&DAT_001022e0 + (ulong)(param_1 >> 6 & 0x1f) * 4) << 6;
+  return;
+}
+

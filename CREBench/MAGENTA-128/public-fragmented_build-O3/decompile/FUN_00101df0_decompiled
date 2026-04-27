@@ -1,0 +1,42 @@
+
+void FUN_00101df0(undefined (*param_1) [16],undefined (*param_2) [16])
+
+{
+  undefined auVar1 [16];
+  undefined auVar2 [16];
+  undefined auVar3 [16];
+  uint uVar4;
+  undefined1 *puVar5;
+  undefined auVar6 [16];
+  
+  if (DAT_00104040 == 0) {
+    DAT_00104060 = 1;
+    puVar5 = &DAT_00104061;
+    uVar4 = 2;
+    do {
+      *puVar5 = (char)uVar4;
+      uVar4 = uVar4 * 2;
+      if ((uVar4 & 0x100) != 0) {
+        uVar4 = uVar4 ^ 0x165;
+      }
+      puVar5 = puVar5 + 1;
+    } while (puVar5 != &DAT_0010415f);
+    DAT_0010415f = 0;
+    DAT_00104040 = 1;
+  }
+  auVar1 = *param_2;
+  auVar6._8_4_ = auVar1._8_4_;
+  auVar6._12_4_ = auVar1._12_4_;
+  auVar6._0_8_ = auVar1._8_8_;
+  auVar2._8_4_ = auVar1._0_4_;
+  auVar2._0_8_ = auVar1._0_8_;
+  auVar2._12_4_ = auVar1._4_4_;
+  *param_1 = auVar2;
+  param_1[1] = auVar6;
+  auVar3._8_4_ = auVar1._0_4_;
+  auVar3._0_8_ = auVar1._0_8_;
+  auVar3._12_4_ = auVar1._4_4_;
+  param_1[2] = auVar3;
+  return;
+}
+

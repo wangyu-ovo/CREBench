@@ -1,0 +1,12 @@
+
+void FUN_00101e10(ulong *param_1,ulong *param_2)
+
+{
+  ulong *extraout_RDX;
+  
+  FUN_00101dc0();
+  *extraout_RDX = *param_1 ^ *param_2;
+  FUN_00101dc0();
+  return;
+}
+

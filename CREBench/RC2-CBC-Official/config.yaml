@@ -1,0 +1,53 @@
+name: rc2_cbc
+publc_path: CREBench/RC2-CBC-Official/public
+flag: 78309f62f05dac232032998d74e4c8c5
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: RC2-CBC
+algorithm_aliases:
+  - RC2
+  - RC2 CBC
+  - RC2-CBC-Official
+  - rc2_cbc
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/RC2-CBC-Official/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: weak_prng_seeded
+
+template_metadata:
+  wrapper_family: cbc_direct
+  key_source_file: CREBench/RC2-CBC-Official/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1727740800
+  key_seed_note: fixed_timestamp_utc_2024_10_01_00_00_00
+  key_length_bytes: 8
+  block_size_bytes: 8
+  iv_length_bytes: 8
+  target_length_bytes: 16
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: rc2_tables
+  compile_define: CONSTXOR_RC2_TABLES
+  source_file: src/rc2.c
+  tables:
+    - symbol: key_table
+      source_ctype: unsigned char
+      ctype: uint8_t
+      accessor: constxor_rc2_key_table
+

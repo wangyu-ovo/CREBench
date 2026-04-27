@@ -1,0 +1,60 @@
+name: shark
+publc_path: CREBench/SHARK/public
+flag: 982700c197d58057
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: SHARK-ECB
+algorithm_aliases:
+  - SHARK
+  - SHARK ECB
+  - shark_ecb
+  - SHARK-ECB
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/SHARK/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: fragmented_build
+
+template_metadata:
+  wrapper_family: single_block_direct
+  key_source_file: CREBench/SHARK/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1730419200
+  key_seed_note: fixed_timestamp_utc_2024_11_01_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 8
+  iv_length_bytes: 0
+  target_length_bytes: 8
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: shark_tables
+  compile_define: CONSTXOR_SHARK_TABLES
+  source_file: src/shark-constant.c
+  extra_source_files:
+    - src/shark-core.c
+    - src/shark-key.c
+    - src/shark-math.c
+    - src/shark.c
+  tables:
+    - symbol: sbox
+      ctype: uint8_t
+      accessor: constxor_shark_sbox
+    - symbol: cbox
+      ctype: uint64_t
+      accessor: constxor_shark_cbox
+

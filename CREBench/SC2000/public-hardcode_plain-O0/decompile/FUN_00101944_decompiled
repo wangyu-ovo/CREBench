@@ -1,0 +1,36 @@
+
+void FUN_00101944(undefined4 *param_1,undefined8 param_2,long param_3)
+
+{
+  undefined4 uVar1;
+  undefined4 uVar2;
+  undefined4 uVar3;
+  undefined4 uVar4;
+  undefined4 uVar5;
+  undefined4 uVar6;
+  undefined4 uVar7;
+  undefined4 uVar8;
+  undefined4 uVar9;
+  uint local_3c;
+  
+  uVar1 = *param_1;
+  uVar2 = param_1[1];
+  uVar3 = param_1[2];
+  uVar4 = param_1[3];
+  uVar5 = param_1[4];
+  uVar6 = param_1[5];
+  uVar7 = param_1[6];
+  uVar8 = param_1[7];
+  for (local_3c = 0; local_3c < 3; local_3c = local_3c + 1) {
+    uVar9 = FUN_0010182d(uVar1,uVar2,local_3c,0);
+    *(undefined4 *)(param_3 + (ulong)local_3c * 4) = uVar9;
+    uVar9 = FUN_0010182d(uVar3,uVar4,local_3c,1);
+    *(undefined4 *)(param_3 + 0xc + (ulong)local_3c * 4) = uVar9;
+    uVar9 = FUN_0010182d(uVar5,uVar6,local_3c,2);
+    *(undefined4 *)(param_3 + 0x18 + (ulong)local_3c * 4) = uVar9;
+    uVar9 = FUN_0010182d(uVar7,uVar8,local_3c,3);
+    *(undefined4 *)(param_3 + 0x24 + (ulong)local_3c * 4) = uVar9;
+  }
+  return;
+}
+

@@ -1,0 +1,37 @@
+[
+  {
+    "plaintext": "b825a237d7f1f3806df89cd27aa495a76794234d22e8aa860b3a99090cde984c",
+    "key": "b28c54a3a76e6e1f0f802d055645f911",
+    "iv": "448d230f9cb9c873",
+    "ciphertext": "f35cde87aaeea275308d0ee0b74119a0845472e2b88d6e61cd2d608c0abd70b0",
+    "block_size": 8
+  },
+  {
+    "plaintext": "eed3fb213c5c2eec44209a7dd5b1bd6e442e9a8a661a32df20534a788292be94",
+    "key": "b28c54a3a76e6e1f0f802d055645f911",
+    "iv": "448d230f9cb9c873",
+    "ciphertext": "71e9ec40e03e71b59e8756c1f7e994e01d44b078a2f6e8bd7b081875ef519737",
+    "block_size": 8
+  },
+  {
+    "plaintext": "0dd5efd8cf86bf91ac9b4046db0d48d6e6b24455490065fe09cd46e8c1e9f219",
+    "key": "b28c54a3a76e6e1f0f802d055645f911",
+    "iv": "448d230f9cb9c873",
+    "ciphertext": "7a9ccfef33a8bab9d8f82fa551768cfa0454787b1eaf2bf357b557525fed66e6",
+    "block_size": 8
+  },
+  {
+    "plaintext": "ce538a0bb764bc8b4f9edccd265395dd46e1056d640b89494ca4b30f616f1716",
+    "key": "b28c54a3a76e6e1f0f802d055645f911",
+    "iv": "448d230f9cb9c873",
+    "ciphertext": "fd060171ba648b05b62cc432f9430fd45031a6bed59d1d873832cdd503fdf98e",
+    "block_size": 8
+  },
+  {
+    "plaintext": "28c583d14143a82cfa8cdc951a70736862f2f99febeecf90b5da30d2c7f958d0",
+    "key": "b28c54a3a76e6e1f0f802d055645f911",
+    "iv": "448d230f9cb9c873",
+    "ciphertext": "8f743ca4975b4533d14ec952af30a760ecf09aeb85581e99707c8f0753261d63",
+    "block_size": 8
+  }
+]

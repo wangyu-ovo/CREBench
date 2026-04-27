@@ -1,0 +1,7 @@
+
+ulong FUN_00101209(ulong param_1,int param_2)
+
+{
+  return param_1 >> ((byte)(param_2 << 3) & 0x3f);
+}
+

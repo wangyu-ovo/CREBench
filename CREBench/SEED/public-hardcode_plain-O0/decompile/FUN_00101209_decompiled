@@ -1,0 +1,63 @@
+
+void FUN_00101209(byte *param_1,undefined *param_2,undefined8 param_3)
+
+{
+  int iVar1;
+  int iVar2;
+  uint uVar3;
+  long in_FS_OFFSET;
+  uint local_b4;
+  uint local_b0;
+  uint local_ac;
+  uint local_a8;
+  int local_a4;
+  uint local_98 [34];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  FUN_0010178c(param_3,local_98);
+  local_b4 = (uint)param_1[3] |
+             (uint)*param_1 << 0x18 | (uint)param_1[1] << 0x10 | (uint)param_1[2] << 8;
+  local_b0 = (uint)param_1[7] |
+             (uint)param_1[4] << 0x18 | (uint)param_1[5] << 0x10 | (uint)param_1[6] << 8;
+  local_ac = (uint)param_1[0xb] |
+             (uint)param_1[8] << 0x18 | (uint)param_1[9] << 0x10 | (uint)param_1[10] << 8;
+  local_a8 = (uint)param_1[0xf] |
+             (uint)param_1[0xc] << 0x18 | (uint)param_1[0xd] << 0x10 | (uint)param_1[0xe] << 8;
+  for (local_a4 = 0; local_a4 < 0x10; local_a4 = local_a4 + 2) {
+    uVar3 = local_98[local_a4 * 2];
+    iVar1 = FUN_001016ca(local_98[local_a4 * 2 + 1] ^ local_a8 ^ uVar3 ^ local_ac);
+    iVar2 = FUN_001016ca((uVar3 ^ local_ac) + iVar1);
+    uVar3 = FUN_001016ca(iVar1 + iVar2);
+    local_b4 = local_b4 ^ uVar3 + iVar2;
+    local_b0 = local_b0 ^ uVar3;
+    uVar3 = local_98[(local_a4 + 1) * 2];
+    iVar1 = FUN_001016ca(local_98[local_a4 * 2 + 3] ^ local_b0 ^ uVar3 ^ local_b4);
+    iVar2 = FUN_001016ca((uVar3 ^ local_b4) + iVar1);
+    uVar3 = FUN_001016ca(iVar1 + iVar2);
+    local_ac = local_ac ^ uVar3 + iVar2;
+    local_a8 = local_a8 ^ uVar3;
+  }
+  *param_2 = (char)(local_ac >> 0x18);
+  param_2[1] = (char)(local_ac >> 0x10);
+  param_2[2] = (char)(local_ac >> 8);
+  param_2[3] = (char)local_ac;
+  param_2[4] = (char)(local_a8 >> 0x18);
+  param_2[5] = (char)(local_a8 >> 0x10);
+  param_2[6] = (char)(local_a8 >> 8);
+  param_2[7] = (char)local_a8;
+  param_2[8] = (char)(local_b4 >> 0x18);
+  param_2[9] = (char)(local_b4 >> 0x10);
+  param_2[10] = (char)(local_b4 >> 8);
+  param_2[0xb] = (char)local_b4;
+  param_2[0xc] = (char)(local_b0 >> 0x18);
+  param_2[0xd] = (char)(local_b0 >> 0x10);
+  param_2[0xe] = (char)(local_b0 >> 8);
+  param_2[0xf] = (char)local_b0;
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

@@ -1,0 +1,7 @@
+
+uint FUN_00101641(byte param_1,byte param_2)
+
+{
+  return (int)(uint)param_1 >> (8 - param_2 & 0x1f) | (uint)param_1 << (param_2 & 0x1f);
+}
+

@@ -1,0 +1,7 @@
+
+undefined FUN_001016c6(byte param_1)
+
+{
+  return (&DAT_001031c0)[(int)(uint)param_1];
+}
+

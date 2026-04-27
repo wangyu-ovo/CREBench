@@ -1,0 +1,89 @@
+
+void FUN_001019d0(ulong *param_1,undefined8 *param_2,undefined8 *param_3)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  uint uVar4;
+  uint uVar5;
+  undefined auVar6 [16];
+  uint uVar7;
+  uint uVar8;
+  long in_FS_OFFSET;
+  undefined auVar9 [16];
+  undefined auVar10 [16];
+  undefined8 local_58;
+  undefined8 uStack_50;
+  undefined local_48 [8];
+  uint uStack_40;
+  uint uStack_3c;
+  long local_30;
+  
+  uVar1 = *(uint *)param_3;
+  uVar2 = *(uint *)param_2;
+  uVar3 = *(uint *)((long)param_2 + 4);
+  local_58 = *param_2;
+  local_30 = *(long *)(in_FS_OFFSET + 0x28);
+  uVar4 = *(uint *)((long)param_3 + 4);
+  uStack_50 = *param_3;
+  FUN_00101800(local_48,&local_58);
+  FUN_00101800(&local_58,local_48);
+  FUN_00101800(local_48,&local_58);
+  FUN_00101800(&local_58,local_48);
+  auVar9._4_4_ = (uStack_50._4_4_ & 0xff) << 0x10 | (uStack_50._4_4_ >> 0x10) << 0x18 |
+                 (uint)uStack_50 & 0xff;
+  auVar9._0_4_ = (local_58._4_4_ & 0xff) << 0x10 | (local_58._4_4_ >> 0x10) << 0x18 |
+                 (uint)local_58 & 0xff;
+  auVar9._12_4_ =
+       ((uint)uStack_50 >> 0x18) << 8 | (uint)uStack_50 >> 8 & 0xff | uStack_50._4_4_ & 0xff000000;
+  auVar9._8_4_ = (uint)local_58 >> 8 & 0xff | ((uint)local_58 >> 0x18) << 8 |
+                 local_58._4_4_ & 0xff000000;
+  auVar10._12_4_ = (uStack_50._4_4_ >> 8) << 0x10;
+  auVar10._8_4_ = (local_58._4_4_ >> 8) << 0x10;
+  auVar10._4_4_ = ((uint)uStack_50 >> 0x10) << 8;
+  auVar10._0_4_ = ((uint)local_58 >> 0x10) << 8;
+  auVar6._8_8_ = DAT_001020a8;
+  auVar6._0_8_ = DAT_001020a0;
+  _local_48 = auVar9 | auVar10 & auVar6;
+  local_58._0_4_ = SUB164(_local_48,0) ^ uVar2;
+  local_58._4_4_ = SUB164(_local_48,4) ^ uVar3;
+  uStack_50._0_4_ = SUB164(_local_48,8) ^ uVar1;
+  uStack_50._4_4_ = SUB164(_local_48,0xc) ^ uVar4;
+  FUN_00101800(local_48,&local_58);
+  FUN_00101800(&local_58,local_48);
+  FUN_00101800(local_48,&local_58);
+  FUN_00101800(&local_58,local_48);
+  uVar8 = (uint)local_58 >> 0x18;
+  local_48._0_4_ =
+       (local_58._4_4_ & 0xff) << 0x10 | (local_58._4_4_ >> 0x10) << 0x18 | (uint)local_58 & 0xff |
+       (uint)local_58 >> 8 & 0xff00;
+  local_48._4_4_ =
+       (uStack_50._4_4_ & 0xff) << 0x10 | (uStack_50._4_4_ >> 0x10) << 0x18 | (uint)uStack_50 & 0xff
+       | (uint)uStack_50 >> 8 & 0xff00;
+  uVar5 = (uint)local_58 >> 8;
+  uVar7 = (uint)uStack_50 >> 0x18;
+  local_58._0_4_ = uVar2 ^ local_48._0_4_;
+  uStack_40 = uVar5 & 0xff | uVar8 << 8 | local_58._4_4_ & 0xff000000 |
+              (local_58._4_4_ & 0xff00) << 8;
+  uVar2 = (uint)uStack_50 >> 8;
+  uStack_50._0_4_ = uVar1 ^ uStack_40;
+  uStack_3c = uVar2 & 0xff | uVar7 << 8 | uStack_50._4_4_ & 0xff000000 |
+              (uStack_50._4_4_ & 0xff00) << 8;
+  uStack_50._4_4_ = uVar4 ^ uStack_3c;
+  local_58._4_4_ = uVar3 ^ local_48._4_4_;
+  FUN_00101800(local_48,&local_58);
+  FUN_00101800(&local_58,local_48);
+  FUN_00101800(local_48,&local_58);
+  FUN_00101800(&local_58,local_48);
+  *param_1 = (CONCAT44(((uint)uStack_50 >> 0x10) << 8,((uint)local_58 >> 0x10) << 8) & DAT_001020a0
+              | CONCAT44((uStack_50._4_4_ >> 0x10) << 0x18,(local_58._4_4_ >> 0x10) << 0x18) |
+             CONCAT44(uStack_50._4_4_ << 0x10,local_58._4_4_ << 0x10) & DAT_001020a8 |
+             CONCAT44((uint)uStack_50,(uint)local_58) & DAT_001020d0) ^ *param_1;
+  if (local_30 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+

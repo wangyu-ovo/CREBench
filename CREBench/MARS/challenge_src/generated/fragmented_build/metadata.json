@@ -1,0 +1,10 @@
+{
+  "challenge": "MARS",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "ad98c7a9df4da30fbb008c402795347a233834a81f33fbb0dce7240acb860edf",
+  "key": "1f564456ebc672a50a02481585849ebe5d7eba93788e2d62d07bbd251f8d0804",
+  "iv": "1a09ca1828a4b8288e7fe7f0a0fdc252",
+  "target_ciphertext": "0f37dc4fc1c110b6a08dda62386b9166cd0a64c30047c4701c472203322303f8",
+  "test_vectors_path": "CREBench/MARS/test_vectors-fragmented_build.json"
+}

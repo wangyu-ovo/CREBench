@@ -1,0 +1,10 @@
+{
+  "challenge": "Square",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "1afcce7e2ed14bc77cdd74a9af92689f",
+  "key": "7edeb8816f60b14c32422b1f06618bb0",
+  "iv": "",
+  "target_ciphertext": "e929ecdb2f80c9b100aeb2e024d5a2d8",
+  "test_vectors_path": "CREBench/Square/test_vectors-fragmented_build.json"
+}

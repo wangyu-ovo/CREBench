@@ -1,0 +1,28 @@
+
+void FUN_00101531(long param_1,long param_2)
+
+{
+  undefined uVar1;
+  byte bVar2;
+  byte local_1a;
+  int local_18;
+  uint local_14;
+  int local_10;
+  int local_c;
+  
+  for (local_18 = 0; local_18 < 4; local_18 = local_18 + 1) {
+    local_14 = 0;
+    for (local_10 = 0; local_10 < 4; local_10 = local_10 + 1) {
+      local_1a = 0;
+      for (local_c = 0; local_c < 4; local_c = local_c + 1) {
+        uVar1 = FUN_001014bb(*(undefined4 *)(param_1 + (long)local_18 * 4),3 - local_c);
+        bVar2 = FUN_001014d6(uVar1,(&DAT_00104140)[(long)local_10 + (long)local_c * 4]);
+        local_1a = local_1a ^ bVar2;
+      }
+      local_14 = local_14 | (uint)local_1a << (('\x03' - (char)local_10) * '\b' & 0x1fU);
+    }
+    *(uint *)((long)local_18 * 4 + param_2) = local_14;
+  }
+  return;
+}
+

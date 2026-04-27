@@ -1,0 +1,10 @@
+{
+  "challenge": "RC4",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "d69813ad06d6a43efc47f52675e08cec6bd01431983530463afa2758da7472eb",
+  "key": "1974cd4f737de161e18fad1a0e2adf00",
+  "iv": "",
+  "target_ciphertext": "7087b9bcf64d52cdaac888c1ed43e6d8a46a20d2319e0433df387ec770dcf8e9",
+  "test_vectors_path": "CREBench/RC4/test_vectors-weak_prng_seeded.json"
+}

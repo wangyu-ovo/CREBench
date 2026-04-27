@@ -1,0 +1,10 @@
+{
+  "challenge": "SHACAL-2",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "cb05bbf9bb43157d1446cd259c5ee25bcd04ef3c107afac7864184a7c2b3786c",
+  "key": "f574e644b833b84554b1263b7a7f4ae9817a7c6e5c182b07e785457e860339fb",
+  "iv": "dbeb531f4ba119ef36848e74289a45b7faf7af05402cabf779368f1d1640968c",
+  "target_ciphertext": "9873f14799961d92572b0648a357d0dc24631451c223282fc2d65d5e5d6307ec",
+  "test_vectors_path": "CREBench/SHACAL-2/test_vectors-hardcode_plain.json"
+}

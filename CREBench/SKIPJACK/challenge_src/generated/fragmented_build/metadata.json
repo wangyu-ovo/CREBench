@@ -1,0 +1,10 @@
+{
+  "challenge": "SKIPJACK",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "37ee4a6094b551403bea3084f57cda817566da9d3af666ade43466c6bac30b7a",
+  "key": "164516ef5f584ce79a84",
+  "iv": "8227b5d620c18a34",
+  "target_ciphertext": "55365eb7c2bcc3bac4092426ef1d0da3e1985f983433af0c57489d7fa6ab35bd",
+  "test_vectors_path": "CREBench/SKIPJACK/test_vectors-fragmented_build.json"
+}

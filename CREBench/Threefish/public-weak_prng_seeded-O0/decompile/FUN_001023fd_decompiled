@@ -1,0 +1,67 @@
+
+void FUN_001023fd(undefined8 param_1,undefined8 *param_2,long param_3,long param_4,ulong param_5)
+
+{
+  undefined8 *puVar1;
+  long in_FS_OFFSET;
+  int local_f4;
+  ulong local_f0;
+  undefined8 local_e8;
+  undefined8 local_e0;
+  undefined8 local_d8;
+  undefined8 local_d0;
+  undefined8 local_c8;
+  undefined8 local_c0;
+  undefined8 local_b8;
+  undefined8 local_b0;
+  undefined8 local_a8;
+  undefined8 local_a0;
+  undefined8 local_98;
+  undefined8 local_90;
+  undefined8 local_88;
+  undefined8 local_80;
+  undefined8 local_78;
+  undefined8 local_70;
+  byte local_68 [72];
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  local_e8 = *param_2;
+  local_e0 = param_2[1];
+  local_d8 = param_2[2];
+  local_d0 = param_2[3];
+  local_c8 = param_2[4];
+  local_c0 = param_2[5];
+  local_b0 = param_2[7];
+  local_b8 = param_2[6];
+  for (local_f0 = 0; local_f0 < param_5; local_f0 = local_f0 + 0x40) {
+    puVar1 = (undefined8 *)(local_f0 + param_3);
+    local_a8 = *puVar1;
+    local_a0 = puVar1[1];
+    local_98 = puVar1[2];
+    local_90 = puVar1[3];
+    local_88 = puVar1[4];
+    local_80 = puVar1[5];
+    local_70 = puVar1[7];
+    local_78 = puVar1[6];
+    FUN_00101f04(param_1,param_3 + local_f0,local_68);
+    for (local_f4 = 0; local_f4 < 0x40; local_f4 = local_f4 + 1) {
+      *(byte *)(param_4 + (long)local_f4 + local_f0) =
+           *(byte *)((long)&local_e8 + (long)local_f4) ^ local_68[local_f4];
+    }
+    local_e8 = local_a8;
+    local_e0 = local_a0;
+    local_d8 = local_98;
+    local_d0 = local_90;
+    local_c8 = local_88;
+    local_c0 = local_80;
+    local_b8 = local_78;
+    local_b0 = local_70;
+  }
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

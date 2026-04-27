@@ -1,0 +1,10 @@
+
+/* WARNING: Removing unreachable block (ram,0x001018c3) */
+/* WARNING: Removing unreachable block (ram,0x001018cf) */
+
+void FUN_001018b0(void)
+
+{
+  return;
+}
+

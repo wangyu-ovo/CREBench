@@ -1,0 +1,10 @@
+{
+  "challenge": "RC5-CBC",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "26125bdc1697b80cc6b9e67afa291faef05f797aca35e3587cb36a1a13aa28ad",
+  "key": "61d5eee253fa57b166ae72a8de306612",
+  "iv": "5ce1c3b034d32191",
+  "target_ciphertext": "d45fc239d39971f16f5a037ae7cf927d5dc0f1bb498bd78dc87fbfe269494327",
+  "test_vectors_path": "CREBench/RC5-CBC/test_vectors-weak_prng_seeded.json"
+}

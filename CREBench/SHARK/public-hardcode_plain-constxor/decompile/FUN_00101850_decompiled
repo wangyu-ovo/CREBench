@@ -1,0 +1,71 @@
+
+ulong FUN_00101850(ulong param_1,ulong *param_2)
+
+{
+  ulong uVar1;
+  ulong uVar2;
+  ulong uVar3;
+  ulong uVar4;
+  byte bVar5;
+  ulong uVar6;
+  int iVar7;
+  undefined8 *puVar8;
+  ulong *puVar9;
+  ulong uVar10;
+  ulong uVar11;
+  ulong uVar12;
+  undefined8 uVar13;
+  
+  puVar8 = &DAT_0010c180;
+  param_1 = param_1 ^ *param_2;
+  FUN_00101800();
+  uVar10 = puVar8[param_1 & 0xff];
+  FUN_00101800();
+  uVar1 = puVar8[(param_1 >> 8 & 0xff) + 0x100];
+  FUN_00101800();
+  uVar2 = puVar8[(param_1 >> 0x10 & 0xff) + 0x200];
+  FUN_00101800();
+  uVar3 = puVar8[(param_1 >> 0x18 & 0xff) + 0x300];
+  FUN_00101800();
+  uVar11 = puVar8[(param_1 >> 0x20 & 0xff) + 0x400];
+  FUN_00101800();
+  uVar12 = puVar8[(param_1 >> 0x28 & 0xff) + 0x500];
+  FUN_00101800();
+  uVar6 = puVar8[(param_1 >> 0x30 & 0xff) + 0x600];
+  FUN_00101800();
+  puVar9 = param_2 + 2;
+  uVar6 = uVar10 ^ puVar8[(param_1 >> 0x38) + 0x700] ^ param_2[1] ^ uVar1 ^ uVar2 ^ uVar3 ^ uVar11 ^
+          uVar12 ^ uVar6;
+  do {
+    FUN_00101800();
+    puVar9 = puVar9 + 1;
+    uVar10 = puVar8[uVar6 >> 0x38];
+    FUN_00101800();
+    uVar1 = puVar8[(uVar6 >> 0x30 & 0xff) + 0x100];
+    FUN_00101800();
+    uVar2 = puVar8[(uVar6 >> 0x28 & 0xff) + 0x200];
+    FUN_00101800();
+    uVar3 = puVar8[(uVar6 >> 0x20 & 0xff) + 0x300];
+    FUN_00101800();
+    uVar11 = puVar8[(uVar6 >> 0x18 & 0xff) + 0x400];
+    FUN_00101800();
+    uVar12 = puVar8[(uVar6 >> 0x10 & 0xff) + 0x500];
+    FUN_00101800();
+    uVar4 = puVar8[(uVar6 >> 8 & 0xff) + 0x600];
+    FUN_00101800();
+    uVar6 = uVar4 ^ uVar10 ^ puVar8[(uVar6 & 0xff) + 0x700] ^ puVar9[-1] ^ uVar1 ^ uVar2 ^ uVar3 ^
+                    uVar11 ^ uVar12;
+  } while (param_2 + 6 != puVar9);
+  iVar7 = 0;
+  uVar10 = 0;
+  uVar13 = 0x38;
+  do {
+    FUN_001017b0();
+    bVar5 = (byte)iVar7;
+    iVar7 = iVar7 + 8;
+    uVar10 = uVar10 | (ulong)(byte)(&DAT_0010c060)[uVar6 >> (bVar5 & 0x3f) & 0xff] <<
+                      ((char)uVar13 - bVar5 & 0x3f);
+  } while (iVar7 != 0x40);
+  return param_2[6] ^ uVar10;
+}
+

@@ -1,0 +1,45 @@
+
+void FUN_00101d30(uint param_1,uint param_2,uint param_3,uint param_4,uint *param_5,uint *param_6,
+                 uint *param_7,uint *param_8)
+
+{
+  uint uVar1;
+  int iVar2;
+  uint uVar3;
+  
+  iVar2 = 0x20;
+  uVar3 = 1;
+  *param_5 = 0;
+  *param_6 = 0;
+  *param_7 = 0;
+  *param_8 = 0;
+  do {
+    uVar1 = (uint)((param_1 & uVar3) != 0) << 3;
+    if ((param_2 & uVar3) != 0) {
+      uVar1 = uVar1 | 4;
+    }
+    if ((param_3 & uVar3) != 0) {
+      uVar1 = uVar1 | 2;
+    }
+    if ((param_4 & uVar3) != 0) {
+      uVar1 = uVar1 | 1;
+    }
+    uVar1 = *(uint *)(&DAT_00102220 + (ulong)uVar1 * 4);
+    if ((uVar1 & 8) != 0) {
+      *param_5 = *param_5 | uVar3;
+    }
+    if ((uVar1 & 4) != 0) {
+      *param_6 = *param_6 | uVar3;
+    }
+    if ((uVar1 & 2) != 0) {
+      *param_7 = *param_7 | uVar3;
+    }
+    if ((uVar1 & 1) != 0) {
+      *param_8 = *param_8 | uVar3;
+    }
+    uVar3 = uVar3 * 2;
+    iVar2 = iVar2 + -1;
+  } while (iVar2 != 0);
+  return;
+}
+

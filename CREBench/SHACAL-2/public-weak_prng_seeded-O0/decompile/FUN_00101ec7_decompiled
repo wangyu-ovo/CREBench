@@ -1,0 +1,58 @@
+
+void FUN_00101ec7(long param_1,long param_2,long param_3)
+
+{
+  long in_FS_OFFSET;
+  undefined4 local_38;
+  undefined4 local_34;
+  undefined4 local_30;
+  undefined4 local_2c;
+  undefined4 local_28;
+  undefined4 local_24;
+  undefined4 local_20;
+  undefined4 local_1c;
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_38 = FUN_00101694(param_2);
+  local_34 = FUN_00101694(param_2 + 4);
+  local_30 = FUN_00101694(param_2 + 8);
+  local_2c = FUN_00101694(param_2 + 0xc);
+  local_28 = FUN_00101694(param_2 + 0x10);
+  local_24 = FUN_00101694(param_2 + 0x14);
+  local_20 = FUN_00101694(param_2 + 0x18);
+  local_1c = FUN_00101694(param_2 + 0x1c);
+  for (local_18 = 0; local_18 < 0x40; local_18 = local_18 + 8) {
+    FUN_0010192e(local_34,local_30,local_2c,&local_28,local_24,local_20,local_1c,&local_38,
+                 *(undefined4 *)(param_1 + (0x3f - local_18) * 4));
+    FUN_0010192e(local_30,local_2c,local_28,&local_24,local_20,local_1c,local_38,&local_34,
+                 *(undefined4 *)(param_1 + (0x3e - local_18) * 4));
+    FUN_0010192e(local_2c,local_28,local_24,&local_20,local_1c,local_38,local_34,&local_30,
+                 *(undefined4 *)(param_1 + (0x3d - local_18) * 4));
+    FUN_0010192e(local_28,local_24,local_20,&local_1c,local_38,local_34,local_30,&local_2c,
+                 *(undefined4 *)(param_1 + (0x3c - local_18) * 4));
+    FUN_0010192e(local_24,local_20,local_1c,&local_38,local_34,local_30,local_2c,&local_28,
+                 *(undefined4 *)(param_1 + (0x3b - local_18) * 4));
+    FUN_0010192e(local_20,local_1c,local_38,&local_34,local_30,local_2c,local_28,&local_24,
+                 *(undefined4 *)(param_1 + (0x3a - local_18) * 4));
+    FUN_0010192e(local_1c,local_38,local_34,&local_30,local_2c,local_28,local_24,&local_20,
+                 *(undefined4 *)(param_1 + (0x39 - local_18) * 4));
+    FUN_0010192e(local_38,local_34,local_30,&local_2c,local_28,local_24,local_20,&local_1c,
+                 *(undefined4 *)(param_1 + (0x38 - local_18) * 4));
+  }
+  FUN_001016e3(param_3,local_38);
+  FUN_001016e3(param_3 + 4,local_34);
+  FUN_001016e3(param_3 + 8,local_30);
+  FUN_001016e3(param_3 + 0xc,local_2c);
+  FUN_001016e3(param_3 + 0x10,local_28);
+  FUN_001016e3(param_3 + 0x14,local_24);
+  FUN_001016e3(param_3 + 0x18,local_20);
+  FUN_001016e3(param_3 + 0x1c,local_1c);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

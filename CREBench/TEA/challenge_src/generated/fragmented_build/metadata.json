@@ -1,0 +1,10 @@
+{
+  "challenge": "TEA",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "63c0455a63f60727",
+  "key": "abaee74ec30dd63f247fd721c8e89456",
+  "iv": "",
+  "target_ciphertext": "ba587786131ca267",
+  "test_vectors_path": "CREBench/TEA/test_vectors-fragmented_build.json"
+}

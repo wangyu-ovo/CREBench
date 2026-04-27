@@ -1,0 +1,12 @@
+
+void FUN_00101351(long param_1,ulong param_2)
+
+{
+  ulong local_10;
+  
+  for (local_10 = 0; local_10 < param_2; local_10 = local_10 + 1) {
+    printf("%02x",(ulong)*(byte *)(local_10 + param_1));
+  }
+  return;
+}
+

@@ -1,0 +1,10 @@
+
+uint FUN_001016ca(uint param_1)
+
+{
+  return (uint)(byte)(&DAT_00102060)[(int)(param_1 & 0xff)] * 0x1010101 & 0x3fcff3fc ^
+         (uint)(byte)(&DAT_00102160)[(int)(param_1 >> 8 & 0xff)] * 0x1010101 & 0xfc3fcff3 ^
+         (uint)(byte)(&DAT_00102060)[(int)(param_1 >> 0x10 & 0xff)] * 0x1010101 & 0xf3fc3fcf ^
+         (uint)(byte)(&DAT_00102160)[(int)(param_1 >> 0x18)] * 0x1010101 & 0xcff3fc3f;
+}
+

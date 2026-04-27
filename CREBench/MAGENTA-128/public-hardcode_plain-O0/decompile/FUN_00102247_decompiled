@@ -1,0 +1,26 @@
+
+void FUN_00102247(uint *param_1,uint *param_2,undefined4 *param_3)
+
+{
+  long in_FS_OFFSET;
+  uint local_28;
+  uint local_24;
+  undefined4 local_20;
+  undefined4 local_1c;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_28 = *param_2;
+  local_24 = param_2[1];
+  local_20 = *param_3;
+  local_1c = param_3[1];
+  FUN_00101cdf(&local_28);
+  *param_1 = *param_1 ^ local_28;
+  param_1[1] = local_24 ^ param_1[1];
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

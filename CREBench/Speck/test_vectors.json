@@ -1,0 +1,37 @@
+[
+  {
+    "plaintext": "34bf90fdec2c6e3a",
+    "key": "071231fdf618d921a691b9f5",
+    "iv": "",
+    "ciphertext": "6b15e2296a2826a0",
+    "block_size": 8
+  },
+  {
+    "plaintext": "bf9bcfe55920a296",
+    "key": "071231fdf618d921a691b9f5",
+    "iv": "",
+    "ciphertext": "a2793161cfdd257c",
+    "block_size": 8
+  },
+  {
+    "plaintext": "836ef16a19b5caae",
+    "key": "071231fdf618d921a691b9f5",
+    "iv": "",
+    "ciphertext": "e3b85f2440c636fd",
+    "block_size": 8
+  },
+  {
+    "plaintext": "e19da75076177ca8",
+    "key": "071231fdf618d921a691b9f5",
+    "iv": "",
+    "ciphertext": "244978ef3a85c369",
+    "block_size": 8
+  },
+  {
+    "plaintext": "81322ccb144fda59",
+    "key": "071231fdf618d921a691b9f5",
+    "iv": "",
+    "ciphertext": "c60acec0f03a53cc",
+    "block_size": 8
+  }
+]

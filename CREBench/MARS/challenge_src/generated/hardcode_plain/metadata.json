@@ -1,0 +1,10 @@
+{
+  "challenge": "MARS",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "ad98c7a9df4da30fbb008c402795347a233834a81f33fbb0dce7240acb860edf",
+  "key": "3429c53b47a2a2557ac4f5a943f91bf6290593e7256805ec8864efedcc3c047f",
+  "iv": "1a09ca1828a4b8288e7fe7f0a0fdc252",
+  "target_ciphertext": "a11c2dfa01bfa51562f7a51d518a61511efb8469ab01ce70155b93a319accedd",
+  "test_vectors_path": "CREBench/MARS/test_vectors-hardcode_plain.json"
+}

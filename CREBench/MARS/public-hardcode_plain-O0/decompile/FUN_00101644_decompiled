@@ -1,0 +1,7 @@
+
+undefined4 FUN_00101644(undefined4 *param_1)
+
+{
+  return *param_1;
+}
+

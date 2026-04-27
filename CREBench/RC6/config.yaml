@@ -1,0 +1,52 @@
+name: rc6
+publc_path: CREBench/RC6/public
+flag: 7f99111f347562684e18a37dca254ba9b71307456f6523a398fb063acea71afe
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: RC6-CBC
+algorithm_aliases:
+  - RC6
+  - RC6 CBC
+  - RC6-32/20/16
+  - rc6_cbc
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/RC6/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: cbc_direct
+  key_source_file: CREBench/RC6/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1727740800
+  key_seed_note: fixed_timestamp_utc_2024_10_01_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 16
+  iv_length_bytes: 16
+  target_length_bytes: 32
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: rc6_magic
+  compile_define: CONSTXOR_RC6_TABLES
+  source_file: src/rc6.c
+  tables:
+    - symbol: rc6_magic
+      ctype: uint32_t
+      accessor: constxor_rc6_magic
+

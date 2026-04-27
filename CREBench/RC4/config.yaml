@@ -1,0 +1,51 @@
+name: rc4
+publc_path: CREBench/RC4/public
+flag: d69813ad06d6a43efc47f52675e08cec6bd01431983530463afa2758da7472eb
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: RC4
+algorithm_aliases:
+  - ARC4
+  - RC-4
+  - rc4
+  - arc4
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/RC4/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: stream_direct
+  key_source_file: CREBench/RC4/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1738368000
+  key_seed_note: fixed_timestamp_utc_2025_02_01_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 1
+  iv_length_bytes: 0
+  target_length_bytes: 32
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: rc4_identity_seed
+  compile_define: CONSTXOR_RC4_TABLES
+  source_file: src/rc4.c
+  tables:
+    - symbol: rc4_identity_seed
+      ctype: uint8_t
+      accessor: constxor_rc4_identity_seed

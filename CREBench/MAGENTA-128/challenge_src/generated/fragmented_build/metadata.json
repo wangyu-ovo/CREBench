@@ -1,0 +1,10 @@
+{
+  "challenge": "MAGENTA-128",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "6ac6661437a3ebc1c3f909ec51fc684d8bd56cb48ed2b289b20b6d41ebba6ba4",
+  "key": "a6a9542a1ff5da72be1358b80a023c2c",
+  "iv": "2a6f0095ac25a7e0882950cfc206e806",
+  "target_ciphertext": "42784778bf80f1b9f0772c97a4e56c5cfc425ce4cafee7c9ac3bb354b4422ae7",
+  "test_vectors_path": "CREBench/MAGENTA-128/test_vectors-fragmented_build.json"
+}

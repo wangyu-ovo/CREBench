@@ -1,0 +1,10 @@
+{
+  "challenge": "SKIPJACK",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "37ee4a6094b551403bea3084f57cda817566da9d3af666ade43466c6bac30b7a",
+  "key": "5c4401c3591d8a130b54",
+  "iv": "8227b5d620c18a34",
+  "target_ciphertext": "0107381c800be44a254d9c848218666bdd27f39d9fed83e626db1afe6b74eff3",
+  "test_vectors_path": "CREBench/SKIPJACK/test_vectors-hardcode_plain.json"
+}

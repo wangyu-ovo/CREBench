@@ -1,0 +1,47 @@
+
+void FUN_001023bc(undefined8 param_1,undefined8 *param_2,long param_3,long param_4,ulong param_5)
+
+{
+  undefined8 *puVar1;
+  long in_FS_OFFSET;
+  int local_84;
+  ulong local_80;
+  undefined8 local_78;
+  undefined8 local_70;
+  undefined8 local_68;
+  undefined8 local_60;
+  undefined8 local_58;
+  undefined8 local_50;
+  undefined8 local_48;
+  undefined8 local_40;
+  byte local_38 [40];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_78 = *param_2;
+  local_70 = param_2[1];
+  local_68 = param_2[2];
+  local_60 = param_2[3];
+  for (local_80 = 0; local_80 < param_5; local_80 = local_80 + 0x20) {
+    puVar1 = (undefined8 *)(param_3 + local_80);
+    local_58 = *puVar1;
+    local_50 = puVar1[1];
+    local_48 = puVar1[2];
+    local_40 = puVar1[3];
+    FUN_00101ef7(param_1,param_3 + local_80,local_38);
+    for (local_84 = 0; local_84 < 0x20; local_84 = local_84 + 1) {
+      *(byte *)(param_4 + (long)local_84 + local_80) =
+           *(byte *)((long)&local_78 + (long)local_84) ^ local_38[local_84];
+    }
+    local_78 = local_58;
+    local_70 = local_50;
+    local_68 = local_48;
+    local_60 = local_40;
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

@@ -1,0 +1,15 @@
+
+void FUN_001017be(undefined *param_1,undefined8 param_2)
+
+{
+  *param_1 = (char)param_2;
+  param_1[1] = (char)((ulong)param_2 >> 8);
+  param_1[2] = (char)((ulong)param_2 >> 0x10);
+  param_1[3] = (char)((ulong)param_2 >> 0x18);
+  param_1[4] = (char)((ulong)param_2 >> 0x20);
+  param_1[5] = (char)((ulong)param_2 >> 0x28);
+  param_1[6] = (char)((ulong)param_2 >> 0x30);
+  param_1[7] = (char)((ulong)param_2 >> 0x38);
+  return;
+}
+

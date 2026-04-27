@@ -1,0 +1,50 @@
+
+bool FUN_00101389(int param_1,undefined8 *param_2)
+
+{
+  int iVar1;
+  char *pcVar2;
+  long in_FS_OFFSET;
+  bool bVar3;
+  undefined8 local_40;
+  undefined local_38 [8];
+  undefined local_30 [8];
+  undefined local_28 [24];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  if (param_1 == 2) {
+    FUN_00101505(local_28,0x10);
+    local_40 = 0xbd9c6f75507a56b6;
+    iVar1 = FUN_0010125c(param_2[1],local_38,8);
+    if (iVar1 == 0) {
+      fwrite("Bad input hex. Expecting 16 hex chars (8 bytes).\n",1,0x31,stderr);
+      bVar3 = true;
+    }
+    else {
+      FUN_0010155e(local_38,local_30,local_28);
+      printf("Ciphertext(hex): ");
+      FUN_00101331(local_30,8);
+      putchar(10);
+      iVar1 = memcmp(local_30,&local_40,8);
+      bVar3 = iVar1 != 0;
+      if (bVar3) {
+        pcVar2 = "False";
+      }
+      else {
+        pcVar2 = "True";
+      }
+      printf("Match: %s\n",pcVar2);
+    }
+  }
+  else {
+    fprintf(stderr,"Usage: %s <16-hex-chars>\n",*param_2);
+    bVar3 = true;
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return bVar3;
+}
+

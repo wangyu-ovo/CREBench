@@ -1,0 +1,68 @@
+
+undefined8 FUN_001016ff(undefined4 *param_1,long param_2,ulong param_3,uint param_4)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  undefined8 uVar4;
+  byte bVar5;
+  long in_FS_OFFSET;
+  uint local_138;
+  uint local_134;
+  uint local_130;
+  int local_12c;
+  uint local_128;
+  uint local_124;
+  uint local_118 [66];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  if ((param_4 < 0x100) && (param_3 < 0x100)) {
+    param_1[0x200] = param_4;
+    uVar2 = (param_4 + 1) * 2;
+    local_124 = (uint)(param_3 + 3 >> 2);
+    if (local_124 == 0) {
+      local_124 = 1;
+    }
+    memset(local_118,0,0x100);
+    for (local_138 = 0; local_138 < param_3; local_138 = local_138 + 1) {
+      local_118[local_138 >> 2] =
+           (uint)*(byte *)(param_2 + (ulong)local_138) << (sbyte)((local_138 & 3) << 3) |
+           local_118[local_138 >> 2];
+    }
+    *param_1 = 0xb7e15163;
+    for (local_138 = 1; local_138 < uVar2; local_138 = local_138 + 1) {
+      param_1[local_138] = param_1[local_138 - 1] + -0x61c88647;
+    }
+    local_128 = 0;
+    local_12c = 0;
+    uVar1 = local_124;
+    if (local_124 < uVar2) {
+      uVar1 = uVar2;
+    }
+    local_138 = 0;
+    local_134 = 0;
+    for (local_130 = 0; local_130 < uVar1 * 3; local_130 = local_130 + 1) {
+      uVar3 = local_128 + param_1[local_138] + local_12c;
+      param_1[local_138] = uVar3 * 8 | uVar3 >> 0x1d;
+      local_12c = param_1[local_138];
+      uVar3 = local_118[local_134] + local_12c + local_128;
+      bVar5 = (char)local_128 + (char)local_12c & 0x1f;
+      local_118[local_134] = uVar3 << bVar5 | uVar3 >> 0x20 - bVar5;
+      local_128 = local_118[local_134];
+      local_138 = (local_138 + 1) % uVar2;
+      local_134 = (local_134 + 1) % local_124;
+    }
+    uVar4 = 0;
+  }
+  else {
+    uVar4 = 0xffffffff;
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar4;
+}
+

@@ -1,0 +1,10 @@
+{
+  "challenge": "RC2-CBC-Official",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "78309f62f05dac232032998d74e4c8c5",
+  "key": "137f276e11c3ca64",
+  "iv": "af55d48bb3f42f5b",
+  "target_ciphertext": "373f1bff8ea235264eb759997e261361",
+  "test_vectors_path": "CREBench/RC2-CBC-Official/test_vectors-hardcode_plain.json"
+}

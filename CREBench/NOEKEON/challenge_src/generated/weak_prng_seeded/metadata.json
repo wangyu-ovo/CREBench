@@ -1,0 +1,10 @@
+{
+  "challenge": "NOEKEON",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "b62e1a00b71ebe967e2e15bdf3a5e5dae3d3311e3e6a4aa60229ec3a34f99b5b",
+  "key": "a776b75f6c44d4bb824f9bb00fd94965",
+  "iv": "f1f579649e516eeaca2988e36aacf02f",
+  "target_ciphertext": "7ed18be5ea7018e1ab70e41418171631793a0685dcd1aa8651258482427d57ba",
+  "test_vectors_path": "CREBench/NOEKEON/test_vectors-weak_prng_seeded.json"
+}

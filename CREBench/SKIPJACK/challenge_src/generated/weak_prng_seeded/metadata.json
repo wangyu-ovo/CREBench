@@ -1,0 +1,10 @@
+{
+  "challenge": "SKIPJACK",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "37ee4a6094b551403bea3084f57cda817566da9d3af666ade43466c6bac30b7a",
+  "key": "2629e04d5a4a9b30f5cf",
+  "iv": "8227b5d620c18a34",
+  "target_ciphertext": "4f27f739e20a5eea67696042ee33884c1685c07c2b00fbb4f645339503280d1a",
+  "test_vectors_path": "CREBench/SKIPJACK/test_vectors-weak_prng_seeded.json"
+}

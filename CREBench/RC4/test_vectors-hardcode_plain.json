@@ -1,0 +1,37 @@
+[
+  {
+    "plaintext": "d69813ad06d6a43efc47f52675e08cec6bd01431983530463afa2758da7472eb",
+    "key": "451ef90cbabd2373329a970cdbb20e3f",
+    "iv": "",
+    "ciphertext": "915c10bc8b9a54d2125b79db66f620dc001c00cdee475925b8fb4482405ee98e",
+    "block_size": 1
+  },
+  {
+    "plaintext": "d56708f4278b943b6d40ded66ec8237505b33dec66feef8a55f8aae51c61b15e",
+    "key": "451ef90cbabd2373329a970cdbb20e3f",
+    "iv": "",
+    "ciphertext": "92a30be5aac764d7835c522b7dde8f456e7f2910108c86e9d7f9c93f864b2a3b",
+    "block_size": 1
+  },
+  {
+    "plaintext": "6865b020ac0849101af2300877f1f8ebf19345379e79df71970b9b73bfbd0e81",
+    "key": "451ef90cbabd2373329a970cdbb20e3f",
+    "iv": "",
+    "ciphertext": "2fa1b3312144b9fcf4eebcf564e754db9a5f51cbe80bb612150af8a9259795e4",
+    "block_size": 1
+  },
+  {
+    "plaintext": "eb08e002b9767b8a38b3e98e681cc9cd42ef2bb4b9f5119b5eac30374314972d",
+    "key": "451ef90cbabd2373329a970cdbb20e3f",
+    "iv": "",
+    "ciphertext": "accce313343a8b66d6af65737b0a65fd29233f48cf8778f8dcad53edd93e0c48",
+    "block_size": 1
+  },
+  {
+    "plaintext": "c0028973eb2f89b370c4c6cae27f831aefab0fa16372531e1c7c9dd27804c4d0",
+    "key": "451ef90cbabd2373329a970cdbb20e3f",
+    "iv": "",
+    "ciphertext": "87c68a626663795f9ed84a37f1692f2a84671b5d15003a7d9e7dfe08e22e5fb5",
+    "block_size": 1
+  }
+]

@@ -1,0 +1,48 @@
+
+undefined8 FUN_00101b91(uint *param_1,long param_2,long param_3)
+
+{
+  undefined8 uVar1;
+  long in_FS_OFFSET;
+  ulong local_30;
+  uint local_28;
+  uint local_24;
+  uint local_20;
+  uint local_1c;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  if (((param_1 == (uint *)0x0) || (param_2 == 0)) || (param_3 != 0x10)) {
+    uVar1 = 0xffffffff;
+  }
+  else {
+    local_28 = FUN_0010167f(param_2);
+    local_24 = FUN_0010167f(param_2 + 4);
+    local_20 = FUN_0010167f(param_2 + 8);
+    local_1c = FUN_0010167f(param_2 + 0xc);
+    for (local_30 = 0; local_30 < 0x10; local_30 = local_30 + 1) {
+      local_28 = (byte)(&DAT_001030b0)[local_30] ^ local_28;
+      FUN_00101753(&local_28);
+      FUN_00101aa1(&local_28);
+      FUN_00101997(&local_28);
+      FUN_00101b19(&local_28);
+    }
+    local_28 = local_28 ^ 0xd4;
+    param_1[4] = local_28;
+    param_1[5] = local_24;
+    param_1[6] = local_20;
+    param_1[7] = local_1c;
+    FUN_00101753(&local_28);
+    *param_1 = local_28;
+    param_1[1] = local_24;
+    param_1[2] = local_20;
+    param_1[3] = local_1c;
+    uVar1 = 0;
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar1;
+}
+

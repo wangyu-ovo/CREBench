@@ -1,0 +1,20 @@
+
+uint FUN_00101a55(long param_1,uint param_2,uint param_3)
+
+{
+  int iVar1;
+  int iVar2;
+  
+  iVar1 = *(int *)(param_1 + (ulong)*(uint *)(&DAT_001032a0 + (ulong)param_2 * 0x10) * 0xc +
+                  (ulong)*(uint *)(&DAT_00103360 + (ulong)param_3 * 0x10) * 4);
+  iVar2 = *(int *)(param_1 + (ulong)*(uint *)(&DAT_001032a8 + (ulong)param_2 * 0x10) * 0xc +
+                  (ulong)*(uint *)(&DAT_00103368 + (ulong)param_3 * 0x10) * 4);
+  iVar2 = (iVar2 << 1 | (uint)(iVar2 < 0)) -
+          *(int *)(param_1 + (ulong)*(uint *)(&DAT_001032ac + (ulong)param_2 * 0x10) * 0xc +
+                  (ulong)*(uint *)(&DAT_0010336c + (ulong)param_3 * 0x10) * 4);
+  return (iVar1 << 1 | (uint)(iVar1 < 0)) +
+         *(int *)(param_1 + (ulong)*(uint *)(&DAT_001032a4 + (ulong)param_2 * 0x10) * 0xc +
+                 (ulong)*(uint *)(&DAT_00103364 + (ulong)param_3 * 0x10) * 4) ^
+         (iVar2 * 2 | (uint)(iVar2 < 0));
+}
+

@@ -1,0 +1,98 @@
+
+void FUN_00101f60(int *param_1,long param_2,long param_3)
+
+{
+  int iVar1;
+  int iVar2;
+  int iVar3;
+  int iVar4;
+  uint uVar5;
+  uint uVar6;
+  undefined4 uVar7;
+  uint uVar8;
+  uint uVar9;
+  uint local_3c;
+  uint local_38;
+  uint local_34;
+  uint local_30;
+  uint local_2c;
+  uint local_28;
+  uint local_24;
+  
+  iVar1 = FUN_001016a8(param_2);
+  iVar2 = FUN_001016a8(param_2 + 4);
+  iVar3 = FUN_001016a8(param_2 + 8);
+  iVar4 = FUN_001016a8(param_2 + 0xc);
+  local_3c = iVar1 + param_1[0x24];
+  local_38 = iVar2 + param_1[0x25];
+  local_34 = iVar3 + param_1[0x26];
+  local_30 = iVar4 + param_1[0x27];
+  for (local_2c = 0; local_2c < 8; local_2c = local_2c + 1) {
+    uVar8 = FUN_0010177c(local_30);
+    iVar1 = FUN_0010179f(local_30 >> 8);
+    uVar8 = iVar1 + (uVar8 ^ local_34);
+    iVar1 = FUN_0010177c(local_30 >> 0x10);
+    local_34 = local_38 + iVar1;
+    local_30 = FUN_00101760(local_30,0x18);
+    local_38 = FUN_0010179f(local_30);
+    local_38 = local_3c ^ local_38;
+    if ((local_2c & 3) == 0) {
+      local_30 = local_30 + local_38;
+    }
+    if ((local_2c & 3) == 1) {
+      local_30 = local_30 + uVar8;
+    }
+    local_3c = local_30;
+    local_30 = uVar8;
+  }
+  for (local_28 = 0; local_28 < 0x10; local_28 = local_28 + 1) {
+    uVar9 = FUN_00101760(local_30,0xd);
+    uVar5 = FUN_00101744(param_1[local_28 * -2 + 0x23] * local_30,10);
+    iVar1 = param_1[(0x11 - local_28) * 2];
+    uVar8 = FUN_001017c7(uVar9 + iVar1);
+    uVar6 = FUN_00101760(uVar5,5);
+    iVar2 = FUN_00101744(uVar6 ^ uVar8 ^ uVar5,uVar5);
+    uVar7 = FUN_00101760(uVar5,5);
+    iVar1 = FUN_00101744(uVar9 + iVar1,uVar7);
+    uVar8 = local_38 - iVar1;
+    if (local_28 < 8) {
+      local_34 = local_34 - iVar2;
+      local_3c = local_3c ^ uVar5;
+    }
+    else {
+      local_3c = local_3c - iVar2;
+      local_34 = local_34 ^ uVar5;
+    }
+    local_30 = local_34;
+    local_38 = local_3c;
+    local_3c = uVar9;
+    local_34 = uVar8;
+  }
+  for (local_24 = 0; local_24 < 8; local_24 = local_24 + 1) {
+    if ((local_24 & 3) == 2) {
+      local_30 = local_30 - local_3c;
+    }
+    if ((local_24 & 3) == 3) {
+      local_30 = local_30 - local_34;
+    }
+    uVar8 = FUN_0010179f(local_30);
+    uVar8 = local_34 ^ uVar8;
+    iVar1 = FUN_0010177c(local_30 >> 0x18);
+    local_34 = local_38 - iVar1;
+    uVar9 = FUN_00101744(local_30,0x18);
+    iVar1 = FUN_0010179f(local_30 >> 0x10);
+    local_38 = FUN_0010177c(uVar9);
+    local_38 = local_38 ^ local_3c - iVar1;
+    local_3c = uVar9;
+    local_30 = uVar8;
+  }
+  iVar1 = param_1[1];
+  iVar2 = param_1[2];
+  iVar3 = param_1[3];
+  FUN_001016f5(param_3,local_3c - *param_1);
+  FUN_001016f5(param_3 + 4,local_38 - iVar1);
+  FUN_001016f5(param_3 + 8,local_34 - iVar2);
+  FUN_001016f5(param_3 + 0xc,local_30 - iVar3);
+  return;
+}
+

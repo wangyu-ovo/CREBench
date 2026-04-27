@@ -1,0 +1,51 @@
+name: xtea
+publc_path: CREBench/XTEA/public
+flag: c59943fe857e33de
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: XTEA-ECB
+algorithm_aliases:
+  - XTEA
+  - XTEA ECB
+  - xtea_ecb
+  - XTEA-ECB
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/XTEA/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: fragmented_build
+
+template_metadata:
+  wrapper_family: single_block_direct
+  key_source_file: CREBench/XTEA/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1723680000
+  key_seed_note: fixed_timestamp_utc_2024_08_15_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 8
+  iv_length_bytes: 0
+  target_length_bytes: 8
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: xtea_magic
+  compile_define: CONSTXOR_XTEA_TABLES
+  source_file: src/xtea.c
+  tables:
+    - symbol: xtea_magic
+      ctype: uint32_t
+      accessor: constxor_xtea_magic
+

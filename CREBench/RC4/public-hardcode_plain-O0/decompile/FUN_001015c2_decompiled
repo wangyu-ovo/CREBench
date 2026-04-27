@@ -1,0 +1,27 @@
+
+void FUN_001015c2(void *param_1,long param_2,ulong param_3)
+
+{
+  undefined uVar1;
+  void *__src;
+  byte local_1a;
+  ulong local_18;
+  
+  __src = (void *)FUN_001015b1();
+  local_1a = 0;
+  memcpy(param_1,__src,0x100);
+  *(undefined *)((long)param_1 + 0x100) = 0;
+  *(undefined *)((long)param_1 + 0x101) = 0;
+  if (param_3 != 0) {
+    for (local_18 = 0; local_18 < 0x100; local_18 = local_18 + 1) {
+      local_1a = *(char *)(param_2 + local_18 % param_3) +
+                 *(char *)(local_18 + (long)param_1) + local_1a;
+      uVar1 = *(undefined *)(local_18 + (long)param_1);
+      *(undefined *)(local_18 + (long)param_1) =
+           *(undefined *)((long)param_1 + (long)(int)(uint)local_1a);
+      *(undefined *)((long)param_1 + (long)(int)(uint)local_1a) = uVar1;
+    }
+  }
+  return;
+}
+

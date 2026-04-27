@@ -1,0 +1,107 @@
+
+void FUN_00101fe9(byte *param_1,byte *param_2,byte *param_3)
+
+{
+  byte bVar1;
+  byte bVar2;
+  char cVar3;
+  long in_FS_OFFSET;
+  byte local_25;
+  byte local_24;
+  byte local_23;
+  byte local_22;
+  byte local_21;
+  byte local_20;
+  byte local_1f;
+  byte local_1e;
+  byte local_1d;
+  uint local_1c;
+  byte *local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_1c = (uint)*param_1;
+  if (0xd < local_1c) {
+    local_1c = 0xd;
+  }
+  param_1 = param_1 + (local_1c * 0x10 + 8);
+  local_1e = param_2[7] ^ *param_1;
+  local_1f = param_2[6] - param_1[-1];
+  local_20 = param_2[5] - param_1[-2];
+  local_21 = param_2[4] ^ param_1[-3];
+  local_22 = param_2[3] ^ param_1[-4];
+  local_23 = param_2[2] - param_1[-5];
+  local_24 = param_2[1] - param_1[-6];
+  local_18 = param_1 + -7;
+  local_25 = *param_2 ^ *local_18;
+  while (bVar2 = local_20, bVar1 = local_21, local_1c != 0) {
+    local_21 = local_24;
+    local_24 = local_23;
+    local_23 = bVar1;
+    local_1d = local_20;
+    local_20 = local_22;
+    local_22 = local_1f;
+    local_1f = bVar2;
+    local_1c = local_1c - 1;
+    FUN_001016c1(&local_25,&local_21);
+    FUN_001016c1(&local_24,&local_20);
+    FUN_001016c1(&local_23,&local_1f);
+    FUN_001016c1(&local_22,&local_1e);
+    FUN_001016c1(&local_25,&local_23);
+    FUN_001016c1(&local_21,&local_1f);
+    FUN_001016c1(&local_24,&local_22);
+    FUN_001016c1(&local_20,&local_1e);
+    FUN_001016c1(&local_25,&local_24);
+    FUN_001016c1(&local_23,&local_22);
+    FUN_001016c1(&local_21,&local_20);
+    FUN_001016c1(&local_1f,&local_1e);
+    local_1e = local_1e - local_18[-1];
+    local_1f = local_1f ^ local_18[-2];
+    local_20 = local_20 ^ local_18[-3];
+    local_21 = local_21 - local_18[-4];
+    local_22 = local_22 - local_18[-5];
+    local_23 = local_23 ^ local_18[-6];
+    local_24 = local_24 ^ local_18[-7];
+    local_18 = local_18 + -8;
+    local_25 = local_25 - *local_18;
+    local_1e = FUN_00101662(local_1e);
+    local_18 = local_18 + -1;
+    local_1e = *local_18 ^ local_1e;
+    cVar3 = FUN_00101642(local_1f);
+    local_18 = local_18 + -1;
+    local_1f = cVar3 - *local_18;
+    cVar3 = FUN_00101642(local_20);
+    local_18 = local_18 + -1;
+    local_20 = cVar3 - *local_18;
+    local_21 = FUN_00101662(local_21);
+    local_18 = local_18 + -1;
+    local_21 = *local_18 ^ local_21;
+    local_22 = FUN_00101662(local_22);
+    local_18 = local_18 + -1;
+    local_22 = *local_18 ^ local_22;
+    cVar3 = FUN_00101642(local_23);
+    local_18 = local_18 + -1;
+    local_23 = cVar3 - *local_18;
+    cVar3 = FUN_00101642(local_24);
+    local_18 = local_18 + -1;
+    local_24 = cVar3 - *local_18;
+    local_25 = FUN_00101662(local_25);
+    local_18 = local_18 + -1;
+    local_25 = *local_18 ^ local_25;
+  }
+  *param_3 = local_25;
+  param_3[1] = local_24;
+  param_3[2] = local_23;
+  param_3[3] = local_22;
+  param_3[4] = local_21;
+  param_3[5] = local_20;
+  param_3[6] = local_1f;
+  param_3[7] = local_1e;
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+    local_1c = local_1c - 1;
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

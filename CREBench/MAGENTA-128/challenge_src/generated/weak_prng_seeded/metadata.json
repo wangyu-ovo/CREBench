@@ -1,0 +1,10 @@
+{
+  "challenge": "MAGENTA-128",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "6ac6661437a3ebc1c3f909ec51fc684d8bd56cb48ed2b289b20b6d41ebba6ba4",
+  "key": "0cd7d4256c49b79fd7259e5d729bc84a",
+  "iv": "2a6f0095ac25a7e0882950cfc206e806",
+  "target_ciphertext": "9a8c19ae5aaa679f6877d529d0ae96f18761160b0c1ff5fc6b89096b00a06b7c",
+  "test_vectors_path": "CREBench/MAGENTA-128/test_vectors-weak_prng_seeded.json"
+}

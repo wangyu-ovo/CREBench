@@ -1,0 +1,53 @@
+
+void FUN_0010171c(long param_1,long param_2)
+
+{
+  undefined8 uVar1;
+  long in_FS_OFFSET;
+  int local_6c;
+  int local_68;
+  int local_64;
+  int local_60;
+  int local_5c;
+  undefined8 local_58 [6];
+  undefined8 uStack_28;
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  for (local_6c = 0; local_6c < 2; local_6c = local_6c + 1) {
+    *(undefined8 *)(param_2 + (long)local_6c * 8) = 0;
+    for (local_68 = 0; local_68 < 8; local_68 = local_68 + 1) {
+      *(ulong *)(param_2 + (long)local_6c * 8) =
+           (ulong)*(byte *)(param_1 + (local_68 + local_6c * 8)) <<
+           (('\a' - (char)local_68) * '\b' & 0x3fU) | *(ulong *)(param_2 + (long)local_6c * 8);
+    }
+  }
+  for (local_64 = 2; local_64 < 7; local_64 = local_64 + 1) {
+    *(undefined8 *)(param_2 + (long)local_64 * 8) =
+         *(undefined8 *)(param_2 + (long)local_64 * 8 + -0x10);
+  }
+  for (local_60 = 0; local_60 < 7; local_60 = local_60 + 1) {
+    local_58[local_60] = *(undefined8 *)(&DAT_00102120 + (long)local_60 * 8);
+    if (local_60 == 0) {
+      local_58[0] = FUN_001016c3(local_58[0]);
+    }
+    else if (local_60 == 6) {
+      uVar1 = FUN_001019b0(uStack_28);
+      uStack_28 = FUN_001016c3(uVar1);
+    }
+  }
+  FUN_0010161b(param_2,7,local_58,0);
+  for (local_5c = 1; local_5c < 7; local_5c = local_5c + 1) {
+    uVar1 = FUN_001016c3(*(undefined8 *)(param_2 + (long)local_5c * 8));
+    *(undefined8 *)((long)local_5c * 8 + param_2) = uVar1;
+  }
+  uVar1 = FUN_001019b0(*(undefined8 *)(param_2 + 0x30));
+  uVar1 = FUN_001016c3(uVar1);
+  *(undefined8 *)(param_2 + 0x30) = uVar1;
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+

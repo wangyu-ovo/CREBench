@@ -1,0 +1,10 @@
+{
+  "challenge": "Unicorn-A",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "e5b6e8bd877ae36079962ac7952e1823",
+  "key": "8c43638c5f45628a2343e78060012ab93debaded22bcff1b98a8b0fb688a436d",
+  "iv": "",
+  "target_ciphertext": "a3cf4a12c29875f48936c3e34e366297",
+  "test_vectors_path": "CREBench/Unicorn-A/test_vectors-hardcode_plain.json"
+}

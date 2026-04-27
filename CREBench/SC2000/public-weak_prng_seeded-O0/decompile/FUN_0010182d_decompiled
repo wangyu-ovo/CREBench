@@ -1,0 +1,31 @@
+
+uint FUN_0010182d(uint param_1,uint param_2,int param_3,int param_4)
+
+{
+  long in_FS_OFFSET;
+  uint local_1c;
+  uint local_18;
+  int local_14;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_1c = param_1;
+  FUN_00101229(param_1,&local_1c);
+  FUN_0010137c(local_1c,&local_1c);
+  local_18 = param_2;
+  FUN_00101229(param_2,&local_18);
+  FUN_0010137c(local_18,&local_18);
+  local_14 = param_4 + param_3 * 4;
+  FUN_00101229(local_14,&local_14);
+  FUN_0010137c(local_14,&local_14);
+  local_18 = local_18 * (param_3 + 1);
+  local_1c = local_18 ^ local_14 + local_1c;
+  FUN_00101229(local_1c,&local_1c);
+  FUN_0010137c(local_1c,&local_1c);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_1c;
+}
+

@@ -1,0 +1,10 @@
+{
+  "challenge": "SM4-CBC-Official",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "a454eec650748622d2421da0c4441e4778a3ecbc0c68451e115f4521b533f478",
+  "key": "1b43aaf4b5fdaa99bb399c862e3131b9",
+  "iv": "6203731cd2220b37e7e2ea9f12d639dc",
+  "target_ciphertext": "4c5cc8dd6f5602521d36bc0eec98df3336df733f19421f1538e731a57fb7c53c",
+  "test_vectors_path": "CREBench/SM4-CBC-Official/test_vectors-weak_prng_seeded.json"
+}

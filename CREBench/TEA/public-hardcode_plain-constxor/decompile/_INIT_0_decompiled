@@ -1,0 +1,8 @@
+
+void _INIT_0(void)
+
+{
+  FUN_00101490();
+  return;
+}
+

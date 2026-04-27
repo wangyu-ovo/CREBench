@@ -1,0 +1,10 @@
+{
+  "challenge": "Simon",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "3f39194df10c9d5b",
+  "key": "79b6cdef68d5a7b24e398b50",
+  "iv": "",
+  "target_ciphertext": "9f4c468d628a8473",
+  "test_vectors_path": "CREBench/Simon/test_vectors-hardcode_plain.json"
+}

@@ -1,0 +1,27 @@
+
+void FUN_00101b40(uint *param_1,uint *param_2)
+
+{
+  uint *extraout_RDX;
+  
+  FUN_00101af0();
+  *extraout_RDX = *param_1 ^ *param_2;
+  extraout_RDX[1] = param_1[1] ^ param_2[1];
+  extraout_RDX[2] = param_1[2] ^ param_2[2];
+  extraout_RDX[3] = param_1[3] ^ param_2[3];
+  extraout_RDX[4] = param_1[4] ^ param_2[4];
+  extraout_RDX[5] = param_1[5] ^ param_2[5];
+  extraout_RDX[6] = param_1[6] ^ param_2[6];
+  extraout_RDX[7] = param_1[7] ^ param_2[7];
+  extraout_RDX[8] = param_1[8] ^ param_2[8];
+  extraout_RDX[9] = param_1[9] ^ param_2[9];
+  extraout_RDX[10] = param_1[10] ^ param_2[10];
+  extraout_RDX[0xb] = param_1[0xb] ^ param_2[0xb];
+  extraout_RDX[0xc] = param_1[0xc] ^ param_2[0xc];
+  extraout_RDX[0xd] = param_1[0xd] ^ param_2[0xd];
+  extraout_RDX[0xe] = param_1[0xe] ^ param_2[0xe];
+  extraout_RDX[0xf] = param_1[0xf] ^ param_2[0xf];
+  FUN_00101af0();
+  return;
+}
+

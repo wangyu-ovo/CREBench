@@ -1,0 +1,10 @@
+{
+  "challenge": "MARS",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "ad98c7a9df4da30fbb008c402795347a233834a81f33fbb0dce7240acb860edf",
+  "key": "f2329f999971a1962b45a9b8cec70235c2b158aa4066a34f0342baacd84bf791",
+  "iv": "1a09ca1828a4b8288e7fe7f0a0fdc252",
+  "target_ciphertext": "6db5693f3e472c7eb19b19d63249d623bae4dcfd51d13ac61584f64f649a80fb",
+  "test_vectors_path": "CREBench/MARS/test_vectors-weak_prng_seeded.json"
+}

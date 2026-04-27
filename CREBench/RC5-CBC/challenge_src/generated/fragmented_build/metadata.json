@@ -1,0 +1,10 @@
+{
+  "challenge": "RC5-CBC",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "26125bdc1697b80cc6b9e67afa291faef05f797aca35e3587cb36a1a13aa28ad",
+  "key": "21564fc37404d62d1cec587e61f556c4",
+  "iv": "5ce1c3b034d32191",
+  "target_ciphertext": "716e594f6593f507ad3a76852d5f7af51d878428c08765fdb6978136af82168c",
+  "test_vectors_path": "CREBench/RC5-CBC/test_vectors-fragmented_build.json"
+}

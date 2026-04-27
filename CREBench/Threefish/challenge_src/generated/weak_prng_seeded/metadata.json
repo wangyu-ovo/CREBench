@@ -1,0 +1,10 @@
+{
+  "challenge": "Threefish",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "995dd9c9d8f658022ade336e8bead5a37bc8c1e5b6c12bdb9d797a3f6b4cc39838ae128e992eee80cb12971cb44898e1efa7a8b04fd8dcc99f1dbdc7b7d35e2d",
+  "key": "2d9d5677ed620e67138bd19571ef8e67dbb3ec340577167620da5d073ddbdeadeab8862aacadfdeabebfc5540ee261d39e5b7937d34c9cf611041884eb56fa4b",
+  "iv": "460a625478b99b3c9255b99841f2e29d161f1fad21ba647a9165139d83d56c6460fb0a5bcb49612b5b732a0c0bf7e55a800dce6e70f27de0b7a5724b1d0ed68f",
+  "target_ciphertext": "23bb6dd58ba3f6a754aa131cc722fd1eada07c48fc2064bbc6d8702eef12d68aab00109b0d8ee158521b7a30ce66bbc49d9e4e32a90c6ad206ebf3e877d37047",
+  "test_vectors_path": "CREBench/Threefish/test_vectors-weak_prng_seeded.json"
+}

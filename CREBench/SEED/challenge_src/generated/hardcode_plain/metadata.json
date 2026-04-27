@@ -1,0 +1,10 @@
+{
+  "challenge": "SEED",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "641dccf909f44d593bdcd35ae89ce632",
+  "key": "4e1d4155184e2be076a1662f16e74317",
+  "iv": "",
+  "target_ciphertext": "d2046a02377860723134d9e9aa15f30d",
+  "test_vectors_path": "CREBench/SEED/test_vectors-hardcode_plain.json"
+}

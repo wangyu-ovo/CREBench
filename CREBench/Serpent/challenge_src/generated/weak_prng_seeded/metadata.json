@@ -1,0 +1,10 @@
+{
+  "challenge": "Serpent",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "ec4b46ae323cec71f659c934bd7d22fa",
+  "key": "0a5b1166c980fec9b37c2bb1cbeab4c9",
+  "iv": "",
+  "target_ciphertext": "c0a00b14334e2ee89f637c733a0b32e9",
+  "test_vectors_path": "CREBench/Serpent/test_vectors-weak_prng_seeded.json"
+}

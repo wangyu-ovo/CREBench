@@ -1,0 +1,53 @@
+name: magenta
+publc_path: CREBench/MAGENTA-128/public
+flag: 6ac6661437a3ebc1c3f909ec51fc684d8bd56cb48ed2b289b20b6d41ebba6ba4
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: MAGENTA-CBC
+algorithm_aliases:
+  - MAGENTA
+  - MAGENTA-128
+  - MAGENTA CBC
+  - magenta_cbc
+  - MAGENTA-CBC
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/MAGENTA-128/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: cbc_direct
+  key_source_file: CREBench/MAGENTA-128/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1727740800
+  key_seed_note: fixed_timestamp_utc_2024_10_01_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 16
+  iv_length_bytes: 16
+  target_length_bytes: 32
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: magenta_poly
+  compile_define: CONSTXOR_MAGENTA_TABLES
+  source_file: src/magenta.c
+  tables:
+    - symbol: magenta_gf_poly
+      ctype: uint32_t
+      accessor: constxor_magenta_gf_poly
+

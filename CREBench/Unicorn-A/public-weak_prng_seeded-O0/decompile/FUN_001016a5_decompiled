@@ -1,0 +1,38 @@
+
+void FUN_001016a5(int param_1,int param_2,int *param_3,uint *param_4,uint *param_5)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  uint uVar4;
+  uint uVar5;
+  
+  uVar1 = param_1 + *param_3;
+  uVar2 = param_2 + param_3[2];
+  uVar3 = ((uint)(uVar2 < 9) ^ uVar1 * 0x800000 ^ uVar1 ^ uVar2 >> 9 ^ uVar1 >> 0x17) * 0x7e167289;
+  uVar4 = (uVar1 * 0x200 ^ uVar2 < 0x17 ^ uVar2 ^ uVar1 >> 9 ^ uVar2 >> 0x17 ^
+          *(uint *)(&DAT_00103020 + (ulong)(uVar3 >> 0x18) * 4)) * -0x1deb9b5;
+  uVar3 = uVar3 ^ *(uint *)(&DAT_00103020 + (ulong)(uVar4 >> 0x18) * 4);
+  uVar4 = uVar4 ^ *(uint *)(&DAT_00103020 + (ulong)(uVar3 >> 0x10 & 0xff) * 4);
+  uVar3 = uVar3 ^ *(uint *)(&DAT_00103020 + (ulong)(uVar4 >> 0x10 & 0xff) * 4);
+  uVar4 = uVar4 ^ *(uint *)(&DAT_00103020 + (ulong)(uVar3 >> 8 & 0xff) * 4);
+  uVar3 = uVar3 ^ *(uint *)(&DAT_00103020 + (ulong)(uVar4 >> 8 & 0xff) * 4);
+  uVar4 = uVar4 ^ *(uint *)(&DAT_00103020 + (ulong)(uVar3 & 0xff) * 4);
+  uVar3 = uVar3 ^ *(uint *)(&DAT_00103020 + (ulong)(uVar4 & 0xff) * 4);
+  uVar1 = (param_2 + param_3[1]) * 0x7e167289;
+  uVar5 = (param_1 + param_3[3] ^ *(uint *)(&DAT_00103020 + (ulong)(uVar1 >> 0x18) * 4)) *
+          -0x1deb9b5;
+  uVar2 = (uVar1 ^ *(uint *)(&DAT_00103020 + (ulong)(uVar5 >> 0x18) * 4)) * -0x1deb9b5;
+  uVar1 = (uVar5 ^ *(uint *)(&DAT_00103020 + (ulong)(uVar2 >> 0x18) * 4)) * 0x7e167289;
+  uVar2 = uVar2 ^ *(uint *)(&DAT_00103020 + (ulong)(uVar1 >> 0x18) * 4);
+  uVar1 = uVar1 ^ *(uint *)(&DAT_00103020 + (ulong)(uVar2 >> 0x10 & 0xff) * 4);
+  uVar2 = uVar2 ^ *(uint *)(&DAT_00103020 + (ulong)(uVar1 >> 0x10 & 0xff) * 4);
+  uVar4 = uVar4 ^ *(uint *)(&DAT_00103020 +
+                           (ulong)(uVar3 >> (~((char)uVar1 * '\x02') & 0x18U) & 0xff) * 4);
+  *param_4 = uVar3 ^ *(uint *)(&DAT_00103020 +
+                              (ulong)(uVar4 >> (sbyte)((~uVar1 & 3) << 3) & 0xff) * 4) ^ uVar2;
+  *param_5 = uVar4 ^ uVar2;
+  return;
+}
+

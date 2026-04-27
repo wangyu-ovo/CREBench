@@ -1,0 +1,10 @@
+{
+  "challenge": "Unicorn-A",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "e5b6e8bd877ae36079962ac7952e1823",
+  "key": "3dd9064f28f6f7d1c34faaf2102693df60b8d7bb4210baf56ba6e44a62fa402a",
+  "iv": "",
+  "target_ciphertext": "af4409bd97e5438d414efdd9082a8b45",
+  "test_vectors_path": "CREBench/Unicorn-A/test_vectors-weak_prng_seeded.json"
+}

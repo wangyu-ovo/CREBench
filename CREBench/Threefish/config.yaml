@@ -1,0 +1,59 @@
+name: threefish
+publc_path: CREBench/Threefish/public
+flag: 995dd9c9d8f658022ade336e8bead5a37bc8c1e5b6c12bdb9d797a3f6b4cc39838ae128e992eee80cb12971cb44898e1efa7a8b04fd8dcc99f1dbdc7b7d35e2d
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: THREEFISH-512-CBC
+algorithm_aliases:
+  - Threefish
+  - Threefish-512
+  - Threefish CBC
+  - threefish_512_cbc
+  - THREEFISH-512-CBC
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/Threefish/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: cbc_direct
+  key_source_file: CREBench/Threefish/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1727740800
+  key_seed_note: fixed_timestamp_utc_2024_10_01_00_00_00
+  key_length_bytes: 64
+  block_size_bytes: 64
+  iv_length_bytes: 64
+  target_length_bytes: 64
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: threefish_tables
+  compile_define: CONSTXOR_THREEFISH_TABLES
+  source_file: src/threefish.c
+  tables:
+    - symbol: threefish_c240
+      ctype: uint64_t
+      accessor: constxor_threefish_c240
+    - symbol: r512
+      ctype: uint8_t
+      accessor: constxor_threefish_r512
+    - symbol: p512
+      ctype: uint8_t
+      accessor: constxor_threefish_p512
+

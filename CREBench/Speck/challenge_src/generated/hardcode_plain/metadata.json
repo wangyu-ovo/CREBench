@@ -1,0 +1,10 @@
+{
+  "challenge": "Speck",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "34bf90fdec2c6e3a",
+  "key": "8d3dd0d271b1bad9db88e689",
+  "iv": "",
+  "target_ciphertext": "accd6dc131285533",
+  "test_vectors_path": "CREBench/Speck/test_vectors-hardcode_plain.json"
+}

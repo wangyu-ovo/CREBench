@@ -1,0 +1,43 @@
+
+void FUN_001015c0(void *param_1,ulong param_2,long param_3,uint *param_4)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  uint local_24;
+  uint local_20;
+  int local_1c;
+  uint local_18;
+  
+  memcpy(param_4,param_1,param_2 * 4);
+  uVar2 = (int)param_2 - 1;
+  local_24 = param_4[uVar2];
+  local_1c = (int)(0x34 / (param_2 & 0xffffffff)) + 6;
+  local_18 = 0;
+  if (uVar2 != 0) {
+    while (local_1c != 0) {
+      local_18 = local_18 + 0x9e3779b9;
+      uVar3 = local_18 >> 2 & 3;
+      for (local_20 = 0; local_20 < uVar2; local_20 = local_20 + 1) {
+        uVar1 = param_4[local_20 + 1];
+        param_4[local_20] =
+             param_4[local_20] +
+             ((local_24 >> 5 ^ uVar1 << 2) + (local_24 << 4 ^ uVar1 >> 3) ^
+             (*(uint *)(param_3 + (ulong)(local_20 & 3 ^ uVar3) * 4) ^ local_24) +
+             (local_18 ^ uVar1));
+        local_24 = param_4[local_20];
+      }
+      uVar1 = *param_4;
+      param_4[uVar2] =
+           param_4[uVar2] +
+           ((local_24 >> 5 ^ uVar1 << 2) + (local_24 << 4 ^ uVar1 >> 3) ^
+           (*(uint *)(param_3 + (ulong)(local_20 & 3 ^ uVar3) * 4) ^ local_24) + (local_18 ^ uVar1))
+      ;
+      local_24 = param_4[uVar2];
+      local_1c = local_1c + -1;
+    }
+  }
+  return;
+}
+

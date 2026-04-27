@@ -1,0 +1,37 @@
+[
+  {
+    "plaintext": "78309f62f05dac232032998d74e4c8c5",
+    "key": "cfadda06dbac265f",
+    "iv": "af55d48bb3f42f5b",
+    "ciphertext": "189f043d4f8ac523699c562598d7924d",
+    "block_size": 8
+  },
+  {
+    "plaintext": "82e397f095f3c9c98395be81aeccec79",
+    "key": "cfadda06dbac265f",
+    "iv": "af55d48bb3f42f5b",
+    "ciphertext": "d455a6fa0fb1c6721a9da92cfc374e3b",
+    "block_size": 8
+  },
+  {
+    "plaintext": "6d3ab7ef83da26850ea119479e3138b9",
+    "key": "cfadda06dbac265f",
+    "iv": "af55d48bb3f42f5b",
+    "ciphertext": "ec026083550a013dd3d5b8257ffb6f40",
+    "block_size": 8
+  },
+  {
+    "plaintext": "76f7ab093617283fcf1c7e7ab6778e0e",
+    "key": "cfadda06dbac265f",
+    "iv": "af55d48bb3f42f5b",
+    "ciphertext": "6fed94b9158f4a5285b78346cb989f1d",
+    "block_size": 8
+  },
+  {
+    "plaintext": "7d6718601d2b08a73dbec7df3fd5bfef",
+    "key": "cfadda06dbac265f",
+    "iv": "af55d48bb3f42f5b",
+    "ciphertext": "2bb2986602c129dbd028a8d7f1a25885",
+    "block_size": 8
+  }
+]

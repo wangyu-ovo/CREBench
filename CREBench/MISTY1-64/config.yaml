@@ -1,0 +1,56 @@
+name: misty1
+publc_path: CREBench/MISTY1-64/public
+flag: c9dcc5f2845b8aa3c9289cbb781fa729992d703dc01d91d2e58a5d20f45402363b95618b7be29c6ca6f68a7704ab00826eb5e65d2854a6e78ad3150fcfcbc630
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: MISTY1-64-ECB
+algorithm_aliases:
+  - MISTY1
+  - MISTY1-64
+  - MISTY1 ECB
+  - misty1_64_ecb
+  - MISTY1-64-ECB
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/MISTY1-64/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: fragmented_build
+
+template_metadata:
+  wrapper_family: multi_block_ecb
+  key_source_file: CREBench/MISTY1-64/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1727740800
+  key_seed_note: fixed_timestamp_utc_2024_10_01_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 8
+  iv_length_bytes: 0
+  target_length_bytes: 64
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: misty1_tables
+  compile_define: CONSTXOR_MISTY1_TABLES
+  source_file: src/misty1.c
+  tables:
+    - symbol: S7
+      ctype: uint8_t
+      accessor: constxor_misty1_s7
+    - symbol: S9
+      ctype: uint16_t
+      accessor: constxor_misty1_s9
+

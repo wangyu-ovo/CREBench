@@ -1,0 +1,10 @@
+{
+  "challenge": "Simon",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "3f39194df10c9d5b",
+  "key": "1c3af1b79a63597ba19f185d",
+  "iv": "",
+  "target_ciphertext": "51143b6e1d957926",
+  "test_vectors_path": "CREBench/Simon/test_vectors-weak_prng_seeded.json"
+}

@@ -1,0 +1,20 @@
+
+undefined4 FUN_00101705(undefined4 param_1,int param_2,long param_3)
+
+{
+  ushort uVar1;
+  ushort uVar2;
+  undefined4 local_c;
+  
+  uVar1 = FUN_0010164e((ushort)((uint)param_1 >> 0x10) ^ *(ushort *)(param_3 + (long)param_2 * 2),
+                       *(undefined2 *)(param_3 + ((long)((param_2 + 5) % 8) + 8) * 2));
+  uVar1 = uVar1 ^ (ushort)param_1;
+  uVar2 = FUN_0010164e((ushort)param_1 ^ *(ushort *)(param_3 + (long)((param_2 + 2) % 8) * 2),
+                       *(undefined2 *)(param_3 + ((long)((param_2 + 1) % 8) + 8) * 2));
+  uVar2 = uVar2 ^ uVar1;
+  uVar1 = FUN_0010164e(uVar1 ^ *(ushort *)(param_3 + (long)((param_2 + 7) % 8) * 2),
+                       *(undefined2 *)(param_3 + ((long)((param_2 + 3) % 8) + 8) * 2));
+  local_c = CONCAT22(uVar2 ^ *(ushort *)(param_3 + (long)((param_2 + 4) % 8) * 2),uVar1 ^ uVar2);
+  return local_c;
+}
+

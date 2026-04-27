@@ -1,0 +1,10 @@
+{
+  "challenge": "SHARK",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "982700c197d58057",
+  "key": "0f7a9fa5867319ebc82a619cdc278691",
+  "iv": "",
+  "target_ciphertext": "3110c4b3d6244bd9",
+  "test_vectors_path": "CREBench/SHARK/test_vectors-weak_prng_seeded.json"
+}

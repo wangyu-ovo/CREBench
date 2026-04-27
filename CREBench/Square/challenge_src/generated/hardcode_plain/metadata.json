@@ -1,0 +1,10 @@
+{
+  "challenge": "Square",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "1afcce7e2ed14bc77cdd74a9af92689f",
+  "key": "dab04c814eda94a03085b04e0f4ef9bf",
+  "iv": "",
+  "target_ciphertext": "52a1cedba07b937308f1e13e0b60ecbe",
+  "test_vectors_path": "CREBench/Square/test_vectors-hardcode_plain.json"
+}

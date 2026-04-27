@@ -1,0 +1,19 @@
+
+void FUN_00101742(void)
+
+{
+  uint local_10;
+  uint local_c;
+  
+  local_10 = 1;
+  for (local_c = 0; local_c < 0xff; local_c = local_c + 1) {
+    (&DAT_00105040)[local_c] = (char)local_10;
+    local_10 = local_10 << 1;
+    if ((local_10 & 0x100) != 0) {
+      local_10 = local_10 ^ 0x165;
+    }
+  }
+  DAT_0010513f = 0;
+  return;
+}
+

@@ -1,0 +1,10 @@
+{
+  "challenge": "RC6",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "7f99111f347562684e18a37dca254ba9b71307456f6523a398fb063acea71afe",
+  "key": "814a7e2552c1c0db9dd47b16aba60e4e",
+  "iv": "87b63e9c8d704989e5bdd1dd0c017255",
+  "target_ciphertext": "a3e7f8edacd2be459ca925323353fd167416c04b1cadfbc2ca11f63e12444a66",
+  "test_vectors_path": "CREBench/RC6/test_vectors-hardcode_plain.json"
+}

@@ -1,0 +1,10 @@
+{
+  "challenge": "Speck",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "34bf90fdec2c6e3a",
+  "key": "c8f9a38067a8f8dd0cd20c8c",
+  "iv": "",
+  "target_ciphertext": "aba4051071a87758",
+  "test_vectors_path": "CREBench/Speck/test_vectors-weak_prng_seeded.json"
+}

@@ -1,0 +1,54 @@
+name: serpent
+publc_path: CREBench/Serpent/public
+flag: ec4b46ae323cec71f659c934bd7d22fa
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: SERPENT-ECB
+algorithm_aliases:
+  - Serpent
+  - Serpent ECB
+  - serpent_ecb
+  - SERPENT-ECB
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/Serpent/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: fragmented_build
+
+template_metadata:
+  wrapper_family: single_block_direct
+  key_source_file: CREBench/Serpent/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1733011200
+  key_seed_note: fixed_timestamp_utc_2024_12_01_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 16
+  iv_length_bytes: 0
+  target_length_bytes: 16
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: serpent_magic
+  compile_define: CONSTXOR_SERPENT_TABLES
+  source_file: src/serpent-key.c
+  extra_source_files:
+    - src/serpent.c
+  tables:
+    - symbol: serpent_magic
+      ctype: uint32_t
+      accessor: constxor_serpent_magic
+

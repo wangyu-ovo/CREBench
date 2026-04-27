@@ -1,0 +1,10 @@
+{
+  "challenge": "SM4-CBC-Official",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "a454eec650748622d2421da0c4441e4778a3ecbc0c68451e115f4521b533f478",
+  "key": "f6ea45cdda5681e08501aa47819219b8",
+  "iv": "6203731cd2220b37e7e2ea9f12d639dc",
+  "target_ciphertext": "c44fc089fb0eadb1e8aade47dcfcf00aa09ab5f588c4e9729e21f314e3ac5912",
+  "test_vectors_path": "CREBench/SM4-CBC-Official/test_vectors-hardcode_plain.json"
+}

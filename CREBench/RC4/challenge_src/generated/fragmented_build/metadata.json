@@ -1,0 +1,10 @@
+{
+  "challenge": "RC4",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "d69813ad06d6a43efc47f52675e08cec6bd01431983530463afa2758da7472eb",
+  "key": "2f923fac605a486ba63c1c8020597eb2",
+  "iv": "",
+  "target_ciphertext": "456592dbbeead690321c0f45538a55c59b44f53c7b034a2bf36df591abfa0eb9",
+  "test_vectors_path": "CREBench/RC4/test_vectors-fragmented_build.json"
+}

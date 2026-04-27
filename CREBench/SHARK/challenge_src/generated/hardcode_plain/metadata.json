@@ -1,0 +1,10 @@
+{
+  "challenge": "SHARK",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "982700c197d58057",
+  "key": "62c4afe3c21653c94a0b31249216c02a",
+  "iv": "",
+  "target_ciphertext": "fb704c864565ab92",
+  "test_vectors_path": "CREBench/SHARK/test_vectors-hardcode_plain.json"
+}

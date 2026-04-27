@@ -1,0 +1,20 @@
+
+undefined8 FUN_00101b1e(long param_1,long param_2,long param_3)
+
+{
+  undefined8 uVar1;
+  
+  if (((param_1 == 0) || (param_2 == 0)) || (param_3 != 0x10)) {
+    uVar1 = 0xffffffff;
+  }
+  else {
+    uVar1 = FUN_001016e3(param_2);
+    *(undefined8 *)(param_1 + 0x40) = uVar1;
+    uVar1 = FUN_001016e3(param_2 + 8);
+    *(undefined8 *)(param_1 + 0x48) = uVar1;
+    FUN_00101870(param_1);
+    uVar1 = 0;
+  }
+  return uVar1;
+}
+

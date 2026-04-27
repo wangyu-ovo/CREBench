@@ -1,0 +1,10 @@
+{
+  "challenge": "SM4-CBC-Official",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "a454eec650748622d2421da0c4441e4778a3ecbc0c68451e115f4521b533f478",
+  "key": "42a8ac0fe74cc615080e9d3750fdabd6",
+  "iv": "6203731cd2220b37e7e2ea9f12d639dc",
+  "target_ciphertext": "500720b213cb99cdb7a9a53efb278ed287d379c590e70abfc23543b5b270b4c7",
+  "test_vectors_path": "CREBench/SM4-CBC-Official/test_vectors-fragmented_build.json"
+}

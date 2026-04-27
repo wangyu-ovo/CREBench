@@ -1,0 +1,40 @@
+
+void FUN_00101225(long param_1,long param_2)
+
+{
+  uint uVar1;
+  int iVar2;
+  uint uVar3;
+  int local_24;
+  int local_20;
+  int local_1c;
+  
+  for (local_24 = 0; local_24 < 0x10; local_24 = local_24 + 1) {
+    iVar2 = local_24;
+    if (local_24 < 0) {
+      iVar2 = local_24 + 3;
+    }
+    *(uint *)(param_2 + (long)(iVar2 >> 2) * 4) =
+         *(uint *)(param_2 + (long)(iVar2 >> 2) * 4) |
+         (uint)*(byte *)(param_1 + local_24) << ((byte)((0xf - local_24) % 4 << 3) & 0x1f);
+  }
+  for (local_20 = 1; local_20 < 9; local_20 = local_20 + 1) {
+    uVar1 = *(uint *)(param_2 + (long)((local_20 + -1) * 4) * 4);
+    uVar3 = FUN_00101209(*(undefined4 *)(param_2 + ((long)((local_20 + -1) * 4) + 3) * 4),8);
+    *(uint *)(param_2 + (long)(local_20 << 2) * 4) = (&DAT_00104120)[local_20 + -1] ^ uVar1 ^ uVar3;
+    *(uint *)(param_2 + ((long)(local_20 << 2) + 1) * 4) =
+         *(uint *)(param_2 + (long)(local_20 << 2) * 4) ^
+         *(uint *)(param_2 + ((long)((local_20 + -1) * 4) + 1) * 4);
+    *(uint *)(param_2 + ((long)(local_20 << 2) + 2) * 4) =
+         *(uint *)(param_2 + ((long)(local_20 << 2) + 1) * 4) ^
+         *(uint *)(param_2 + ((long)((local_20 + -1) * 4) + 2) * 4);
+    *(uint *)(param_2 + ((long)(local_20 << 2) + 3) * 4) =
+         *(uint *)(param_2 + ((long)(local_20 << 2) + 2) * 4) ^
+         *(uint *)(param_2 + ((long)((local_20 + -1) * 4) + 3) * 4);
+  }
+  for (local_1c = 0; local_1c < 8; local_1c = local_1c + 1) {
+    FUN_00101531(param_2 + (long)(local_1c << 2) * 4,(long)(local_1c << 2) * 4 + param_2);
+  }
+  return;
+}
+

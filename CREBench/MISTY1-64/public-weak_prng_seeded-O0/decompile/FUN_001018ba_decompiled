@@ -1,0 +1,22 @@
+
+undefined4 FUN_001018ba(undefined4 param_1,uint param_2,long param_3)
+
+{
+  ushort uVar1;
+  ushort local_c;
+  ushort local_a;
+  
+  local_c = (ushort)((uint)param_1 >> 0x10);
+  if ((param_2 & 1) == 0) {
+    local_a = (ushort)param_1 ^ *(ushort *)(param_3 + (long)((int)param_2 / 2) * 2) & local_c;
+    uVar1 = *(ushort *)(param_3 + ((long)(((int)param_2 / 2 + 6) % 8) + 8) * 2) | local_a;
+  }
+  else {
+    local_a = (ushort)param_1 ^
+              *(ushort *)(param_3 + ((long)(((int)(param_2 - 1) / 2 + 2) % 8) + 8) * 2) & local_c;
+    uVar1 = *(ushort *)(param_3 + (long)(((int)(param_2 - 1) / 2 + 4) % 8) * 2) | local_a;
+  }
+  local_c = local_c ^ uVar1;
+  return CONCAT22(local_c,local_a);
+}
+

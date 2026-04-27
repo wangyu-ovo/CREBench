@@ -1,0 +1,10 @@
+{
+  "challenge": "Speck",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "34bf90fdec2c6e3a",
+  "key": "64a80aa6beaf397b8c09cb55",
+  "iv": "",
+  "target_ciphertext": "f0f65d5f4057d18e",
+  "test_vectors_path": "CREBench/Speck/test_vectors-fragmented_build.json"
+}

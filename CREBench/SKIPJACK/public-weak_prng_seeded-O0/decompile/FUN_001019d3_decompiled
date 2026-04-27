@@ -1,0 +1,60 @@
+
+void FUN_001019d3(undefined8 param_1,long param_2,long param_3)
+
+{
+  ushort uVar1;
+  ushort uVar2;
+  long in_FS_OFFSET;
+  ushort local_24;
+  ushort local_22;
+  ushort local_20;
+  ushort local_1e;
+  undefined4 local_18;
+  int local_14;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_24 = FUN_00101662(param_2);
+  local_22 = FUN_00101662(param_2 + 2);
+  local_20 = FUN_00101662(param_2 + 4);
+  local_1e = FUN_00101662(param_2 + 6);
+  local_18 = 0;
+  for (local_14 = 1; local_14 < 9; local_14 = local_14 + 1) {
+    uVar1 = FUN_001016c2(local_1e,&local_18,param_1);
+    local_1e = (ushort)local_14 ^ uVar1 ^ local_24;
+    local_24 = local_22;
+    local_22 = local_20;
+    local_20 = uVar1;
+  }
+  for (; uVar1 = local_24, local_14 < 0x11; local_14 = local_14 + 1) {
+    uVar2 = FUN_001016c2(local_1e,&local_18,param_1);
+    local_24 = local_22;
+    local_22 = (ushort)local_14 ^ local_1e ^ local_20;
+    local_1e = uVar1;
+    local_20 = uVar2;
+  }
+  for (; local_14 < 0x19; local_14 = local_14 + 1) {
+    uVar1 = FUN_001016c2(local_1e,&local_18,param_1);
+    local_1e = (ushort)local_14 ^ uVar1 ^ local_24;
+    local_24 = local_22;
+    local_22 = local_20;
+    local_20 = uVar1;
+  }
+  for (; uVar1 = local_24, local_14 < 0x21; local_14 = local_14 + 1) {
+    uVar2 = FUN_001016c2(local_1e,&local_18,param_1);
+    local_24 = local_22;
+    local_22 = (ushort)local_14 ^ local_1e ^ local_20;
+    local_1e = uVar1;
+    local_20 = uVar2;
+  }
+  FUN_0010168d(param_3,local_24);
+  FUN_0010168d(param_3 + 2,local_22);
+  FUN_0010168d(param_3 + 4,local_20);
+  FUN_0010168d(param_3 + 6,local_1e);
+  if (local_10 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+

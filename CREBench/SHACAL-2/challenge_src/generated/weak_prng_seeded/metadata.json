@@ -1,0 +1,10 @@
+{
+  "challenge": "SHACAL-2",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "cb05bbf9bb43157d1446cd259c5ee25bcd04ef3c107afac7864184a7c2b3786c",
+  "key": "2ca7284dfdedb4eb43cc76b41a09b608837dfbed2725d10b817a83bebb7af41f",
+  "iv": "dbeb531f4ba119ef36848e74289a45b7faf7af05402cabf779368f1d1640968c",
+  "target_ciphertext": "fcc69f90817cada389cabb404288a27224f2c3fe7b54f2c855eeb1517f755777",
+  "test_vectors_path": "CREBench/SHACAL-2/test_vectors-weak_prng_seeded.json"
+}

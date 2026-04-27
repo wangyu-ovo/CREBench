@@ -1,0 +1,31 @@
+
+uint FUN_00101770(uint param_1,uint *param_2,long param_3)
+
+{
+  byte bVar1;
+  byte bVar2;
+  byte bVar3;
+  uint uVar4;
+  undefined3 uVar5;
+  byte bVar6;
+  byte bVar7;
+  
+  bVar1 = *(byte *)(param_3 + (int)*param_2);
+  bVar2 = (&DAT_001020a0)[(int)*param_2];
+  uVar5 = (undefined3)(param_1 >> 8);
+  *param_2 = (uint)bVar2;
+  bVar6 = (byte)(param_1 >> 8) ^ (&DAT_001020c0)[(bVar1 ^ param_1) & 0xff];
+  bVar7 = (byte)param_1 ^
+          (&DAT_001020c0)
+          [((uint)*(byte *)(param_3 + (ulong)bVar2) ^ CONCAT31(uVar5,bVar6) & 0xffff00ff) & 0xff];
+  bVar1 = (&DAT_001020a0)[(int)(uint)bVar2];
+  *param_2 = (uint)bVar1;
+  bVar2 = *(byte *)(param_3 + (ulong)bVar1);
+  bVar1 = (&DAT_001020a0)[(int)(uint)bVar1];
+  *param_2 = (uint)bVar1;
+  bVar3 = *(byte *)(param_3 + (ulong)bVar1);
+  uVar4 = CONCAT31(uVar5,bVar6 ^ (&DAT_001020c0)[bVar2 ^ bVar7]) & 0xffff00ff;
+  *param_2 = (uint)(byte)(&DAT_001020a0)[(int)(uint)bVar1];
+  return uVar4 << 8 | (uint)(bVar7 ^ (&DAT_001020c0)[(bVar3 ^ uVar4) & 0xff]);
+}
+

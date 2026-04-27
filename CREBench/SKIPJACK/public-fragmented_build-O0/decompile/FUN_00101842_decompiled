@@ -1,0 +1,19 @@
+
+undefined2 FUN_00101842(undefined2 param_1,uint *param_2,long param_3)
+
+{
+  byte bVar1;
+  byte bVar2;
+  
+  bVar2 = (byte)((ushort)param_1 >> 8);
+  *param_2 = (uint)(byte)(&DAT_001031b0)[(int)*param_2];
+  bVar1 = (byte)param_1 ^ (&DAT_001030a0)[(int)(uint)(*(byte *)(param_3 + (int)*param_2) ^ bVar2)];
+  *param_2 = (uint)(byte)(&DAT_001031b0)[(int)*param_2];
+  bVar2 = bVar2 ^ (&DAT_001030a0)[(int)(uint)(*(byte *)(param_3 + (int)*param_2) ^ bVar1)];
+  *param_2 = (uint)(byte)(&DAT_001031b0)[(int)*param_2];
+  bVar1 = bVar1 ^ (&DAT_001030a0)[(int)(uint)(*(byte *)(param_3 + (int)*param_2) ^ bVar2)];
+  *param_2 = (uint)(byte)(&DAT_001031b0)[(int)*param_2];
+  return CONCAT11(bVar2 ^ (&DAT_001030a0)[(int)(uint)(*(byte *)(param_3 + (int)*param_2) ^ bVar1)],
+                  bVar1);
+}
+

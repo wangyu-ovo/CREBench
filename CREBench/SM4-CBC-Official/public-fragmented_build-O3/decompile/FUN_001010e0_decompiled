@@ -1,0 +1,517 @@
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+bool FUN_001010e0(int param_1,undefined8 *param_2)
+
+{
+  char cVar1;
+  undefined uVar2;
+  int iVar3;
+  uint uVar4;
+  size_t sVar5;
+  ulong uVar6;
+  uint uVar7;
+  long lVar8;
+  char *pcVar9;
+  uint uVar10;
+  ulong uVar11;
+  uint uVar12;
+  uint uVar13;
+  uint uVar14;
+  uint uVar15;
+  uint uVar16;
+  uint uVar17;
+  undefined8 *puVar18;
+  ulong *puVar19;
+  long in_FS_OFFSET;
+  bool bVar20;
+  byte local_1e8;
+  byte local_1d0;
+  byte local_1cc;
+  byte local_1c8;
+  byte local_1c4;
+  uint local_128;
+  uint local_124;
+  uint local_120;
+  uint local_11c;
+  uint local_118;
+  uint local_114;
+  uint local_110;
+  uint local_10c;
+  uint local_108;
+  uint local_104;
+  uint local_100;
+  uint local_fc;
+  uint local_f8;
+  uint local_f4;
+  uint local_f0;
+  uint local_ec;
+  uint local_e8;
+  uint local_e4;
+  uint local_e0;
+  uint local_dc;
+  uint local_d8;
+  uint local_d4;
+  uint local_d0;
+  uint local_cc;
+  uint local_c8;
+  uint local_c4;
+  uint local_c0;
+  uint local_bc;
+  uint local_b8;
+  uint local_b4;
+  uint local_b0;
+  uint local_ac;
+  undefined local_a8 [16];
+  ulong local_98 [4];
+  undefined8 local_78;
+  byte local_70 [24];
+  undefined4 local_58;
+  undefined4 uStack_54;
+  undefined4 uStack_50;
+  undefined4 uStack_4c;
+  undefined4 local_48;
+  undefined4 uStack_44;
+  undefined4 uStack_40;
+  undefined4 uStack_3c;
+  long local_30;
+  
+  local_30 = *(long *)(in_FS_OFFSET + 0x28);
+  if (param_1 == 2) {
+    FUN_001025e0(local_a8);
+    pcVar9 = (char *)param_2[1];
+    local_58 = _DAT_00103240;
+    uStack_54 = _UNK_00103244;
+    uStack_50 = _UNK_00103248;
+    uStack_4c = _UNK_0010324c;
+    local_48 = _DAT_00103250;
+    uStack_44 = _UNK_00103254;
+    uStack_40 = _UNK_00103258;
+    uStack_3c = _UNK_0010325c;
+    sVar5 = strlen(pcVar9);
+    if (sVar5 == 0x40) {
+      lVar8 = 0;
+      do {
+        cVar1 = pcVar9[lVar8 * 2];
+        iVar3 = (int)cVar1;
+        if ((byte)(cVar1 - 0x30U) < 10) {
+          uVar4 = iVar3 - 0x30;
+        }
+        else if ((byte)(cVar1 + 0x9fU) < 6) {
+          uVar4 = iVar3 - 0x57;
+        }
+        else {
+          uVar4 = iVar3 - 0x37;
+          if (5 < (byte)(cVar1 + 0xbfU)) {
+            uVar4 = 0xffffffff;
+          }
+        }
+        cVar1 = pcVar9[lVar8 * 2 + 1];
+        iVar3 = (int)cVar1;
+        if ((byte)(cVar1 - 0x30U) < 10) {
+          uVar10 = iVar3 - 0x30;
+        }
+        else if ((byte)(cVar1 + 0x9fU) < 6) {
+          uVar10 = iVar3 - 0x57;
+        }
+        else {
+          if (5 < (byte)(cVar1 + 0xbfU)) goto LAB_00101227;
+          uVar10 = iVar3 - 0x37;
+        }
+        if ((int)(uVar4 | uVar10) < 0) goto LAB_00101227;
+        puVar18 = &local_78;
+        *(byte *)((long)&local_78 + lVar8) = (byte)(uVar4 << 4) | (byte)uVar10;
+        lVar8 = lVar8 + 1;
+      } while (lVar8 != 0x20);
+      uVar11 = 0xdc39d6129feae2e7;
+      FUN_00102640(&local_128,local_a8);
+      uVar6 = 0x370b22d21c730362;
+      puVar19 = local_98;
+      do {
+        uVar12 = (uint)(byte)((byte)(uVar6 >> 0x28) ^ *(byte *)((long)puVar18 + 5)) << 0x10 |
+                 (uint)(byte)((byte)(uVar6 >> 0x20) ^ *(byte *)((long)puVar18 + 4)) << 0x18 |
+                 (uint)(byte)((byte)(uVar6 >> 0x38) ^ *(byte *)((long)puVar18 + 7)) |
+                 (uint)(byte)((byte)(uVar6 >> 0x30) ^ *(byte *)((long)puVar18 + 6)) << 8;
+        uVar4 = (uint)(byte)((byte)(uVar11 >> 8) ^ *(byte *)((long)puVar18 + 9)) << 0x10 |
+                ((uint)*(byte *)(puVar18 + 1) ^ (uint)uVar11) << 0x18 |
+                (uint)(byte)((byte)(uVar11 >> 0x18) ^ *(byte *)((long)puVar18 + 0xb)) |
+                (uint)(byte)((byte)(uVar11 >> 0x10) ^ *(byte *)((long)puVar18 + 10)) << 8;
+        uVar7 = (uint)(byte)((byte)(uVar11 >> 0x38) ^ *(byte *)((long)puVar18 + 0xf)) |
+                (uint)(byte)((byte)(uVar11 >> 0x20) ^ *(byte *)((long)puVar18 + 0xc)) << 0x18 |
+                (uint)(byte)((byte)(uVar11 >> 0x28) ^ *(byte *)((long)puVar18 + 0xd)) << 0x10 |
+                (uint)(byte)((byte)(uVar11 >> 0x30) ^ *(byte *)((long)puVar18 + 0xe)) << 8;
+        uVar10 = uVar12 ^ uVar4 ^ local_128 ^ uVar7;
+        uVar13 = (uint)(byte)(&DAT_00103140)[uVar10 >> 0x10 & 0xff] << 0x10 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 & 0xff];
+        uVar14 = uVar13 | (uint)(byte)(&DAT_00103140)[(int)(uVar10 >> 8 & 0xff)] << 8;
+        uVar17 = (uVar14 >> 0xe | uVar14 << 0x12) ^
+                 (uVar14 << 10 | uVar13 >> 0x16) ^
+                 ((uint)(byte)((byte)(uVar6 >> 0x18) ^ *(byte *)((long)puVar18 + 3)) |
+                  ((uint)*(byte *)puVar18 ^ (uint)uVar6) << 0x18 |
+                  (uint)(byte)((byte)(uVar6 >> 8) ^ *(byte *)((long)puVar18 + 1)) << 0x10 |
+                 (uint)(byte)((byte)(uVar6 >> 0x10) ^ *(byte *)((long)puVar18 + 2)) << 8) ^ uVar14 ^
+                 (uVar14 << 2 | ((uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18) >> 0x1e) ^
+                 (uVar14 >> 8 | (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] << 0x18);
+        uVar10 = uVar4 ^ uVar7 ^ local_124 ^ uVar17;
+        uVar14 = (uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] |
+                 (uint)(byte)(&DAT_00103140)[uVar10 >> 0x10 & 0xff] << 0x10;
+        uVar13 = (uint)(byte)(&DAT_00103140)[(int)(uVar10 >> 8 & 0xff)] << 8 | uVar14;
+        uVar16 = (uVar13 >> 0xe | uVar13 << 0x12) ^
+                 (uVar13 << 10 | uVar14 >> 0x16) ^
+                 uVar12 ^ uVar13 ^
+                 (uVar13 << 2 | ((uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18) >> 0x1e) ^
+                 (uVar13 >> 8 | (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] << 0x18);
+        uVar10 = local_120 ^ uVar7 ^ uVar17 ^ uVar16;
+        uVar13 = (uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] |
+                 (uint)(byte)(&DAT_00103140)[uVar10 >> 0x10 & 0xff] << 0x10;
+        uVar12 = (uint)(byte)(&DAT_00103140)[(int)(uVar10 >> 8 & 0xff)] << 8 | uVar13;
+        uVar15 = (uVar12 >> 0xe | uVar12 << 0x12) ^
+                 uVar4 ^ uVar12 ^
+                 (uVar12 << 2 | ((uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18) >> 0x1e) ^
+                 (uVar12 << 10 | uVar13 >> 0x16) ^
+                 (uVar12 >> 8 | (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] << 0x18);
+        uVar12 = uVar17 ^ uVar16 ^ local_11c ^ uVar15;
+        uVar4 = (uint)(byte)(&DAT_00103140)[uVar12 >> 0x10 & 0xff] << 0x10 |
+                (uint)(byte)(&DAT_00103140)[uVar12 >> 0x18] << 0x18 |
+                (uint)(byte)(&DAT_00103140)[uVar12 & 0xff];
+        uVar10 = uVar4 | (uint)(byte)(&DAT_00103140)[(int)(uVar12 >> 8 & 0xff)] << 8;
+        uVar14 = (uVar10 >> 0xe | uVar10 << 0x12) ^
+                 uVar7 ^ uVar10 ^
+                 (uVar10 << 2 | ((uint)(byte)(&DAT_00103140)[uVar12 >> 0x18] << 0x18) >> 0x1e) ^
+                 (uVar10 << 10 | uVar4 >> 0x16) ^
+                 (uVar10 >> 8 | (uint)(byte)(&DAT_00103140)[uVar12 & 0xff] << 0x18);
+        uVar4 = local_118 ^ uVar16 ^ uVar15 ^ uVar14;
+        uVar10 = (uint)(byte)(&DAT_00103140)[uVar4 >> 0x10 & 0xff] << 0x10 |
+                 (uint)(byte)(&DAT_00103140)[uVar4 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar4 & 0xff];
+        uVar12 = (uint)(byte)(&DAT_00103140)[(int)(uVar4 >> 8 & 0xff)] << 8 | uVar10;
+        uVar13 = (uVar12 >> 8 | (uint)(byte)(&DAT_00103140)[uVar4 & 0xff] << 0x18) ^
+                 (uVar12 >> 0xe | uVar12 << 0x12) ^
+                 (uVar12 << 10 | uVar10 >> 0x16) ^
+                 uVar17 ^ uVar12 ^
+                 (uVar12 << 2 | ((uint)(byte)(&DAT_00103140)[uVar4 >> 0x18] << 0x18) >> 0x1e);
+        uVar12 = local_114 ^ uVar15 ^ uVar14 ^ uVar13;
+        uVar10 = (uint)(byte)(&DAT_00103140)[uVar12 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar12 & 0xff] |
+                 (uint)(byte)(&DAT_00103140)[uVar12 >> 0x10 & 0xff] << 0x10;
+        uVar4 = (uint)(byte)(&DAT_00103140)[(int)(uVar12 >> 8 & 0xff)] << 8 | uVar10;
+        uVar4 = (uVar4 >> 8 | (uint)(byte)(&DAT_00103140)[uVar12 & 0xff] << 0x18) ^
+                (uVar4 >> 0xe | uVar4 << 0x12) ^
+                (uVar4 << 10 | uVar10 >> 0x16) ^
+                uVar16 ^ uVar4 ^
+                (uVar4 << 2 | ((uint)(byte)(&DAT_00103140)[uVar12 >> 0x18] << 0x18) >> 0x1e);
+        uVar7 = local_110 ^ uVar14 ^ uVar13 ^ uVar4;
+        uVar10 = (uint)(byte)(&DAT_00103140)[uVar7 >> 0x10 & 0xff] << 0x10 |
+                 (uint)(byte)(&DAT_00103140)[uVar7 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar7 & 0xff];
+        uVar12 = uVar10 | (uint)(byte)(&DAT_00103140)[(int)(uVar7 >> 8 & 0xff)] << 8;
+        uVar7 = (uVar12 >> 8 | (uint)(byte)(&DAT_00103140)[uVar7 & 0xff] << 0x18) ^
+                (uVar12 >> 0xe | uVar12 << 0x12) ^
+                (uVar12 << 10 | uVar10 >> 0x16) ^
+                uVar15 ^ uVar12 ^
+                (uVar12 << 2 | ((uint)(byte)(&DAT_00103140)[uVar7 >> 0x18] << 0x18) >> 0x1e);
+        uVar10 = uVar13 ^ uVar4 ^ local_10c ^ uVar7;
+        uVar15 = (uint)(byte)(&DAT_00103140)[uVar10 >> 0x10 & 0xff] << 0x10 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 & 0xff];
+        uVar12 = (uint)(byte)(&DAT_00103140)[(int)(uVar10 >> 8 & 0xff)] << 8 | uVar15;
+        uVar12 = (uVar12 >> 8 | (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] << 0x18) ^
+                 (uVar12 >> 0xe | uVar12 << 0x12) ^
+                 (uVar12 << 10 | uVar15 >> 0x16) ^
+                 uVar14 ^ uVar12 ^
+                 (uVar12 << 2 | ((uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18) >> 0x1e);
+        uVar10 = local_108 ^ uVar4 ^ uVar7 ^ uVar12;
+        uVar15 = (uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] |
+                 (uint)(byte)(&DAT_00103140)[uVar10 >> 0x10 & 0xff] << 0x10;
+        uVar14 = (uint)(byte)(&DAT_00103140)[(int)(uVar10 >> 8 & 0xff)] << 8 | uVar15;
+        uVar15 = (uVar14 >> 8 | (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] << 0x18) ^
+                 (uVar14 >> 0xe | uVar14 << 0x12) ^
+                 (uVar14 << 10 | uVar15 >> 0x16) ^
+                 uVar13 ^ uVar14 ^
+                 (uVar14 << 2 | ((uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18) >> 0x1e);
+        uVar10 = local_104 ^ uVar7 ^ uVar12 ^ uVar15;
+        uVar14 = (uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] |
+                 (uint)(byte)(&DAT_00103140)[uVar10 >> 0x10 & 0xff] << 0x10;
+        uVar13 = (uint)(byte)(&DAT_00103140)[(int)(uVar10 >> 8 & 0xff)] << 8 | uVar14;
+        uVar14 = (uVar13 >> 8 | (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] << 0x18) ^
+                 (uVar13 >> 0xe | uVar13 << 0x12) ^
+                 (uVar13 << 10 | uVar14 >> 0x16) ^
+                 uVar4 ^ uVar13 ^
+                 (uVar13 << 2 | ((uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18) >> 0x1e);
+        uVar13 = local_100 ^ uVar12 ^ uVar15 ^ uVar14;
+        uVar4 = (uint)(byte)(&DAT_00103140)[uVar13 >> 0x10 & 0xff] << 0x10 |
+                (uint)(byte)(&DAT_00103140)[uVar13 >> 0x18] << 0x18 |
+                (uint)(byte)(&DAT_00103140)[uVar13 & 0xff];
+        uVar10 = uVar4 | (uint)(byte)(&DAT_00103140)[(int)(uVar13 >> 8 & 0xff)] << 8;
+        uVar4 = (uVar10 >> 8 | (uint)(byte)(&DAT_00103140)[uVar13 & 0xff] << 0x18) ^
+                (uVar10 >> 0xe | uVar10 << 0x12) ^
+                (uVar10 << 10 | uVar4 >> 0x16) ^
+                uVar7 ^ uVar10 ^
+                (uVar10 << 2 | ((uint)(byte)(&DAT_00103140)[uVar13 >> 0x18] << 0x18) >> 0x1e);
+        uVar13 = uVar15 ^ uVar14 ^ local_fc ^ uVar4;
+        uVar10 = (uint)(byte)(&DAT_00103140)[uVar13 >> 0x10 & 0xff] << 0x10 |
+                 (uint)(byte)(&DAT_00103140)[uVar13 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar13 & 0xff];
+        uVar7 = uVar10 | (uint)(byte)(&DAT_00103140)[(int)(uVar13 >> 8 & 0xff)] << 8;
+        uVar7 = (uVar7 >> 8 | (uint)(byte)(&DAT_00103140)[uVar13 & 0xff] << 0x18) ^
+                (uVar7 >> 0xe | uVar7 << 0x12) ^
+                (uVar7 << 10 | uVar10 >> 0x16) ^
+                uVar12 ^ uVar7 ^
+                (uVar7 << 2 | ((uint)(byte)(&DAT_00103140)[uVar13 >> 0x18] << 0x18) >> 0x1e);
+        uVar12 = local_f8 ^ uVar14 ^ uVar4 ^ uVar7;
+        uVar13 = (uint)(byte)(&DAT_00103140)[uVar12 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar12 & 0xff] |
+                 (uint)(byte)(&DAT_00103140)[uVar12 >> 0x10 & 0xff] << 0x10;
+        uVar10 = (uint)(byte)(&DAT_00103140)[(int)(uVar12 >> 8 & 0xff)] << 8 | uVar13;
+        uVar12 = (uVar10 >> 8 | (uint)(byte)(&DAT_00103140)[uVar12 & 0xff] << 0x18) ^
+                 (uVar10 >> 0xe | uVar10 << 0x12) ^
+                 (uVar10 << 10 | uVar13 >> 0x16) ^
+                 uVar15 ^ uVar10 ^
+                 (uVar10 << 2 | ((uint)(byte)(&DAT_00103140)[uVar12 >> 0x18] << 0x18) >> 0x1e);
+        uVar10 = local_f4 ^ uVar4 ^ uVar7 ^ uVar12;
+        uVar13 = (uint)(byte)(&DAT_00103140)[uVar10 >> 0x10 & 0xff] << 0x10 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 & 0xff];
+        uVar15 = (uint)(byte)(&DAT_00103140)[(int)(uVar10 >> 8 & 0xff)] << 8 | uVar13;
+        uVar15 = (uVar15 >> 8 | (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] << 0x18) ^
+                 (uVar15 >> 0xe | uVar15 << 0x12) ^
+                 (uVar15 << 10 | uVar13 >> 0x16) ^
+                 uVar14 ^ uVar15 ^
+                 (uVar15 << 2 | ((uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18) >> 0x1e);
+        uVar10 = local_f0 ^ uVar7 ^ uVar12 ^ uVar15;
+        uVar13 = (uint)(byte)(&DAT_00103140)[uVar10 >> 0x10 & 0xff] << 0x10 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 & 0xff];
+        uVar14 = uVar13 | (uint)(byte)(&DAT_00103140)[(int)(uVar10 >> 8 & 0xff)] << 8;
+        uVar14 = (uVar14 >> 8 | (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] << 0x18) ^
+                 (uVar14 >> 0xe | uVar14 << 0x12) ^
+                 (uVar14 << 10 | uVar13 >> 0x16) ^
+                 uVar4 ^ uVar14 ^
+                 (uVar14 << 2 | ((uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18) >> 0x1e);
+        uVar13 = uVar12 ^ uVar15 ^ local_ec ^ uVar14;
+        uVar4 = (uint)(byte)(&DAT_00103140)[uVar13 >> 0x10 & 0xff] << 0x10 |
+                (uint)(byte)(&DAT_00103140)[uVar13 >> 0x18] << 0x18 |
+                (uint)(byte)(&DAT_00103140)[uVar13 & 0xff];
+        uVar10 = uVar4 | (uint)(byte)(&DAT_00103140)[(int)(uVar13 >> 8 & 0xff)] << 8;
+        uVar4 = (uVar10 >> 8 | (uint)(byte)(&DAT_00103140)[uVar13 & 0xff] << 0x18) ^
+                (uVar10 >> 0xe | uVar10 << 0x12) ^
+                (uVar10 << 10 | uVar4 >> 0x16) ^
+                uVar7 ^ uVar10 ^
+                (uVar10 << 2 | ((uint)(byte)(&DAT_00103140)[uVar13 >> 0x18] << 0x18) >> 0x1e);
+        uVar10 = local_e8 ^ uVar15 ^ uVar14 ^ uVar4;
+        uVar7 = (uint)(byte)(&DAT_00103140)[uVar10 >> 0x10 & 0xff] << 0x10 |
+                (uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18 |
+                (uint)(byte)(&DAT_00103140)[uVar10 & 0xff];
+        uVar13 = (uint)(byte)(&DAT_00103140)[(int)(uVar10 >> 8 & 0xff)] << 8 | uVar7;
+        uVar16 = (uVar13 >> 8 | (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] << 0x18) ^
+                 (uVar13 >> 0xe | uVar13 << 0x12) ^
+                 uVar12 ^ uVar13 ^
+                 (uVar13 << 2 | ((uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18) >> 0x1e) ^
+                 (uVar13 << 10 | uVar7 >> 0x16);
+        uVar12 = local_e4 ^ uVar14 ^ uVar4 ^ uVar16;
+        uVar10 = (uint)(byte)(&DAT_00103140)[uVar12 >> 0x10 & 0xff] << 0x10 |
+                 (uint)(byte)(&DAT_00103140)[uVar12 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar12 & 0xff];
+        uVar7 = (uint)(byte)(&DAT_00103140)[(int)(uVar12 >> 8 & 0xff)] << 8 | uVar10;
+        uVar15 = (uVar7 >> 8 | (uint)(byte)(&DAT_00103140)[uVar12 & 0xff] << 0x18) ^
+                 (uVar7 >> 0xe | uVar7 << 0x12) ^
+                 (uVar7 << 10 | uVar10 >> 0x16) ^
+                 (uVar7 << 2 | ((uint)(byte)(&DAT_00103140)[uVar12 >> 0x18] << 0x18) >> 0x1e) ^
+                 uVar15 ^ uVar7;
+        uVar12 = local_e0 ^ uVar4 ^ uVar16 ^ uVar15;
+        uVar7 = (uint)(byte)(&DAT_00103140)[uVar12 >> 0x18] << 0x18 |
+                (uint)(byte)(&DAT_00103140)[uVar12 & 0xff] |
+                (uint)(byte)(&DAT_00103140)[uVar12 >> 0x10 & 0xff] << 0x10;
+        uVar10 = (uint)(byte)(&DAT_00103140)[(int)(uVar12 >> 8 & 0xff)] << 8 | uVar7;
+        uVar12 = (uVar10 >> 8 | (uint)(byte)(&DAT_00103140)[uVar12 & 0xff] << 0x18) ^
+                 (uVar10 >> 0xe | uVar10 << 0x12) ^
+                 (uVar10 << 10 | uVar7 >> 0x16) ^
+                 uVar14 ^ uVar10 ^
+                 (uVar10 << 2 | ((uint)(byte)(&DAT_00103140)[uVar12 >> 0x18] << 0x18) >> 0x1e);
+        uVar10 = uVar16 ^ uVar15 ^ local_dc ^ uVar12;
+        uVar13 = (uint)(byte)(&DAT_00103140)[uVar10 >> 0x10 & 0xff] << 0x10 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 & 0xff];
+        uVar7 = (uint)(byte)(&DAT_00103140)[(int)(uVar10 >> 8 & 0xff)] << 8 | uVar13;
+        uVar7 = (uVar7 >> 8 | (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] << 0x18) ^
+                (uVar7 >> 0xe | uVar7 << 0x12) ^
+                (uVar7 << 10 | uVar13 >> 0x16) ^
+                uVar4 ^ uVar7 ^
+                (uVar7 << 2 | ((uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18) >> 0x1e);
+        uVar4 = local_d8 ^ uVar15 ^ uVar12 ^ uVar7;
+        uVar13 = (uint)(byte)(&DAT_00103140)[uVar4 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar4 & 0xff] |
+                 (uint)(byte)(&DAT_00103140)[uVar4 >> 0x10 & 0xff] << 0x10;
+        uVar10 = (uint)(byte)(&DAT_00103140)[(int)(uVar4 >> 8 & 0xff)] << 8 | uVar13;
+        uVar16 = (uVar10 >> 8 | (uint)(byte)(&DAT_00103140)[uVar4 & 0xff] << 0x18) ^
+                 (uVar10 >> 0xe | uVar10 << 0x12) ^
+                 uVar16 ^ uVar10 ^
+                 (uVar10 << 2 | ((uint)(byte)(&DAT_00103140)[uVar4 >> 0x18] << 0x18) >> 0x1e) ^
+                 (uVar10 << 10 | uVar13 >> 0x16);
+        uVar4 = local_d4 ^ uVar12 ^ uVar7 ^ uVar16;
+        uVar13 = (uint)(byte)(&DAT_00103140)[uVar4 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar4 & 0xff] |
+                 (uint)(byte)(&DAT_00103140)[uVar4 >> 0x10 & 0xff] << 0x10;
+        uVar10 = (uint)(byte)(&DAT_00103140)[(int)(uVar4 >> 8 & 0xff)] << 8 | uVar13;
+        uVar14 = (uVar10 >> 8 | (uint)(byte)(&DAT_00103140)[uVar4 & 0xff] << 0x18) ^
+                 (uVar10 >> 0xe | uVar10 << 0x12) ^
+                 uVar15 ^ uVar10 ^
+                 (uVar10 << 2 | ((uint)(byte)(&DAT_00103140)[uVar4 >> 0x18] << 0x18) >> 0x1e) ^
+                 (uVar10 << 10 | uVar13 >> 0x16);
+        uVar13 = local_d0 ^ uVar7 ^ uVar16 ^ uVar14;
+        uVar4 = (uint)(byte)(&DAT_00103140)[uVar13 >> 0x10 & 0xff] << 0x10 |
+                (uint)(byte)(&DAT_00103140)[uVar13 >> 0x18] << 0x18 |
+                (uint)(byte)(&DAT_00103140)[uVar13 & 0xff];
+        uVar10 = uVar4 | (uint)(byte)(&DAT_00103140)[(int)(uVar13 >> 8 & 0xff)] << 8;
+        uVar4 = (uVar10 >> 8 | (uint)(byte)(&DAT_00103140)[uVar13 & 0xff] << 0x18) ^
+                (uVar10 >> 0xe | uVar10 << 0x12) ^
+                (uVar10 << 10 | uVar4 >> 0x16) ^
+                uVar12 ^ uVar10 ^
+                (uVar10 << 2 | ((uint)(byte)(&DAT_00103140)[uVar13 >> 0x18] << 0x18) >> 0x1e);
+        uVar10 = uVar16 ^ uVar14 ^ local_cc ^ uVar4;
+        uVar13 = (uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] |
+                 (uint)(byte)(&DAT_00103140)[uVar10 >> 0x10 & 0xff] << 0x10;
+        uVar12 = (uint)(byte)(&DAT_00103140)[(int)(uVar10 >> 8 & 0xff)] << 8 | uVar13;
+        uVar12 = (uVar12 >> 8 | (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] << 0x18) ^
+                 (uVar12 << 10 | uVar13 >> 0x16) ^
+                 uVar7 ^ uVar12 ^
+                 (uVar12 << 2 | ((uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18) >> 0x1e) ^
+                 (uVar12 >> 0xe | uVar12 << 0x12);
+        uVar7 = local_c8 ^ uVar14 ^ uVar4 ^ uVar12;
+        uVar13 = (uint)(byte)(&DAT_00103140)[uVar7 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar7 & 0xff] |
+                 (uint)(byte)(&DAT_00103140)[uVar7 >> 0x10 & 0xff] << 0x10;
+        uVar10 = (uint)(byte)(&DAT_00103140)[(int)(uVar7 >> 8 & 0xff)] << 8 | uVar13;
+        uVar10 = (uVar10 >> 8 | (uint)(byte)(&DAT_00103140)[uVar7 & 0xff] << 0x18) ^
+                 (uVar10 >> 0xe | uVar10 << 0x12) ^
+                 (uVar10 << 10 | uVar13 >> 0x16) ^
+                 (uVar10 << 2 | ((uint)(byte)(&DAT_00103140)[uVar7 >> 0x18] << 0x18) >> 0x1e) ^
+                 uVar16 ^ uVar10;
+        uVar7 = local_c4 ^ uVar4 ^ uVar12 ^ uVar10;
+        uVar13 = (uint)(byte)(&DAT_00103140)[uVar7 >> 0x10 & 0xff] << 0x10 |
+                 (uint)(byte)(&DAT_00103140)[uVar7 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar7 & 0xff];
+        uVar15 = (uint)(byte)(&DAT_00103140)[(int)(uVar7 >> 8 & 0xff)] << 8 | uVar13;
+        uVar16 = (uVar15 >> 8 | (uint)(byte)(&DAT_00103140)[uVar7 & 0xff] << 0x18) ^
+                 (uVar15 >> 0xe | uVar15 << 0x12) ^
+                 (uVar15 << 10 | uVar13 >> 0x16) ^
+                 uVar14 ^ uVar15 ^
+                 (uVar15 << 2 | ((uint)(byte)(&DAT_00103140)[uVar7 >> 0x18] << 0x18) >> 0x1e);
+        uVar7 = local_c0 ^ uVar12 ^ uVar10 ^ uVar16;
+        uVar13 = (uint)(byte)(&DAT_00103140)[uVar7 >> 0x10 & 0xff] << 0x10 |
+                 (uint)(byte)(&DAT_00103140)[uVar7 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar7 & 0xff];
+        uVar14 = uVar13 | (uint)(byte)(&DAT_00103140)[(int)(uVar7 >> 8 & 0xff)] << 8;
+        uVar14 = (uVar14 >> 8 | (uint)(byte)(&DAT_00103140)[uVar7 & 0xff] << 0x18) ^
+                 (uVar14 >> 0xe | uVar14 << 0x12) ^
+                 (uVar14 << 10 | uVar13 >> 0x16) ^
+                 uVar4 ^ uVar14 ^
+                 (uVar14 << 2 | ((uint)(byte)(&DAT_00103140)[uVar7 >> 0x18] << 0x18) >> 0x1e);
+        uVar4 = uVar10 ^ uVar16 ^ local_bc ^ uVar14;
+        uVar13 = (uint)(byte)(&DAT_00103140)[uVar4 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar4 & 0xff] |
+                 (uint)(byte)(&DAT_00103140)[uVar4 >> 0x10 & 0xff] << 0x10;
+        uVar7 = (uint)(byte)(&DAT_00103140)[(int)(uVar4 >> 8 & 0xff)] << 8 | uVar13;
+        uVar15 = (uVar7 >> 8 | (uint)(byte)(&DAT_00103140)[uVar4 & 0xff] << 0x18) ^
+                 (uVar7 >> 0xe | uVar7 << 0x12) ^
+                 (uVar7 << 10 | uVar13 >> 0x16) ^
+                 (uVar7 << 2 | ((uint)(byte)(&DAT_00103140)[uVar4 >> 0x18] << 0x18) >> 0x1e) ^
+                 uVar12 ^ uVar7;
+        uVar4 = local_b8 ^ uVar16 ^ uVar14 ^ uVar15;
+        uVar7 = (uint)(byte)(&DAT_00103140)[uVar4 >> 0x18] << 0x18 |
+                (uint)(byte)(&DAT_00103140)[uVar4 & 0xff] |
+                (uint)(byte)(&DAT_00103140)[uVar4 >> 0x10 & 0xff] << 0x10;
+        uVar12 = (uint)(byte)(&DAT_00103140)[(int)(uVar4 >> 8 & 0xff)] << 8 | uVar7;
+        uVar7 = (uVar12 >> 8 | (uint)(byte)(&DAT_00103140)[uVar4 & 0xff] << 0x18) ^
+                (uVar12 >> 0xe | uVar12 << 0x12) ^
+                (uVar12 << 10 | uVar7 >> 0x16) ^
+                (uVar12 << 2 | ((uint)(byte)(&DAT_00103140)[uVar4 >> 0x18] << 0x18) >> 0x1e) ^
+                uVar10 ^ uVar12;
+        uVar4 = local_b4 ^ uVar14 ^ uVar15 ^ uVar7;
+        uVar12 = (uint)(byte)(&DAT_00103140)[uVar4 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar4 & 0xff] |
+                 (uint)(byte)(&DAT_00103140)[uVar4 >> 0x10 & 0xff] << 0x10;
+        uVar10 = (uint)(byte)(&DAT_00103140)[(int)(uVar4 >> 8 & 0xff)] << 8 | uVar12;
+        uVar12 = (uVar10 >> 8 | (uint)(byte)(&DAT_00103140)[uVar4 & 0xff] << 0x18) ^
+                 (uVar10 >> 0xe | uVar10 << 0x12) ^
+                 (uVar10 << 10 | uVar12 >> 0x16) ^
+                 (uVar10 << 2 | ((uint)(byte)(&DAT_00103140)[uVar4 >> 0x18] << 0x18) >> 0x1e) ^
+                 uVar16 ^ uVar10;
+        uVar13 = local_b0 ^ uVar15 ^ uVar7 ^ uVar12;
+        uVar4 = (uint)(byte)(&DAT_00103140)[uVar13 >> 0x10 & 0xff] << 0x10 |
+                (uint)(byte)(&DAT_00103140)[uVar13 >> 0x18] << 0x18 |
+                (uint)(byte)(&DAT_00103140)[uVar13 & 0xff];
+        uVar10 = uVar4 | (uint)(byte)(&DAT_00103140)[(int)(uVar13 >> 8 & 0xff)] << 8;
+        uVar4 = (uVar10 >> 8 | (uint)(byte)(&DAT_00103140)[uVar13 & 0xff] << 0x18) ^
+                (uVar10 >> 0xe | uVar10 << 0x12) ^
+                (uVar10 << 10 | uVar4 >> 0x16) ^
+                uVar14 ^ uVar10 ^
+                (uVar10 << 2 | ((uint)(byte)(&DAT_00103140)[uVar13 >> 0x18] << 0x18) >> 0x1e);
+        uVar10 = uVar7 ^ uVar12 ^ local_ac ^ uVar4;
+        uVar14 = (uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18 |
+                 (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] |
+                 (uint)(byte)(&DAT_00103140)[uVar10 >> 0x10 & 0xff] << 0x10;
+        uVar13 = (uint)(byte)(&DAT_00103140)[(int)(uVar10 >> 8 & 0xff)] << 8 | uVar14;
+        uVar10 = (uVar13 >> 8 | (uint)(byte)(&DAT_00103140)[uVar10 & 0xff] << 0x18) ^
+                 (uVar13 >> 0xe | uVar13 << 0x12) ^
+                 (uVar13 << 10 | uVar14 >> 0x16) ^
+                 uVar15 ^ uVar13 ^
+                 (uVar13 << 2 | ((uint)(byte)(&DAT_00103140)[uVar10 >> 0x18] << 0x18) >> 0x1e);
+        local_1d0 = (byte)(uVar4 >> 0x18);
+        local_1e8 = (byte)(uVar10 >> 8);
+        puVar18 = puVar18 + 2;
+        uVar6 = (((((((ulong)(uVar4 & 0xff) << 8 | (ulong)(uVar4 >> 8 & 0xff)) << 8 |
+                    (ulong)(uVar4 >> 0x10 & 0xff)) << 8 | (ulong)local_1d0) << 8 |
+                  (ulong)(uVar10 & 0xff)) << 8 | (ulong)local_1e8) << 8 |
+                (ulong)(uVar10 >> 0x10 & 0xff)) << 8 | (ulong)(uVar10 >> 0x18);
+        local_1c4 = (byte)(uVar12 >> 8);
+        local_1c8 = (byte)(uVar12 >> 0x10);
+        local_1cc = (byte)(uVar12 >> 0x18);
+        *puVar19 = uVar6;
+        puVar19[1] = (((((((ulong)(uVar7 & 0xff) << 8 | (ulong)(uVar7 >> 8 & 0xff)) << 8 |
+                         (ulong)(uVar7 >> 0x10 & 0xff)) << 8 | (ulong)(uVar7 >> 0x18)) << 8 |
+                       (ulong)(uVar12 & 0xff)) << 8 | (ulong)local_1c4) << 8 | (ulong)local_1c8) <<
+                     8 | (ulong)local_1cc;
+        uVar11 = puVar19[1];
+        puVar19 = puVar19 + 2;
+      } while (puVar18 != (undefined8 *)&local_58);
+      __printf_chk(1,"Ciphertext(hex): ");
+      puVar19 = local_98;
+      do {
+        uVar2 = *(undefined *)puVar19;
+        puVar19 = (ulong *)((long)puVar19 + 1);
+        __printf_chk(1,&DAT_0010303b,uVar2);
+      } while (puVar19 != &local_78);
+      __printf_chk(1,"\n");
+      iVar3 = memcmp(local_98,&local_58,0x20);
+      pcVar9 = "True";
+      if (iVar3 != 0) {
+        pcVar9 = "False";
+      }
+      __printf_chk(1,"Match: %s\n",pcVar9);
+      bVar20 = iVar3 != 0;
+    }
+    else {
+LAB_00101227:
+      __fprintf_chk(*(undefined8 *)PTR_stderr_00104ff8,1,
+                    "Bad input hex. Expecting 64 hex chars (32 bytes).\n");
+      bVar20 = true;
+    }
+  }
+  else {
+    __fprintf_chk(*(undefined8 *)PTR_stderr_00104ff8,1,"Usage: %s <64-hex-chars>\n",*param_2);
+    bVar20 = true;
+  }
+  if (local_30 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return bVar20;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+

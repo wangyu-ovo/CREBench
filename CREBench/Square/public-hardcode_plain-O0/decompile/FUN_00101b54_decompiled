@@ -1,0 +1,78 @@
+
+void FUN_00101b54(long param_1,long param_2,undefined8 param_3)
+
+{
+  int iVar1;
+  long lVar2;
+  undefined8 *puVar3;
+  long in_FS_OFFSET;
+  int local_e0;
+  int local_dc;
+  int local_d8;
+  int local_d4;
+  int local_d0;
+  int local_cc;
+  undefined8 local_c8;
+  undefined8 local_c0;
+  undefined8 local_b8;
+  undefined8 local_b0;
+  undefined8 local_a8 [16];
+  undefined auStack_28 [24];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  puVar3 = local_a8;
+  for (lVar2 = 0x12; lVar2 != 0; lVar2 = lVar2 + -1) {
+    *puVar3 = 0;
+    puVar3 = puVar3 + 1;
+  }
+  FUN_00101225(param_3,local_a8);
+  local_c8 = 0;
+  local_c0 = 0;
+  local_b8 = 0;
+  local_b0 = 0;
+  for (local_e0 = 0; local_e0 < 0x10; local_e0 = local_e0 + 1) {
+    iVar1 = local_e0;
+    if (local_e0 < 0) {
+      iVar1 = local_e0 + 3;
+    }
+    *(uint *)((long)&local_c8 + (long)(iVar1 >> 2) * 4) =
+         *(uint *)((long)&local_c8 + (long)(iVar1 >> 2) * 4) |
+         (uint)*(byte *)(param_1 + local_e0) << ((byte)((0xf - local_e0) % 4 << 3) & 0x1f);
+  }
+  for (local_dc = 0; local_dc < 4; local_dc = local_dc + 1) {
+  }
+  for (local_d8 = 0; local_d8 < 8; local_d8 = local_d8 + 1) {
+    if (local_d8 == 0) {
+      for (local_d4 = 0; local_d4 < 4; local_d4 = local_d4 + 1) {
+        *(uint *)((long)&local_c8 + (long)local_d4 * 4) =
+             *(uint *)((long)&local_c8 + (long)local_d4 * 4) ^
+             *(uint *)((long)local_a8 + (long)local_d4 * 4);
+      }
+    }
+    else {
+      FUN_0010162a(&local_c8,&local_b8,&DAT_00103120,&DAT_00103520,&DAT_00103920,&DAT_00103d20,
+                   (long)local_a8 + (long)(local_d8 << 2) * 4);
+      local_c8 = local_b8;
+      local_c0 = local_b0;
+    }
+    for (local_d0 = 0; local_d0 < 4; local_d0 = local_d0 + 1) {
+    }
+  }
+  FUN_001018cf(&local_c8,&local_b8,&DAT_00103020,auStack_28);
+  for (local_cc = 0; local_cc < 0x10; local_cc = local_cc + 1) {
+    iVar1 = local_cc;
+    if (local_cc < 0) {
+      iVar1 = local_cc + 3;
+    }
+    *(char *)(param_2 + local_cc) =
+         (char)(*(uint *)((long)&local_b8 + (long)(iVar1 >> 2) * 4) >>
+               ((byte)((0xf - local_cc) % 4 << 3) & 0x1f));
+  }
+  if (local_10 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+

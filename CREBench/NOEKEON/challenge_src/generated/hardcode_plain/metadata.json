@@ -1,0 +1,10 @@
+{
+  "challenge": "NOEKEON",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "b62e1a00b71ebe967e2e15bdf3a5e5dae3d3311e3e6a4aa60229ec3a34f99b5b",
+  "key": "8db46d869f77d88ffb0a9962e1c987cf",
+  "iv": "f1f579649e516eeaca2988e36aacf02f",
+  "target_ciphertext": "95fbaece547b9b1603d5e4816433b1f84546d1dab6b2035449b9754ca91b0437",
+  "test_vectors_path": "CREBench/NOEKEON/test_vectors-hardcode_plain.json"
+}

@@ -1,0 +1,22 @@
+
+undefined8 FUN_0010195c(long param_1,long param_2,long param_3)
+
+{
+  undefined8 uVar1;
+  ulong local_10;
+  
+  if ((param_1 == 0) || (param_2 == 0)) {
+    uVar1 = 0xffffffff;
+  }
+  else if (param_3 == 10) {
+    for (local_10 = 0; local_10 < 10; local_10 = local_10 + 1) {
+      *(undefined *)(local_10 + param_1) = *(undefined *)(param_2 + (9 - local_10));
+    }
+    uVar1 = 0;
+  }
+  else {
+    uVar1 = 0xffffffff;
+  }
+  return uVar1;
+}
+

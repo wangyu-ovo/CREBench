@@ -1,0 +1,40 @@
+
+undefined8 FUN_001019d1(void *param_1,long param_2,ulong param_3)
+
+{
+  int iVar1;
+  int iVar2;
+  undefined4 uVar3;
+  int iVar4;
+  int iVar5;
+  undefined8 uVar6;
+  ulong local_38;
+  ulong local_30;
+  ulong local_28;
+  
+  if ((((param_1 == (void *)0x0) || (param_2 == 0)) || (param_3 < 0x10)) ||
+     ((0x40 < param_3 || ((param_3 & 3) != 0)))) {
+    uVar6 = 0xffffffff;
+  }
+  else {
+    memset(param_1,0,0x100);
+    for (local_38 = 0; local_38 < param_3 >> 2; local_38 = local_38 + 1) {
+      uVar3 = FUN_00101694(param_2 + local_38 * 4);
+      *(undefined4 *)((long)param_1 + local_38 * 4) = uVar3;
+    }
+    for (local_30 = 0x10; local_30 < 0x40; local_30 = local_30 + 1) {
+      iVar1 = *(int *)((long)param_1 + (local_30 - 0x10) * 4);
+      iVar4 = FUN_00101815(*(undefined4 *)((long)param_1 + (local_30 - 0xf) * 4));
+      iVar2 = *(int *)((long)param_1 + (local_30 - 7) * 4);
+      iVar5 = FUN_00101853(*(undefined4 *)((long)param_1 + (local_30 - 2) * 4));
+      *(int *)((long)param_1 + local_30 * 4) = iVar1 + iVar4 + iVar2 + iVar5;
+    }
+    for (local_28 = 0; local_28 < 0x40; local_28 = local_28 + 1) {
+      *(int *)((long)param_1 + local_28 * 4) =
+           *(int *)((long)param_1 + local_28 * 4) + *(int *)(&DAT_001030c0 + local_28 * 4);
+    }
+    uVar6 = 0;
+  }
+  return uVar6;
+}
+

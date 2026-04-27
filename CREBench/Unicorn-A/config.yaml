@@ -1,0 +1,52 @@
+name: unicorn_a
+publc_path: CREBench/Unicorn-A/public
+flag: e5b6e8bd877ae36079962ac7952e1823
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: UNICORN-A-ECB
+algorithm_aliases:
+  - Unicorn-A
+  - UNICORN-A-ECB
+  
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/Unicorn-A/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: single_block_direct
+  key_source_file: CREBench/Unicorn-A/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1743465600
+  key_seed_note: fixed_timestamp_utc_2025_04_01_00_00_00
+  key_length_bytes: 32
+  block_size_bytes: 16
+  iv_length_bytes: 0
+  target_length_bytes: 16
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: unicorn_sbox
+  compile_define: CONSTXOR_UNICORN_TABLES
+  source_file: src/unicorn-a.c
+  tables:
+    - symbol: S
+      ctype: uint32_t
+      source_ctype: u32
+      accessor: constxor_unicorn_s
+

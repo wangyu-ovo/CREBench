@@ -1,0 +1,10 @@
+{
+  "challenge": "Square",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "1afcce7e2ed14bc77cdd74a9af92689f",
+  "key": "affdcf47b56df989fc97784d95beed16",
+  "iv": "",
+  "target_ciphertext": "b0599b598a5e3c7f88f7382cd0b2fa48",
+  "test_vectors_path": "CREBench/Square/test_vectors-weak_prng_seeded.json"
+}

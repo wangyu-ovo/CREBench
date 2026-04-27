@@ -1,0 +1,10 @@
+{
+  "challenge": "Unicorn-A",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "e5b6e8bd877ae36079962ac7952e1823",
+  "key": "79a46b03bd5b2fc28784a783ec3b19bcbb999b30ad4f9b02dd8687611c919c90",
+  "iv": "",
+  "target_ciphertext": "c53105f15275400c8559e5e7392af7cb",
+  "test_vectors_path": "CREBench/Unicorn-A/test_vectors-fragmented_build.json"
+}

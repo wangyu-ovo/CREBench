@@ -1,0 +1,10 @@
+
+uint FUN_00101664(long param_1,int param_2)
+
+{
+  return (uint)*(byte *)(param_1 + (ulong)(param_2 * 4 + 3)) |
+         (uint)*(byte *)(param_1 + (ulong)(uint)(param_2 << 2)) << 0x18 |
+         (uint)*(byte *)(param_1 + (ulong)(param_2 * 4 + 1)) << 0x10 |
+         (uint)*(byte *)(param_1 + (ulong)(param_2 * 4 + 2)) << 8;
+}
+

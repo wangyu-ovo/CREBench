@@ -1,0 +1,58 @@
+name: sm4_cbc
+publc_path: CREBench/SM4-CBC-Official/public
+flag: a454eec650748622d2421da0c4441e4778a3ecbc0c68451e115f4521b533f478
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: SM4-CBC
+algorithm_aliases:
+  - SM4
+  - SMS4
+  - SM4 CBC
+  - sm4_cbc
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/SM4-CBC-Official/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: weak_prng_seeded
+
+template_metadata:
+  wrapper_family: cbc_direct
+  key_source_file: CREBench/SM4-CBC-Official/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1727740800
+  key_seed_note: fixed_timestamp_utc_2024_10_01_00_00_00
+  key_length_bytes: 16
+  block_size_bytes: 16
+  iv_length_bytes: 16
+  target_length_bytes: 32
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: sm4_tables
+  compile_define: CONSTXOR_SM4_TABLES
+  source_file: src/sm4.c
+  tables:
+    - symbol: SM4_S
+      ctype: uint8_t
+      accessor: constxor_sm4_sbox
+    - symbol: FK
+      ctype: uint32_t
+      accessor: constxor_sm4_fk
+    - symbol: CK
+      ctype: uint32_t
+      accessor: constxor_sm4_ck
+

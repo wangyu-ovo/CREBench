@@ -1,0 +1,10 @@
+{
+  "challenge": "TEA",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "63c0455a63f60727",
+  "key": "b2c7ce245294fac4f81f39431de4424b",
+  "iv": "",
+  "target_ciphertext": "d7db4f5b3510b088",
+  "test_vectors_path": "CREBench/TEA/test_vectors-weak_prng_seeded.json"
+}

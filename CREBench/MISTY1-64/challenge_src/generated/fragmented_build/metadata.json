@@ -1,0 +1,10 @@
+{
+  "challenge": "MISTY1-64",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "c9dcc5f2845b8aa3c9289cbb781fa729992d703dc01d91d2e58a5d20f45402363b95618b7be29c6ca6f68a7704ab00826eb5e65d2854a6e78ad3150fcfcbc630",
+  "key": "d09e40cd5094761a49e5347712655916",
+  "iv": "",
+  "target_ciphertext": "0bb5e94bb99d848b93f97d4bdf57f51d3fd1851ebefe98fbe1d4300ad661d12e3ef2f42c9507eac90d3c68abddf4ed3645f51f65fe16f02f4a76a98a455e1be5",
+  "test_vectors_path": "CREBench/MISTY1-64/test_vectors-fragmented_build.json"
+}

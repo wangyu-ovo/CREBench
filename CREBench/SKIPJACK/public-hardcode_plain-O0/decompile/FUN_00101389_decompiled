@@ -1,0 +1,66 @@
+
+bool FUN_00101389(int param_1,undefined8 *param_2)
+
+{
+  int iVar1;
+  char *pcVar2;
+  long in_FS_OFFSET;
+  bool bVar3;
+  undefined local_94 [10];
+  undefined8 local_8a;
+  undefined local_82 [10];
+  undefined8 local_78;
+  undefined8 local_70;
+  undefined8 local_68;
+  undefined8 local_60;
+  undefined local_58 [32];
+  undefined local_38 [40];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  if (param_1 == 2) {
+    FUN_001015b4(local_82,10);
+    local_8a = 0x348ac120d6b52782;
+    local_78 = 0x4ae40b801c380701;
+    local_70 = 0x6b661882849c4d25;
+    local_68 = 0xe683ed9f9df327dd;
+    local_60 = 0xf3ef746bfe1adb26;
+    iVar1 = FUN_0010125c(param_2[1],local_58,0x20);
+    if (iVar1 == 0) {
+      fwrite("Bad input hex. Expecting 64 hex chars (32 bytes).\n",1,0x32,stderr);
+      bVar3 = true;
+    }
+    else {
+      iVar1 = FUN_00101928(local_94,local_82,10);
+      if (iVar1 == 0) {
+        FUN_00101e0f(local_94,&local_8a,local_58,local_38,0x20);
+        printf("Ciphertext(hex): ");
+        FUN_00101331(local_38,0x20);
+        putchar(10);
+        iVar1 = memcmp(local_38,&local_78,0x20);
+        bVar3 = iVar1 != 0;
+        if (bVar3) {
+          pcVar2 = "False";
+        }
+        else {
+          pcVar2 = "True";
+        }
+        printf("Match: %s\n",pcVar2);
+      }
+      else {
+        fwrite("Key setup failed.\n",1,0x12,stderr);
+        bVar3 = true;
+      }
+    }
+  }
+  else {
+    fprintf(stderr,"Usage: %s <64-hex-chars>\n",*param_2);
+    bVar3 = true;
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return bVar3;
+}
+

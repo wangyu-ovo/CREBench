@@ -1,0 +1,68 @@
+name: sc2000
+publc_path: CREBench/SC2000/public
+flag: 6b527ad435c5aefbcbfc1f3f9a2b96ed
+flag_type: hex
+
+# Level 1: algorithm identification
+algorithm: SC2000-ECB
+algorithm_aliases:
+  - SC2000
+  - SC2000 ECB
+  - sc2000_ecb
+
+# Level 2: key extraction
+# Mode-specific key material is resolved from generated metadata.
+
+# Level 3: code recovery
+# Mode-specific test vectors are resolved from generated metadata.
+
+instance_metadata:
+  generated_root: CREBench/SC2000/challenge_src/generated
+  supported_key_modes:
+    - hardcode_plain
+    - fragmented_build
+    - weak_prng_seeded
+  default_key_mode: hardcode_plain
+
+template_metadata:
+  wrapper_family: single_block_direct
+  key_source_file: CREBench/SC2000/challenge_src/key_source.c
+  key_versions:
+    - hardcode
+    - fragmented_build
+    - weak_prng
+  key_seed: 1725148800
+  key_seed_note: fixed_timestamp_utc_2024_09_01_00_00_00
+  key_length_bytes: 32
+  block_size_bytes: 16
+  iv_length_bytes: 0
+  target_length_bytes: 16
+  verification_target: ciphertext_match
+
+constxor_metadata:
+  enabled: true
+  profile: sc2000_tables
+  compile_define: CONSTXOR_SC2000_TABLES
+  source_file: src/sc2000.c
+  tables:
+    - symbol: S6
+      ctype: uint32_t
+      source_ctype: u32
+      accessor: constxor_sc2000_s6
+    - symbol: S5
+      ctype: uint32_t
+      source_ctype: u32
+      accessor: constxor_sc2000_s5
+    - symbol: S4
+      ctype: uint32_t
+      source_ctype: u32
+      accessor: constxor_sc2000_s4
+    - symbol: S4i
+      ctype: uint32_t
+      source_ctype: u32
+      accessor: constxor_sc2000_s4i
+    - symbol: M
+      ctype: uint32_t
+      source_ctype: u32
+      accessor: constxor_sc2000_m
+

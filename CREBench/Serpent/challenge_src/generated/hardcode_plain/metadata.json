@@ -1,0 +1,10 @@
+{
+  "challenge": "Serpent",
+  "key_mode": "hardcode_plain",
+  "variant": "randomized",
+  "flag": "ec4b46ae323cec71f659c934bd7d22fa",
+  "key": "ca4513c7ee610fb8cccff389701768ad",
+  "iv": "",
+  "target_ciphertext": "2f496d0c03f5bae9299fa12b0192e876",
+  "test_vectors_path": "CREBench/Serpent/test_vectors-hardcode_plain.json"
+}

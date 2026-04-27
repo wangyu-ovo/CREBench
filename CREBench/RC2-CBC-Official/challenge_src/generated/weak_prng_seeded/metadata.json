@@ -1,0 +1,10 @@
+{
+  "challenge": "RC2-CBC-Official",
+  "key_mode": "weak_prng_seeded",
+  "variant": "randomized",
+  "flag": "78309f62f05dac232032998d74e4c8c5",
+  "key": "fec9eeb1fa9a492d",
+  "iv": "af55d48bb3f42f5b",
+  "target_ciphertext": "8d0075bec6a1d44e547d434e5418396f",
+  "test_vectors_path": "CREBench/RC2-CBC-Official/test_vectors-weak_prng_seeded.json"
+}

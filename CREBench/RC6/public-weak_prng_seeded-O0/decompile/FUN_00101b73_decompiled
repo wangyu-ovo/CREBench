@@ -1,0 +1,42 @@
+
+void FUN_00101b73(int *param_1,long param_2,long param_3)
+
+{
+  uint uVar1;
+  uint uVar2;
+  int iVar3;
+  int iVar4;
+  uint uVar5;
+  uint uVar6;
+  uint local_2c;
+  uint local_28;
+  uint local_24;
+  uint local_20;
+  int local_1c;
+  
+  iVar3 = FUN_001016af(param_2);
+  local_28 = FUN_001016af(param_2 + 4);
+  iVar4 = FUN_001016af(param_2 + 8);
+  local_20 = FUN_001016af(param_2 + 0xc);
+  local_24 = iVar4 - param_1[param_1[0x2c] * 2 + 3];
+  local_2c = iVar3 - param_1[(uint)((param_1[0x2c] + 1) * 2)];
+  local_1c = param_1[0x2c];
+  while (uVar2 = local_20, uVar1 = local_28, local_1c = local_1c + -1, -1 < local_1c) {
+    local_20 = local_24;
+    local_28 = local_2c;
+    uVar5 = FUN_0010166f((local_24 * 2 + 1) * local_24,5);
+    uVar6 = FUN_0010166f((local_2c * 2 + 1) * local_2c,5);
+    local_24 = FUN_0010168f(uVar1 - param_1[(long)(local_1c * 2) + 3],uVar6);
+    local_24 = local_24 ^ uVar5;
+    local_2c = FUN_0010168f(uVar2 - param_1[(long)(local_1c * 2) + 2],uVar5);
+    local_2c = local_2c ^ uVar6;
+  }
+  iVar3 = param_1[1];
+  iVar4 = *param_1;
+  FUN_00101700(param_3,local_2c);
+  FUN_00101700(param_3 + 4,local_28 - iVar4);
+  FUN_00101700(param_3 + 8,local_24);
+  FUN_00101700(param_3 + 0xc,local_20 - iVar3);
+  return;
+}
+

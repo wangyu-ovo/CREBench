@@ -1,0 +1,20 @@
+
+undefined8 FUN_00101209(uint *param_1,uint *param_2,long param_3)
+
+{
+  uint local_14;
+  uint local_10;
+  uint local_c;
+  
+  local_10 = *param_1;
+  local_c = *param_2;
+  for (local_14 = 0; local_14 < 0x1a; local_14 = local_14 + 1) {
+    local_10 = (local_10 >> 8 | local_10 << 0x18) + local_c ^
+               *(uint *)(param_3 + (ulong)local_14 * 4);
+    local_c = (local_c << 3 | local_c >> 0x1d) ^ local_10;
+  }
+  *param_1 = local_10;
+  *param_2 = local_c;
+  return 0;
+}
+

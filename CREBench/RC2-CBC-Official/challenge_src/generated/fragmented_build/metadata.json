@@ -1,0 +1,10 @@
+{
+  "challenge": "RC2-CBC-Official",
+  "key_mode": "fragmented_build",
+  "variant": "randomized",
+  "flag": "78309f62f05dac232032998d74e4c8c5",
+  "key": "cfadda06dbac265f",
+  "iv": "af55d48bb3f42f5b",
+  "target_ciphertext": "189f043d4f8ac523699c562598d7924d",
+  "test_vectors_path": "CREBench/RC2-CBC-Official/test_vectors-fragmented_build.json"
+}

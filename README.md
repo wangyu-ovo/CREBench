@@ -1,6 +1,8 @@
 # CREBench: Evaluating Large Language Models in Cryptographic Binary Reverse Engineering
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/abs/2604.03750)
+[![Homepage](https://img.shields.io/badge/Homepage-GitHub-red)](https://jams-zhou-james.github.io/CREBench/)
+
 
 Official code repository for the paper "CREBench: Evaluating Large Language Models in Cryptographic Binary Reverse Engineering".
 

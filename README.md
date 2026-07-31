@@ -2,6 +2,7 @@
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/abs/2604.03750)
 [![Homepage](https://img.shields.io/badge/Homepage-GitHub-yellow)](https://jams-zhou-james.github.io/CREBench/)
+[![Dataset](https://img.shields.io/badge/Dataset-Hugging%20Face-orange)](https://huggingface.co/datasets/Danny-1223/CREBench)
 
 
 Official code repository for the paper "CREBench: Evaluating Large Language Models in Cryptographic Binary Reverse Engineering".

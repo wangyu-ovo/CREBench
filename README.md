@@ -5,7 +5,7 @@
 [![Dataset](https://img.shields.io/badge/Dataset-Hugging%20Face-orange)](https://huggingface.co/datasets/Danny-1223/CREBench)
 
 
-Official code repository for the paper "CREBench: Evaluating Large Language Models in Cryptographic Binary Reverse Engineering".
+Official code repository for the paper "CREBench: Evaluating Large Language Models in Cryptographic Binary Reverse Engineering" (COLM 2026).
 
 ## Introduction
 

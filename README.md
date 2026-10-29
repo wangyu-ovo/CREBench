@@ -304,10 +304,16 @@ CREBench/                     # Our repo
 If you find this project useful, please cite:
 
 ```bibtex
-@article{chen2026crebench,
-  title={CREBench: Evaluating Large Language Models in Cryptographic Binary Reverse Engineering},
-  author={Chen, Baicheng and Wang, Yu and Zhou, Ziheng and Liu, Xiangru and Li, Juanru and Chen, Yilei and He, Tianxing},
-  journal={arXiv preprint arXiv:2604.03750},
-  year={2026}
+@inproceedings{
+  chen2026crebench,
+  title={{CREB}ench: Evaluating Large Language Models in Cryptographic Binary Reverse Engineering},
+  author={Baicheng Chen and Yu Wang and Ziheng Zhou and Xiangru Liu and Juanru Li and Yilei Chen and Tianxing He},
+  booktitle={Third Conference on Language Modeling (COLM)},
+  year={2026},
+  url={https://openreview.net/forum?id=tLYdf8hWJB}
 }
 ```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

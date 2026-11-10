@@ -214,6 +214,8 @@ openssl
 nyuctf_agents_bark
 ghidra
 ghidra_scripts
+!docker/ghidra_scripts/
+!docker/ghidra_scripts/**
 get_public_reverse.py
 rand_hex.py
 insecure_key
